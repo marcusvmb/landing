@@ -135,14 +135,6 @@ export default function FAQLossAversion() {
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[120px] translate-x-1/3" aria-hidden="true" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Eyebrow */}
-        <div className="text-center mb-6">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/20">
-            <span className="text-[#5C5CFF]" aria-hidden="true">&#9888;</span>
-            <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider">Duvidas Frequentes</span>
-          </span>
-        </div>
-
         {/* Headline */}
         <h2 id="faq-loss-heading" className="text-center text-3xl sm:text-4xl md:text-5xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
           Duvidas que Podem{' '}

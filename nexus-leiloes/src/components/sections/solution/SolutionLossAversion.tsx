@@ -44,28 +44,6 @@ export default function SolutionLossAversion() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Eyebrow - Transition from loss to gain */}
-        <div className="text-center mb-8">
-          <span
-            className="
-              inline-flex items-center gap-3
-              px-6 py-3
-              bg-white/60 backdrop-blur-sm
-              rounded-full
-              border border-[#5C5CFF]/15
-              shadow-[0_8px_30px_-10px_rgba(92,92,255,0.15)]
-            "
-          >
-            <span className="text-[#5C5CFF] line-through opacity-60 text-sm font-medium">
-              Perder
-            </span>
-            <span className="text-[#5C5CFF]" aria-hidden="true">
-              &rarr;
-            </span>
-            <span className="text-[#5C5CFF] font-semibold text-sm">Ganhar</span>
-          </span>
-        </div>
-
         {/* Headline */}
         <h2
           id="solution-loss-heading"

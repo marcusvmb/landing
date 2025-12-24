@@ -49,16 +49,6 @@ export default function ProblemLossAversion() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Eyebrow */}
-        <div className="text-center mb-6">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/15">
-            <span className="w-2 h-2 bg-[#5C5CFF] rounded-full animate-pulse" aria-hidden="true" />
-            <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-widest">
-              Enquanto você espera
-            </span>
-          </span>
-        </div>
-
         {/* Main Grid: Headline + Loss Counter */}
         <div className="grid grid-cols-12 gap-8 items-center mb-16">
           {/* Headline - 7 cols */}

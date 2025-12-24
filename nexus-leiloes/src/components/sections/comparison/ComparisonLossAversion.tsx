@@ -204,24 +204,6 @@ export default function ComparisonLossAversion() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Eyebrow */}
-        <div className="text-center mb-6">
-          <span
-            className="
-              inline-flex items-center gap-2
-              px-5 py-2.5
-              bg-[#5C5CFF]/10
-              rounded-full
-              border border-[#5C5CFF]/20
-            "
-          >
-            <span className="text-[#5C5CFF] text-lg">!</span>
-            <span className="text-sm font-semibold text-[#5C5CFF]">
-              Quanto você esta deixando na mesa?
-            </span>
-          </span>
-        </div>
-
         {/* Headline */}
         <h2
           id="comparison-loss-heading"

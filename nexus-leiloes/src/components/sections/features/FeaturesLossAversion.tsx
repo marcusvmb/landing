@@ -163,24 +163,6 @@ export default function FeaturesLossAversion() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Eyebrow */}
-        <div className="text-center mb-6">
-          <span
-            className="
-              inline-flex items-center gap-2
-              px-5 py-2.5
-              bg-[#5C5CFF]/10
-              rounded-full
-              border border-[#5C5CFF]/20
-            "
-          >
-            <span className="text-[#5C5CFF]">⚠️</span>
-            <span className="text-sm font-semibold text-[#5C5CFF]">
-              Quanto você esta perdendo?
-            </span>
-          </span>
-        </div>
-
         {/* Headline */}
         <h2
           id="features-loss-heading"
@@ -333,25 +315,6 @@ function FeatureCard({ feature }: FeatureCardProps) {
         "
         aria-hidden="true"
       />
-
-      {/* Badge */}
-      {feature.badge && (
-        <div className="absolute top-4 right-4 z-10">
-          <span
-            className={`
-              px-3 py-1
-              text-xs font-bold
-              rounded-full
-              ${feature.badge === 'EXCLUSIVO'
-                ? 'bg-[#5C5CFF] text-white'
-                : 'bg-[#2B3259]/10 text-[#2B3259]'
-              }
-            `}
-          >
-            {feature.badge}
-          </span>
-        </div>
-      )}
 
       <div className="relative z-10 p-6">
         {/* Header */}

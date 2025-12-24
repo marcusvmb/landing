@@ -66,14 +66,6 @@ export default function SocialProofLossAversion() {
       <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-[#5C5CFF]/6 rounded-full blur-[100px] -translate-x-1/3" aria-hidden="true" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Eyebrow */}
-        <div className="text-center mb-6">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/20">
-            <span className="text-lg">🛡️</span>
-            <span className="text-sm font-bold text-[#5C5CFF] uppercase tracking-wider">Perdas evitadas</span>
-          </span>
-        </div>
-
         {/* Headline - Asymmetric */}
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 text-center">

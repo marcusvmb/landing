@@ -108,26 +108,6 @@ export default function SegmentationLossAversion() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Eyebrow */}
-        <div className="text-center mb-6">
-          <span
-            className="
-              inline-flex items-center gap-2
-              px-5 py-2.5
-              bg-[#5C5CFF]/10
-              rounded-full
-              border border-[#5C5CFF]/20
-            "
-          >
-            <span className="text-[#5C5CFF]" aria-hidden="true">
-              &#9888;
-            </span>
-            <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider">
-              Quem esta perdendo?
-            </span>
-          </span>
-        </div>
-
         {/* Headline */}
         <h2
           id="segmentation-loss-heading"

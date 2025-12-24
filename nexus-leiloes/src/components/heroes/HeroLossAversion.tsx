@@ -59,13 +59,8 @@ export default function HeroLossAversion() {
       {/* Header / Navigation */}
       <header className="relative z-20 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#5C5CFF] rounded-xl flex items-center justify-center shadow-[0_8px_20px_-6px_rgba(92,92,255,0.4)]">
-            <span className="text-white font-bold text-lg">N</span>
-          </div>
-          <span className="font-bold text-[#2B3259] text-xl tracking-[-0.02em]">
-            Nexus Leilões
-          </span>
+        <div className="flex items-center gap-2">
+          <img src="/logo-nexus.png" alt="Nexus Leilões" className="h-10" />
         </div>
 
         {/* Trust Badge - Desktop */}
@@ -83,16 +78,6 @@ export default function HeroLossAversion() {
 
           {/* Content Column - 7 colunas (assimetrico) */}
           <div className="col-span-12 lg:col-span-7 relative z-10">
-
-            {/* Exclusive Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/10 rounded-full mb-8 border border-[#5C5CFF]/15">
-              <span className="text-lg" role="img" aria-label="fire">
-                🔥
-              </span>
-              <span className="text-sm font-semibold text-[#5C5CFF] tracking-wide">
-                Exclusivo para Fundadores
-              </span>
-            </div>
 
             {/* Headline - Massivo com tight tracking */}
             <h1

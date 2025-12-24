@@ -70,13 +70,8 @@ export default function HeroAuthority() {
       {/* Header */}
       <header className="relative z-20 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#5C5CFF] rounded-xl flex items-center justify-center shadow-[0_8px_20px_-6px_rgba(92,92,255,0.4)]">
-            <span className="text-white font-bold text-lg">N</span>
-          </div>
-          <span className="font-bold text-[#2B3259] text-xl tracking-[-0.02em]">
-            Nexus Leilões
-          </span>
+        <div className="flex items-center gap-2">
+          <img src="/logo-nexus.png" alt="Nexus Leilões" className="h-10" />
         </div>
 
         {/* Authority Badge - Gradient */}
