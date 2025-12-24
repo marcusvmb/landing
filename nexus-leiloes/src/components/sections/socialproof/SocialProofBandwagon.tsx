@@ -98,7 +98,7 @@ export default function SocialProofBandwagon() {
                     {joiner.initials}
                   </div>
                 ))}
-                <div className="w-10 h-10 bg-[#FF7A00] rounded-full flex items-center justify-center text-white text-xs font-bold border-2 border-white shadow-[0_4px_10px_-3px_rgba(255,122,0,0.4)]">
+                <div className="w-10 h-10 bg-[#5C5CFF] rounded-full flex items-center justify-center text-white text-xs font-bold border-2 border-white shadow-[0_4px_10px_-3px_rgba(92,92,255,0.4)]">
                   +{userCount - 6}
                 </div>
               </div>
@@ -180,7 +180,7 @@ export default function SocialProofBandwagon() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button type="button" className="group bg-[#FF7A00] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+          <button type="button" className="group bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
             Fazer Parte da Comunidade
             <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
           </button>

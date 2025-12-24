@@ -131,15 +131,15 @@ export default function FAQLossAversion() {
   return (
     <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="faq-loss-heading">
       {/* Background Glows */}
-      <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-[#FF7A00]/8 rounded-full blur-[150px] -translate-x-1/2" aria-hidden="true" />
-      <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-[#FF7A00]/6 rounded-full blur-[120px] translate-x-1/3" aria-hidden="true" />
+      <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[150px] -translate-x-1/2" aria-hidden="true" />
+      <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[120px] translate-x-1/3" aria-hidden="true" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Eyebrow */}
         <div className="text-center mb-6">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF7A00]/10 rounded-full border border-[#FF7A00]/20">
-            <span className="text-[#FF7A00]" aria-hidden="true">&#9888;</span>
-            <span className="text-sm font-semibold text-[#FF7A00] uppercase tracking-wider">Duvidas Frequentes</span>
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/20">
+            <span className="text-[#5C5CFF]" aria-hidden="true">&#9888;</span>
+            <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider">Duvidas Frequentes</span>
           </span>
         </div>
 
@@ -147,7 +147,7 @@ export default function FAQLossAversion() {
         <h2 id="faq-loss-heading" className="text-center text-3xl sm:text-4xl md:text-5xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
           Duvidas que Podem{' '}
           <br className="hidden sm:block" />
-          <span className="text-[#FF7A00]">Te Custar Caro</span>
+          <span className="text-[#5C5CFF]">Te Custar Caro</span>
         </h2>
 
         {/* Subheadline */}
@@ -168,11 +168,11 @@ export default function FAQLossAversion() {
           {/* Savings Summary - 5 columns, sticky */}
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-8">
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl border border-[#FF7A00]/15 shadow-[0_20px_60px_-15px_rgba(255,122,0,0.15)] overflow-hidden">
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl border border-[#5C5CFF]/15 shadow-[0_20px_60px_-15px_rgba(92,92,255,0.15)] overflow-hidden">
                 {/* Header */}
-                <div className="p-6 bg-gradient-to-br from-[#FF7A00]/10 to-[#FF7A00]/5 border-b border-[#FF7A00]/10">
-                  <p className="text-sm font-semibold text-[#FF7A00] uppercase tracking-wider mb-2">Economia Total Estimada</p>
-                  <p className="text-5xl font-black text-[#FF7A00] tracking-tight">{savingsSummary.total}</p>
+                <div className="p-6 bg-gradient-to-br from-[#5C5CFF]/10 to-[#5C5CFF]/5 border-b border-[#5C5CFF]/10">
+                  <p className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider mb-2">Economia Total Estimada</p>
+                  <p className="text-5xl font-black text-[#5C5CFF] tracking-tight">{savingsSummary.total}</p>
                   <p className="text-sm text-[#2B3259]/60 mt-1">por ano usando o Nexus</p>
                 </div>
 
@@ -180,7 +180,7 @@ export default function FAQLossAversion() {
                 <div className="p-6 space-y-4">
                   {savingsSummary.breakdown.map((item, index) => (
                     <div key={index} className="flex items-center gap-4 p-4 bg-[#EFF0F0]/80 rounded-2xl">
-                      <div className="w-12 h-12 bg-[#FF7A00]/10 rounded-xl flex items-center justify-center text-xl">
+                      <div className="w-12 h-12 bg-[#5C5CFF]/10 rounded-xl flex items-center justify-center text-xl">
                         {item.icon}
                       </div>
                       <div className="flex-1">
@@ -193,7 +193,7 @@ export default function FAQLossAversion() {
 
                 {/* CTA */}
                 <div className="p-6 pt-0">
-                  <button type="button" className="w-full bg-[#FF7A00] text-white font-bold text-base px-6 py-4 rounded-xl shadow-[0_12px_35px_-10px_rgba(255,122,0,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-0.5 hover:shadow-[0_18px_45px_-10px_rgba(255,122,0,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+                  <button type="button" className="w-full bg-[#5C5CFF] text-white font-bold text-base px-6 py-4 rounded-xl shadow-[0_12px_35px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-0.5 hover:shadow-[0_18px_45px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
                     Parar de Perder Agora
                   </button>
                 </div>
@@ -213,20 +213,20 @@ interface FAQAccordionItemProps {
 }
 
 function FAQAccordionItem({ item, isOpen, onToggle }: FAQAccordionItemProps) {
-  const savingsColor = item.savingsType === 'money' ? '#FF7A00' : item.savingsType === 'time' ? '#5C5CFF' : '#2B3259';
+  const savingsColor = item.savingsType === 'money' ? '#5C5CFF' : item.savingsType === 'time' ? '#5C5CFF' : '#2B3259';
 
   return (
-    <div className={`group bg-white/80 backdrop-blur-sm rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen ? 'border-[#FF7A00]/30 shadow-[0_15px_40px_-10px_rgba(255,122,0,0.2)]' : 'border-[#FF7A00]/10 shadow-[0_8px_30px_-15px_rgba(255,122,0,0.1)] hover:border-[#FF7A00]/20 hover:shadow-[0_12px_35px_-10px_rgba(255,122,0,0.15)]'}`}>
+    <div className={`group bg-white/80 backdrop-blur-sm rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen ? 'border-[#5C5CFF]/30 shadow-[0_15px_40px_-10px_rgba(92,92,255,0.2)]' : 'border-[#5C5CFF]/10 shadow-[0_8px_30px_-15px_rgba(92,92,255,0.1)] hover:border-[#5C5CFF]/20 hover:shadow-[0_12px_35px_-10px_rgba(92,92,255,0.15)]'}`}>
       {/* Question Header */}
       <button type="button" onClick={onToggle} className="w-full p-6 text-left flex items-start gap-4 cursor-pointer" aria-expanded={isOpen}>
         {/* Warning Icon */}
-        <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-[#FF7A00] text-white' : 'bg-[#FF7A00]/10 text-[#FF7A00]'}`}>
+        <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-[#5C5CFF] text-white' : 'bg-[#5C5CFF]/10 text-[#5C5CFF]'}`}>
           <span className="text-lg" aria-hidden="true">{isOpen ? '✓' : '!'}</span>
         </div>
 
         <div className="flex-1 min-w-0">
           {/* Loss Frame */}
-          <p className="text-xs font-semibold text-[#FF7A00] uppercase tracking-wider mb-1">{item.lossFrame}</p>
+          <p className="text-xs font-semibold text-[#5C5CFF] uppercase tracking-wider mb-1">{item.lossFrame}</p>
           {/* Question */}
           <h3 className="text-lg font-bold text-[#2B3259] leading-snug">{item.question}</h3>
         </div>

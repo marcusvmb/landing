@@ -362,7 +362,7 @@ export default function ComparisonAuthority() {
             className="
               absolute bottom-0 right-0
               w-40 h-40
-              bg-[#FF7A00]/20
+              bg-[#5C5CFF]/20
               rounded-full
               blur-3xl
               translate-x-1/2 translate-y-1/2
@@ -418,16 +418,16 @@ export default function ComparisonAuthority() {
           <button
             type="button"
             className="
-              bg-[#FF7A00]
+              bg-[#5C5CFF]
               text-white
               font-bold text-lg
               px-12 py-5
               rounded-full
-              shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)]
+              shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
               transition-all duration-300
               ease-[cubic-bezier(0.34,1.56,0.64,1)]
               hover:-translate-y-1 hover:scale-[1.02]
-              hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)]
+              hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
               active:translate-y-0 active:scale-[0.98]
               cursor-pointer
             "
@@ -502,14 +502,14 @@ function ComparisonTableRow({ item, isLast }: ComparisonTableRowProps) {
             className="
               flex-shrink-0
               w-7 h-7
-              bg-[#FF7A00]/10
+              bg-[#5C5CFF]/10
               rounded-lg
               flex items-center justify-center
               mt-0.5
             "
           >
             <svg
-              className="w-4 h-4 text-[#FF7A00]"
+              className="w-4 h-4 text-[#5C5CFF]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

@@ -101,15 +101,15 @@ export default function FinalCTALossAversion() {
       {/* CTA Section */}
       <section className="bg-[#2B3259] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="finalcta-loss-heading">
         {/* Background Glows */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#FF7A00]/10 rounded-full blur-[200px] translate-x-1/3 -translate-y-1/3" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#5C5CFF]/10 rounded-full blur-[200px] translate-x-1/3 -translate-y-1/3" aria-hidden="true" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#5C5CFF]/10 rounded-full blur-[150px] -translate-x-1/3 translate-y-1/3" aria-hidden="true" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           {/* Eyebrow */}
           <div className="text-center mb-6">
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF7A00]/15 rounded-full border border-[#FF7A00]/25">
-              <span className="w-2 h-2 bg-[#FF7A00] rounded-full animate-pulse" aria-hidden="true" />
-              <span className="text-sm font-semibold text-[#FF7A00] uppercase tracking-wider">Ultima Oportunidade</span>
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/15 rounded-full border border-[#5C5CFF]/25">
+              <span className="w-2 h-2 bg-[#5C5CFF] rounded-full animate-pulse" aria-hidden="true" />
+              <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider">Ultima Oportunidade</span>
             </span>
           </div>
 
@@ -117,23 +117,23 @@ export default function FinalCTALossAversion() {
           <h2 id="finalcta-loss-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-white mb-6">
             Cada Dia Sem o Nexus
             <br />
-            <span className="text-[#FF7A00]">e Dinheiro Perdido</span>
+            <span className="text-[#5C5CFF]">e Dinheiro Perdido</span>
           </h2>
 
           {/* Subheadline */}
           <p className="text-center text-lg text-white/60 max-w-2xl mx-auto mb-16">
             Enquanto você hesita, investidores com o Nexus estão{' '}
-            <span className="text-[#FF7A00] font-semibold">economizando R$47.000 por ano</span>.
+            <span className="text-[#5C5CFF] font-semibold">economizando R$47.000 por ano</span>.
           </p>
 
           {/* Main Content - Asymmetric Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Economia Card - 5 columns */}
             <div className="lg:col-span-5 order-2 lg:order-1">
-              <div className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-8 shadow-[0_30px_80px_-20px_rgba(255,122,0,0.2)]">
+              <div className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-8 shadow-[0_30px_80px_-20px_rgba(92,92,255,0.2)]">
                 {/* Total */}
                 <div className="text-center mb-8">
-                  <p className="text-sm font-semibold text-[#FF7A00] uppercase tracking-wider mb-2">Economia Estimada</p>
+                  <p className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider mb-2">Economia Estimada</p>
                   <div className="flex items-baseline justify-center gap-2">
                     <span className="text-6xl lg:text-7xl font-black text-white tracking-tight">{economiaData.total}</span>
                     <span className="text-xl text-white/50">/{economiaData.periodo.split(' ')[0]}</span>
@@ -147,7 +147,7 @@ export default function FinalCTALossAversion() {
                 <div className="space-y-4">
                   {economiaData.breakdown.map((item, index) => (
                     <div key={index} className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/5">
-                      <div className="w-12 h-12 bg-[#FF7A00]/15 rounded-xl flex items-center justify-center">
+                      <div className="w-12 h-12 bg-[#5C5CFF]/15 rounded-xl flex items-center justify-center">
                         <IconRenderer icon={item.icon} />
                       </div>
                       <div className="flex-1">
@@ -162,30 +162,30 @@ export default function FinalCTALossAversion() {
 
             {/* CTA + Urgencia - 7 columns */}
             <div className="lg:col-span-7 order-1 lg:order-2">
-              <div className="bg-gradient-to-br from-[#FF7A00]/15 to-[#FF7A00]/5 backdrop-blur-xl rounded-3xl border border-[#FF7A00]/20 p-8 lg:p-10 shadow-[0_40px_100px_-30px_rgba(255,122,0,0.3)]">
+              <div className="bg-gradient-to-br from-[#5C5CFF]/15 to-[#5C5CFF]/5 backdrop-blur-xl rounded-3xl border border-[#5C5CFF]/20 p-8 lg:p-10 shadow-[0_40px_100px_-30px_rgba(92,92,255,0.3)]">
                 {/* Urgency Counter */}
                 <div className="text-center mb-8">
                   <p className="text-sm font-medium text-white/60 mb-4">Oferta de lancamento encerra em:</p>
                   <div className="flex items-center justify-center gap-3">
                     <TimeBlock value={formatTime(timeLeft.hours)} label="horas" />
-                    <span className="text-3xl font-bold text-[#FF7A00]">:</span>
+                    <span className="text-3xl font-bold text-[#5C5CFF]">:</span>
                     <TimeBlock value={formatTime(timeLeft.minutes)} label="min" />
-                    <span className="text-3xl font-bold text-[#FF7A00]">:</span>
+                    <span className="text-3xl font-bold text-[#5C5CFF]">:</span>
                     <TimeBlock value={formatTime(timeLeft.seconds)} label="seg" />
                   </div>
                 </div>
 
                 {/* Spots Counter */}
                 <div className="flex items-center justify-center gap-3 mb-8 px-5 py-3 bg-white/5 rounded-full w-fit mx-auto border border-white/10">
-                  <span className="w-2 h-2 bg-[#FF7A00] rounded-full animate-pulse" />
-                  <span className="text-sm font-medium text-white">Apenas <span className="text-[#FF7A00] font-bold">{spotsLeft} vagas</span> com desconto de fundador</span>
+                  <span className="w-2 h-2 bg-[#5C5CFF] rounded-full animate-pulse" />
+                  <span className="text-sm font-medium text-white">Apenas <span className="text-[#5C5CFF] font-bold">{spotsLeft} vagas</span> com desconto de fundador</span>
                 </div>
 
                 {/* Email Form */}
                 <div className="space-y-4">
-                  <input type="email" placeholder="Seu melhor e-mail" className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder:text-white/40 focus:outline-none focus:border-[#FF7A00]/50 focus:bg-white/15 transition-all duration-300" />
+                  <input type="email" placeholder="Seu melhor e-mail" className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder:text-white/40 focus:outline-none focus:border-[#5C5CFF]/50 focus:bg-white/15 transition-all duration-300" />
 
-                  <button type="button" className="w-full bg-[#FF7A00] text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-[0_20px_50px_-15px_rgba(255,122,0,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:shadow-[0_25px_60px_-15px_rgba(255,122,0,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+                  <button type="button" className="w-full bg-[#5C5CFF] text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-[0_20px_50px_-15px_rgba(92,92,255,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:shadow-[0_25px_60px_-15px_rgba(92,92,255,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
                     Garantir Minha Vaga
                     <span className="ml-2" aria-hidden="true">&rarr;</span>
                   </button>
@@ -194,15 +194,15 @@ export default function FinalCTALossAversion() {
                 {/* Microcopy */}
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm text-white/50">
                   <span className="flex items-center gap-1.5">
-                    <svg className="w-4 h-4 text-[#FF7A00]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+                    <svg className="w-4 h-4 text-[#5C5CFF]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
                     7 dias gratis
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <svg className="w-4 h-4 text-[#FF7A00]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+                    <svg className="w-4 h-4 text-[#5C5CFF]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
                     Sem cartao
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <svg className="w-4 h-4 text-[#FF7A00]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
+                    <svg className="w-4 h-4 text-[#5C5CFF]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
                     Cancele quando quiser
                   </span>
                 </div>
@@ -213,7 +213,7 @@ export default function FinalCTALossAversion() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1E2240] py-12 border-t border-white/5" role="contentinfo">
+      <footer className="bg-[#2B3259] py-12 border-t border-white/5" role="contentinfo">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Logo */}
@@ -229,11 +229,11 @@ export default function FinalCTALossAversion() {
             {/* Links */}
             <div className="md:col-span-4 flex flex-wrap gap-6">
               {footerLinks.legal.map((link) => (
-                <a key={link.href} href={link.href} className="text-sm text-white/50 hover:text-[#FF7A00] transition-colors duration-300">
+                <a key={link.href} href={link.href} className="text-sm text-white/50 hover:text-[#5C5CFF] transition-colors duration-300">
                   {link.label}
                 </a>
               ))}
-              <a href="mailto:contato@nexusleiloes.com.br" className="text-sm text-white/50 hover:text-[#FF7A00] transition-colors duration-300">
+              <a href="mailto:contato@nexusleiloes.com.br" className="text-sm text-white/50 hover:text-[#5C5CFF] transition-colors duration-300">
                 Suporte
               </a>
             </div>
@@ -241,7 +241,7 @@ export default function FinalCTALossAversion() {
             {/* Social */}
             <div className="md:col-span-3 flex gap-4">
               {footerLinks.social.map((social) => (
-                <a key={social.href} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white/50 hover:bg-[#FF7A00]/20 hover:text-[#FF7A00] transition-all duration-300" aria-label={social.label}>
+                <a key={social.href} href={social.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-white/50 hover:bg-[#5C5CFF]/20 hover:text-[#5C5CFF] transition-all duration-300" aria-label={social.label}>
                   <SocialIcon icon={social.icon} />
                 </a>
               ))}
@@ -255,7 +255,7 @@ export default function FinalCTALossAversion() {
 
           {/* Urgency reminder */}
           <div className="mt-8 pt-8 border-t border-white/5 text-center">
-            <p className="text-sm text-[#FF7A00]/80">
+            <p className="text-sm text-[#5C5CFF]/80">
               Não perca mais tempo. Cada hora conta.
             </p>
           </div>
@@ -279,17 +279,17 @@ function TimeBlock({ value, label }: { value: string; label: string }) {
 function IconRenderer({ icon }: { icon: string }) {
   const iconMap: Record<string, React.ReactElement> = {
     clock: (
-      <svg className="w-6 h-6 text-[#FF7A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <svg className="w-6 h-6 text-[#5C5CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
     shield: (
-      <svg className="w-6 h-6 text-[#FF7A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <svg className="w-6 h-6 text-[#5C5CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
     target: (
-      <svg className="w-6 h-6 text-[#FF7A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <svg className="w-6 h-6 text-[#5C5CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
       </svg>
     ),

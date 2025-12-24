@@ -16,9 +16,10 @@ import { useState, useEffect, useCallback } from 'react';
  *
  * Design Tokens:
  * - Background: #EFF0F0 com dot pattern #5C5CFF
- * - Avatars: Gradient #5C5CFF -> #7B7BFF com border
+ * - Avatars: Solid #5C5CFF com border
  * - Form: Glassmorphism intenso (backdrop-blur-xl)
  * - Toast: Card branco com border azul e shadow
+ * - CTA: #5C5CFF (Primary Blue)
  *
  * Anti-AI Checklist:
  * [x] Dot pattern no background
@@ -129,7 +130,7 @@ export default function HeroSocialProof() {
                   className="
                     w-11 h-11
                     rounded-full
-                    bg-gradient-to-br from-[#5C5CFF] to-[#7B7BFF]
+                    bg-[#5C5CFF]
                     border-3 border-[#EFF0F0]
                     flex items-center justify-center
                     shadow-[0_4px_12px_-3px_rgba(92,92,255,0.4)]
@@ -355,19 +356,19 @@ export default function HeroSocialProof() {
               type="submit"
               className="
                 w-full
-                bg-[#FF7A00]
+                bg-[#5C5CFF]
                 text-white
                 font-bold
                 text-lg
                 px-8 py-4
                 rounded-full
-                shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)]
+                shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
                 transition-all
                 duration-300
                 ease-[cubic-bezier(0.34,1.56,0.64,1)]
                 hover:-translate-y-1
                 hover:scale-[1.01]
-                hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)]
+                hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
                 active:translate-y-0
                 active:scale-[0.99]
                 focus-visible:outline

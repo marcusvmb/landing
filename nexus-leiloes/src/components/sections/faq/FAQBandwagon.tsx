@@ -141,7 +141,7 @@ export default function FAQBandwagon() {
     <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="faq-bandwagon-heading">
       {/* Background Glows */}
       <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[150px] translate-x-1/3" aria-hidden="true" />
-      <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-[#FF7A00]/6 rounded-full blur-[120px] -translate-x-1/3" aria-hidden="true" />
+      <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[120px] -translate-x-1/3" aria-hidden="true" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Eyebrow with Live Counter */}
@@ -150,7 +150,7 @@ export default function FAQBandwagon() {
             {/* Avatars Stack */}
             <div className="flex -space-x-2">
               <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#5C5CFF] to-[#5C5CFF]/70 border-2 border-white flex items-center justify-center text-white text-xs font-bold">M</div>
-              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#FF7A00] to-[#FF7A00]/70 border-2 border-white flex items-center justify-center text-white text-xs font-bold">A</div>
+              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#5C5CFF] to-[#5C5CFF]/70 border-2 border-white flex items-center justify-center text-white text-xs font-bold">A</div>
               <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#2B3259] to-[#2B3259]/70 border-2 border-white flex items-center justify-center text-white text-xs font-bold">C</div>
               <div className="w-7 h-7 rounded-full bg-[#5C5CFF] border-2 border-white flex items-center justify-center text-white text-xs font-bold">+</div>
             </div>
@@ -204,7 +204,7 @@ export default function FAQBandwagon() {
               <p className="text-sm text-[#2B3259]/60 mt-1">investidores na fila</p>
             </div>
             <div className="text-center">
-              <p className="text-4xl font-black text-[#FF7A00]">96%</p>
+              <p className="text-4xl font-black text-[#5C5CFF]">96%</p>
               <p className="text-sm text-[#2B3259]/60 mt-1">acham as respostas uteis</p>
             </div>
             <div className="text-center">
@@ -216,7 +216,7 @@ export default function FAQBandwagon() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button type="button" className="bg-[#FF7A00] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+          <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
             Entrar para a Lista VIP
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
@@ -245,7 +245,7 @@ function FAQBandwagonCard({ item, isOpen, onToggle, maxCount, isFeatured }: FAQB
       <button type="button" onClick={onToggle} className="w-full p-6 text-left cursor-pointer" aria-expanded={isOpen}>
         <div className="flex items-start gap-4">
           {/* Rank Badge */}
-          <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center font-black transition-all duration-300 ${item.rank === 1 ? 'bg-gradient-to-br from-[#FF7A00] to-[#FF7A00]/80 text-white shadow-[0_8px_20px_-5px_rgba(255,122,0,0.4)]' : isOpen ? 'bg-[#5C5CFF] text-white' : 'bg-[#5C5CFF]/10 text-[#5C5CFF]'}`}>
+          <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center font-black transition-all duration-300 ${item.rank === 1 ? 'bg-gradient-to-br from-[#5C5CFF] to-[#5C5CFF]/80 text-white shadow-[0_8px_20px_-5px_rgba(92,92,255,0.4)]' : isOpen ? 'bg-[#5C5CFF] text-white' : 'bg-[#5C5CFF]/10 text-[#5C5CFF]'}`}>
             #{item.rank}
           </div>
 
@@ -259,7 +259,7 @@ function FAQBandwagonCard({ item, isOpen, onToggle, maxCount, isFeatured }: FAQB
                 <span className="text-xs font-semibold text-[#5C5CFF]">{item.askedCount} pessoas perguntaram</span>
               </span>
               {item.rank === 1 && (
-                <span className="px-2 py-0.5 bg-[#FF7A00]/10 text-[#FF7A00] text-xs font-bold rounded-full">MAIS PERGUNTADA</span>
+                <span className="px-2 py-0.5 bg-[#5C5CFF]/10 text-[#5C5CFF] text-xs font-bold rounded-full">MAIS PERGUNTADA</span>
               )}
             </div>
 
@@ -289,9 +289,9 @@ function FAQBandwagonCard({ item, isOpen, onToggle, maxCount, isFeatured }: FAQB
           {/* Engagement Stats */}
           <div className="flex items-center gap-4 flex-wrap">
             {/* Helpful */}
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-green-500/10 rounded-full">
-              <span className="text-green-600">&#128077;</span>
-              <span className="text-sm font-semibold text-green-700">Util: {item.helpfulPercent}%</span>
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-[#5C5CFF]/10 rounded-full">
+              <span className="text-[#5C5CFF]">&#128077;</span>
+              <span className="text-sm font-semibold text-[#5C5CFF]">Util: {item.helpfulPercent}%</span>
             </div>
 
             {/* Comments */}

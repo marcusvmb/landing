@@ -130,7 +130,7 @@ export default function FAQTransformation() {
   return (
     <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="faq-transform-heading">
       {/* Background Gradient Glows */}
-      <div className="absolute top-0 left-1/2 w-[800px] h-[400px] bg-gradient-to-r from-[#FF7A00]/5 via-transparent to-[#5C5CFF]/10 rounded-full blur-[100px] -translate-x-1/2" aria-hidden="true" />
+      <div className="absolute top-0 left-1/2 w-[800px] h-[400px] bg-gradient-to-r from-[#5C5CFF]/5 via-transparent to-[#5C5CFF]/10 rounded-full blur-[100px] -translate-x-1/2" aria-hidden="true" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#5C5CFF]/8 rounded-full blur-[120px] translate-x-1/4" aria-hidden="true" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
@@ -209,7 +209,7 @@ export default function FAQTransformation() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {stage.questions.map((question, qIndex) => (
                   <div key={question.id} className={`${qIndex === 0 ? 'md:col-span-1' : ''}`}>
-                    <QuestionCard question={question} isOpen={openQuestionId === question.id} onToggle={() => toggleQuestion(question.id)} stageColor={stage.id === 'antes' ? '#FF7A00' : stage.id === 'durante' ? '#5C5CFF' : '#2B3259'} />
+                    <QuestionCard question={question} isOpen={openQuestionId === question.id} onToggle={() => toggleQuestion(question.id)} stageColor={stage.id === 'antes' ? '#5C5CFF' : stage.id === 'durante' ? '#5C5CFF' : '#2B3259'} />
                   </div>
                 ))}
               </div>
@@ -228,7 +228,7 @@ export default function FAQTransformation() {
 
             {/* Arrow */}
             <div className="hidden md:block">
-              <div className="w-20 h-1 bg-gradient-to-r from-[#FF7A00]/30 to-[#5C5CFF] rounded-full relative">
+              <div className="w-20 h-1 bg-gradient-to-r from-[#5C5CFF]/30 to-[#5C5CFF] rounded-full relative">
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[10px] border-l-[#5C5CFF]" />
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function FAQTransformation() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button type="button" className="bg-[#FF7A00] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+          <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
             Iniciar Minha Transformação
           </button>
         </div>

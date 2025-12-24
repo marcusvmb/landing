@@ -63,14 +63,14 @@ export default function SocialProofLossAversion() {
     <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="social-loss-heading">
       {/* Background Glows */}
       <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[120px] translate-x-1/3" aria-hidden="true" />
-      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-[#FF7A00]/6 rounded-full blur-[100px] -translate-x-1/3" aria-hidden="true" />
+      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-[#5C5CFF]/6 rounded-full blur-[100px] -translate-x-1/3" aria-hidden="true" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Eyebrow */}
         <div className="text-center mb-6">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF7A00]/10 rounded-full border border-[#FF7A00]/20">
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/20">
             <span className="text-lg">🛡️</span>
-            <span className="text-sm font-bold text-[#FF7A00] uppercase tracking-wider">Perdas evitadas</span>
+            <span className="text-sm font-bold text-[#5C5CFF] uppercase tracking-wider">Perdas evitadas</span>
           </span>
         </div>
 
@@ -78,7 +78,7 @@ export default function SocialProofLossAversion() {
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 text-center">
             <h2 id="social-loss-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
-              Eles <span className="text-[#FF7A00] line-through opacity-70">Quase Perderam</span>
+              Eles <span className="text-[#5C5CFF] line-through opacity-70">Quase Perderam</span>
               <br />
               <span className="text-[#5C5CFF]">Ate Descobrirem o Nexus</span>
             </h2>
@@ -111,7 +111,7 @@ export default function SocialProofLossAversion() {
         </div>
 
         {/* Total Savings Summary */}
-        <div className="mt-16 p-8 bg-gradient-to-br from-[#5C5CFF]/10 via-white/80 to-[#FF7A00]/5 backdrop-blur-sm rounded-3xl border border-[#5C5CFF]/15 shadow-[0_20px_60px_-15px_rgba(92,92,255,0.2)] text-center">
+        <div className="mt-16 p-8 bg-gradient-to-br from-[#5C5CFF]/10 via-white/80 to-[#5C5CFF]/5 backdrop-blur-sm rounded-3xl border border-[#5C5CFF]/15 shadow-[0_20px_60px_-15px_rgba(92,92,255,0.2)] text-center">
           <p className="text-[#2B3259]/60 text-lg mb-2">Total de perdas evitadas pelos usuarios:</p>
           <p className="text-4xl md:text-5xl font-black text-[#5C5CFF]">+R$2.4 milhoes</p>
           <p className="text-sm text-[#2B3259]/50 mt-2">nos ultimos 12 meses</p>
@@ -119,7 +119,7 @@ export default function SocialProofLossAversion() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button type="button" className="bg-[#FF7A00] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+          <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
             Evitar Minhas Perdas Também
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">Junte-se aos investidores que pararam de perder dinheiro</p>

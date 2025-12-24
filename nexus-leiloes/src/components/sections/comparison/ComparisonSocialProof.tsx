@@ -194,7 +194,7 @@ export default function ComparisonSocialProof() {
         className="
           absolute bottom-20 left-0
           w-[400px] h-[400px]
-          bg-[#FF7A00]/5
+          bg-[#5C5CFF]/5
           rounded-full
           blur-[100px]
           -translate-x-1/3
@@ -298,7 +298,7 @@ export default function ComparisonSocialProof() {
             className="
               absolute -bottom-20 -right-20
               w-60 h-60
-              bg-[#FF7A00]/20
+              bg-[#5C5CFF]/20
               rounded-full
               blur-3xl
             "
@@ -346,11 +346,11 @@ export default function ComparisonSocialProof() {
                   <div
                     className="
                       w-12 h-12
-                      bg-[#FF7A00]
+                      bg-[#5C5CFF]
                       rounded-full
                       border-3 border-[#2B3259]
                       flex items-center justify-center
-                      shadow-[0_4px_15px_-3px_rgba(255,122,0,0.4)]
+                      shadow-[0_4px_15px_-3px_rgba(92,92,255,0.4)]
                     "
                   >
                     <span className="text-xs font-bold text-white">+541</span>
@@ -360,16 +360,16 @@ export default function ComparisonSocialProof() {
                 <button
                   type="button"
                   className="
-                    bg-[#FF7A00]
+                    bg-[#5C5CFF]
                     text-white
                     font-bold text-base
                     px-8 py-4
                     rounded-full
-                    shadow-[0_10px_30px_-8px_rgba(255,122,0,0.5)]
+                    shadow-[0_10px_30px_-8px_rgba(92,92,255,0.5)]
                     transition-all duration-300
                     ease-[cubic-bezier(0.34,1.56,0.64,1)]
                     hover:-translate-y-1 hover:scale-[1.02]
-                    hover:shadow-[0_15px_40px_-8px_rgba(255,122,0,0.6)]
+                    hover:shadow-[0_15px_40px_-8px_rgba(92,92,255,0.6)]
                     active:translate-y-0 active:scale-[0.98]
                     cursor-pointer
                   "
@@ -460,21 +460,21 @@ function ComparisonCard({ item, index }: ComparisonCardProps) {
               p-4
               bg-[#2B3259]/[0.03]
               rounded-2xl
-              border border-[#FF7A00]/10
+              border border-[#5C5CFF]/10
             "
           >
             <div className="flex items-center gap-3">
               <div
                 className="
                   w-8 h-8
-                  bg-[#FF7A00]/10
+                  bg-[#5C5CFF]/10
                   rounded-lg
                   flex items-center justify-center
                   flex-shrink-0
                 "
               >
                 <svg
-                  className="w-4 h-4 text-[#FF7A00]"
+                  className="w-4 h-4 text-[#5C5CFF]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

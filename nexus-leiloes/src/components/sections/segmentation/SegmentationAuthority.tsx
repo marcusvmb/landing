@@ -140,7 +140,7 @@ export default function SegmentationAuthority() {
         className="
           absolute bottom-1/3 right-1/4
           w-[400px] h-[400px]
-          bg-[#FF7A00]/8
+          bg-[#5C5CFF]/8
           rounded-full
           blur-[120px]
         "
@@ -164,7 +164,7 @@ export default function SegmentationAuthority() {
             <span
               className="
                 px-2.5 py-1
-                bg-gradient-to-r from-[#5C5CFF] to-[#FF7A00]
+                bg-gradient-to-r from-[#5C5CFF] to-[#5C5CFF]
                 rounded-md
                 text-[10px] font-black text-white
                 uppercase tracking-widest
@@ -193,7 +193,7 @@ export default function SegmentationAuthority() {
         >
           A Ferramenta <span className="text-[#5C5CFF]">Profissional</span>
           <br className="hidden sm:block" />
-          Para Cada <span className="text-[#FF7A00]">Perfil</span>
+          Para Cada <span className="text-[#5C5CFF]">Perfil</span>
         </h2>
 
         {/* Subheadline */}
@@ -226,7 +226,7 @@ export default function SegmentationAuthority() {
               edition="Pro Edition"
               features={assessorFeatures}
               ctaText="Acessar Versao Pro"
-              primaryColor="#FF7A00"
+              primaryColor="#5C5CFF"
             />
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function SegmentationAuthority() {
           <div
             className="
               w-16 h-16
-              bg-gradient-to-br from-[#5C5CFF] to-[#FF7A00]
+              bg-gradient-to-br from-[#5C5CFF] to-[#5C5CFF]
               rounded-2xl
               flex items-center justify-center
               shadow-[0_10px_30px_-10px_rgba(92,92,255,0.3)]

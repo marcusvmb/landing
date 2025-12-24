@@ -85,7 +85,7 @@ export default function FinalCTATransformation() {
   return (
     <>
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-[#5C5CFF] via-[#4848CC] to-[#2B3259] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="finalcta-transformation-heading">
+      <section className="bg-gradient-to-br from-[#5C5CFF] via-[#5C5CFF] to-[#2B3259] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="finalcta-transformation-heading">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10" aria-hidden="true">
           <div className="absolute top-20 left-10 w-40 h-40 border border-white/20 rounded-full" />
@@ -109,7 +109,7 @@ export default function FinalCTATransformation() {
           <h2 id="finalcta-transformation-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-white mb-6">
             De Buscas Caoticas Para
             <br />
-            <span className="text-[#FF7A00]">Investimentos Precisos</span>
+            <span className="text-[#EFF0F0]">Investimentos Precisos</span>
           </h2>
 
           {/* Subheadline */}
@@ -144,22 +144,22 @@ export default function FinalCTATransformation() {
             {/* Arrow connector */}
             <div className="lg:col-span-2 flex items-center justify-center py-4 lg:py-0">
               <div className="hidden lg:flex flex-col items-center gap-2">
-                <div className="w-px h-8 bg-gradient-to-b from-transparent to-[#FF7A00]/50" />
-                <div className="w-16 h-16 bg-[#FF7A00] rounded-full flex items-center justify-center shadow-[0_15px_40px_-10px_rgba(255,122,0,0.5)]">
-                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <div className="w-px h-8 bg-gradient-to-b from-transparent to-[#EFF0F0]/50" />
+                <div className="w-16 h-16 bg-[#EFF0F0] rounded-full flex items-center justify-center shadow-[0_15px_40px_-10px_rgba(239,240,240,0.5)]">
+                  <svg className="w-8 h-8 text-[#2B3259]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
-                <div className="w-px h-8 bg-gradient-to-b from-[#FF7A00]/50 to-transparent" />
+                <div className="w-px h-8 bg-gradient-to-b from-[#EFF0F0]/50 to-transparent" />
               </div>
               <div className="lg:hidden flex items-center gap-4">
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[#FF7A00]/50" />
-                <div className="w-12 h-12 bg-[#FF7A00] rounded-full flex items-center justify-center shadow-[0_10px_30px_-8px_rgba(255,122,0,0.5)]">
-                  <svg className="w-6 h-6 text-white rotate-90 lg:rotate-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent to-[#EFF0F0]/50" />
+                <div className="w-12 h-12 bg-[#EFF0F0] rounded-full flex items-center justify-center shadow-[0_10px_30px_-8px_rgba(239,240,240,0.5)]">
+                  <svg className="w-6 h-6 text-[#2B3259] rotate-90 lg:rotate-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                   </svg>
                 </div>
-                <div className="flex-1 h-px bg-gradient-to-r from-[#FF7A00]/50 to-transparent" />
+                <div className="flex-1 h-px bg-gradient-to-r from-[#EFF0F0]/50 to-transparent" />
               </div>
             </div>
 
@@ -167,8 +167,8 @@ export default function FinalCTATransformation() {
             <div className="lg:col-span-5 lg:z-10">
               <div className="h-full bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-xl rounded-3xl border border-white/20 p-8 shadow-[0_30px_80px_-20px_rgba(255,255,255,0.1)]">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-[#FF7A00]/20 rounded-xl flex items-center justify-center">
-                    <span className="text-[#FF7A00] text-xl" aria-hidden="true">&#10003;</span>
+                  <div className="w-10 h-10 bg-[#EFF0F0]/20 rounded-xl flex items-center justify-center">
+                    <span className="text-[#EFF0F0] text-xl" aria-hidden="true">&#10003;</span>
                   </div>
                   <h3 className="text-xl font-bold text-white">{afterState.title}</h3>
                 </div>
@@ -187,7 +187,7 @@ export default function FinalCTATransformation() {
 
           {/* CTA */}
           <div className="text-center">
-            <button type="button" className="bg-[#FF7A00] text-white font-bold text-lg px-12 py-5 rounded-full shadow-[0_20px_50px_-15px_rgba(255,122,0,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_25px_60px_-15px_rgba(255,122,0,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+            <button type="button" className="bg-[#EFF0F0] text-[#2B3259] font-bold text-lg px-12 py-5 rounded-full shadow-[0_20px_50px_-15px_rgba(239,240,240,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_25px_60px_-15px_rgba(239,240,240,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
               Iniciar Minha Jornada
               <span className="ml-2" aria-hidden="true">&rarr;</span>
             </button>
@@ -201,7 +201,7 @@ export default function FinalCTATransformation() {
       </section>
 
       {/* Footer with Onboarding Timeline */}
-      <footer className="bg-[#1E2240] py-16 border-t border-white/5" role="contentinfo">
+      <footer className="bg-[#2B3259] py-16 border-t border-white/5" role="contentinfo">
         <div className="max-w-6xl mx-auto px-6">
           {/* Onboarding Timeline */}
           <div className="mb-12">
@@ -310,29 +310,29 @@ function BeforeIcon({ icon }: { icon: string }) {
 function AfterIcon({ icon }: { icon: string }) {
   const iconMap: Record<string, React.ReactElement> = {
     unified: (
-      <div className="w-8 h-8 bg-[#FF7A00]/20 rounded-lg flex items-center justify-center">
-        <svg className="w-4 h-4 text-[#FF7A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <div className="w-8 h-8 bg-[#5C5CFF]/20 rounded-lg flex items-center justify-center">
+        <svg className="w-4 h-4 text-[#5C5CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
         </svg>
       </div>
     ),
     fast: (
-      <div className="w-8 h-8 bg-[#FF7A00]/20 rounded-lg flex items-center justify-center">
-        <svg className="w-4 h-4 text-[#FF7A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <div className="w-8 h-8 bg-[#5C5CFF]/20 rounded-lg flex items-center justify-center">
+        <svg className="w-4 h-4 text-[#5C5CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       </div>
     ),
     calc: (
-      <div className="w-8 h-8 bg-[#FF7A00]/20 rounded-lg flex items-center justify-center">
-        <svg className="w-4 h-4 text-[#FF7A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <div className="w-8 h-8 bg-[#5C5CFF]/20 rounded-lg flex items-center justify-center">
+        <svg className="w-4 h-4 text-[#5C5CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       </div>
     ),
     alert: (
-      <div className="w-8 h-8 bg-[#FF7A00]/20 rounded-lg flex items-center justify-center">
-        <svg className="w-4 h-4 text-[#FF7A00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <div className="w-8 h-8 bg-[#5C5CFF]/20 rounded-lg flex items-center justify-center">
+        <svg className="w-4 h-4 text-[#5C5CFF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
         </svg>
       </div>

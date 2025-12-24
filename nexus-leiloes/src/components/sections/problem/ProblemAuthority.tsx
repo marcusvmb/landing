@@ -18,7 +18,7 @@
 export default function ProblemAuthority() {
   return (
     <section
-      className="bg-[#EFF0F0] py-32 lg:py-40 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
       aria-labelledby="problem-authority-heading"
     >
       {/* Subtle center glow */}
@@ -54,12 +54,12 @@ export default function ProblemAuthority() {
             O problema não e você.
             <br />
             E usar{' '}
-            <span className="relative inline-block text-[#FF7A00]">
+            <span className="relative inline-block text-[#5C5CFF]">
               {/* Glow behind number */}
               <span
                 className="
                   absolute inset-0
-                  bg-[#FF7A00]/10
+                  bg-[#5C5CFF]/10
                   blur-xl
                   rounded-full
                   scale-150
@@ -113,7 +113,7 @@ export default function ProblemAuthority() {
                     text-[#2B3259]/40
                     font-semibold
                     line-through
-                    decoration-[#FF7A00]/50
+                    decoration-[#5C5CFF]/50
                     decoration-2
                   "
                 >
@@ -186,7 +186,7 @@ export default function ProblemAuthority() {
                 className="
                   w-20 h-20
                   mx-auto mb-6
-                  bg-gradient-to-br from-[#5C5CFF] to-[#7B7BFF]
+                  bg-gradient-to-br from-[#5C5CFF] to-[#5C5CFF]
                   rounded-2xl
                   flex items-center justify-center
                   shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]

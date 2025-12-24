@@ -56,7 +56,7 @@ export default function SolutionLossAversion() {
               shadow-[0_8px_30px_-10px_rgba(92,92,255,0.15)]
             "
           >
-            <span className="text-[#FF7A00] line-through opacity-60 text-sm font-medium">
+            <span className="text-[#5C5CFF] line-through opacity-60 text-sm font-medium">
               Perder
             </span>
             <span className="text-[#5C5CFF]" aria-hidden="true">
@@ -178,16 +178,16 @@ export default function SolutionLossAversion() {
           <button
             type="button"
             className="
-              bg-[#FF7A00]
+              bg-[#5C5CFF]
               text-white
               font-bold text-lg
               px-10 py-5
               rounded-full
-              shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)]
+              shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
               transition-all duration-300
               ease-[cubic-bezier(0.34,1.56,0.64,1)]
               hover:-translate-y-1 hover:scale-[1.02]
-              hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)]
+              hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
               active:translate-y-0 active:scale-[0.98]
               focus-visible:outline focus-visible:outline-2
               focus-visible:outline-offset-2 focus-visible:outline-[#2B3259]
@@ -249,15 +249,15 @@ function PillarCard({
       <div
         className="
           px-6 py-4
-          bg-[#FF7A00]/5
-          border-b border-[#FF7A00]/10
+          bg-[#5C5CFF]/5
+          border-b border-[#5C5CFF]/10
         "
       >
-        <span className="text-xs font-semibold text-[#FF7A00]/60 uppercase tracking-widest">
+        <span className="text-xs font-semibold text-[#5C5CFF]/60 uppercase tracking-widest">
           {beforeLabel}
         </span>
         <div className="flex items-baseline gap-2 mt-1">
-          <span className="text-xl font-bold text-[#FF7A00]/70 line-through decoration-2">
+          <span className="text-xl font-bold text-[#5C5CFF]/70 line-through decoration-2">
             {beforeValue}
           </span>
           <span className="text-sm text-[#2B3259]/50">{beforeDesc}</span>

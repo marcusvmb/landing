@@ -136,7 +136,7 @@ export default function FeaturesTransformation() {
         className="
           absolute top-0 left-1/2
           w-[800px] h-[400px]
-          bg-gradient-to-r from-[#FF7A00]/5 via-transparent to-[#5C5CFF]/10
+          bg-gradient-to-r from-[#5C5CFF]/5 via-transparent to-[#5C5CFF]/10
           rounded-full
           blur-[100px]
           -translate-x-1/2
@@ -236,7 +236,7 @@ export default function FeaturesTransformation() {
               <div
                 className="
                   w-20 h-1
-                  bg-gradient-to-r from-[#FF7A00]/30 to-[#5C5CFF]
+                  bg-gradient-to-r from-[#5C5CFF]/30 to-[#5C5CFF]
                   rounded-full
                   relative
                 "
@@ -267,16 +267,16 @@ export default function FeaturesTransformation() {
           <button
             type="button"
             className="
-              bg-[#FF7A00]
+              bg-[#5C5CFF]
               text-white
               font-bold text-lg
               px-10 py-5
               rounded-full
-              shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)]
+              shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
               transition-all duration-300
               ease-[cubic-bezier(0.34,1.56,0.64,1)]
               hover:-translate-y-1 hover:scale-[1.02]
-              hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)]
+              hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
               active:translate-y-0 active:scale-[0.98]
               cursor-pointer
             "

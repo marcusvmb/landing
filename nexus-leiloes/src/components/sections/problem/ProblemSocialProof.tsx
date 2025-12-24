@@ -68,7 +68,7 @@ export default function ProblemSocialProof() {
                     className="
                       w-12 h-12
                       rounded-full
-                      bg-gradient-to-br from-[#5C5CFF] to-[#7B7BFF]
+                      bg-gradient-to-br from-[#5C5CFF] to-[#5C5CFF]
                       flex items-center justify-center
                       shadow-[0_4px_12px_-3px_rgba(92,92,255,0.4)]
                       flex-shrink-0
@@ -106,7 +106,7 @@ export default function ProblemSocialProof() {
                     className="
                       w-12 h-12
                       rounded-full
-                      bg-gradient-to-br from-[#5C5CFF] to-[#7B7BFF]
+                      bg-gradient-to-br from-[#5C5CFF] to-[#5C5CFF]
                       flex items-center justify-center
                       shadow-[0_4px_12px_-3px_rgba(92,92,255,0.4)]
                       flex-shrink-0
@@ -145,7 +145,7 @@ export default function ProblemSocialProof() {
                       className="
                         w-8 h-8
                         rounded-full
-                        bg-gradient-to-br from-[#5C5CFF] to-[#7B7BFF]
+                        bg-gradient-to-br from-[#5C5CFF] to-[#5C5CFF]
                         border-2 border-white
                         flex items-center justify-center
                         text-white text-xs font-bold
@@ -183,7 +183,7 @@ export default function ProblemSocialProof() {
               className="
                 inline-block
                 text-sm font-semibold
-                text-[#FF7A00]/70
+                text-[#5C5CFF]/70
                 tracking-widest uppercase
                 mb-6
               "
@@ -225,9 +225,9 @@ export default function ProblemSocialProof() {
                   className="
                     w-10 h-10
                     rounded-lg
-                    bg-[#FF7A00]/10
+                    bg-[#5C5CFF]/10
                     flex items-center justify-center
-                    text-[#FF7A00]
+                    text-[#5C5CFF]
                     flex-shrink-0
                   "
                   aria-hidden="true"
@@ -253,9 +253,9 @@ export default function ProblemSocialProof() {
                   className="
                     w-10 h-10
                     rounded-lg
-                    bg-[#FF7A00]/10
+                    bg-[#5C5CFF]/10
                     flex items-center justify-center
-                    text-[#FF7A00]
+                    text-[#5C5CFF]
                     flex-shrink-0
                   "
                   aria-hidden="true"
@@ -281,9 +281,9 @@ export default function ProblemSocialProof() {
                   className="
                     w-10 h-10
                     rounded-lg
-                    bg-[#FF7A00]/10
+                    bg-[#5C5CFF]/10
                     flex items-center justify-center
-                    text-[#FF7A00]
+                    text-[#5C5CFF]
                     flex-shrink-0
                   "
                   aria-hidden="true"
@@ -303,8 +303,8 @@ export default function ProblemSocialProof() {
                 p-6
                 bg-white
                 rounded-2xl
-                border border-[#FF7A00]/15
-                shadow-[0_10px_30px_-10px_rgba(255,122,0,0.1)]
+                border border-[#5C5CFF]/15
+                shadow-[0_10px_30px_-10px_rgba(92,92,255,0.1)]
               "
             >
               <p className="text-[#2B3259]/60 text-sm mb-2">
@@ -333,15 +333,15 @@ export default function ProblemSocialProof() {
           <button
             type="button"
             className="
-              bg-[#FF7A00]
+              bg-[#5C5CFF]
               text-white
               font-bold
               text-lg
               px-10 py-5
               rounded-full
-              shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)]
+              shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
               hover:-translate-y-1
-              hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)]
+              hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
               transition-all duration-300
               focus-visible:outline
               focus-visible:outline-2

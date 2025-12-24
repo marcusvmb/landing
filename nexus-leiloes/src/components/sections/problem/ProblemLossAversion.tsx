@@ -27,8 +27,8 @@ export default function ProblemLossAversion() {
         style={{
           backgroundImage: `repeating-linear-gradient(
             -45deg,
-            #FF7A00,
-            #FF7A00 2px,
+            #5C5CFF,
+            #5C5CFF 2px,
             transparent 2px,
             transparent 20px
           )`,
@@ -41,7 +41,7 @@ export default function ProblemLossAversion() {
           absolute
           top-0 right-0
           w-[500px] h-[500px]
-          bg-[#FF7A00]/5
+          bg-[#5C5CFF]/5
           rounded-full
           blur-[120px]
           translate-x-1/4 -translate-y-1/4
@@ -51,9 +51,9 @@ export default function ProblemLossAversion() {
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Eyebrow */}
         <div className="text-center mb-6">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF7A00]/10 rounded-full border border-[#FF7A00]/15">
-            <span className="w-2 h-2 bg-[#FF7A00] rounded-full animate-pulse" aria-hidden="true" />
-            <span className="text-sm font-semibold text-[#FF7A00] uppercase tracking-widest">
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/15">
+            <span className="w-2 h-2 bg-[#5C5CFF] rounded-full animate-pulse" aria-hidden="true" />
+            <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-widest">
               Enquanto você espera
             </span>
           </span>
@@ -79,7 +79,7 @@ export default function ProblemLossAversion() {
               Enquanto você le isso,
               <br />
               um negocio lucrativo esta{' '}
-              <span className="text-[#FF7A00]">escapando</span>
+              <span className="text-[#5C5CFF]">escapando</span>
               <br />
               das suas maos
             </h2>
@@ -93,8 +93,8 @@ export default function ProblemLossAversion() {
                 p-8 lg:p-10
                 bg-white
                 rounded-3xl
-                border-2 border-[#FF7A00]/20
-                shadow-[0_20px_60px_-15px_rgba(255,122,0,0.25)]
+                border-2 border-[#5C5CFF]/20
+                shadow-[0_20px_60px_-15px_rgba(92,92,255,0.25)]
               "
             >
               {/* Pulsing dot */}
@@ -102,15 +102,15 @@ export default function ProblemLossAversion() {
                 className="
                   absolute -top-2 -right-2
                   w-5 h-5
-                  bg-[#FF7A00]
+                  bg-[#5C5CFF]
                   rounded-full
                 "
                 aria-hidden="true"
               >
-                <span className="absolute inset-0 bg-[#FF7A00] rounded-full animate-ping opacity-75" />
+                <span className="absolute inset-0 bg-[#5C5CFF] rounded-full animate-ping opacity-75" />
               </div>
 
-              <span className="text-[#FF7A00]/50 text-sm font-bold uppercase tracking-widest">
+              <span className="text-[#5C5CFF]/50 text-sm font-bold uppercase tracking-widest">
                 Perda Estimada
               </span>
               <div
@@ -119,7 +119,7 @@ export default function ProblemLossAversion() {
                   sm:text-5xl
                   lg:text-6xl
                   font-black
-                  text-[#FF7A00]
+                  text-[#5C5CFF]
                   tracking-[-0.03em]
                   mt-2
                 "
@@ -141,14 +141,14 @@ export default function ProblemLossAversion() {
                 bg-white/80
                 backdrop-blur-sm
                 rounded-2xl
-                border border-[#FF7A00]/10
-                shadow-[0_10px_30px_-10px_rgba(255,122,0,0.15)]
-                hover:border-[#FF7A00]/30
-                hover:shadow-[0_15px_40px_-10px_rgba(255,122,0,0.25)]
+                border border-[#5C5CFF]/10
+                shadow-[0_10px_30px_-10px_rgba(92,92,255,0.15)]
+                hover:border-[#5C5CFF]/30
+                hover:shadow-[0_15px_40px_-10px_rgba(92,92,255,0.25)]
                 transition-all duration-300
               "
             >
-              <div className="w-12 h-12 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center mb-4" aria-hidden="true">
+              <div className="w-12 h-12 rounded-xl bg-[#5C5CFF]/10 flex items-center justify-center mb-4" aria-hidden="true">
                 <span className="text-2xl">&#9200;</span>
               </div>
               <h3 className="font-bold text-lg text-[#2B3259] mb-1">2 horas/dia</h3>
@@ -164,14 +164,14 @@ export default function ProblemLossAversion() {
                 bg-white/80
                 backdrop-blur-sm
                 rounded-2xl
-                border border-[#FF7A00]/10
-                shadow-[0_10px_30px_-10px_rgba(255,122,0,0.15)]
-                hover:border-[#FF7A00]/30
-                hover:shadow-[0_15px_40px_-10px_rgba(255,122,0,0.25)]
+                border border-[#5C5CFF]/10
+                shadow-[0_10px_30px_-10px_rgba(92,92,255,0.15)]
+                hover:border-[#5C5CFF]/30
+                hover:shadow-[0_15px_40px_-10px_rgba(92,92,255,0.25)]
                 transition-all duration-300
               "
             >
-              <div className="w-12 h-12 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center mb-4" aria-hidden="true">
+              <div className="w-12 h-12 rounded-xl bg-[#5C5CFF]/10 flex items-center justify-center mb-4" aria-hidden="true">
                 <span className="text-2xl">&#10060;</span>
               </div>
               <h3 className="font-bold text-lg text-[#2B3259] mb-1">Oportunidades perdidas</h3>
@@ -187,14 +187,14 @@ export default function ProblemLossAversion() {
                 bg-white/80
                 backdrop-blur-sm
                 rounded-2xl
-                border border-[#FF7A00]/10
-                shadow-[0_10px_30px_-10px_rgba(255,122,0,0.15)]
-                hover:border-[#FF7A00]/30
-                hover:shadow-[0_15px_40px_-10px_rgba(255,122,0,0.25)]
+                border border-[#5C5CFF]/10
+                shadow-[0_10px_30px_-10px_rgba(92,92,255,0.15)]
+                hover:border-[#5C5CFF]/30
+                hover:shadow-[0_15px_40px_-10px_rgba(92,92,255,0.25)]
                 transition-all duration-300
               "
             >
-              <div className="w-12 h-12 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center mb-4" aria-hidden="true">
+              <div className="w-12 h-12 rounded-xl bg-[#5C5CFF]/10 flex items-center justify-center mb-4" aria-hidden="true">
                 <span className="text-2xl">&#128200;</span>
               </div>
               <h3 className="font-bold text-lg text-[#2B3259] mb-1">Vantagem competitiva</h3>
@@ -207,7 +207,7 @@ export default function ProblemLossAversion() {
         <div className="mt-16 text-center max-w-3xl mx-auto">
           <p className="text-xl md:text-2xl text-[#2B3259]/70 leading-relaxed">
             Cada minuto gasto organizando ferramentas fragmentadas e um minuto que{' '}
-            <span className="font-semibold text-[#FF7A00]">seus concorrentes usam para fechar negocios</span>.
+            <span className="font-semibold text-[#5C5CFF]">seus concorrentes usam para fechar negocios</span>.
             Eles não estão perdendo tempo.{' '}
             <span className="font-semibold text-[#2B3259]">Você esta.</span>
           </p>
@@ -219,14 +219,14 @@ export default function ProblemLossAversion() {
             mt-12
             py-6
             px-8
-            bg-[#FF7A00]/5
+            bg-[#5C5CFF]/5
             rounded-2xl
-            border border-[#FF7A00]/10
+            border border-[#5C5CFF]/10
             text-center
           "
         >
           <p className="text-lg text-[#2B3259]/80">
-            <span className="text-[#FF7A00] font-semibold">&#9888;</span>{' '}
+            <span className="text-[#5C5CFF] font-semibold">&#9888;</span>{' '}
             A cada semana com esse caos, você deixa na mesa oportunidades que{' '}
             <span className="font-semibold">nunca mais voltarao</span>.
           </p>

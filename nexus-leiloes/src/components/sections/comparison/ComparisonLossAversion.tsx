@@ -183,7 +183,7 @@ export default function ComparisonLossAversion() {
         className="
           absolute top-1/3 left-0
           w-[600px] h-[600px]
-          bg-[#FF7A00]/6
+          bg-[#5C5CFF]/6
           rounded-full
           blur-[150px]
           -translate-x-1/2
@@ -210,13 +210,13 @@ export default function ComparisonLossAversion() {
             className="
               inline-flex items-center gap-2
               px-5 py-2.5
-              bg-[#FF7A00]/10
+              bg-[#5C5CFF]/10
               rounded-full
-              border border-[#FF7A00]/20
+              border border-[#5C5CFF]/20
             "
           >
-            <span className="text-[#FF7A00] text-lg">!</span>
-            <span className="text-sm font-semibold text-[#FF7A00]">
+            <span className="text-[#5C5CFF] text-lg">!</span>
+            <span className="text-sm font-semibold text-[#5C5CFF]">
               Quanto você esta deixando na mesa?
             </span>
           </span>
@@ -236,7 +236,7 @@ export default function ComparisonLossAversion() {
           "
         >
           O Custo de{' '}
-          <span className="text-[#FF7A00]">NAO</span> Ter
+          <span className="text-[#5C5CFF]">NAO</span> Ter
           <br />
           o Nexus
         </h2>
@@ -259,14 +259,14 @@ export default function ComparisonLossAversion() {
                   p-4
                   bg-[#2B3259]/5
                   rounded-2xl
-                  border border-[#FF7A00]/10
+                  border border-[#5C5CFF]/10
                   text-center
                 "
               >
-                <span className="text-sm font-bold text-[#FF7A00]/80 uppercase tracking-widest">
+                <span className="text-sm font-bold text-[#5C5CFF]/80 uppercase tracking-widest">
                   Sem Nexus
                 </span>
-                <p className="text-2xl font-black text-[#FF7A00] mt-1">
+                <p className="text-2xl font-black text-[#5C5CFF] mt-1">
                   Perdas Acumulando
                 </p>
               </div>
@@ -312,7 +312,7 @@ export default function ComparisonLossAversion() {
               absolute top-0 bottom-0
               left-1/2 -translate-x-1/2
               w-[2px]
-              bg-gradient-to-b from-[#FF7A00]/20 via-[#2B3259]/10 to-[#5C5CFF]/20
+              bg-gradient-to-b from-[#5C5CFF]/20 via-[#2B3259]/10 to-[#5C5CFF]/20
             "
             style={{ top: '140px' }}
             aria-hidden="true"
@@ -326,16 +326,16 @@ export default function ComparisonLossAversion() {
             <div
               className="
                 p-6
-                bg-[#FF7A00]/5
+                bg-[#5C5CFF]/5
                 rounded-3xl
-                border border-[#FF7A00]/20
+                border border-[#5C5CFF]/20
                 text-center
               "
             >
               <p className="text-sm text-[#2B3259]/50 mb-2">
                 Total de perdas anuais estimadas
               </p>
-              <p className="text-4xl md:text-5xl font-black text-[#FF7A00]">
+              <p className="text-4xl md:text-5xl font-black text-[#5C5CFF]">
                 -R$45.000+
               </p>
               <p className="text-sm text-[#2B3259]/40 mt-2">
@@ -400,16 +400,16 @@ export default function ComparisonLossAversion() {
           <button
             type="button"
             className="
-              bg-[#FF7A00]
+              bg-[#5C5CFF]
               text-white
               font-bold text-lg
               px-12 py-5
               rounded-full
-              shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)]
+              shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
               transition-all duration-300
               ease-[cubic-bezier(0.34,1.56,0.64,1)]
               hover:-translate-y-1 hover:scale-[1.02]
-              hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)]
+              hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
               active:translate-y-0 active:scale-[0.98]
               cursor-pointer
             "
@@ -463,10 +463,10 @@ function ComparisonRow({ item, index }: ComparisonRowProps) {
             relative
             p-5
             bg-[#2B3259]/[0.03]
-            group-hover:bg-[#FF7A00]/5
+            group-hover:bg-[#5C5CFF]/5
             rounded-2xl
-            border border-[#FF7A00]/10
-            group-hover:border-[#FF7A00]/20
+            border border-[#5C5CFF]/10
+            group-hover:border-[#5C5CFF]/20
             transition-all duration-300
             overflow-hidden
           "
@@ -476,7 +476,7 @@ function ComparisonRow({ item, index }: ComparisonRowProps) {
             className="
               absolute -top-8 -left-8
               w-24 h-24
-              bg-[#FF7A00]/10
+              bg-[#5C5CFF]/10
               rounded-full
               blur-2xl
               opacity-0
@@ -492,12 +492,12 @@ function ComparisonRow({ item, index }: ComparisonRowProps) {
               className="
                 flex-shrink-0
                 w-10 h-10
-                bg-[#FF7A00]/10
+                bg-[#5C5CFF]/10
                 rounded-xl
                 flex items-center justify-center
               "
             >
-              <span className="text-[#FF7A00] font-bold text-lg">!</span>
+              <span className="text-[#5C5CFF] font-bold text-lg">!</span>
             </div>
 
             <div className="flex-grow">
@@ -505,10 +505,10 @@ function ComparisonRow({ item, index }: ComparisonRowProps) {
                 {item.without.title}
               </h3>
               <div className="flex items-baseline gap-1 mt-1">
-                <span className="text-2xl font-black text-[#FF7A00]">
+                <span className="text-2xl font-black text-[#5C5CFF]">
                   {item.without.value}
                 </span>
-                <span className="text-sm text-[#FF7A00]/60">
+                <span className="text-sm text-[#5C5CFF]/60">
                   {item.without.suffix}
                 </span>
               </div>

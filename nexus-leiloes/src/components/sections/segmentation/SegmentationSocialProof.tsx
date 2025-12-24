@@ -108,7 +108,7 @@ export default function SegmentationSocialProof() {
             key={i}
             className="absolute w-2 h-2 rounded-full opacity-20"
             style={{
-              backgroundColor: i % 2 === 0 ? '#5C5CFF' : '#FF7A00',
+              backgroundColor: i % 2 === 0 ? '#5C5CFF' : '#5C5CFF',
               left: `${5 + (i * 5) % 90}%`,
               top: `${10 + (i * 7) % 80}%`,
             }}
@@ -131,7 +131,7 @@ export default function SegmentationSocialProof() {
         className="
           absolute bottom-1/4 right-1/4
           w-[500px] h-[500px]
-          bg-[#FF7A00]/6
+          bg-[#5C5CFF]/6
           rounded-full
           blur-[150px]
         "
@@ -193,7 +193,7 @@ export default function SegmentationSocialProof() {
         >
           Quem Já Esta{' '}
           <span className="text-[#5C5CFF]">Usando</span> o{' '}
-          <span className="text-[#FF7A00]">Nexus</span>?
+          <span className="text-[#5C5CFF]">Nexus</span>?
         </h2>
 
         {/* Subheadline */}
@@ -224,7 +224,7 @@ export default function SegmentationSocialProof() {
               persona="assessor"
               title="Assessores de Leilão"
               stats={assessorStats}
-              primaryColor="#FF7A00"
+              primaryColor="#5C5CFF"
               ctaText="Juntar-se aos Assessores"
             />
           </div>
@@ -239,9 +239,9 @@ export default function SegmentationSocialProof() {
         >
           {[
             { value: '436+', label: 'Usuarios Ativos', color: '#5C5CFF' },
-            { value: '4.9', label: 'Avaliação Media', color: '#FF7A00' },
+            { value: '4.9', label: 'Avaliação Media', color: '#5C5CFF' },
             { value: 'R$2.3M', label: 'Em Negocios Analisados', color: '#5C5CFF' },
-            { value: '98%', label: 'Taxa de Satisfação', color: '#FF7A00' },
+            { value: '98%', label: 'Taxa de Satisfação', color: '#5C5CFF' },
           ].map((stat, index) => (
             <div
               key={index}

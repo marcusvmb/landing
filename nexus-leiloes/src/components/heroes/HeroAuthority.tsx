@@ -13,7 +13,7 @@
  * Design Tokens:
  * - Background: #EFF0F0 com multiplos glows sobrepostos
  * - Headline: #2B3259 com "Ànico" em #5C5CFF + glow
- * - CTA: #FF7A00 (Orange) - maior que outros heroes
+ * - CTA: #5C5CFF (Primary Blue) - maior que outros heroes
  * - Cards: Glassmorphism com colored shadow
  *
  * Anti-AI Checklist:
@@ -85,7 +85,7 @@ export default function HeroAuthority() {
             hidden md:flex
             items-center gap-2
             px-5 py-2.5
-            bg-gradient-to-r from-[#5C5CFF] to-[#7B7BFF]
+            bg-gradient-to-r from-[#5C5CFF] to-[#5C5CFF]
             rounded-full
             shadow-[0_10px_30px_-8px_rgba(92,92,255,0.4)]
           "
@@ -106,7 +106,7 @@ export default function HeroAuthority() {
           max-w-7xl mx-auto
           px-6
           pt-16 md:pt-24 lg:pt-32
-          pb-20
+          pb-24
           flex flex-col items-center justify-center
           min-h-[80vh]
         "
@@ -179,19 +179,19 @@ export default function HeroAuthority() {
           type="button"
           className="
             mt-10 md:mt-12
-            bg-[#FF7A00]
+            bg-[#5C5CFF]
             text-white
             font-bold
             text-xl
             px-12 py-6
             rounded-full
-            shadow-[0_20px_50px_-12px_rgba(255,122,0,0.5)]
+            shadow-[0_20px_50px_-12px_rgba(92,92,255,0.5)]
             transition-all
             duration-300
             ease-[cubic-bezier(0.34,1.56,0.64,1)]
             hover:-translate-y-1.5
             hover:scale-[1.03]
-            hover:shadow-[0_25px_60px_-12px_rgba(255,122,0,0.6)]
+            hover:shadow-[0_25px_60px_-12px_rgba(92,92,255,0.6)]
             active:translate-y-0
             active:scale-[0.98]
             focus-visible:outline
@@ -291,12 +291,12 @@ export default function HeroAuthority() {
               p-6
               text-center
               border border-white/60
-              shadow-[0_10px_40px_-10px_rgba(255,122,0,0.15)]
+              shadow-[0_10px_40px_-10px_rgba(92,92,255,0.15)]
               transition-all
               duration-300
               hover:-translate-y-2
-              hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.25)]
-              hover:border-[#FF7A00]/20
+              hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.25)]
+              hover:border-[#5C5CFF]/20
             "
             role="listitem"
           >
@@ -304,10 +304,10 @@ export default function HeroAuthority() {
               className="
                 w-14 h-14
                 mx-auto mb-4
-                bg-[#FF7A00]/10
+                bg-[#5C5CFF]/10
                 rounded-2xl
                 flex items-center justify-center
-                group-hover:bg-[#FF7A00]/15
+                group-hover:bg-[#5C5CFF]/15
                 transition-colors
               "
               aria-hidden="true"
@@ -326,7 +326,7 @@ export default function HeroAuthority() {
           className="
             flex items-center justify-center gap-2
             px-5 py-3.5
-            bg-gradient-to-r from-[#5C5CFF] to-[#7B7BFF]
+            bg-gradient-to-r from-[#5C5CFF] to-[#5C5CFF]
             rounded-full
             shadow-[0_15px_40px_-10px_rgba(92,92,255,0.5)]
           "

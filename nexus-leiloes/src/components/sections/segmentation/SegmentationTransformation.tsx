@@ -103,7 +103,7 @@ export default function SegmentationTransformation() {
         className="
           absolute top-1/2 left-1/2
           w-[800px] h-[400px]
-          bg-gradient-to-r from-[#5C5CFF]/5 via-[#5C5CFF]/10 to-[#FF7A00]/5
+          bg-gradient-to-r from-[#5C5CFF]/5 via-[#5C5CFF]/10 to-[#5C5CFF]/5
           rounded-full
           blur-[100px]
           -translate-x-1/2 -translate-y-1/2
@@ -118,7 +118,7 @@ export default function SegmentationTransformation() {
             className="
               inline-flex items-center gap-2
               px-5 py-2.5
-              bg-gradient-to-r from-[#5C5CFF]/10 to-[#FF7A00]/10
+              bg-gradient-to-r from-[#5C5CFF]/10 to-[#5C5CFF]/10
               rounded-full
               border border-[#5C5CFF]/15
             "
@@ -126,7 +126,7 @@ export default function SegmentationTransformation() {
             <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider">
               Jornada de Transformação
             </span>
-            <span className="text-[#FF7A00]" aria-hidden="true">
+            <span className="text-[#5C5CFF]" aria-hidden="true">
               &#8594;
             </span>
           </span>
@@ -148,7 +148,7 @@ export default function SegmentationTransformation() {
           Cada Perfil,{' '}
           <br className="hidden sm:block" />
           Uma <span className="text-[#5C5CFF]">Jornada</span> de{' '}
-          <span className="text-[#FF7A00]">Transformação</span>
+          <span className="text-[#5C5CFF]">Transformação</span>
         </h2>
 
         {/* Subheadline */}
@@ -181,7 +181,7 @@ export default function SegmentationTransformation() {
               todayItems={assessorToday}
               nexusItems={assessorWithNexus}
               ctaText="Evoluir Minha Assessoria"
-              primaryColor="#FF7A00"
+              primaryColor="#5C5CFF"
             />
           </div>
         </div>
@@ -210,7 +210,7 @@ export default function SegmentationTransformation() {
                         ? 'bg-[#2B3259]/10 text-[#2B3259]/50'
                         : index === 1
                           ? 'bg-[#5C5CFF] text-white shadow-[0_6px_20px_-5px_rgba(92,92,255,0.4)]'
-                          : 'bg-[#FF7A00] text-white shadow-[0_6px_20px_-5px_rgba(255,122,0,0.4)]'
+                          : 'bg-[#5C5CFF] text-white shadow-[0_6px_20px_-5px_rgba(92,92,255,0.4)]'
                     }
                   `}
                 >

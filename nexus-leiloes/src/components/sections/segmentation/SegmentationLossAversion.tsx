@@ -88,7 +88,7 @@ export default function SegmentationLossAversion() {
         className="
           absolute top-1/4 left-0
           w-[600px] h-[600px]
-          bg-[#FF7A00]/8
+          bg-[#5C5CFF]/8
           rounded-full
           blur-[150px]
           -translate-x-1/2
@@ -99,7 +99,7 @@ export default function SegmentationLossAversion() {
         className="
           absolute bottom-1/4 right-0
           w-[500px] h-[500px]
-          bg-[#FF7A00]/6
+          bg-[#5C5CFF]/6
           rounded-full
           blur-[120px]
           translate-x-1/3
@@ -114,15 +114,15 @@ export default function SegmentationLossAversion() {
             className="
               inline-flex items-center gap-2
               px-5 py-2.5
-              bg-[#FF7A00]/10
+              bg-[#5C5CFF]/10
               rounded-full
-              border border-[#FF7A00]/20
+              border border-[#5C5CFF]/20
             "
           >
-            <span className="text-[#FF7A00]" aria-hidden="true">
+            <span className="text-[#5C5CFF]" aria-hidden="true">
               &#9888;
             </span>
-            <span className="text-sm font-semibold text-[#FF7A00] uppercase tracking-wider">
+            <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider">
               Quem esta perdendo?
             </span>
           </span>
@@ -143,7 +143,7 @@ export default function SegmentationLossAversion() {
         >
           Para Quem e o Nexus?{' '}
           <br className="hidden sm:block" />
-          <span className="text-[#FF7A00]">Para Quem Não Quer Perder.</span>
+          <span className="text-[#5C5CFF]">Para Quem Não Quer Perder.</span>
         </h2>
 
         {/* Subheadline */}
@@ -190,15 +190,15 @@ export default function SegmentationLossAversion() {
             p-8
             bg-white/60 backdrop-blur-sm
             rounded-3xl
-            border border-[#FF7A00]/10
-            shadow-[0_20px_60px_-15px_rgba(255,122,0,0.1)]
+            border border-[#5C5CFF]/10
+            shadow-[0_20px_60px_-15px_rgba(92,92,255,0.1)]
             text-center
           "
         >
           <p className="text-lg text-[#2B3259]/70 mb-3">
             Perdas combinadas estimadas por ano:
           </p>
-          <p className="text-4xl md:text-5xl font-black text-[#FF7A00] line-through decoration-4 mb-2">
+          <p className="text-4xl md:text-5xl font-black text-[#5C5CFF] line-through decoration-4 mb-2">
             R$50.000+
           </p>
           <p className="text-[#2B3259]/60">
@@ -230,10 +230,8 @@ function PersonaCard({
   ctaColor,
 }: PersonaCardProps) {
   const isInvestidor = persona === 'investidor';
-  const primaryColor = isInvestidor ? '#5C5CFF' : '#FF7A00';
-  const hoverGlowColor = isInvestidor
-    ? 'group-hover:shadow-[0_30px_80px_-20px_rgba(92,92,255,0.35)]'
-    : 'group-hover:shadow-[0_30px_80px_-20px_rgba(255,122,0,0.35)]';
+  const primaryColor = '#5C5CFF';
+  const hoverGlowColor = 'group-hover:shadow-[0_30px_80px_-20px_rgba(92,92,255,0.35)]';
 
   return (
     <article
@@ -242,9 +240,9 @@ function PersonaCard({
         relative
         bg-white/80 backdrop-blur-sm
         rounded-3xl
-        border border-[#FF7A00]/15
-        hover:border-${isInvestidor ? '[#5C5CFF]' : '[#FF7A00]'}/30
-        shadow-[0_20px_60px_-15px_rgba(255,122,0,0.15)]
+        border border-[#5C5CFF]/15
+        hover:border-[#5C5CFF]/30
+        shadow-[0_20px_60px_-15px_rgba(92,92,255,0.15)]
         ${hoverGlowColor}
         transition-all duration-500
         overflow-hidden
@@ -256,7 +254,7 @@ function PersonaCard({
         className="
           absolute -top-20 -right-20
           w-48 h-48
-          bg-[#FF7A00]/15
+          bg-[#5C5CFF]/15
           rounded-full
           blur-3xl
           group-hover:opacity-50
@@ -288,16 +286,14 @@ function PersonaCard({
             <div
               className="
                 w-12 h-12
-                bg-[#FF7A00]/10
+                bg-[#5C5CFF]/10
                 group-hover:bg-opacity-20
                 rounded-2xl
                 flex items-center justify-center
                 transition-all duration-300
               "
               style={{
-                backgroundColor: isInvestidor
-                  ? 'rgba(92,92,255,0.1)'
-                  : 'rgba(255,122,0,0.1)',
+                backgroundColor: 'rgba(92,92,255,0.1)',
               }}
             >
               <span className="text-2xl">{isInvestidor ? '💼' : '🎯'}</span>
@@ -318,16 +314,16 @@ function PersonaCard({
         <div
           className="
             p-5 mb-5
-            bg-[#FF7A00]/5
+            bg-[#5C5CFF]/5
             rounded-2xl
-            border border-[#FF7A00]/10
+            border border-[#5C5CFF]/10
           "
         >
           <div className="flex items-center gap-2 mb-4">
-            <span className="text-[#FF7A00]" aria-hidden="true">
+            <span className="text-[#5C5CFF]" aria-hidden="true">
               &#9888;
             </span>
-            <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest">
+            <span className="text-xs font-bold text-[#5C5CFF] uppercase tracking-widest">
               Perdas sem o Nexus
             </span>
           </div>
@@ -341,12 +337,12 @@ function PersonaCard({
                   p-3
                   bg-white/60
                   rounded-xl
-                  border border-[#FF7A00]/10
+                  border border-[#5C5CFF]/10
                 "
               >
-                <span className="text-[#FF7A00] mt-0.5">&#9888;</span>
+                <span className="text-[#5C5CFF] mt-0.5">&#9888;</span>
                 <div>
-                  <span className="font-bold text-[#FF7A00] line-through decoration-2">
+                  <span className="font-bold text-[#5C5CFF] line-through decoration-2">
                     {loss.value}
                   </span>
                   <span className="text-sm text-[#2B3259]/60 ml-2">
@@ -419,9 +415,9 @@ function PersonaCard({
                   hover:shadow-[0_18px_45px_-10px_rgba(92,92,255,0.5)]
                 `
                 : `
-                  bg-[#FF7A00] text-white
-                  shadow-[0_12px_35px_-10px_rgba(255,122,0,0.4)]
-                  hover:shadow-[0_18px_45px_-10px_rgba(255,122,0,0.5)]
+                  bg-[#5C5CFF] text-white
+                  shadow-[0_12px_35px_-10px_rgba(92,92,255,0.4)]
+                  hover:shadow-[0_18px_45px_-10px_rgba(92,92,255,0.5)]
                 `
             }
           `}

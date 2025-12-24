@@ -30,7 +30,7 @@ export default function FeaturesPreviewPage() {
           <nav className="mt-8 flex flex-wrap justify-center gap-3">
             <a
               href="#loss-aversion"
-              className="px-4 py-2 bg-[#FF7A00] rounded-full text-sm font-semibold hover:bg-[#FF7A00]/90 transition-colors"
+              className="px-4 py-2 bg-[#5C5CFF] rounded-full text-sm font-semibold hover:bg-[#5C5CFF]/90 transition-colors"
             >
               V1: Loss Aversion
             </a>
@@ -48,7 +48,7 @@ export default function FeaturesPreviewPage() {
             </a>
             <a
               href="#social-proof"
-              className="px-4 py-2 bg-[#FF7A00] rounded-full text-sm font-semibold hover:bg-[#FF7A00]/90 transition-colors"
+              className="px-4 py-2 bg-[#5C5CFF] rounded-full text-sm font-semibold hover:bg-[#5C5CFF]/90 transition-colors"
             >
               V4: Social Proof
             </a>
@@ -58,9 +58,9 @@ export default function FeaturesPreviewPage() {
 
       {/* V1: Loss Aversion */}
       <div id="loss-aversion">
-        <div className="bg-[#FF7A00]/10 py-4 px-6 border-b border-[#FF7A00]/20">
+        <div className="bg-[#5C5CFF]/10 py-4 px-6 border-b border-[#5C5CFF]/20">
           <div className="max-w-6xl mx-auto flex items-center gap-4">
-            <span className="w-10 h-10 bg-[#FF7A00] rounded-xl flex items-center justify-center text-white font-bold">
+            <span className="w-10 h-10 bg-[#5C5CFF] rounded-xl flex items-center justify-center text-white font-bold">
               V1
             </span>
             <div>
@@ -112,9 +112,9 @@ export default function FeaturesPreviewPage() {
 
       {/* V4: Social Proof */}
       <div id="social-proof">
-        <div className="bg-[#FF7A00]/10 py-4 px-6 border-b border-[#FF7A00]/20">
+        <div className="bg-[#5C5CFF]/10 py-4 px-6 border-b border-[#5C5CFF]/20">
           <div className="max-w-6xl mx-auto flex items-center gap-4">
-            <span className="w-10 h-10 bg-[#FF7A00] rounded-xl flex items-center justify-center text-white font-bold">
+            <span className="w-10 h-10 bg-[#5C5CFF] rounded-xl flex items-center justify-center text-white font-bold">
               V4
             </span>
             <div>

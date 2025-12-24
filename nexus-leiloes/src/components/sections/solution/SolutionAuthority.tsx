@@ -18,7 +18,7 @@
 export default function SolutionAuthority() {
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-40 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
       aria-labelledby="solution-authority-heading"
     >
       {/* Massive glow - center dominant */}
@@ -330,16 +330,16 @@ export default function SolutionAuthority() {
           <button
             type="button"
             className="
-              bg-[#FF7A00]
+              bg-[#5C5CFF]
               text-white
               font-bold text-xl
               px-12 py-6
               rounded-full
-              shadow-[0_20px_60px_-15px_rgba(255,122,0,0.5)]
+              shadow-[0_20px_60px_-15px_rgba(92,92,255,0.5)]
               transition-all duration-300
               ease-[cubic-bezier(0.34,1.56,0.64,1)]
               hover:-translate-y-1 hover:scale-[1.02]
-              hover:shadow-[0_25px_70px_-15px_rgba(255,122,0,0.6)]
+              hover:shadow-[0_25px_70px_-15px_rgba(92,92,255,0.6)]
               active:translate-y-0 active:scale-[0.98]
               focus-visible:outline focus-visible:outline-2
               focus-visible:outline-offset-2 focus-visible:outline-[#2B3259]

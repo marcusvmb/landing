@@ -16,8 +16,8 @@
   /* Navy - Deep Navy - text, headings (replaces black) */
   --color-navy: #2B3259;
 
-  /* CTA - Orange - primary call-to-action buttons */
-  --color-cta: #FF7A00;
+  /* CTA - Blue - primary call-to-action buttons (same as primary) */
+  --color-cta: #5C5CFF;
 
   /* White - only for cards/inputs on top of Surface */
   --color-white: #FFFFFF;
@@ -41,10 +41,10 @@
   --color-navy-80: rgba(43, 50, 89, 0.8);
 
   /* === CTA OPACITY VARIANTS === */
-  --color-cta-10: rgba(255, 122, 0, 0.1);
-  --color-cta-15: rgba(255, 122, 0, 0.15);
-  --color-cta-40: rgba(255, 122, 0, 0.4);
-  --color-cta-50: rgba(255, 122, 0, 0.5);
+  --color-cta-10: rgba(92, 92, 255, 0.1);
+  --color-cta-15: rgba(92, 92, 255, 0.15);
+  --color-cta-40: rgba(92, 92, 255, 0.4);
+  --color-cta-50: rgba(92, 92, 255, 0.5);
 
   /* === FONTS === */
   /* Font family uses CSS variable from next/font */
@@ -58,9 +58,9 @@
   --shadow-primary-xl: 0 40px 100px -25px rgba(92, 92, 255, 0.35);
 
   /* CTA shadows */
-  --shadow-cta: 0 15px 40px -10px rgba(255, 122, 0, 0.4);
-  --shadow-cta-hover: 0 20px 50px -10px rgba(255, 122, 0, 0.5);
-  --shadow-cta-lg: 0 25px 60px -12px rgba(255, 122, 0, 0.5);
+  --shadow-cta: 0 15px 40px -10px rgba(92, 92, 255, 0.4);
+  --shadow-cta-hover: 0 20px 50px -10px rgba(92, 92, 255, 0.5);
+  --shadow-cta-lg: 0 25px 60px -12px rgba(92, 92, 255, 0.5);
 
   /* === EASING CURVES (Premium Motion) === */
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -202,7 +202,7 @@ body {
 }
 
 .glow-cta {
-  filter: drop-shadow(0 0 20px rgba(255, 122, 0, 0.4));
+  filter: drop-shadow(0 0 20px rgba(92, 92, 255, 0.4));
 }
 
 /* Counter pop-in animation */

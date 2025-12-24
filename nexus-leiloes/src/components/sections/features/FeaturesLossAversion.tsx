@@ -143,7 +143,7 @@ export default function FeaturesLossAversion() {
         className="
           absolute top-1/4 right-0
           w-[500px] h-[500px]
-          bg-[#FF7A00]/8
+          bg-[#5C5CFF]/8
           rounded-full
           blur-[120px]
           translate-x-1/3
@@ -169,13 +169,13 @@ export default function FeaturesLossAversion() {
             className="
               inline-flex items-center gap-2
               px-5 py-2.5
-              bg-[#FF7A00]/10
+              bg-[#5C5CFF]/10
               rounded-full
-              border border-[#FF7A00]/20
+              border border-[#5C5CFF]/20
             "
           >
-            <span className="text-[#FF7A00]">⚠️</span>
-            <span className="text-sm font-semibold text-[#FF7A00]">
+            <span className="text-[#5C5CFF]">⚠️</span>
+            <span className="text-sm font-semibold text-[#5C5CFF]">
               Quanto você esta perdendo?
             </span>
           </span>
@@ -195,7 +195,7 @@ export default function FeaturesLossAversion() {
           "
         >
           Sem Essas Ferramentas,{' '}
-          <span className="text-[#FF7A00]">Você Perde Dinheiro</span>
+          <span className="text-[#5C5CFF]">Você Perde Dinheiro</span>
           <br />
           <span className="text-[#5C5CFF]">Todos os Dias</span>
         </h2>
@@ -235,7 +235,7 @@ export default function FeaturesLossAversion() {
           <p className="text-lg text-[#2B3259]/60 mb-3">
             Perdas anuais estimadas sem o Nexus:
           </p>
-          <p className="text-3xl md:text-4xl font-black text-[#FF7A00] line-through decoration-2 mb-2">
+          <p className="text-3xl md:text-4xl font-black text-[#5C5CFF] line-through decoration-2 mb-2">
             R$45.000+
           </p>
           <p className="text-lg text-[#2B3259]/60">
@@ -248,16 +248,16 @@ export default function FeaturesLossAversion() {
           <button
             type="button"
             className="
-              bg-[#FF7A00]
+              bg-[#5C5CFF]
               text-white
               font-bold text-lg
               px-10 py-5
               rounded-full
-              shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)]
+              shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
               transition-all duration-300
               ease-[cubic-bezier(0.34,1.56,0.64,1)]
               hover:-translate-y-1 hover:scale-[1.02]
-              hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)]
+              hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
               active:translate-y-0 active:scale-[0.98]
               cursor-pointer
             "
@@ -297,9 +297,9 @@ function FeatureCard({ feature }: FeatureCardProps) {
         relative
         bg-white/80 backdrop-blur-sm
         rounded-3xl
-        border border-[#FF7A00]/10
+        border border-[#5C5CFF]/10
         hover:border-[#5C5CFF]/20
-        shadow-[0_15px_50px_-15px_rgba(255,122,0,0.15)]
+        shadow-[0_15px_50px_-15px_rgba(92,92,255,0.15)]
         hover:shadow-[0_25px_60px_-15px_rgba(92,92,255,0.25)]
         transition-all duration-500
         overflow-hidden
@@ -310,7 +310,7 @@ function FeatureCard({ feature }: FeatureCardProps) {
         className="
           absolute -top-10 -right-10
           w-32 h-32
-          bg-[#FF7A00]/20
+          bg-[#5C5CFF]/20
           rounded-full
           blur-2xl
           group-hover:opacity-0
@@ -360,7 +360,7 @@ function FeatureCard({ feature }: FeatureCardProps) {
           <div
             className="
               w-14 h-14
-              bg-[#FF7A00]/10
+              bg-[#5C5CFF]/10
               group-hover:bg-[#5C5CFF]/10
               rounded-2xl
               flex items-center justify-center
@@ -381,18 +381,18 @@ function FeatureCard({ feature }: FeatureCardProps) {
         <div
           className="
             p-4 mb-4
-            bg-[#FF7A00]/5
-            group-hover:bg-[#FF7A00]/3
+            bg-[#5C5CFF]/5
+            group-hover:bg-[#5C5CFF]/3
             rounded-2xl
-            border border-[#FF7A00]/10
+            border border-[#5C5CFF]/10
             transition-all duration-300
           "
         >
-          <span className="text-xs font-semibold text-[#FF7A00]/60 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-[#5C5CFF]/60 uppercase tracking-widest">
             {feature.lossLabel}
           </span>
           <div className="flex items-baseline gap-2 mt-1">
-            <span className="text-lg font-bold text-[#FF7A00] line-through decoration-2 opacity-70">
+            <span className="text-lg font-bold text-[#5C5CFF] line-through decoration-2 opacity-70">
               {feature.lossValue}
             </span>
           </div>
@@ -431,7 +431,7 @@ function FeatureCard({ feature }: FeatureCardProps) {
               <div
                 className="
                   h-full
-                  bg-gradient-to-r from-[#FF7A00] via-[#5C5CFF] to-[#5C5CFF]
+                  bg-gradient-to-r from-[#5C5CFF] via-[#5C5CFF] to-[#5C5CFF]
                   rounded-full
                   transition-all duration-700
                   group-hover:animate-pulse

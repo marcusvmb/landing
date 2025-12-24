@@ -57,7 +57,7 @@ export default function HeroTransformation() {
       </header>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-8 lg:pt-12 pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-8 lg:pt-12 pb-24">
 
         {/* Headline - Centralizado e Massivo */}
         <div className="text-center mb-12 lg:mb-16">
@@ -251,13 +251,13 @@ export default function HeroTransformation() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 p-3 bg-[#FF7A00]/5 rounded-xl border border-[#FF7A00]/10">
-                  <div className="w-10 h-10 bg-[#FF7A00] rounded-lg flex items-center justify-center text-lg shadow-[0_4px_12px_-3px_rgba(255,122,0,0.4)]">
+                <div className="flex items-center gap-3 p-3 bg-[#5C5CFF]/5 rounded-xl border border-[#5C5CFF]/10">
+                  <div className="w-10 h-10 bg-[#5C5CFF] rounded-lg flex items-center justify-center text-lg shadow-[0_4px_12px_-3px_rgba(92,92,255,0.4)]">
                     ⚡
                   </div>
                   <div>
                     <div className="font-medium text-sm text-[#2B3259]">Tudo em Um Lugar</div>
-                    <div className="text-xs text-[#FF7A00] font-medium">Um único Hub para seu sucesso</div>
+                    <div className="text-xs text-[#5C5CFF] font-medium">Um único Hub para seu sucesso</div>
                   </div>
                 </div>
               </div>

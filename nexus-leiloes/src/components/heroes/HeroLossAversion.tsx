@@ -12,7 +12,7 @@
  * - Background: #EFF0F0 (Ice Grey) com glow blur #5C5CFF
  * - Text: #2B3259 (Deep Navy)
  * - Accent: #5C5CFF (Electric Blue)
- * - CTA: #FF7A00 (Orange) com colored shadow
+ * - CTA: #5C5CFF (Primary Blue) com colored shadow
  *
  * Anti-AI Checklist:
  * [x] Background #EFF0F0 (não branco puro)
@@ -85,11 +85,11 @@ export default function HeroLossAversion() {
           <div className="col-span-12 lg:col-span-7 relative z-10">
 
             {/* Exclusive Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FF7A00]/10 rounded-full mb-8 border border-[#FF7A00]/15">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/10 rounded-full mb-8 border border-[#5C5CFF]/15">
               <span className="text-lg" role="img" aria-label="fire">
                 🔥
               </span>
-              <span className="text-sm font-semibold text-[#FF7A00] tracking-wide">
+              <span className="text-sm font-semibold text-[#5C5CFF] tracking-wide">
                 Exclusivo para Fundadores
               </span>
             </div>
@@ -131,24 +131,24 @@ export default function HeroLossAversion() {
               Tudo em uma plataforma. Sem alternar entre dezenas de sites e planilhas.
             </p>
 
-            {/* CTA Button - Orange, Pill, com colored shadow e states */}
+            {/* CTA Button - Primary Blue, Pill, com colored shadow e states */}
             <button
               type="button"
               className="
                 mt-10
-                bg-[#FF7A00]
+                bg-[#5C5CFF]
                 text-white
                 font-bold
                 text-lg
                 px-10 py-5
                 rounded-full
-                shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)]
+                shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
                 transition-all
                 duration-300
                 ease-[cubic-bezier(0.34,1.56,0.64,1)]
                 hover:-translate-y-1
                 hover:scale-[1.02]
-                hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)]
+                hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
                 active:translate-y-0
                 active:scale-[0.98]
                 focus-visible:outline
@@ -243,8 +243,8 @@ export default function HeroLossAversion() {
                       <div className="text-2xl font-bold text-[#5C5CFF]">23</div>
                       <div className="text-xs text-[#2B3259]/50">Em análise</div>
                     </div>
-                    <div className="p-4 bg-[#FF7A00]/5 rounded-xl border border-[#FF7A00]/10">
-                      <div className="text-2xl font-bold text-[#FF7A00]">5</div>
+                    <div className="p-4 bg-[#5C5CFF]/5 rounded-xl border border-[#5C5CFF]/10">
+                      <div className="text-2xl font-bold text-[#5C5CFF]">5</div>
                       <div className="text-xs text-[#2B3259]/50">Hoje</div>
                     </div>
                     <div className="p-4 bg-[#5C5CFF]/5 rounded-xl border border-[#5C5CFF]/10">
@@ -259,7 +259,7 @@ export default function HeroLossAversion() {
                     <div className="w-1/6 h-[50%] bg-[#5C5CFF]/40 rounded-t" />
                     <div className="w-1/6 h-[70%] bg-[#5C5CFF]/50 rounded-t" />
                     <div className="w-1/6 h-[45%] bg-[#5C5CFF]/40 rounded-t" />
-                    <div className="w-1/6 h-[85%] bg-[#FF7A00] rounded-t" />
+                    <div className="w-1/6 h-[85%] bg-[#5C5CFF] rounded-t" />
                     <div className="w-1/6 h-[60%] bg-[#5C5CFF]/40 rounded-t" />
                   </div>
 

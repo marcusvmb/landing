@@ -98,14 +98,14 @@ export default function SocialProofTransformation() {
   return (
     <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="social-transform-heading">
       {/* Background Glows */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#FF7A00]/6 rounded-full blur-[120px]" aria-hidden="true" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[120px]" aria-hidden="true" />
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[120px]" aria-hidden="true" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Eyebrow */}
         <div className="text-center mb-6">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#FF7A00]/10 to-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/15">
-            <span className="text-[#FF7A00]">Antes</span>
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#5C5CFF]/10 to-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/15">
+            <span className="text-[#5C5CFF]">Antes</span>
             <span className="text-[#2B3259]/30">&rarr;</span>
             <span className="text-[#5C5CFF]">Depois</span>
           </span>
@@ -122,7 +122,7 @@ export default function SocialProofTransformation() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Line - Desktop only */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FF7A00]/30 via-[#5C5CFF]/30 to-[#5C5CFF]/30 -translate-x-1/2" aria-hidden="true" />
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#5C5CFF]/30 via-[#5C5CFF]/30 to-[#5C5CFF]/30 -translate-x-1/2" aria-hidden="true" />
 
           {/* Transformation Cards */}
           <div className="space-y-12 lg:space-y-0">
@@ -138,7 +138,7 @@ export default function SocialProofTransformation() {
             <div className="p-8 bg-white/80 backdrop-blur-sm rounded-3xl border border-[#5C5CFF]/15 shadow-[0_20px_60px_-15px_rgba(92,92,255,0.15)]">
               <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
                 <div className="text-center">
-                  <p className="text-3xl md:text-4xl font-black text-[#FF7A00] line-through opacity-60">Frustrado</p>
+                  <p className="text-3xl md:text-4xl font-black text-[#5C5CFF] line-through opacity-60">Frustrado</p>
                   <p className="text-sm text-[#2B3259]/50 mt-1">Era assim</p>
                 </div>
                 <div className="text-3xl text-[#5C5CFF]">&rarr;</div>
@@ -153,7 +153,7 @@ export default function SocialProofTransformation() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button type="button" className="bg-[#FF7A00] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+          <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
             Comecar Minha Transformação
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">Sua jornada de sucesso começa aqui</p>
@@ -190,11 +190,11 @@ function TransformationCard({ transformation, index }: { transformation: Transfo
     <div className={`lg:grid lg:grid-cols-12 lg:gap-8 lg:py-12 ${index > 0 ? '' : ''}`}>
       {/* Before Card */}
       <div className={`col-span-5 ${isEven ? 'lg:col-start-1' : 'lg:col-start-8 lg:order-2'}`}>
-        <div className="group bg-white/60 backdrop-blur-sm rounded-2xl border border-[#FF7A00]/15 p-6 shadow-[0_15px_40px_-15px_rgba(255,122,0,0.1)] hover:shadow-[0_20px_50px_-15px_rgba(255,122,0,0.2)] hover:-translate-y-1 transition-all duration-400">
-          <span className="inline-block px-3 py-1 bg-[#FF7A00]/10 rounded-full text-xs font-bold text-[#FF7A00] uppercase tracking-wider mb-4">{transformation.before.title}</span>
+        <div className="group bg-white/60 backdrop-blur-sm rounded-2xl border border-[#5C5CFF]/15 p-6 shadow-[0_15px_40px_-15px_rgba(92,92,255,0.1)] hover:shadow-[0_20px_50px_-15px_rgba(92,92,255,0.2)] hover:-translate-y-1 transition-all duration-400">
+          <span className="inline-block px-3 py-1 bg-[#5C5CFF]/10 rounded-full text-xs font-bold text-[#5C5CFF] uppercase tracking-wider mb-4">{transformation.before.title}</span>
           <p className="text-[#2B3259]/70 mb-4">{transformation.before.pain}</p>
           <div className="flex items-baseline gap-2">
-            <span className="text-2xl font-black text-[#FF7A00]/70 line-through">{transformation.before.metric}</span>
+            <span className="text-2xl font-black text-[#5C5CFF]/70 line-through">{transformation.before.metric}</span>
             <span className="text-sm text-[#2B3259]/50">{transformation.before.metricLabel}</span>
           </div>
         </div>

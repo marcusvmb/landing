@@ -156,7 +156,7 @@ export default function FeaturesSocialProof() {
         className="
           absolute top-0 right-1/4
           w-[500px] h-[500px]
-          bg-[#FF7A00]/5
+          bg-[#5C5CFF]/5
           rounded-full
           blur-[120px]
         "
@@ -186,7 +186,7 @@ export default function FeaturesSocialProof() {
               shadow-[0_8px_30px_-10px_rgba(92,92,255,0.15)]
             "
           >
-            <span className="text-[#FF7A00]">♥</span>
+            <span className="text-[#5C5CFF]">♥</span>
             <span className="text-sm font-semibold text-[#2B3259]/70">
               Baseado em feedback real de usuarios beta
             </span>
@@ -207,7 +207,7 @@ export default function FeaturesSocialProof() {
           "
         >
           As Features{' '}
-          <span className="text-[#FF7A00]">Mais Amadas</span>
+          <span className="text-[#5C5CFF]">Mais Amadas</span>
           <br />
           Pelos Nossos Usuarios
         </h2>
@@ -253,7 +253,7 @@ export default function FeaturesSocialProof() {
               <p className="text-sm text-[#2B3259]/60 mt-1">Satisfação geral</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-black text-[#FF7A00]">4.9★</p>
+              <p className="text-3xl md:text-4xl font-black text-[#5C5CFF]">4.9★</p>
               <p className="text-sm text-[#2B3259]/60 mt-1">Avaliação media</p>
             </div>
             <div>
@@ -298,16 +298,16 @@ export default function FeaturesSocialProof() {
           <button
             type="button"
             className="
-              bg-[#FF7A00]
+              bg-[#5C5CFF]
               text-white
               font-bold text-lg
               px-10 py-5
               rounded-full
-              shadow-[0_15px_40px_-10px_rgba(255,122,0,0.4)]
+              shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
               transition-all duration-300
               ease-[cubic-bezier(0.34,1.56,0.64,1)]
               hover:-translate-y-1 hover:scale-[1.02]
-              hover:shadow-[0_20px_50px_-10px_rgba(255,122,0,0.5)]
+              hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
               active:translate-y-0 active:scale-[0.98]
               cursor-pointer
             "
@@ -352,7 +352,7 @@ function SocialProofCard({ feature }: SocialProofCardProps) {
         rounded-3xl
         border
         ${isFeatured
-          ? 'border-[#FF7A00]/20 ring-2 ring-[#FF7A00]/10'
+          ? 'border-[#5C5CFF]/20 ring-2 ring-[#5C5CFF]/10'
           : 'border-[#5C5CFF]/10 hover:border-[#5C5CFF]/20'
         }
         shadow-[0_15px_50px_-15px_rgba(92,92,255,0.12)]
@@ -371,8 +371,8 @@ function SocialProofCard({ feature }: SocialProofCardProps) {
               text-xs font-bold
               uppercase tracking-wider
               rounded-full
-              bg-[#FF7A00] text-white
-              shadow-[0_4px_15px_-3px_rgba(255,122,0,0.5)]
+              bg-[#5C5CFF] text-white
+              shadow-[0_4px_15px_-3px_rgba(92,92,255,0.5)]
             "
           >
             <span>♥</span>
@@ -408,7 +408,7 @@ function SocialProofCard({ feature }: SocialProofCardProps) {
         <div className="flex items-baseline gap-2 mb-4">
           <span
             className="
-              text-[#FF7A00]
+              text-[#5C5CFF]
               group-hover:animate-pulse
               transition-all duration-300
             "
@@ -473,7 +473,7 @@ function SocialProofCard({ feature }: SocialProofCardProps) {
                 bg-gradient-to-r from-[#5C5CFF] to-[#5C5CFF]/80
                 rounded-full
                 transition-all duration-700
-                group-hover:from-[#5C5CFF] group-hover:to-[#FF7A00]
+                group-hover:from-[#5C5CFF] group-hover:to-[#5C5CFF]
               "
               style={{ width: `${feature.satisfactionPercent}%` }}
             />
@@ -486,7 +486,7 @@ function SocialProofCard({ feature }: SocialProofCardProps) {
                   className={`
                     text-xs
                     ${star <= Math.round(feature.satisfactionPercent / 20)
-                      ? 'text-[#FF7A00]'
+                      ? 'text-[#5C5CFF]'
                       : 'text-[#2B3259]/20'
                     }
                   `}
