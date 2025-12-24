@@ -1,0 +1,73 @@
+Bloco 1: Produto/Serviço
+
+1.	O que é seu produto/serviço? (uma frase clara)
+Um hub criado para auxiliar investidores e assessores de leilão imobiliário. Contém ferramentas para busca de imóveis, análise mercadológica, financeira e jurídica. Gestão de portfólio, análises em dashboards construídos para auxiliar na análise. Para Assessores, possuí a gestão de carteira cntendo todos os detalhes de cada cliente  a ser gerenciado.
+2.	Em qual categoria ele se encaixa? (SaaS, Agência, E-commerce, Consultoria, Infoproduto)
+Saas
+3.	Quais são as 3-5 principais funcionalidades?
+- Busca de imóveis de diversos leiloeiros em um único lugar com filtros avançados
+- Ferramentas voltadas para estudo de viabilidade financeira e estudo de diversos cenários para a escolha da melhor opção
+- Ferramentas criadas para estudo e avaliação mercadológica
+- Ferramenta para gestão de portfólio e dashboards para visualização de informações para tomada de decisão
+- Para assessores de leilão imobiliário, temos a ferramenta de gestão de carteira de investimento para investidores, co controles de valor investido, imóveis em análise, funil de oportunidades e dashboards para tomada de decisão
+- Feeramenta para consulta de dados de ocupantes, para descobrir telefones, whatsapp, endereções e email
+  4. Qual é o PRINCIPAL benefício que o usuário obtém?
+O melhor beneficío que nossa ferramenta pode proporcionar é o HUB de ferramentas disponíveis para serem utilizadas desde o início que é a busca por oportunidades até a última etapa do processo que é a gestão até a venda.
+
+  Bloco 2: Cliente Ideal (ICP)
+
+1.	Quem é o cliente ideal? (cargo, função, perfil)
+O cliente Ideal, são investidores, assessores e usuários que buscam através do leilão de imóveis a buscar oportunidades de imóveis com descontos.
+2.	Tamanho da empresa-alvo? (startup, PME, enterprise, pessoa física)
+Escritórios de assessoria especializada em leilão de imóveis, investidores pessoa física que investem em leilões d eimóveis e pessoas fisícas que buscam oportunidades de moradia através de leilão imobiliário.
+3.	Qual setor/indústria?
+
+
+  Bloco 3: Dores e Problemas
+
+1.	Problema EXTERNO (tangível): o que o cliente enfrenta? Atualmente, os clientes da nossa ferramenta enfrenta diversas dificuldades, vou listá-las abaixo:
+- No Brasil existem diversos sites de leiloeiros e para a pessoa realizar as buscas de imóveis elas devem acessar site a site e realizar os filtros de busca em cada um dos sites, tornando uma tarefa desafiadora e que toma mutio tempo para busca de oportunidades.
+- Para realizar o estudo das oportunidades localizadas, se faz necessário a utilização de diversas ferramentas separadas e que possuem custos mensais. rEALIZAR ESTA GESTÃO DE PREENCHIMENTO E CONTROLE DE CADA FERRAMENTA TORNA O USUÁRIO MENOS PRODUTIVO E UM CONTROLE INEFICIENTE. Exemplos de ferramentas utilizadas, Excel, Word, Power Point, Notion, Asana entre outras.
+- Hoje os usuários não conseguem extrair informações valiosas, pois por alimentarem diversas plataformas de informações, fica humanamente impossível de consolidar as informações e extrair dados e insights valiosos para compartilhar com investidores em caso de assessores e em caso de investidores, analisar o próprio trabalho realizado.
+  2. Problema INTERNO (emocional): como isso faz ele se sentir?
+- Estes problemas que citei, faz com que nosso ICP se sinta como se estivendo perdendo oportunidades, por não conseguir acompanhar diversos sites de leiloeiros diariamente. Se sinta desconfortável e sem confiança na tomada de decisão de arrematações, pois não possuí dadso concretos e cálculos reais se o investimento vale apena, se sente cansado e improdutivo por ter que utilizar diversas ferramentas para fazer busca e controle.
+  3. O que acontece se NÃO resolver esse problema?
+Não resolvendo estes problemas, nosso icp ACABA PERDENDO TEMPO E SENDO IMPRODUTIVO.
+
+  Bloco 4: Solução e Diferenciais
+
+1.	Como seu produto resolve o problema em 3 passos?
+- HUB de soluções que agrega todas as ferramentas necessárias para investidores e assessores de leilão imobiliário desde a busca de todas oportunidades disponíveis até a gestão final, TUDO em um único lugar.
+  2. Em quanto tempo o cliente vê resultados? Logo no primeiro dia de uso ele já consegue notar a diferença das demais ferramentas.
+  3. Qual é seu diferencial único vs concorrentes/alternativas? Nossa ferramenta é a única a ser considerada um hub com diversas soluções. Mas as principais diferenças são a calculadora que tem uma seção disponível para realização de estudos de diversos cenários, possibilidade de gerar relatórios em PDF de estudos já realizados, Agenda para controle de leilões que ocorrerão, uma seção dedicada para assessores e escritórios de assessoria em leilão, para fazer a gestão completa de carteira de clientes, gerar relatório para clientes com todas as métricas referente análise de imóveis, valores de ganhos ao decorrer do contrato entre outras métricas importantes.
+
+  Bloco 5: Provas Sociais
+
+1.	O que você tem? (logos, depoimentos, casos de sucesso, números)
+
+  2. Melhor depoimento com resultado mensurável?
+
+  Bloco 6: Objeções e Garantias
+
+  1. Quais objeções impedem pessoas de comprar? Precisamos realizar um estudo para responder esta pergunta
+  2. Quais garantias você oferece? (trial, devolução, sem cartão) Temos o teste de 7 dias e caso não atinja a expectativa proposta, e se o usuário solicitar o reembolso dentro dos 7 dias, vamos devolver o dinheiro.
+
+  Bloco 7: Objetivo de Conversão
+
+  1. CTA principal: qual ação quer que o visitante tome? Como será uma página de captura de lead, apenas que forneça os dados solicitados para receber informações sobre lançamento da plataforma entre outras informações importantes, como código de desconto para que estiver na lista de espera.
+  2. O que acontece depois que ele converte? Apenasdeixa os dadso e já vai para página de agradecimento.
+
+  Bloco 8: Tom e Voz
+
+  1. Personalidade da marca? (Profissional / Amigável / Ousado / Técnico). Tom de voz profissional e amigável.
+  2. Idioma de saída: Português BR? Português br
+
+  Bloco 9: Concorrentes
+
+  1. Quem são seus 3 principais concorrentes? Auket, Leilão Ninja, Procura Bem, Leilão Imóvel, Procura Bem, Qachado, Núcleo Leilão
+  2. URLs das landing pages deles (se tiver)?
+https://www.auket.com.br/
+https://leilaoninja.com/
+https://www.procurabem.com.br/?utm_source=ig&utm_medium=social&utm_content=link_in_bio
+https://qachadoimoveis.com/
+https://nucleoleiloes.com.br/

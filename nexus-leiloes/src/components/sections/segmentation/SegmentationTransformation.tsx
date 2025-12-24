@@ -1,0 +1,469 @@
+/**
+ * SEGMENTATION SECTION V2: TRANSFORMATION
+ *
+ * Frame Cognitivo: "Sua jornada de evolucao começa aqui"
+ *
+ * ASCII Layout:
+ * ┌──────────────────────────────────────────────────────────────────────┐
+ * │                         EYEBROW BADGE                                │
+ * │                                                                      │
+ * │          "Cada Perfil, Uma Jornada de Transformação"                │
+ * │                          (headline)                                  │
+ * ├──────────────────────────────────────────────────────────────────────┤
+ * │                                                                      │
+ * │  ┌─────────────────────────────┐  ┌──────────────────────────────┐  │
+ * │  │      INVESTIDORES PF        │  │     ASSESSORES DE LEILAO     │  │
+ * │  │      ───────────────        │  │     ─────────────────        │  │
+ * │  │                             │  │                              │  │
+ * │  │  HOJE                       │  │  HOJE                        │  │
+ * │  │  ──┬──                      │  │  ──┬──                       │  │
+ * │  │    │ ○ Buscas fragmentadas  │  │    │ ○ Planilhas por cliente │  │
+ * │  │    │ ○ Calculos manuais     │  │    │ ○ Relatorios amadores   │  │
+ * │  │    │ ○ Dados espalhados     │  │    │ ○ Zero visao de comissao│  │
+ * │  │    │                        │  │    │                         │  │
+ * │  │    ↓  (linha de progresso)  │  │    ↓  (linha de progresso)   │  │
+ * │  │    │                        │  │    │                         │  │
+ * │  │  COM NEXUS                  │  │  COM NEXUS                   │  │
+ * │  │  ──┴──                      │  │  ──┴──                       │  │
+ * │  │    ✓ Busca unificada        │  │    ✓ Painel multi-cliente    │  │
+ * │  │    ✓ Calculadora precisa    │  │    ✓ PDFs profissionais      │  │
+ * │  │    ✓ Dashboard central      │  │    ✓ Controle de comissoes   │  │
+ * │  │    ✓ Decisões confiantes    │  │    ✓ Clientes impressionados │  │
+ * │  │                             │  │                              │  │
+ * │  │  ┌─────────────────────┐    │  │  ┌──────────────────────┐   │  │
+ * │  │  │ INICIAR JORNADA     │    │  │  │ INICIAR JORNADA      │   │  │
+ * │  │  └─────────────────────┘    │  │  └──────────────────────┘   │  │
+ * │  └─────────────────────────────┘  └──────────────────────────────┘  │
+ * │          ↑ col-span-5                      ↑ col-span-7             │
+ * └──────────────────────────────────────────────────────────────────────┘
+ *
+ * Grid Structure: 12 cols (assimetrico invertido da V1)
+ * - Investidores card: col-span-5
+ * - Assessores card: col-span-7
+ *
+ * Visual Elements:
+ * - Timeline vertical com dots e linha de progresso
+ * - Gradiente de opacidade (muted -> vibrant)
+ * - Checkmarks animados no hover
+ * - Transicao visual de "hoje" (cinza) para "com Nexus" (colorido)
+ *
+ * Hover States:
+ * - Timeline pulsa suavemente
+ * - Cards elevam com glow da cor da persona
+ * - Checkmarks fazem scale up
+ */
+
+const investidorToday = [
+  'Buscas fragmentadas em +20 sites',
+  'Calculos manuais em planilhas',
+  'Dados espalhados sem organização',
+  'Decisões baseadas em "achismo"',
+];
+
+const investidorWithNexus = [
+  'Encontre oportunidades antes da concorrência',
+  'Calcule o ROI real antes de arrematar',
+  'Organize todos os seus leilões em um só lugar',
+  'Tome decisões com confiança',
+];
+
+const assessorToday = [
+  'Uma planilha para cada cliente',
+  'Relatorios montados manualmente',
+  'Zero visibilidade de comissoes',
+  'Apresentacoes pouco profissionais',
+];
+
+const assessorWithNexus = [
+  'Gerencie multiplos clientes em um painel',
+  'Gere relatorios profissionais com sua marca',
+  'Acompanhe comissoes e resultados',
+  'Impressione clientes com análises detalhadas',
+];
+
+export default function SegmentationTransformation() {
+  return (
+    <section
+      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      aria-labelledby="segmentation-transform-heading"
+    >
+      {/* Gradient transition background */}
+      <div
+        className="
+          absolute inset-0
+          bg-gradient-to-b
+          from-[#EFF0F0] via-[#F5F5FF] to-[#EFF0F0]
+          pointer-events-none
+        "
+        aria-hidden="true"
+      />
+
+      {/* Subtle journey line glow */}
+      <div
+        className="
+          absolute top-1/2 left-1/2
+          w-[800px] h-[400px]
+          bg-gradient-to-r from-[#5C5CFF]/5 via-[#5C5CFF]/10 to-[#FF7A00]/5
+          rounded-full
+          blur-[100px]
+          -translate-x-1/2 -translate-y-1/2
+        "
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        {/* Eyebrow */}
+        <div className="text-center mb-6">
+          <span
+            className="
+              inline-flex items-center gap-2
+              px-5 py-2.5
+              bg-gradient-to-r from-[#5C5CFF]/10 to-[#FF7A00]/10
+              rounded-full
+              border border-[#5C5CFF]/15
+            "
+          >
+            <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider">
+              Jornada de Transformação
+            </span>
+            <span className="text-[#FF7A00]" aria-hidden="true">
+              &#8594;
+            </span>
+          </span>
+        </div>
+
+        {/* Headline */}
+        <h2
+          id="segmentation-transform-heading"
+          className="
+            text-center
+            text-3xl sm:text-4xl md:text-5xl
+            font-black
+            tracking-[-0.03em]
+            leading-[1.1]
+            text-[#2B3259]
+            mb-6
+          "
+        >
+          Cada Perfil,{' '}
+          <br className="hidden sm:block" />
+          Uma <span className="text-[#5C5CFF]">Jornada</span> de{' '}
+          <span className="text-[#FF7A00]">Transformação</span>
+        </h2>
+
+        {/* Subheadline */}
+        <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
+          Veja como o Nexus transforma sua operação, seja você um investidor
+          individual ou um assessor gerenciando multiplos clientes.
+        </p>
+
+        {/* Persona Cards - Asymmetric Grid (inverted) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          {/* Investidores Card - Smaller */}
+          <div className="lg:col-span-5">
+            <TransformationCard
+              persona="investidor"
+              title="Investidores PF"
+              subtitle="Pessoas fisicas que investem em leilões"
+              todayItems={investidorToday}
+              nexusItems={investidorWithNexus}
+              ctaText="Iniciar Minha Jornada"
+              primaryColor="#5C5CFF"
+            />
+          </div>
+
+          {/* Assessores Card - Larger */}
+          <div className="lg:col-span-7 lg:-mt-8">
+            <TransformationCard
+              persona="assessor"
+              title="Assessores de Leilão"
+              subtitle="Profissionais que assessoram clientes"
+              todayItems={assessorToday}
+              nexusItems={assessorWithNexus}
+              ctaText="Evoluir Minha Assessoria"
+              primaryColor="#FF7A00"
+            />
+          </div>
+        </div>
+
+        {/* Bottom Motivation */}
+        <div className="mt-16 text-center">
+          <p className="text-lg text-[#2B3259]/60 max-w-2xl mx-auto mb-6">
+            A diferenca entre amadores e profissionais esta nas ferramentas.{' '}
+            <span className="font-semibold text-[#2B3259]">
+              O Nexus e o upgrade que você precisa.
+            </span>
+          </p>
+
+          {/* Journey Steps Summary */}
+          <div className="flex flex-wrap justify-center gap-8 mt-8">
+            {['HOJE', 'NEXUS', 'SUCESSO'].map((step, index) => (
+              <div key={step} className="flex items-center gap-4">
+                <div
+                  className={`
+                    w-10 h-10
+                    rounded-full
+                    flex items-center justify-center
+                    font-bold text-sm
+                    ${
+                      index === 0
+                        ? 'bg-[#2B3259]/10 text-[#2B3259]/50'
+                        : index === 1
+                          ? 'bg-[#5C5CFF] text-white shadow-[0_6px_20px_-5px_rgba(92,92,255,0.4)]'
+                          : 'bg-[#FF7A00] text-white shadow-[0_6px_20px_-5px_rgba(255,122,0,0.4)]'
+                    }
+                  `}
+                >
+                  {index + 1}
+                </div>
+                <span
+                  className={`
+                    font-semibold text-sm
+                    ${index === 0 ? 'text-[#2B3259]/50' : 'text-[#2B3259]'}
+                  `}
+                >
+                  {step}
+                </span>
+                {index < 2 && (
+                  <span className="text-[#5C5CFF]/40 ml-2" aria-hidden="true">
+                    &#8594;
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+interface TransformationCardProps {
+  persona: 'investidor' | 'assessor';
+  title: string;
+  subtitle: string;
+  todayItems: string[];
+  nexusItems: string[];
+  ctaText: string;
+  primaryColor: string;
+}
+
+function TransformationCard({
+  persona,
+  title,
+  subtitle,
+  todayItems,
+  nexusItems,
+  ctaText,
+  primaryColor,
+}: TransformationCardProps) {
+  const isInvestidor = persona === 'investidor';
+
+  return (
+    <article
+      className={`
+        group
+        relative
+        bg-white/80 backdrop-blur-sm
+        rounded-3xl
+        border border-[#2B3259]/10
+        hover:border-opacity-20
+        shadow-[0_20px_60px_-15px_rgba(43,50,89,0.1)]
+        transition-all duration-500
+        overflow-hidden
+        h-full
+      `}
+      style={{
+        // @ts-expect-error - CSS custom property
+        '--hover-shadow': isInvestidor
+          ? '0 30px 80px -20px rgba(92,92,255,0.25)'
+          : '0 30px 80px -20px rgba(255,122,0,0.25)',
+      }}
+    >
+      {/* Gradient overlay on hover */}
+      <div
+        className="
+          absolute inset-0
+          bg-gradient-to-b from-transparent via-transparent to-white/50
+          opacity-0
+          group-hover:opacity-100
+          transition-opacity duration-500
+          pointer-events-none
+        "
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 p-8">
+        {/* Header */}
+        <div className="mb-8">
+          <div className="flex items-center gap-3 mb-2">
+            <div
+              className="
+                w-12 h-12
+                rounded-2xl
+                flex items-center justify-center
+                transition-all duration-300
+                group-hover:scale-110
+              "
+              style={{ backgroundColor: `${primaryColor}15` }}
+            >
+              <span className="text-2xl">{isInvestidor ? '💼' : '🎯'}</span>
+            </div>
+            <div>
+              <h3
+                className="text-2xl font-black tracking-[-0.02em]"
+                style={{ color: primaryColor }}
+              >
+                {title}
+              </h3>
+              <p className="text-sm text-[#2B3259]/50">{subtitle}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Timeline Container */}
+        <div className="relative">
+          {/* Vertical Progress Line */}
+          <div
+            className="
+              absolute left-[18px] top-8 bottom-8
+              w-0.5
+              bg-gradient-to-b from-[#2B3259]/20 via-[#5C5CFF]/50 to-[#5C5CFF]
+              group-hover:via-[#5C5CFF]/70
+              transition-all duration-500
+            "
+            style={{
+              background: `linear-gradient(to bottom, rgba(43,50,89,0.2), ${primaryColor}80, ${primaryColor})`,
+            }}
+            aria-hidden="true"
+          />
+
+          {/* TODAY Section */}
+          <div className="relative mb-8">
+            {/* Timeline Dot - Today */}
+            <div
+              className="
+                absolute left-0 top-0
+                w-9 h-9
+                bg-[#EFF0F0]
+                rounded-full
+                border-2 border-[#2B3259]/20
+                flex items-center justify-center
+                z-10
+              "
+            >
+              <div className="w-2.5 h-2.5 bg-[#2B3259]/30 rounded-full" />
+            </div>
+
+            <div className="ml-14">
+              <span className="text-xs font-bold text-[#2B3259]/40 uppercase tracking-widest">
+                Hoje
+              </span>
+
+              <div className="mt-3 space-y-2">
+                {todayItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="
+                      flex items-start gap-2
+                      text-sm text-[#2B3259]/50
+                    "
+                  >
+                    <span className="text-[#2B3259]/30 mt-0.5">&#9675;</span>
+                    <span className="line-through decoration-[#2B3259]/20">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* WITH NEXUS Section */}
+          <div className="relative">
+            {/* Timeline Dot - Nexus */}
+            <div
+              className="
+                absolute left-0 top-0
+                w-9 h-9
+                rounded-full
+                flex items-center justify-center
+                z-10
+                shadow-lg
+                transition-transform duration-300
+                group-hover:scale-110
+              "
+              style={{
+                backgroundColor: primaryColor,
+                boxShadow: `0 8px 25px -5px ${primaryColor}50`,
+              }}
+            >
+              <span className="text-white font-bold text-sm">&#10003;</span>
+            </div>
+
+            <div className="ml-14">
+              <span
+                className="text-xs font-bold uppercase tracking-widest"
+                style={{ color: primaryColor }}
+              >
+                Com Nexus
+              </span>
+
+              <div className="mt-3 space-y-3">
+                {nexusItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="
+                      flex items-start gap-2
+                      text-sm text-[#2B3259]/80
+                      group-hover:translate-x-1
+                      transition-transform duration-300
+                    "
+                    style={{ transitionDelay: `${index * 50}ms` }}
+                  >
+                    <span
+                      className="mt-0.5 font-bold"
+                      style={{ color: primaryColor }}
+                    >
+                      &#10003;
+                    </span>
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-8 ml-14">
+          <button
+            type="button"
+            className="
+              w-full
+              font-bold text-base
+              text-white
+              px-6 py-4
+              rounded-xl
+              transition-all duration-300
+              ease-[cubic-bezier(0.34,1.56,0.64,1)]
+              hover:-translate-y-0.5
+              active:translate-y-0 active:scale-[0.98]
+              cursor-pointer
+            "
+            style={{
+              backgroundColor: primaryColor,
+              boxShadow: `0 12px 35px -10px ${primaryColor}60`,
+            }}
+          >
+            {ctaText} &#8594;
+          </button>
+
+          <p className="mt-3 text-center text-xs text-[#2B3259]/40">
+            Acesso antecipado + desconto exclusivo
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+}

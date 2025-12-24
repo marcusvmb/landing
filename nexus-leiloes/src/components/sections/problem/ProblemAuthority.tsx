@@ -1,0 +1,280 @@
+/**
+ * PROBLEM SECTION V3: AUTHORITY
+ *
+ * Frame Cognitivo: "Por que ferramentas fragmentadas NUNCA vao funcionar"
+ *
+ * Vieses Aplicados:
+ * - Authority: Posicionamento de expert com argumento logico
+ * - Cognitive Fluency: Argumento estruturado, facil de seguir
+ * - Framing Effect: Frame o problema como estrutural
+ *
+ * Design:
+ * - Background limpo com glow radial sutil
+ * - Tipografia massiva (numero "5" como hero)
+ * - Comparacao VS (fragmentado vs unificado)
+ * - Minimalista e comandante
+ */
+
+export default function ProblemAuthority() {
+  return (
+    <section
+      className="bg-[#EFF0F0] py-32 lg:py-40 relative overflow-hidden"
+      aria-labelledby="problem-authority-heading"
+    >
+      {/* Subtle center glow */}
+      <div
+        className="
+          absolute
+          top-1/2 left-1/2
+          -translate-x-1/2 -translate-y-1/2
+          w-[1000px] h-[1000px]
+          bg-[#5C5CFF]/[0.03]
+          rounded-full
+          blur-[150px]
+        "
+      />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        {/* Massive Typography Headline */}
+        <div className="text-center mb-16 lg:mb-24">
+          <h2
+            id="problem-authority-heading"
+            className="
+              text-4xl
+              sm:text-5xl
+              md:text-6xl
+              lg:text-7xl
+              xl:text-8xl
+              font-black
+              tracking-[-0.04em]
+              leading-[0.9]
+              text-[#2B3259]
+            "
+          >
+            O problema não e você.
+            <br />
+            E usar{' '}
+            <span className="relative inline-block text-[#FF7A00]">
+              {/* Glow behind number */}
+              <span
+                className="
+                  absolute inset-0
+                  bg-[#FF7A00]/10
+                  blur-xl
+                  rounded-full
+                  scale-150
+                "
+                aria-hidden="true"
+              />
+              <span className="relative z-10">5</span>
+            </span>
+            {' '}ferramentas
+            <br />
+            <span className="text-[#2B3259]/40">para fazer o trabalho de 1.</span>
+          </h2>
+        </div>
+
+        {/* VS Comparison - Asymmetric grid */}
+        <div className="grid grid-cols-12 gap-6 items-center max-w-5xl mx-auto mb-16">
+          {/* Fragmented side - 40% (5 cols) */}
+          <div className="col-span-12 md:col-span-5">
+            <div
+              className="
+                p-6 lg:p-8
+                bg-white/40
+                rounded-3xl
+                border border-[#2B3259]/5
+              "
+            >
+              {/* Tool grid - scattered */}
+              <div className="grid grid-cols-3 gap-3 mb-6" role="img" aria-label="Ferramentas fragmentadas">
+                <div className="aspect-square bg-[#2B3259]/5 rounded-xl flex items-center justify-center text-2xl grayscale opacity-60 rotate-[-3deg]">
+                  &#128202;
+                </div>
+                <div className="aspect-square bg-[#2B3259]/5 rounded-xl flex items-center justify-center text-2xl grayscale opacity-60 rotate-[3deg]">
+                  &#128221;
+                </div>
+                <div className="aspect-square bg-[#2B3259]/5 rounded-xl flex items-center justify-center text-2xl grayscale opacity-60 rotate-[-2deg]">
+                  &#128197;
+                </div>
+                <div className="aspect-square bg-[#2B3259]/5 rounded-xl flex items-center justify-center text-2xl grayscale opacity-60 rotate-[1deg]">
+                  &#127760;
+                </div>
+                <div className="aspect-square bg-[#2B3259]/5 rounded-xl flex items-center justify-center text-2xl grayscale opacity-60 rotate-[-3deg]">
+                  &#128231;
+                </div>
+                <div className="aspect-square bg-transparent" />
+              </div>
+
+              {/* Strike through label */}
+              <div className="text-center">
+                <span
+                  className="
+                    text-[#2B3259]/40
+                    font-semibold
+                    line-through
+                    decoration-[#FF7A00]/50
+                    decoration-2
+                  "
+                >
+                  Fragmentado
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* VS indicator */}
+          <div className="hidden md:flex col-span-2 justify-center">
+            <div
+              className="
+                w-16 h-16
+                rounded-full
+                bg-[#2B3259]/10
+                flex items-center justify-center
+                text-[#2B3259]/40
+                font-bold
+                text-lg
+              "
+              aria-hidden="true"
+            >
+              vs
+            </div>
+          </div>
+
+          {/* Mobile VS */}
+          <div className="md:hidden col-span-12 flex justify-center py-4" aria-hidden="true">
+            <div
+              className="
+                w-14 h-14
+                rounded-full
+                bg-[#2B3259]/10
+                flex items-center justify-center
+                text-[#2B3259]/40
+                font-bold
+              "
+            >
+              vs
+            </div>
+          </div>
+
+          {/* Unified side - 60% (5 cols but visually larger) */}
+          <div className="col-span-12 md:col-span-5">
+            <div
+              className="
+                p-8 lg:p-10
+                bg-white
+                rounded-3xl
+                border border-[#5C5CFF]/20
+                shadow-[0_25px_70px_-20px_rgba(92,92,255,0.25)]
+                relative
+              "
+            >
+              {/* Glow */}
+              <div
+                className="
+                  absolute inset-0
+                  bg-[#5C5CFF]/5
+                  rounded-3xl
+                  blur-xl
+                  -z-10
+                "
+                aria-hidden="true"
+              />
+
+              {/* Single hub icon */}
+              <div
+                className="
+                  w-20 h-20
+                  mx-auto mb-6
+                  bg-gradient-to-br from-[#5C5CFF] to-[#7B7BFF]
+                  rounded-2xl
+                  flex items-center justify-center
+                  shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
+                "
+                aria-hidden="true"
+              >
+                <span className="text-white text-4xl font-black">N</span>
+              </div>
+
+              <div className="text-center">
+                <span className="text-[#5C5CFF] font-bold text-lg">
+                  Unificado
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Logical Argument Points */}
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-6 bg-white/60 rounded-2xl border border-[#2B3259]/5">
+              <h3 className="font-bold text-lg text-[#2B3259] mb-2">Sites de leiloeiros</h3>
+              <p className="text-sm text-[#2B3259]/60">
+                Foram feitos para leiloar, não para você buscar com eficiência.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white/60 rounded-2xl border border-[#2B3259]/5">
+              <h3 className="font-bold text-lg text-[#2B3259] mb-2">Excel e Notion</h3>
+              <p className="text-sm text-[#2B3259]/60">
+                Sao ferramentas genericas. Não entendem leilão.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white/60 rounded-2xl border border-[#2B3259]/5">
+              <h3 className="font-bold text-lg text-[#2B3259] mb-2">Calculadoras simples</h3>
+              <p className="text-sm text-[#2B3259]/60">
+                Mostram um cenario. Investidores inteligentes precisam comparar varios.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white/60 rounded-2xl border border-[#2B3259]/5">
+              <h3 className="font-bold text-lg text-[#2B3259] mb-2">Copiar dados manualmente</h3>
+              <p className="text-sm text-[#2B3259]/60">
+                Gera erros. Erros geram decisões ruins.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Logical Conclusion */}
+        <div className="mt-12 text-center max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-[#2B3259]/60 leading-relaxed">
+            Ferramentas separadas significam{' '}
+            <span className="font-semibold text-[#2B3259]">informação espalhada</span>.
+            <br />
+            Informação espalhada significa{' '}
+            <span className="font-semibold text-[#2B3259]">visao incompleta</span>.
+          </p>
+        </div>
+
+        {/* Commanding CTA */}
+        <div className="mt-16 text-center">
+          <button
+            type="button"
+            className="
+              bg-[#5C5CFF]
+              text-white
+              font-bold
+              text-xl
+              px-16 py-6
+              rounded-full
+              shadow-[0_20px_60px_-15px_rgba(92,92,255,0.4)]
+              hover:-translate-y-2
+              hover:shadow-[0_30px_80px_-15px_rgba(92,92,255,0.5)]
+              transition-all duration-300
+              focus-visible:outline
+              focus-visible:outline-2
+              focus-visible:outline-offset-2
+              focus-visible:outline-[#2B3259]
+              cursor-pointer
+            "
+          >
+            Conhecer a Unica Solução Completa
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}

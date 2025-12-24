@@ -1,0 +1,438 @@
+/**
+ * SEGMENTATION SECTION V1: LOSS AVERSION
+ *
+ * Frame Cognitivo: "Não importa quem você e, você esta perdendo sem isso"
+ *
+ * ASCII Layout:
+ * ┌──────────────────────────────────────────────────────────────────────┐
+ * │                         EYEBROW BADGE                                │
+ * │                                                                      │
+ * │         "Para Quem e o Nexus? Para Quem Não Quer Perder"            │
+ * │                          (headline)                                  │
+ * ├──────────────────────────────────────────────────────────────────────┤
+ * │                                                                      │
+ * │  ┌────────────────────────────┐    ┌─────────────────────────────┐  │
+ * │  │ [!] INVESTIDORES PF        │    │ [!] ASSESSORES DE LEILAO   │  │
+ * │  │     ───────────────        │    │     ─────────────────      │  │
+ * │  │                            │    │                             │  │
+ * │  │  PERDAS SEM O NEXUS:       │    │  PERDAS SEM O NEXUS:       │  │
+ * │  │  ┌────────────────────┐    │    │  ┌─────────────────────┐   │  │
+ * │  │  │ ⚠ R$15k em erros   │    │    │  │ ⚠ 3 clientes/mês    │   │  │
+ * │  │  │ ⚠ 2h/dia buscando  │    │    │  │ ⚠ 5h/dia em tarefas │   │  │
+ * │  │  │ ⚠ Oportunidades    │    │    │  │ ⚠ Credibilidade     │   │  │
+ * │  │  └────────────────────┘    │    │  └─────────────────────┘   │  │
+ * │  │                            │    │                             │  │
+ * │  │  COM O NEXUS:              │    │  COM O NEXUS:              │  │
+ * │  │  ✓ Encontre antes          │    │  ✓ Gerencie multiplos      │  │
+ * │  │  ✓ Calcule o ROI real      │    │  ✓ Gere relatorios PRO     │  │
+ * │  │  ✓ Organize tudo           │    │  ✓ Acompanhe comissoes     │  │
+ * │  │  ✓ Decida com confiança    │    │  ✓ Impressione clientes    │  │
+ * │  │                            │    │                             │  │
+ * │  │  ┌────────────────────┐    │    │  ┌─────────────────────┐   │  │
+ * │  │  │ PARAR DE PERDER    │    │    │  │ PARAR DE PERDER     │   │  │
+ * │  │  │    (Primary)       │    │    │  │    (Secondary)      │   │  │
+ * │  │  └────────────────────┘    │    │  └─────────────────────┘   │  │
+ * │  └────────────────────────────┘    └─────────────────────────────┘  │
+ * │          ↑ col-span-7                      ↑ col-span-5             │
+ * └──────────────────────────────────────────────────────────────────────┘
+ *
+ * Grid Structure: 12 cols
+ * - Investidores card: col-span-7 (assimetrico, ligeiramente maior)
+ * - Assessores card: col-span-5
+ *
+ * Visual Elements:
+ * - Warning glows laranja nos cards
+ * - Badges de alerta com valores de perda
+ * - Linha divisoria visual entre "perdas" e "ganhos"
+ * - Sombras coloridas diferenciadas por persona
+ *
+ * Hover States:
+ * - Investidores: glow azul (#5C5CFF) aparece, card eleva
+ * - Assessores: glow laranja (#FF7A00) intensifica, card eleva
+ */
+
+const investidorLosses = [
+  { value: 'R$15.000+', desc: 'em erros de cálculo por ano' },
+  { value: '2h/dia', desc: 'buscando em +20 sites' },
+  { value: '3-5 imóveis', desc: 'bons perdidos por mês' },
+];
+
+const investidorBenefits = [
+  'Encontre oportunidades antes da concorrência',
+  'Calcule o ROI real antes de arrematar',
+  'Organize todos os seus leilões em um só lugar',
+  'Tome decisões com confiança',
+];
+
+const assessorLosses = [
+  { value: '3 clientes', desc: 'perdidos por mês por desorganização' },
+  { value: '5h/dia', desc: 'em tarefas manuais repetitivas' },
+  { value: 'Credibilidade', desc: 'abalada com relatorios amadores' },
+];
+
+const assessorBenefits = [
+  'Gerencie multiplos clientes em um painel',
+  'Gere relatorios profissionais com sua marca',
+  'Acompanhe comissoes e resultados',
+  'Impressione clientes com análises detalhadas',
+];
+
+export default function SegmentationLossAversion() {
+  return (
+    <section
+      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      aria-labelledby="segmentation-loss-heading"
+    >
+      {/* Background Glows */}
+      <div
+        className="
+          absolute top-1/4 left-0
+          w-[600px] h-[600px]
+          bg-[#FF7A00]/8
+          rounded-full
+          blur-[150px]
+          -translate-x-1/2
+        "
+        aria-hidden="true"
+      />
+      <div
+        className="
+          absolute bottom-1/4 right-0
+          w-[500px] h-[500px]
+          bg-[#FF7A00]/6
+          rounded-full
+          blur-[120px]
+          translate-x-1/3
+        "
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-6">
+        {/* Eyebrow */}
+        <div className="text-center mb-6">
+          <span
+            className="
+              inline-flex items-center gap-2
+              px-5 py-2.5
+              bg-[#FF7A00]/10
+              rounded-full
+              border border-[#FF7A00]/20
+            "
+          >
+            <span className="text-[#FF7A00]" aria-hidden="true">
+              &#9888;
+            </span>
+            <span className="text-sm font-semibold text-[#FF7A00] uppercase tracking-wider">
+              Quem esta perdendo?
+            </span>
+          </span>
+        </div>
+
+        {/* Headline */}
+        <h2
+          id="segmentation-loss-heading"
+          className="
+            text-center
+            text-3xl sm:text-4xl md:text-5xl
+            font-black
+            tracking-[-0.03em]
+            leading-[1.1]
+            text-[#2B3259]
+            mb-6
+          "
+        >
+          Para Quem e o Nexus?{' '}
+          <br className="hidden sm:block" />
+          <span className="text-[#FF7A00]">Para Quem Não Quer Perder.</span>
+        </h2>
+
+        {/* Subheadline */}
+        <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
+          Não importa se você investe sozinho ou assessora dezenas de clientes.{' '}
+          <span className="font-semibold text-[#2B3259]">
+            Sem as ferramentas certas, você esta deixando dinheiro na mesa.
+          </span>
+        </p>
+
+        {/* Persona Cards - Asymmetric Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          {/* Investidores Card - Larger */}
+          <div className="lg:col-span-7">
+            <PersonaCard
+              persona="investidor"
+              title="Investidores PF"
+              subtitle="Pessoas fisicas que investem em leilões"
+              losses={investidorLosses}
+              benefits={investidorBenefits}
+              ctaText="Parar de Perder Oportunidades"
+              ctaColor="primary"
+            />
+          </div>
+
+          {/* Assessores Card - Smaller */}
+          <div className="lg:col-span-5 lg:mt-8">
+            <PersonaCard
+              persona="assessor"
+              title="Assessores de Leilão"
+              subtitle="Profissionais que assessoram clientes"
+              losses={assessorLosses}
+              benefits={assessorBenefits}
+              ctaText="Parar de Perder Clientes"
+              ctaColor="secondary"
+            />
+          </div>
+        </div>
+
+        {/* Bottom Summary */}
+        <div
+          className="
+            mt-16
+            p-8
+            bg-white/60 backdrop-blur-sm
+            rounded-3xl
+            border border-[#FF7A00]/10
+            shadow-[0_20px_60px_-15px_rgba(255,122,0,0.1)]
+            text-center
+          "
+        >
+          <p className="text-lg text-[#2B3259]/70 mb-3">
+            Perdas combinadas estimadas por ano:
+          </p>
+          <p className="text-4xl md:text-5xl font-black text-[#FF7A00] line-through decoration-4 mb-2">
+            R$50.000+
+          </p>
+          <p className="text-[#2B3259]/60">
+            Entre na lista VIP e seja o primeiro a eliminar essas perdas
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+interface PersonaCardProps {
+  persona: 'investidor' | 'assessor';
+  title: string;
+  subtitle: string;
+  losses: { value: string; desc: string }[];
+  benefits: string[];
+  ctaText: string;
+  ctaColor: 'primary' | 'secondary';
+}
+
+function PersonaCard({
+  persona,
+  title,
+  subtitle,
+  losses,
+  benefits,
+  ctaText,
+  ctaColor,
+}: PersonaCardProps) {
+  const isInvestidor = persona === 'investidor';
+  const primaryColor = isInvestidor ? '#5C5CFF' : '#FF7A00';
+  const hoverGlowColor = isInvestidor
+    ? 'group-hover:shadow-[0_30px_80px_-20px_rgba(92,92,255,0.35)]'
+    : 'group-hover:shadow-[0_30px_80px_-20px_rgba(255,122,0,0.35)]';
+
+  return (
+    <article
+      className={`
+        group
+        relative
+        bg-white/80 backdrop-blur-sm
+        rounded-3xl
+        border border-[#FF7A00]/15
+        hover:border-${isInvestidor ? '[#5C5CFF]' : '[#FF7A00]'}/30
+        shadow-[0_20px_60px_-15px_rgba(255,122,0,0.15)]
+        ${hoverGlowColor}
+        transition-all duration-500
+        overflow-hidden
+        h-full
+      `}
+    >
+      {/* Warning Glow */}
+      <div
+        className="
+          absolute -top-20 -right-20
+          w-48 h-48
+          bg-[#FF7A00]/15
+          rounded-full
+          blur-3xl
+          group-hover:opacity-50
+          transition-opacity duration-500
+        "
+        aria-hidden="true"
+      />
+
+      {/* Solution Glow - appears on hover */}
+      <div
+        className={`
+          absolute -top-20 -right-20
+          w-48 h-48
+          bg-[${primaryColor}]/20
+          rounded-full
+          blur-3xl
+          opacity-0
+          group-hover:opacity-100
+          transition-opacity duration-500
+        `}
+        style={{ backgroundColor: `${primaryColor}20` }}
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 p-8">
+        {/* Header */}
+        <div className="mb-6">
+          <div className="flex items-center gap-3 mb-2">
+            <div
+              className="
+                w-12 h-12
+                bg-[#FF7A00]/10
+                group-hover:bg-opacity-20
+                rounded-2xl
+                flex items-center justify-center
+                transition-all duration-300
+              "
+              style={{
+                backgroundColor: isInvestidor
+                  ? 'rgba(92,92,255,0.1)'
+                  : 'rgba(255,122,0,0.1)',
+              }}
+            >
+              <span className="text-2xl">{isInvestidor ? '💼' : '🎯'}</span>
+            </div>
+            <div>
+              <h3
+                className="text-2xl font-black tracking-[-0.02em]"
+                style={{ color: primaryColor }}
+              >
+                {title}
+              </h3>
+              <p className="text-sm text-[#2B3259]/50">{subtitle}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Losses Section */}
+        <div
+          className="
+            p-5 mb-5
+            bg-[#FF7A00]/5
+            rounded-2xl
+            border border-[#FF7A00]/10
+          "
+        >
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-[#FF7A00]" aria-hidden="true">
+              &#9888;
+            </span>
+            <span className="text-xs font-bold text-[#FF7A00] uppercase tracking-widest">
+              Perdas sem o Nexus
+            </span>
+          </div>
+
+          <div className="space-y-3">
+            {losses.map((loss, index) => (
+              <div
+                key={index}
+                className="
+                  flex items-start gap-3
+                  p-3
+                  bg-white/60
+                  rounded-xl
+                  border border-[#FF7A00]/10
+                "
+              >
+                <span className="text-[#FF7A00] mt-0.5">&#9888;</span>
+                <div>
+                  <span className="font-bold text-[#FF7A00] line-through decoration-2">
+                    {loss.value}
+                  </span>
+                  <span className="text-sm text-[#2B3259]/60 ml-2">
+                    {loss.desc}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div
+          className="
+            p-5 mb-6
+            rounded-2xl
+            border
+            transition-all duration-300
+          "
+          style={{
+            backgroundColor: `${primaryColor}08`,
+            borderColor: `${primaryColor}15`,
+          }}
+        >
+          <div className="flex items-center gap-2 mb-4">
+            <span style={{ color: primaryColor }} aria-hidden="true">
+              &#10003;
+            </span>
+            <span
+              className="text-xs font-bold uppercase tracking-widest"
+              style={{ color: primaryColor }}
+            >
+              Com o Nexus
+            </span>
+          </div>
+
+          <ul className="space-y-3">
+            {benefits.map((benefit, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <span
+                  className="mt-0.5 font-bold"
+                  style={{ color: primaryColor }}
+                >
+                  &#10003;
+                </span>
+                <span className="text-sm text-[#2B3259]/80">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* CTA */}
+        <button
+          type="button"
+          className={`
+            w-full
+            font-bold text-base
+            px-6 py-4
+            rounded-xl
+            transition-all duration-300
+            ease-[cubic-bezier(0.34,1.56,0.64,1)]
+            hover:-translate-y-0.5
+            active:translate-y-0 active:scale-[0.98]
+            cursor-pointer
+            ${
+              ctaColor === 'primary'
+                ? `
+                  bg-[#5C5CFF] text-white
+                  shadow-[0_12px_35px_-10px_rgba(92,92,255,0.4)]
+                  hover:shadow-[0_18px_45px_-10px_rgba(92,92,255,0.5)]
+                `
+                : `
+                  bg-[#FF7A00] text-white
+                  shadow-[0_12px_35px_-10px_rgba(255,122,0,0.4)]
+                  hover:shadow-[0_18px_45px_-10px_rgba(255,122,0,0.5)]
+                `
+            }
+          `}
+        >
+          {ctaText}
+        </button>
+
+        <p className="mt-3 text-center text-xs text-[#2B3259]/40">
+          Garanta seu desconto exclusivo
+        </p>
+      </div>
+    </article>
+  );
+}
