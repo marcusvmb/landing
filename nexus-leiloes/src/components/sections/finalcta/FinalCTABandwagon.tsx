@@ -56,11 +56,11 @@ const promoCode = {
 const liveStats = {
   totalUsers: 2547,
   activeNow: 127,
-  lastSignup: '3 min atras',
+  lastSignup: '3 min atrás',
 };
 
 const recentSignups = [
-  { name: 'Carlos M.', city: 'Sao Paulo', time: '3 min' },
+  { name: 'Carlos M.', city: 'São Paulo', time: '3 min' },
   { name: 'Ana P.', city: 'Rio de Janeiro', time: '7 min' },
   { name: 'Roberto S.', city: 'Belo Horizonte', time: '12 min' },
   { name: 'Juliana F.', city: 'Curitiba', time: '18 min' },
@@ -68,7 +68,7 @@ const recentSignups = [
 
 const footerLinks = {
   legal: [
-    { label: 'Politica de Privacidade', href: '/privacidade' },
+    { label: 'Política de Privacidade', href: '/privacidade' },
     { label: 'Termos de Uso', href: '/termos' },
   ],
   social: [
@@ -140,7 +140,7 @@ export default function FinalCTABandwagon() {
           <div className="text-center mb-6">
             <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/20 rounded-full border border-white/30 backdrop-blur-sm">
               <span className="w-2 h-2 bg-white rounded-full animate-pulse" aria-hidden="true" />
-              <span className="text-sm font-semibold text-white uppercase tracking-wider">Ultima Semana de Desconto</span>
+              <span className="text-sm font-semibold text-white uppercase tracking-wider">Última Semana de Desconto</span>
             </span>
           </div>
 
@@ -173,7 +173,7 @@ export default function FinalCTABandwagon() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5C5CFF] opacity-75" />
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#5C5CFF]" />
               </span>
-              <span className="text-sm font-medium text-white">{activeNow} usuarios online agora</span>
+              <span className="text-sm font-medium text-white">{activeNow} usuários online agora</span>
             </div>
           </div>
 
@@ -182,7 +182,7 @@ export default function FinalCTABandwagon() {
             {/* Promo Code Card - 5 columns */}
             <div className="lg:col-span-5">
               <div className="h-full bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8 flex flex-col justify-center">
-                <p className="text-sm font-medium text-white/70 uppercase tracking-wider mb-3">Codigo Exclusivo</p>
+                <p className="text-sm font-medium text-white/70 uppercase tracking-wider mb-3">Código Exclusivo</p>
 
                 {/* Code Display */}
                 <button type="button" onClick={copyCode} className="group relative w-full bg-[#2B3259] rounded-2xl p-6 mb-6 border-2 border-dashed border-white/30 cursor-pointer transition-all duration-300 hover:border-white/50 hover:bg-[#2B3259]/90">
@@ -210,7 +210,7 @@ export default function FinalCTABandwagon() {
                     <p className="text-2xl font-black text-white">{promoCode.discount} OFF</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-white/50">Valido por</p>
+                    <p className="text-sm text-white/50">Válido por</p>
                     <p className="text-lg font-bold text-white">{promoCode.validUntil}</p>
                   </div>
                 </div>
@@ -236,7 +236,7 @@ export default function FinalCTABandwagon() {
 
                 {/* Recent Signups */}
                 <div className="mb-8">
-                  <p className="text-xs font-medium text-[#2B3259]/40 uppercase tracking-wider mb-3">Ultimas inscricoes</p>
+                  <p className="text-xs font-medium text-[#2B3259]/40 uppercase tracking-wider mb-3">Últimas inscrições</p>
                   <div className="space-y-2">
                     {recentSignups.slice(0, 3).map((signup, index) => (
                       <div key={index} className="flex items-center gap-3 p-3 bg-[#EFF0F0] rounded-xl">
@@ -291,7 +291,7 @@ export default function FinalCTABandwagon() {
 
             <div className="text-center sm:text-left">
               <p className="text-2xl font-black text-white">{currentUsers.toLocaleString('pt-BR')}+ investidores</p>
-              <p className="text-sm text-white/50">confiam no Nexus para suas decisões</p>
+              <p className="text-sm text-white/50">confiam na Nexus para suas decisões</p>
             </div>
           </div>
 

@@ -17,7 +17,7 @@ import React from 'react';
  * |                                                                      |
  * |   +-------------------- MAIN CONTENT ----------------------+         |
  * |   |                                                         |        |
- * |   |        "Cada Dia Sem o Nexus                           |        |
+ * |   |        "Cada Dia Sem a Nexus                           |        |
  * |   |         e Dinheiro Perdido"                            |        |
  * |   |                                                         |        |
  * |   |   +----- col-span-5 -----+  +----- col-span-7 -----+  |        |
@@ -44,18 +44,18 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 const economiaData = {
-  total: 'R$47.000',
-  periodo: 'por ano',
+  total: '+15h',
+  periodo: 'por semana',
   breakdown: [
-    { label: 'Tempo economizado', value: '730h', icon: 'clock' },
-    { label: 'Erros evitados', value: 'R$15k', icon: 'shield' },
-    { label: 'Oportunidades extras', value: 'R$32k', icon: 'target' },
+    { label: 'Tempo economizado', value: '730h/ano', icon: 'clock' },
+    { label: 'Decisões seguras', value: '100%', icon: 'shield' },
+    { label: 'Encontrar primeiro', value: 'Vantagem', icon: 'target' },
   ],
 };
 
 const footerLinks = {
   legal: [
-    { label: 'Politica de Privacidade', href: '/privacidade' },
+    { label: 'Política de Privacidade', href: '/privacidade' },
     { label: 'Termos de Uso', href: '/termos' },
   ],
   social: [
@@ -105,15 +105,15 @@ export default function FinalCTALossAversion() {
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           {/* Headline */}
           <h2 id="finalcta-loss-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-white mb-6">
-            Cada Dia Sem o Nexus
+            Cada Dia Sem a Nexus
             <br />
-            <span className="text-[#5C5CFF]">e Dinheiro Perdido</span>
+            <span className="text-[#5C5CFF]">é Tempo e Oportunidades Perdidos</span>
           </h2>
 
           {/* Subheadline */}
           <p className="text-center text-lg text-white/60 max-w-2xl mx-auto mb-16">
-            Enquanto você hesita, investidores com o Nexus estão{' '}
-            <span className="text-[#5C5CFF] font-semibold">economizando R$47.000 por ano</span>.
+            Enquanto você hesita, investidores com a Nexus estão{' '}
+            <span className="text-[#5C5CFF] font-semibold">recuperando 15h/semana e tomando decisões com confiança</span>.
           </p>
 
           {/* Main Content - Asymmetric Grid */}
@@ -168,7 +168,7 @@ export default function FinalCTALossAversion() {
                 {/* Spots Counter */}
                 <div className="flex items-center justify-center gap-3 mb-8 px-5 py-3 bg-white/5 rounded-full w-fit mx-auto border border-white/10">
                   <span className="w-2 h-2 bg-[#5C5CFF] rounded-full animate-pulse" />
-                  <span className="text-sm font-medium text-white">Apenas <span className="text-[#5C5CFF] font-bold">{spotsLeft} vagas</span> com desconto de fundador</span>
+                  <span className="text-sm font-medium text-white">Apenas <span className="text-[#5C5CFF] font-bold">{spotsLeft} vagas</span> com desconto de fundadora</span>
                 </div>
 
                 {/* Email Form */}
@@ -185,11 +185,11 @@ export default function FinalCTALossAversion() {
                 <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm text-white/50">
                   <span className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-[#5C5CFF]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
-                    7 dias gratis
+                    7 dias grátis
                   </span>
                   <span className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-[#5C5CFF]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
-                    Sem cartao
+                    Sem cartão
                   </span>
                   <span className="flex items-center gap-1.5">
                     <svg className="w-4 h-4 text-[#5C5CFF]" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/></svg>

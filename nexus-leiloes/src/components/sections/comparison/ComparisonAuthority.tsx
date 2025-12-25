@@ -30,7 +30,7 @@
  * |     |   Controle   |    [X] Caos    |   [V] Dashboard    |          |
  * |     |              |    de abas     |   central          |          |
  * |     +--------------+-----------------+--------------------+          |
- * |     |   Relatorios |    [X] Prints  |   [V] PDFs         |          |
+ * |     |   Relatórios |    [X] Prints  |   [V] PDFs         |          |
  * |     |              |    amadores    |   profissionais    |          |
  * |     +================================================+    |          |
  * |                                                                        |
@@ -75,7 +75,7 @@ const comparisonData = [
   },
   {
     id: 'tempo',
-    aspect: 'Tempo Diario',
+    aspect: 'Tempo Diário',
     amateur: {
       value: '2 horas/dia',
       description: 'alternando entre ferramentas',
@@ -125,16 +125,16 @@ const comparisonData = [
     },
     pro: {
       value: 'Dashboard central',
-      description: 'visao completa do pipeline',
+      description: 'visão completa do pipeline',
       status: 'pass',
     },
   },
   {
     id: 'relatorios',
-    aspect: 'Relatorios',
+    aspect: 'Relatórios',
     amateur: {
       value: 'Prints e Word',
-      description: 'apresentacoes amadoras',
+      description: 'apresentações amadoras',
       status: 'fail',
     },
     pro: {
@@ -435,7 +435,7 @@ export default function ComparisonAuthority() {
             Virar Profissional Agora
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
-            Entre para o time dos investidores que levam a serio
+            Entre para o time dos investidores que levam a sério
           </p>
         </div>
       </div>

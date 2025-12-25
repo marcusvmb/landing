@@ -128,7 +128,7 @@ export default function HeroTransformation() {
                   </div>
                   <div>
                     <div className="font-medium text-sm text-[#2B3259]/70">Word</div>
-                    <div className="text-xs text-[#2B3259]/40">Relatorios manuais</div>
+                    <div className="text-xs text-[#2B3259]/40">Relatórios manuais</div>
                   </div>
                 </div>
 
@@ -211,7 +211,7 @@ export default function HeroTransformation() {
               {/* Label */}
               <div className="flex items-center gap-2 mb-6">
                 <span className="text-2xl" role="img" aria-label="happy">😎</span>
-                <span className="font-semibold text-[#5C5CFF] text-lg">Seu dia com o Nexus</span>
+                <span className="font-semibold text-[#5C5CFF] text-lg">Seu dia com a Nexus</span>
               </div>
 
               {/* Clean dashboard features - vibrant */}
@@ -232,7 +232,7 @@ export default function HeroTransformation() {
                   </div>
                   <div>
                     <div className="font-medium text-sm text-[#2B3259]">Calculadora Inteligente</div>
-                    <div className="text-xs text-[#5C5CFF] font-medium">Multiplos cenarios comparados</div>
+                    <div className="text-xs text-[#5C5CFF] font-medium">Múltiplos cenários comparados</div>
                   </div>
                 </div>
 
@@ -241,7 +241,7 @@ export default function HeroTransformation() {
                     📁
                   </div>
                   <div>
-                    <div className="font-medium text-sm text-[#2B3259]">Gestao Completa</div>
+                    <div className="font-medium text-sm text-[#2B3259]">Gestão Completa</div>
                     <div className="text-xs text-[#5C5CFF] font-medium">Portfolio + PDF em 1 clique</div>
                   </div>
                 </div>
@@ -302,12 +302,12 @@ export default function HeroTransformation() {
               cursor-pointer
             "
           >
-            Comecar Minha Transformação
+            Começar Minha Transformação
             <span aria-hidden="true"> &rarr;</span>
           </button>
 
           <p className="mt-5 text-sm text-[#2B3259]/70">
-            Desconto exclusivo para quem entrar antes do lancamento
+            Desconto exclusivo para quem entrar antes do lançamento
           </p>
         </div>
       </div>

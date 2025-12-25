@@ -91,7 +91,7 @@ const transformationData = [
     after: {
       icon: 'rocket',
       title: '15 Minutos/Dia',
-      subtitle: 'Eficiência maxima',
+      subtitle: 'Eficiência máxima',
       visual: 'fast',
     },
   },
@@ -105,7 +105,7 @@ const transformationData = [
     },
     after: {
       icon: 'calculator',
-      title: 'Calculadora Automatica',
+      title: 'Calculadora Automática',
       subtitle: '100% precisão garantida',
       visual: 'auto',
     },
@@ -120,7 +120,7 @@ const transformationData = [
     },
     after: {
       icon: 'check',
-      title: 'Análise Multi-Cenarios',
+      title: 'Análise Multi-Cenários',
       subtitle: '5 simulações por imóvel',
       visual: 'precision',
     },
@@ -145,13 +145,13 @@ const transformationData = [
     before: {
       icon: 'screenshot',
       title: 'Prints Amadores',
-      subtitle: 'Apresentacoes vergonhosas',
+      subtitle: 'Apresentações vergonhosas',
       visual: 'amateur',
     },
     after: {
       icon: 'pdf',
       title: 'PDFs Profissionais',
-      subtitle: 'Relatorios em 1 clique',
+      subtitle: 'Relatórios em 1 clique',
       visual: 'professional',
     },
   },

@@ -1,7 +1,7 @@
 /**
  * HERO 1: LOSS AVERSION
  *
- * Frame Cognitivo: Aversao a perda - explorar o medo de perder oportunidades
+ * Frame Cognitivo: Aversão a perda - explorar o medo de perder oportunidades
  *
  * Layout Specifications:
  * - Grid: 12 colunas, assimetrico 7/5 (NAO 50/50)
@@ -112,7 +112,7 @@ export default function HeroLossAversion() {
                 leading-relaxed
               "
             >
-              O único Hub que unifica busca, análise e gestao de leilões imobiliarios.
+              O único Hub que unifica busca, análise e gestão de leilões imobiliários.
               Tudo em uma plataforma. Sem alternar entre dezenas de sites e planilhas.
             </p>
 
@@ -155,11 +155,11 @@ export default function HeroLossAversion() {
               </li>
               <li className="flex items-center gap-1.5">
                 <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
-                Sem cartao de credito
+                Sem cartão de crédito
               </li>
               <li className="flex items-center gap-1.5">
                 <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
-                7 dias gratis
+                7 dias grátis
               </li>
             </ul>
           </div>
@@ -203,7 +203,7 @@ export default function HeroLossAversion() {
                   border border-white/50
                 "
                 role="img"
-                aria-label="Visualizacao do painel do Nexus Leilões mostrando 23 imóveis em análise, 5 leilões hoje e R$2.4M em potencial de investimento"
+                aria-label="Visualização do painel da Nexus Leilões mostrando 23 imóveis em análise, 5 leilões hoje e 12 alertas ativos"
               >
                 {/* Mockup Header - macOS style */}
                 <div className="flex items-center gap-2 mb-6">
@@ -233,8 +233,8 @@ export default function HeroLossAversion() {
                       <div className="text-xs text-[#2B3259]/50">Hoje</div>
                     </div>
                     <div className="p-4 bg-[#5C5CFF]/5 rounded-xl border border-[#5C5CFF]/10">
-                      <div className="text-2xl font-bold text-[#5C5CFF]">R$2.4M</div>
-                      <div className="text-xs text-[#2B3259]/50">Potencial</div>
+                      <div className="text-2xl font-bold text-[#5C5CFF]">12</div>
+                      <div className="text-xs text-[#2B3259]/50">Alertas</div>
                     </div>
                   </div>
 

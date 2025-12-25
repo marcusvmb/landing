@@ -75,7 +75,7 @@ const faqItems: FAQItem[] = [
     id: 'tempo',
     rank: 1,
     question: 'Quanto tempo leva para ver resultados?',
-    answer: 'A maioria dos usuarios ve resultados significativos em 15-30 dias. A busca unificada economiza em media 2 horas por dia desde o primeiro acesso. Em um mês, você já tera recuperado o investimento em tempo e estara operando muito mais rapido que a concorrência.',
+    answer: 'A maioria dos usuários vê resultados significativos em 15-30 dias. A busca unificada economiza em média 2 horas por dia desde o primeiro acesso. Em um mês, você já terá recuperado o investimento em tempo e estará operando muito mais rápido que a concorrência.',
     askedCount: 847,
     helpfulPercent: 94,
     commentCount: 23,
@@ -84,7 +84,7 @@ const faqItems: FAQItem[] = [
     id: 'tipos',
     rank: 2,
     question: 'O sistema funciona para qualquer tipo de leilão?',
-    answer: 'Sim! O Nexus cobre leilões judiciais e extrajudiciais de todos os principais leiloeiros do Brasil. Você não perde nenhuma oportunidade por estar "no site errado". Uma única busca, todos os leilões disponiveis.',
+    answer: 'Sim! A Nexus cobre leilões judiciais e extrajudiciais de todos os principais leiloeiros do Brasil. Você não perde nenhuma oportunidade por estar "no site errado". Uma única busca, todos os leilões disponíveis.',
     askedCount: 612,
     helpfulPercent: 97,
     commentCount: 18,
@@ -93,7 +93,7 @@ const faqItems: FAQItem[] = [
     id: 'experiência',
     rank: 3,
     question: 'Preciso de experiência em leilões para usar?',
-    answer: 'Não! A interface foi criada para ser intuitiva tanto para iniciantes quanto para experts. A calculadora multi-cenarios guia você em cada decisao, eliminando erros de cálculo que custam milhares de reais.',
+    answer: 'Não! A interface foi criada para ser intuitiva tanto para iniciantes quanto para experts. A calculadora multi-cenários guia você em cada decisão, eliminando erros de cálculo que custam milhares de reais.',
     askedCount: 589,
     helpfulPercent: 92,
     commentCount: 31,
@@ -102,7 +102,7 @@ const faqItems: FAQItem[] = [
     id: 'calculadora',
     rank: 4,
     question: 'Como funciona a calculadora multi-cenarios?',
-    answer: 'Nossa calculadora exclusiva simula 5 cenarios automaticamente: otimista, realista, conservador, com reforma e para revenda rapida. Você ve o ROI potencial de cada estrategia antes de dar um único lance.',
+    answer: 'Nossa calculadora exclusiva simula 5 cenários automaticamente: otimista, realista, conservador, com reforma e para revenda rápida. Você vê o ROI potencial de cada estratégia antes de dar um único lance.',
     askedCount: 445,
     helpfulPercent: 98,
     commentCount: 15,
@@ -110,8 +110,8 @@ const faqItems: FAQItem[] = [
   {
     id: 'dados',
     rank: 5,
-    question: 'Os dados sao confiaveis?',
-    answer: 'Absolutamente. Nossos dados vem de fontes oficiais dos leiloeiros e sao atualizados diariamente. Você nunca vai perder um leilão por informação desatualizada ou errada.',
+    question: 'Os dados são confiáveis?',
+    answer: 'Absolutamente. Nossos dados vêm de fontes oficiais dos leiloeiros e são atualizados diariamente. Você nunca vai perder um leilão por informação desatualizada ou errada.',
     askedCount: 398,
     helpfulPercent: 96,
     commentCount: 12,
@@ -119,8 +119,8 @@ const faqItems: FAQItem[] = [
   {
     id: 'suporte',
     rank: 6,
-    question: 'Qual suporte e oferecido?',
-    answer: 'Oferecemos chat ao vivo, email e um onboarding gratuito personalizado. Você nunca fica sozinho. Nossa equipe responde em media em 2 horas, para que você nunca perca uma oportunidade esperando ajuda.',
+    question: 'Qual suporte é oferecido?',
+    answer: 'Oferecemos chat ao vivo, email e um onboarding gratuito personalizado. Você nunca fica sozinho. Nossa equipe responde em média em 2 horas, para que você nunca perca uma oportunidade esperando ajuda.',
     askedCount: 287,
     helpfulPercent: 99,
     commentCount: 8,
@@ -205,11 +205,11 @@ export default function FAQBandwagon() {
             </div>
             <div className="text-center">
               <p className="text-4xl font-black text-[#5C5CFF]">96%</p>
-              <p className="text-sm text-[#2B3259]/60 mt-1">acham as respostas uteis</p>
+              <p className="text-sm text-[#2B3259]/60 mt-1">acham as respostas úteis</p>
             </div>
             <div className="text-center">
               <p className="text-4xl font-black text-[#2B3259]">107</p>
-              <p className="text-sm text-[#2B3259]/60 mt-1">comentarios da comunidade</p>
+              <p className="text-sm text-[#2B3259]/60 mt-1">comentários da comunidade</p>
             </div>
           </div>
         </div>
@@ -291,17 +291,17 @@ function FAQBandwagonCard({ item, isOpen, onToggle, maxCount, isFeatured }: FAQB
             {/* Helpful */}
             <div className="flex items-center gap-2 px-3 py-1.5 bg-[#5C5CFF]/10 rounded-full">
               <span className="text-[#5C5CFF]">&#128077;</span>
-              <span className="text-sm font-semibold text-[#5C5CFF]">Util: {item.helpfulPercent}%</span>
+              <span className="text-sm font-semibold text-[#5C5CFF]">Útil: {item.helpfulPercent}%</span>
             </div>
 
             {/* Comments */}
             <div className="flex items-center gap-2 px-3 py-1.5 bg-[#5C5CFF]/10 rounded-full">
               <span className="text-[#5C5CFF]">&#128172;</span>
-              <span className="text-sm font-semibold text-[#5C5CFF]">{item.commentCount} comentarios</span>
+              <span className="text-sm font-semibold text-[#5C5CFF]">{item.commentCount} comentários</span>
             </div>
 
             {/* Share count implied */}
-            <span className="text-xs text-[#2B3259]/40 ml-auto">Ultima atualizacao: Dez 2024</span>
+            <span className="text-xs text-[#2B3259]/40 ml-auto">Última atualização: Dez 2024</span>
           </div>
         </div>
       </div>

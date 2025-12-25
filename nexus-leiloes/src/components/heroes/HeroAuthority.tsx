@@ -1,26 +1,26 @@
 /**
  * HERO 3: AUTHORITY (Typography as Hero)
  *
- * Frame Cognitivo: Autoridade e posicao única - "somos os unicos"
+ * Frame Cognitivo: Autoridade e posição única - "somos os únicos"
  *
  * Layout Specifications:
  * - Typography IS the visual - headline massivo (text-8xl+)
  * - Sem imagem de produto - o texto domina
- * - "Ànico" com efeito especial (glow + underline animado)
+ * - "Único" com efeito especial (glow + underline animado)
  * - 3 pilares abaixo do CTA com glassmorphism
- * - Multiple aurora glows criando efeito atmosferico
+ * - Multiple aurora glows criando efeito atmosférico
  *
  * Design Tokens:
- * - Background: #EFF0F0 com multiplos glows sobrepostos
- * - Headline: #2B3259 com "Ànico" em #5C5CFF + glow
+ * - Background: #EFF0F0 com múltiplos glows sobrepostos
+ * - Headline: #2B3259 com "Único" em #5C5CFF + glow
  * - CTA: #5C5CFF (Primary Blue) - maior que outros heroes
  * - Cards: Glassmorphism com colored shadow
  *
  * Anti-AI Checklist:
  * [x] Typography as visual hero
- * [x] Aurora effect com multiplos glows
+ * [x] Aurora effect com múltiplos glows
  * [x] Shadows coloridas em tudo
- * [x] Underline animado em "Ànico"
+ * [x] Underline animado em "Único"
  * [x] Cards com glassmorphism
  * [x] Hover states em todos elementos
  * [x] Breaking grid com escala massiva
@@ -89,7 +89,7 @@ export default function HeroAuthority() {
             🏆
           </span>
           <span className="text-sm font-semibold text-white">
-            Primeiro e Ànico Hub do Brasil
+            Primeiro e Único Hub do Brasil
           </span>
         </div>
       </header>
@@ -123,7 +123,7 @@ export default function HeroAuthority() {
             "
           >
             O{' '}
-            {/* "Ànico" com efeito especial */}
+            {/* "Único" com efeito especial */}
             <span className="relative inline-block">
               {/* Glow behind */}
               <span
@@ -137,7 +137,7 @@ export default function HeroAuthority() {
                 "
               />
               {/* Text */}
-              <span className="relative z-10 text-[#5C5CFF]">Ànico</span>
+              <span className="relative z-10 text-[#5C5CFF]">Único</span>
               {/* Animated underline */}
               <span
                 className="
@@ -155,7 +155,7 @@ export default function HeroAuthority() {
             <br />
             Completo Para
             <br />
-            Leilão Imobiliario
+            Leilão Imobiliário
             <br />
             <span className="text-[#5C5CFF]/50">no Brasil</span>
           </h1>
@@ -163,7 +163,7 @@ export default function HeroAuthority() {
 
         {/* Subheadline - Curta e direta */}
         <p className="mt-8 md:mt-10 text-xl md:text-2xl text-[#2B3259]/60 text-center max-w-xl">
-          Busque. Análise. Gerencie.{' '}
+          Busque. Analise. Gerencie.{' '}
           <span className="text-[#5C5CFF] font-semibold">
             Tudo em um lugar só.
           </span>
@@ -273,7 +273,7 @@ export default function HeroAuthority() {
               <span className="text-3xl">📊</span>
             </div>
             <h3 className="font-bold text-lg text-[#2B3259] mb-2">Analisar</h3>
-            <p className="text-sm text-[#2B3259]/70">Calculadora multi-cenarios</p>
+            <p className="text-sm text-[#2B3259]/70">Calculadora multi-cenários</p>
           </article>
 
           {/* Pilar 3: Gerenciar */}
@@ -330,7 +330,7 @@ export default function HeroAuthority() {
             🏆
           </span>
           <span className="text-sm font-semibold text-white">
-            Primeiro e Ànico Hub do Brasil
+            Primeiro e Único Hub do Brasil
           </span>
         </div>
       </div>

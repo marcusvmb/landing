@@ -68,20 +68,20 @@ const features = [
   {
     id: 'calculadora',
     icon: '🧮',
-    name: 'Calculadora Multi-Cenario',
+    name: 'Calculadora Multi-Cenário',
     lossLabel: 'Sem isso você perde',
-    lossValue: 'R$15.000+',
-    lossDesc: 'em erros de cálculo por ano',
+    lossValue: '2h por análise',
+    lossDesc: 'em planilhas e cálculos manuais',
     gainLabel: 'Com isso você ganha',
     gainValue: '100% precisão',
-    gainDesc: 'com 5 cenarios simulados por imóvel',
+    gainDesc: 'com 5 cenários simulados por imóvel',
     recoveryPercent: 100,
     badge: 'EXCLUSIVO',
   },
   {
     id: 'relatorios',
     icon: '📄',
-    name: 'Relatorios PDF',
+    name: 'Relatórios PDF',
     lossLabel: 'Sem isso você perde',
     lossValue: 'Credibilidade',
     lossDesc: 'enviando prints e planilhas amadoras',
@@ -177,14 +177,14 @@ export default function FeaturesLossAversion() {
           "
         >
           Sem Essas Ferramentas,{' '}
-          <span className="text-[#5C5CFF]">Você Perde Dinheiro</span>
+          <span className="text-[#5C5CFF]">Você Perde Tempo</span>
           <br />
-          <span className="text-[#5C5CFF]">Todos os Dias</span>
+          <span className="text-[#5C5CFF]">(e Oportunidades) Todos os Dias</span>
         </h2>
 
         {/* Subheadline */}
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Cada funcionalidade do Nexus foi criada para eliminar uma perda especifica.
+          Cada funcionalidade da Nexus foi criada para eliminar uma perda específica.
           Veja o que você recupera com cada uma.
         </p>
 
@@ -215,13 +215,13 @@ export default function FeaturesLossAversion() {
           "
         >
           <p className="text-lg text-[#2B3259]/60 mb-3">
-            Perdas anuais estimadas sem o Nexus:
+            Tempo perdido toda semana sem a Nexus:
           </p>
           <p className="text-3xl md:text-4xl font-black text-[#5C5CFF] line-through decoration-2 mb-2">
-            R$45.000+
+            15h/semana
           </p>
           <p className="text-lg text-[#2B3259]/60">
-            em tempo perdido, erros de cálculo e oportunidades escapadas
+            em navegação fragmentada, planilhas e decisões no escuro
           </p>
         </div>
 

@@ -4,13 +4,13 @@
  * Frame Cognitivo: "Os maiores especialistas confiam"
  *
  * Vieses Aplicados:
- * - Authority Bias: Badges de verificacao, titulos profissionais
- * - Halo Effect: Associacao com credenciais prestigiosas
+ * - Authority Bias: Badges de verificação, titulos profissionais
+ * - Halo Effect: Associação com credenciais prestigiosas
  * - Social Proof: "Se especialistas usam, deve ser bom"
  *
  * Design:
  * - Bento grid assimetrico
- * - Badges de verificacao proeminentes
+ * - Badges de verificação proeminentes
  * - Visual de certificacao/selo
  * - Cards com hierarquia clara de autoridade
  */
@@ -60,9 +60,9 @@ const testimonials = [
     name: 'Julia',
     role: 'Investidora Iniciante',
     credentials: ['Primeira compra bem-sucedida'],
-    quote: 'Comprei meu primeiro imóvel em leilão com total seguranca. O Nexus me deu confiança.',
+    quote: 'Comprei meu primeiro imóvel em leilão com total segurança. A Nexus me deu confiança.',
     metric: '100%',
-    metricLabel: 'seguranca',
+    metricLabel: 'segurança',
     avatar: 'JL',
     verified: true,
     featured: false,
@@ -95,7 +95,7 @@ export default function SocialProofAuthority() {
           Os <span className="text-[#5C5CFF]">Especialistas</span> Confiam
         </h2>
         <p className="text-center text-lg text-[#2B3259]/60 max-w-2xl mx-auto mb-16 leading-relaxed">
-          Profissionais do mercado imobiliario validam o Nexus como ferramenta essencial.
+          Profissionais do mercado imobiliário validam a Nexus como ferramenta essencial.
         </p>
 
         {/* Bento Grid */}
@@ -125,7 +125,7 @@ export default function SocialProofAuthority() {
         <div className="mt-16 p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-[#5C5CFF]/10 shadow-[0_15px_40px_-15px_rgba(92,92,255,0.1)]">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
             <TrustIndicator icon="shield" label="100% Verificados" />
-            <TrustIndicator icon="users" label="2.500+ Usuarios" />
+            <TrustIndicator icon="users" label="2.500+ Usuários" />
             <TrustIndicator icon="star" label="4.9/5 Avaliação" />
             <TrustIndicator icon="lock" label="Dados Seguros" />
           </div>
@@ -136,7 +136,7 @@ export default function SocialProofAuthority() {
           <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
             Juntar-me aos Especialistas
           </button>
-          <p className="mt-4 text-sm text-[#2B3259]/50">Faca parte do grupo seleto de profissionais</p>
+          <p className="mt-4 text-sm text-[#2B3259]/50">Faça parte do grupo seleto de profissionais</p>
         </div>
       </div>
     </section>

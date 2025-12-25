@@ -1,7 +1,7 @@
 /**
  * SOCIAL PROOF SECTION V1: LOSS AVERSION
  *
- * Frame Cognitivo: "Eles quase perderam tudo... até descobrirem o Nexus"
+ * Frame Cognitivo: "Eles quase perderam tudo... ate descobrirem a Nexus"
  *
  * Vieses Aplicados:
  * - Loss Aversion: Testimonials focados em perdas evitadas
@@ -20,9 +20,9 @@ const testimonials = [
     id: 1,
     name: 'Rodrigo M.',
     role: 'Investidor PF',
-    quote: 'Economizei R$32.000 em 6 meses evitando erros de cálculo',
-    lossAvoided: 'R$32.000',
-    lossContext: 'em cálculos errados',
+    quote: 'Recuperei 15 horas por semana que perdia alternando entre sites e planilhas',
+    lossAvoided: '15h/sem',
+    lossContext: 'recuperadas',
     avatar: 'RM',
     offset: '-mt-4',
   },
@@ -30,7 +30,7 @@ const testimonials = [
     id: 2,
     name: 'Ana Paula',
     role: 'Assessora',
-    quote: 'Triplicei minha carteira de clientes com os relatorios profissionais',
+    quote: 'Triplicei minha carteira de clientes com os relatórios profissionais',
     lossAvoided: '3x',
     lossContext: 'mais clientes',
     avatar: 'AP',
@@ -39,8 +39,8 @@ const testimonials = [
   {
     id: 3,
     name: 'Marcos',
-    role: 'Escritorio de Assessoria',
-    quote: 'Gerenciamos 50+ clientes sem contratar mais funcionarios',
+    role: 'Escritório de Assessoria',
+    quote: 'Gerenciamos 50+ clientes sem contratar mais funcionários',
     lossAvoided: '50+',
     lossContext: 'clientes gerenciados',
     avatar: 'MC',
@@ -50,9 +50,9 @@ const testimonials = [
     id: 4,
     name: 'Julia',
     role: 'Compradora Residencial',
-    quote: 'Comprei meu primeiro imóvel em leilão com total seguranca',
+    quote: 'Comprei meu primeiro imóvel em leilão com total segurança',
     lossAvoided: '100%',
-    lossContext: 'seguranca',
+    lossContext: 'segurança',
     avatar: 'JL',
     offset: '-mt-6',
   },
@@ -72,7 +72,7 @@ export default function SocialProofLossAversion() {
             <h2 id="social-loss-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
               Eles <span className="text-[#5C5CFF] line-through opacity-70">Quase Perderam</span>
               <br />
-              <span className="text-[#5C5CFF]">Ate Descobrirem o Nexus</span>
+              <span className="text-[#5C5CFF]">Até Descobrirem a Nexus</span>
             </h2>
             <p className="text-lg text-[#2B3259]/60 max-w-2xl mx-auto leading-relaxed">
               Veja quanto investidores como você deixaram de perder usando nossa plataforma.
@@ -104,9 +104,9 @@ export default function SocialProofLossAversion() {
 
         {/* Total Savings Summary */}
         <div className="mt-16 p-8 bg-gradient-to-br from-[#5C5CFF]/10 via-white/80 to-[#5C5CFF]/5 backdrop-blur-sm rounded-3xl border border-[#5C5CFF]/15 shadow-[0_20px_60px_-15px_rgba(92,92,255,0.2)] text-center">
-          <p className="text-[#2B3259]/60 text-lg mb-2">Total de perdas evitadas pelos usuarios:</p>
-          <p className="text-4xl md:text-5xl font-black text-[#5C5CFF]">+R$2.4 milhoes</p>
-          <p className="text-sm text-[#2B3259]/50 mt-2">nos ultimos 12 meses</p>
+          <p className="text-[#2B3259]/60 text-lg mb-2">Total de horas economizadas pela comunidade:</p>
+          <p className="text-4xl md:text-5xl font-black text-[#5C5CFF]">+3.000 horas</p>
+          <p className="text-sm text-[#2B3259]/50 mt-2">nos últimos 12 meses</p>
         </div>
 
         {/* CTA */}

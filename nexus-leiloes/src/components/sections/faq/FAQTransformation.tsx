@@ -70,12 +70,12 @@ const journeyStages: JourneyStage[] = [
       {
         id: 'experiência',
         question: 'Preciso de experiência em leilões para usar?',
-        answer: 'Não! A interface foi criada para ser intuitiva tanto para iniciantes quanto para experts. A calculadora multi-cenarios guia você em cada decisao, eliminando a curva de aprendizado tradicional.',
+        answer: 'Não! A interface foi criada para ser intuitiva tanto para iniciantes quanto para experts. A calculadora multi-cenários guia você em cada decisão, eliminando a curva de aprendizado tradicional.',
       },
       {
         id: 'tipos',
         question: 'O sistema funciona para qualquer tipo de leilão?',
-        answer: 'Sim! O Nexus cobre leilões judiciais e extrajudiciais de todos os principais leiloeiros do Brasil. Uma única busca, todos os leilões disponiveis.',
+        answer: 'Sim! A Nexus cobre leilões judiciais e extrajudiciais de todos os principais leiloeiros do Brasil. Uma única busca, todos os leilões disponíveis.',
       },
     ],
   },
@@ -87,13 +87,13 @@ const journeyStages: JourneyStage[] = [
     questions: [
       {
         id: 'calculadora',
-        question: 'Como funciona a calculadora multi-cenarios?',
-        answer: 'Nossa calculadora exclusiva simula 5 cenarios automaticamente: otimista, realista, conservador, com reforma e para revenda rapida. Você ve o ROI potencial de cada estrategia antes de dar um único lance.',
+        question: 'Como funciona a calculadora multi-cenários?',
+        answer: 'Nossa calculadora exclusiva simula 5 cenários automaticamente: otimista, realista, conservador, com reforma e para revenda rápida. Você vê o ROI potencial de cada estratégia antes de dar um único lance.',
       },
       {
         id: 'dados',
-        question: 'Os dados sao confiaveis?',
-        answer: 'Absolutamente. Nossos dados vem de fontes oficiais dos leiloeiros e sao atualizados diariamente. Você nunca vai perder um leilão por informação desatualizada ou errada.',
+        question: 'Os dados são confiáveis?',
+        answer: 'Absolutamente. Nossos dados vêm de fontes oficiais dos leiloeiros e são atualizados diariamente. Você nunca vai perder um leilão por informação desatualizada ou errada.',
       },
     ],
   },
@@ -106,12 +106,12 @@ const journeyStages: JourneyStage[] = [
       {
         id: 'tempo',
         question: 'Quanto tempo leva para ver resultados?',
-        answer: 'A maioria dos usuarios ve resultados significativos em 15-30 dias. A busca unificada economiza em media 2 horas por dia desde o primeiro acesso.',
+        answer: 'A maioria dos usuários vê resultados significativos em 15-30 dias. A busca unificada economiza em média 2 horas por dia desde o primeiro acesso.',
       },
       {
         id: 'suporte',
-        question: 'Qual suporte e oferecido?',
-        answer: 'Oferecemos chat ao vivo, email e um onboarding gratuito personalizado. Você nunca fica sozinho. Nossa equipe responde em media em 2 horas.',
+        question: 'Qual suporte é oferecido?',
+        answer: 'Oferecemos chat ao vivo, email e um onboarding gratuito personalizado. Você nunca fica sozinho. Nossa equipe responde em média em 2 horas.',
       },
     ],
   },

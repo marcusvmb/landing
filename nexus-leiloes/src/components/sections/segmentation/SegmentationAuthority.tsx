@@ -65,7 +65,7 @@ const investidorFeatures = [
   },
   {
     icon: '🧮',
-    title: 'Calculadora Multi-Cenario',
+    title: 'Calculadora Multi-Cenário',
     desc: 'Calcule o ROI real antes de arrematar',
   },
   {
@@ -84,7 +84,7 @@ const assessorFeatures = [
   {
     icon: '👥',
     title: 'Painel Multi-Cliente',
-    desc: 'Gerencie multiplos clientes em um painel',
+    desc: 'Gerencie múltiplos clientes em um painel',
   },
   {
     icon: '📄',
@@ -213,7 +213,7 @@ export default function SegmentationAuthority() {
               title="Investidor"
               edition="Pro Edition"
               features={investidorFeatures}
-              ctaText="Acessar Versao Pro"
+              ctaText="Acessar Versão Pro"
               primaryColor="#5C5CFF"
             />
           </div>
@@ -225,7 +225,7 @@ export default function SegmentationAuthority() {
               title="Assessor"
               edition="Pro Edition"
               features={assessorFeatures}
-              ctaText="Acessar Versao Pro"
+              ctaText="Acessar Versão Pro"
               primaryColor="#5C5CFF"
             />
           </div>
@@ -261,7 +261,7 @@ export default function SegmentationAuthority() {
             </p>
             <p className="text-sm text-[#2B3259]/50 mt-1">
               Desenvolvido com base em anos de experiência no mercado de leilões
-              imobiliarios
+              imobiliários
             </p>
           </div>
 

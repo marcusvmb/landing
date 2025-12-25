@@ -32,16 +32,16 @@ import { useState, useEffect, useCallback } from 'react';
  */
 
 const FAKE_USERS = [
-  { name: 'Joao M.', city: 'Sao Paulo' },
+  { name: 'João M.', city: 'São Paulo' },
   { name: 'Maria S.', city: 'Rio de Janeiro' },
   { name: 'Pedro L.', city: 'Belo Horizonte' },
   { name: 'Ana C.', city: 'Curitiba' },
   { name: 'Carlos R.', city: 'Porto Alegre' },
-  { name: 'Fernanda B.', city: 'Brasilia' },
+  { name: 'Fernanda B.', city: 'Brasília' },
   { name: 'Ricardo T.', city: 'Salvador' },
   { name: 'Juliana P.', city: 'Fortaleza' },
   { name: 'Lucas A.', city: 'Campinas' },
-  { name: 'Patricia M.', city: 'Recife' },
+  { name: 'Patrícia M.', city: 'Recife' },
 ];
 
 export default function HeroSocialProof() {
@@ -179,8 +179,8 @@ export default function HeroSocialProof() {
 
         {/* Subheadline */}
         <p className="text-center text-lg md:text-xl text-[#2B3259]/60 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Seja um dos primeiros a acessar o Hub mais completo de leilão imobiliario do Brasil.
-          Beneficios exclusivos para quem entrar antes do lancamento.
+          Seja um dos primeiros a acessar o Hub mais completo de leilão imobiliário do Brasil.
+          Benefícios exclusivos para quem entrar antes do lançamento.
         </p>
 
         {/* Inline Form - Glassmorphism Card */}
@@ -196,7 +196,7 @@ export default function HeroSocialProof() {
             mx-auto
           "
         >
-          <form className="space-y-6" aria-label="Formulario de inscricao na lista de espera">
+          <form className="space-y-6" aria-label="Formulário de inscrição na lista de espera">
             {/* Form Fields - 3 columns on desktop */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Nome */}

@@ -1,11 +1,11 @@
 /**
  * PROBLEM SECTION V2: TRANSFORMATION
  *
- * Frame Cognitivo: "Este e o seu dia hoje" (mostra o caos)
+ * Frame Cognitivo: "Este é o seu dia hoje" (mostra o caos)
  *
  * Vieses Aplicados:
  * - Negativity Bias: Informação negativa pesa 2x mais
- * - Availability Heuristic: Exemplos vividos sao memoraveis
+ * - Availability Heuristic: Exemplos vividos são memoráveis
  * - Unity: "Você reconhece?" cria identificacao
  * - Liking: Espelhar linguagem e frustração do cliente
  *
@@ -63,7 +63,7 @@ export default function ProblemTransformation() {
         </h2>
 
         {/* Scattered Icons - Chaos visualization */}
-        <div className="relative h-[280px] md:h-[350px] max-w-4xl mx-auto mb-8" role="img" aria-label="Visualizacao do caos de ferramentas fragmentadas">
+        <div className="relative h-[280px] md:h-[350px] max-w-4xl mx-auto mb-8" role="img" aria-label="Visualização do caos de ferramentas fragmentadas">
           {/* Connecting dashed lines (chaos) */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
             <line x1="20%" y1="25%" x2="45%" y2="40%" stroke="#2B3259" strokeWidth="1" strokeDasharray="5,5" strokeOpacity="0.1" />
@@ -226,7 +226,7 @@ export default function ProblemTransformation() {
             <span className="text-xl grayscale opacity-60" aria-hidden="true">&#128187;</span>
             <p className="text-[#2B3259]/70 text-sm md:text-base">
               <span className="font-medium text-[#2B3259]">Abre o computador</span> e começa a saga:
-              Viva, Sodre, Zukerman, Lance Certo... Cada leiloeiro e uma nova aba.
+              Viva, Sodré, Zukerman, Lance Certo... Cada leiloeiro é uma nova aba.
             </p>
           </div>
 
@@ -241,8 +241,8 @@ export default function ProblemTransformation() {
           <div className="flex items-start gap-4 p-4 bg-white/40 rounded-xl border border-[#2B3259]/5">
             <span className="text-xl grayscale opacity-60" aria-hidden="true">&#128558;</span>
             <p className="text-[#2B3259]/70 text-sm md:text-base">
-              <span className="font-medium text-[#2B3259]">No final do dia,</span> a sensacao:
-              &quot;Sera que perdi algo importante?&quot;
+              <span className="font-medium text-[#2B3259]">No final do dia,</span> a sensação:
+              &quot;Será que perdi algo importante?&quot;
             </p>
           </div>
         </div>
@@ -263,7 +263,7 @@ export default function ProblemTransformation() {
               Estava em uma das 15 planilhas abertas...&quot;
             </p>
             <cite className="mt-4 block text-sm text-white/40 not-italic">
-              - Investidor anonimo, 3 anos de experiência
+              - Investidor anônimo, 3 anos de experiência
             </cite>
           </blockquote>
         </div>

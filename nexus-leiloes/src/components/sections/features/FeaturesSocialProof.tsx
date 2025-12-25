@@ -70,7 +70,7 @@ const socialProofFeatures = [
     icon: '🔍',
     name: 'Busca Unificada',
     loveMetric: '94%',
-    loveLabel: 'dos usuarios usam diariamente',
+    loveLabel: 'dos usuários usam diariamente',
     testimonial: 'Economizei 2 horas por dia só com essa busca!',
     testimonialAuthor: 'Carlos M.',
     testimonialRole: 'Investidor PF',
@@ -188,7 +188,7 @@ export default function FeaturesSocialProof() {
           >
             <span className="text-[#5C5CFF]">♥</span>
             <span className="text-sm font-semibold text-[#2B3259]/70">
-              Baseado em feedback real de usuarios beta
+              Baseado em feedback real de usuários beta
             </span>
           </span>
         </div>
@@ -209,13 +209,13 @@ export default function FeaturesSocialProof() {
           As Features{' '}
           <span className="text-[#5C5CFF]">Mais Amadas</span>
           <br />
-          Pelos Nossos Usuarios
+          Pelos Nossos Usuários
         </h2>
 
         {/* Subheadline */}
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Não acredite apenas em nos. Veja o que os investidores que já usam
-          o Nexus mais valorizam.
+          Não acredite apenas em nós. Veja o que os investidores que já usam
+          a Nexus mais valorizam.
         </p>
 
         {/* Features Grid */}
@@ -246,7 +246,7 @@ export default function FeaturesSocialProof() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <p className="text-3xl md:text-4xl font-black text-[#5C5CFF]">547+</p>
-              <p className="text-sm text-[#2B3259]/60 mt-1">Usuarios ativos</p>
+              <p className="text-sm text-[#2B3259]/60 mt-1">Usuários ativos</p>
             </div>
             <div>
               <p className="text-3xl md:text-4xl font-black text-[#5C5CFF]">92%</p>
@@ -254,11 +254,11 @@ export default function FeaturesSocialProof() {
             </div>
             <div>
               <p className="text-3xl md:text-4xl font-black text-[#5C5CFF]">4.9★</p>
-              <p className="text-sm text-[#2B3259]/60 mt-1">Avaliação media</p>
+              <p className="text-sm text-[#2B3259]/60 mt-1">Avaliação média</p>
             </div>
             <div>
               <p className="text-3xl md:text-4xl font-black text-[#5C5CFF]">R$2.4M+</p>
-              <p className="text-sm text-[#2B3259]/60 mt-1">Em negociaoes gerenciadas</p>
+              <p className="text-sm text-[#2B3259]/60 mt-1">Em negociações gerenciadas</p>
             </div>
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function FeaturesSocialProof() {
         {/* Social Proof Logos/Avatars */}
         <div className="mt-8 text-center">
           <p className="text-sm text-[#2B3259]/50 mb-4">
-            Investidores de todo o Brasil confiam no Nexus
+            Investidores de todo o Brasil confiam na Nexus
           </p>
           <div className="flex justify-center items-center gap-2">
             <div className="flex -space-x-3">

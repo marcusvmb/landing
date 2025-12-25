@@ -1,10 +1,10 @@
 /**
  * PROBLEM SECTION V3: AUTHORITY
  *
- * Frame Cognitivo: "Por que ferramentas fragmentadas NUNCA vao funcionar"
+ * Frame Cognitivo: "Por que ferramentas fragmentadas NUNCA vão funcionar"
  *
  * Vieses Aplicados:
- * - Authority: Posicionamento de expert com argumento logico
+ * - Authority: Posicionamento de expert com argumento lógico
  * - Cognitive Fluency: Argumento estruturado, facil de seguir
  * - Framing Effect: Frame o problema como estrutural
  *
@@ -51,9 +51,9 @@ export default function ProblemAuthority() {
               text-[#2B3259]
             "
           >
-            O problema não e você.
+            O problema não é você.
             <br />
-            E usar{' '}
+            É usar{' '}
             <span className="relative inline-block text-[#5C5CFF]">
               {/* Glow behind number */}
               <span
@@ -218,14 +218,14 @@ export default function ProblemAuthority() {
             <div className="p-6 bg-white/60 rounded-2xl border border-[#2B3259]/5">
               <h3 className="font-bold text-lg text-[#2B3259] mb-2">Excel e Notion</h3>
               <p className="text-sm text-[#2B3259]/60">
-                Sao ferramentas genericas. Não entendem leilão.
+                São ferramentas genéricas. Não entendem leilão.
               </p>
             </div>
 
             <div className="p-6 bg-white/60 rounded-2xl border border-[#2B3259]/5">
               <h3 className="font-bold text-lg text-[#2B3259] mb-2">Calculadoras simples</h3>
               <p className="text-sm text-[#2B3259]/60">
-                Mostram um cenario. Investidores inteligentes precisam comparar varios.
+                Mostram um cenário. Investidores inteligentes precisam comparar vários.
               </p>
             </div>
 
@@ -245,7 +245,7 @@ export default function ProblemAuthority() {
             <span className="font-semibold text-[#2B3259]">informação espalhada</span>.
             <br />
             Informação espalhada significa{' '}
-            <span className="font-semibold text-[#2B3259]">visao incompleta</span>.
+            <span className="font-semibold text-[#2B3259]">visão incompleta</span>.
           </p>
         </div>
 
@@ -271,7 +271,7 @@ export default function ProblemAuthority() {
               cursor-pointer
             "
           >
-            Conhecer a Unica Solução Completa
+            Conhecer a Única Solução Completa
           </button>
         </div>
       </div>

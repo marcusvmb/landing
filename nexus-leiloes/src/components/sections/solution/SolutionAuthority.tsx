@@ -6,7 +6,7 @@
  * Vieses Aplicados:
  * - Authority: Posicionamento como expert/único
  * - Framing Effect: Posicionar como "o padrao" do mercado
- * - Cognitive Fluency: Argumento logico e estruturado
+ * - Cognitive Fluency: Argumento lógico e estruturado
  *
  * Design:
  * - Tipografia massiva, visual imponente
@@ -47,7 +47,7 @@ export default function SolutionAuthority() {
             "
           >
             <span className="text-white font-bold uppercase tracking-widest text-sm">
-              A Unica Plataforma Completa
+              A Única Plataforma Completa
             </span>
           </span>
         </div>
@@ -65,7 +65,7 @@ export default function SolutionAuthority() {
             mb-8
           "
         >
-          O Padrao Profissional Que o Mercado
+          O Padrão Profissional Que o Mercado
           <br />
           <span className="relative inline-block">
             <span className="text-[#5C5CFF]">de Leilões Esperava</span>
@@ -85,8 +85,8 @@ export default function SolutionAuthority() {
 
         {/* Subheadline */}
         <p className="text-center text-lg md:text-xl text-[#2B3259]/60 max-w-3xl mx-auto mb-20 leading-relaxed">
-          Outras ferramentas resolvem pedacos do problema. O Nexus e o primeiro e
-          único hub que integra busca, análise e gestao em uma plataforma desenvolvida
+          Outras ferramentas resolvem pedacos do problema. A Nexus é a primeira e
+          única hub que integra busca, análise e gestao em uma plataforma desenvolvida
           por quem entende do mercado.
         </p>
 
@@ -130,7 +130,7 @@ export default function SolutionAuthority() {
               </h3>
 
               <p className="text-lg text-[#2B3259]/70 leading-relaxed mb-6">
-                Integracao exclusiva com mais de 20 leiloeiros oficiais. Cobertura
+                Integração exclusiva com mais de 20 leiloeiros oficiais. Cobertura
                 nacional que nenhuma outra ferramenta oferece. Informações atualizadas
                 em tempo real.
               </p>
@@ -139,7 +139,7 @@ export default function SolutionAuthority() {
                 {[
                   '+20 leiloeiras em um só lugar',
                   'Filtros por cidade, valor, tipo',
-                  'Alertas automaticos por WhatsApp',
+                  'Alertas automáticos por WhatsApp',
                 ].map((item) => (
                   <li
                     key={item}
@@ -213,11 +213,11 @@ export default function SolutionAuthority() {
                   mb-3
                 "
               >
-                Calculadora Proprietaria de Multiplos Cenarios
+                Calculadora Proprietária de Múltiplos Cenários
               </h3>
 
               <p className="text-[#2B3259]/70 leading-relaxed mb-5">
-                Tecnologia exclusiva que simula diferentes condicoes de mercado,
+                Tecnologia exclusiva que simula diferentes condições de mercado,
                 custos e margens. O nivel de análise que assessores profissionais
                 exigem.
               </p>
@@ -227,7 +227,7 @@ export default function SolutionAuthority() {
                   Diferencial Ànico
                 </div>
                 <div className="text-[#2B3259]/80">
-                  Simule 5 cenarios simultaneos
+                  Simule 5 cenários simultâneos
                 </div>
               </div>
             </div>
@@ -269,12 +269,12 @@ export default function SolutionAuthority() {
                       mb-3
                     "
                   >
-                    Relatorios com Padrao Institucional
+                    Relatórios com Padrão Institucional
                   </h3>
 
                   <p className="text-[#2B3259]/70 leading-relaxed">
                     PDFs profissionais prontos para apresentar a clientes e
-                    investidores. O mesmo nivel de documentacao usado por grandes
+                    investidores. O mesmo nivel de documentação usado por grandes
                     assessorias do mercado.
                   </p>
                 </div>
@@ -349,7 +349,7 @@ export default function SolutionAuthority() {
             Acessar a Plataforma Profissional
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
-            Lista de espera exclusiva. Vagas limitadas para o lancamento.
+            Lista de espera exclusiva. Vagas limitadas para o lançamento.
           </p>
         </div>
       </div>

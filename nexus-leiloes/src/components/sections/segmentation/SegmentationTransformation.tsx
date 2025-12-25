@@ -1,7 +1,7 @@
 /**
  * SEGMENTATION SECTION V2: TRANSFORMATION
  *
- * Frame Cognitivo: "Sua jornada de evolucao começa aqui"
+ * Frame Cognitivo: "Sua jornada de evolução começa aqui"
  *
  * ASCII Layout:
  * ┌──────────────────────────────────────────────────────────────────────┐
@@ -55,7 +55,7 @@
 
 const investidorToday = [
   'Buscas fragmentadas em +20 sites',
-  'Calculos manuais em planilhas',
+  'Cálculos manuais em planilhas',
   'Dados espalhados sem organização',
   'Decisões baseadas em "achismo"',
 ];
@@ -69,15 +69,15 @@ const investidorWithNexus = [
 
 const assessorToday = [
   'Uma planilha para cada cliente',
-  'Relatorios montados manualmente',
-  'Zero visibilidade de comissoes',
-  'Apresentacoes pouco profissionais',
+  'Relatórios montados manualmente',
+  'Zero visibilidade de comissões',
+  'Apresentações pouco profissionais',
 ];
 
 const assessorWithNexus = [
-  'Gerencie multiplos clientes em um painel',
-  'Gere relatorios profissionais com sua marca',
-  'Acompanhe comissoes e resultados',
+  'Gerencie múltiplos clientes em um painel',
+  'Gere relatórios profissionais com sua marca',
+  'Acompanhe comissões e resultados',
   'Impressione clientes com análises detalhadas',
 ];
 
@@ -153,8 +153,8 @@ export default function SegmentationTransformation() {
 
         {/* Subheadline */}
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Veja como o Nexus transforma sua operação, seja você um investidor
-          individual ou um assessor gerenciando multiplos clientes.
+          Veja como a Nexus transforma sua operação, seja você um investidor
+          individual ou um assessor gerenciando múltiplos clientes.
         </p>
 
         {/* Persona Cards - Asymmetric Grid (inverted) */}
@@ -189,9 +189,9 @@ export default function SegmentationTransformation() {
         {/* Bottom Motivation */}
         <div className="mt-16 text-center">
           <p className="text-lg text-[#2B3259]/60 max-w-2xl mx-auto mb-6">
-            A diferenca entre amadores e profissionais esta nas ferramentas.{' '}
+            A diferença entre amadores e profissionais está nas ferramentas.{' '}
             <span className="font-semibold text-[#2B3259]">
-              O Nexus e o upgrade que você precisa.
+              A Nexus é o upgrade que você precisa.
             </span>
           </p>
 

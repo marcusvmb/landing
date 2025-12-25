@@ -67,13 +67,13 @@ const investidorBenefits = [
 const assessorLosses = [
   { value: '3 clientes', desc: 'perdidos por mês por desorganização' },
   { value: '5h/dia', desc: 'em tarefas manuais repetitivas' },
-  { value: 'Credibilidade', desc: 'abalada com relatorios amadores' },
+  { value: 'Credibilidade', desc: 'abalada com relatórios amadores' },
 ];
 
 const assessorBenefits = [
-  'Gerencie multiplos clientes em um painel',
-  'Gere relatorios profissionais com sua marca',
-  'Acompanhe comissoes e resultados',
+  'Gerencie múltiplos clientes em um painel',
+  'Gere relatórios profissionais com sua marca',
+  'Acompanhe comissões e resultados',
   'Impressione clientes com análises detalhadas',
 ];
 
@@ -121,7 +121,7 @@ export default function SegmentationLossAversion() {
             mb-6
           "
         >
-          Para Quem e o Nexus?{' '}
+          Para Quem é a Nexus?{' '}
           <br className="hidden sm:block" />
           <span className="text-[#5C5CFF]">Para Quem Não Quer Perder.</span>
         </h2>
@@ -130,7 +130,7 @@ export default function SegmentationLossAversion() {
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
           Não importa se você investe sozinho ou assessora dezenas de clientes.{' '}
           <span className="font-semibold text-[#2B3259]">
-            Sem as ferramentas certas, você esta deixando dinheiro na mesa.
+            Sem as ferramentas certas, você está deixando dinheiro na mesa.
           </span>
         </p>
 
@@ -304,7 +304,7 @@ function PersonaCard({
               &#9888;
             </span>
             <span className="text-xs font-bold text-[#5C5CFF] uppercase tracking-widest">
-              Perdas sem o Nexus
+              Perdas sem a Nexus
             </span>
           </div>
 
@@ -355,7 +355,7 @@ function PersonaCard({
               className="text-xs font-bold uppercase tracking-widest"
               style={{ color: primaryColor }}
             >
-              Com o Nexus
+              Com a Nexus
             </span>
           </div>
 

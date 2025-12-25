@@ -66,8 +66,8 @@ export default function SolutionLossAversion() {
         {/* Subheadline */}
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
           Enquanto você alterna entre dezenas de sites e planilhas, boas oportunidades
-          escapam. O Nexus centraliza tudo em um só lugar — para você parar de perder
-          e comecar a lucrar.
+          escapam. A Nexus centraliza tudo em um só lugar — para você parar de perder
+          e começar a lucrar.
         </p>
 
         {/* Pillar Cards - Asymmetric stagger */}
@@ -91,13 +91,13 @@ export default function SolutionLossAversion() {
           {/* ANALISAR Pillar - centered */}
           <div className="col-span-12 md:col-span-4">
             <PillarCard
-              beforeLabel="Você Errava"
-              beforeValue="R$15k+"
-              beforeDesc="em cálculos manuais"
+              beforeLabel="Você Perdia"
+              beforeValue="Horas"
+              beforeDesc="em planilhas e cálculos manuais"
               pillarName="ANALISAR"
               pillarIcon="&#129518;"
               pillarTitle="Nunca Mais Erre no Cálculo do Lucro"
-              pillarDesc="Calculadora exclusiva simula multiplos cenarios. Elimine o risco de entrar em leilões que não compensam."
+              pillarDesc="Calculadora exclusiva simula múltiplos cenários. Elimine o risco de entrar em leilões que não compensam."
               afterLabel="Agora Acerta"
               afterValue="100%"
               afterDesc="precisão nos cálculos"
@@ -113,8 +113,8 @@ export default function SolutionLossAversion() {
               pillarName="GERENCIAR"
               pillarIcon="&#128202;"
               pillarTitle="Controle Total, Oportunidades Seguras"
-              pillarDesc="Dashboard unificado e relatorios PDF profissionais. Mantenha cada oportunidade sob seu controle."
-              afterLabel="Agora Retem"
+              pillarDesc="Dashboard unificado e relatórios PDF profissionais. Mantenha cada oportunidade sob seu controle."
+              afterLabel="Agora Retém"
               afterValue="+87%"
               afterDesc="dos clientes satisfeitos"
             />
@@ -137,8 +137,8 @@ export default function SolutionLossAversion() {
             Resultado combinado dos 3 pilares:
           </p>
           <p className="text-2xl md:text-3xl font-bold text-[#2B3259]">
-            <span className="text-[#5C5CFF]">+R$12.450/mês</span> em oportunidades
-            recuperadas
+            <span className="text-[#5C5CFF]">+15h/semana</span> recuperadas +
+            decisões com confiança
           </p>
         </div>
 
@@ -175,7 +175,7 @@ export default function SolutionLossAversion() {
             Garantir Meu Acesso Antecipado
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
-            Vagas limitadas para a lista VIP. Sem cartao de credito.
+            Vagas limitadas para a lista VIP. Sem cartão de crédito.
           </p>
         </div>
       </div>

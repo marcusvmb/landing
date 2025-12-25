@@ -63,9 +63,9 @@ const investidorStats = {
   reviewCount: 127,
   testimonial: {
     quote:
-      'O Nexus mudou completamente minha forma de investir em leilões. Encontro oportunidades que antes passavam despercebidas.',
-    author: 'Joao M.',
-    location: 'Sao Paulo, SP',
+      'A Nexus mudou completamente minha forma de investir em leilões. Encontro oportunidades que antes passavam despercebidas.',
+    author: 'João M.',
+    location: 'São Paulo, SP',
     avatar: 'JM',
   },
   topBenefits: [
@@ -88,9 +88,9 @@ const assessorStats = {
     avatar: 'MS',
   },
   topBenefits: [
-    'Gerencie multiplos clientes em um painel',
-    'Gere relatorios profissionais com sua marca',
-    'Acompanhe comissoes e resultados',
+    'Gerencie múltiplos clientes em um painel',
+    'Gere relatórios profissionais com sua marca',
+    'Acompanhe comissões e resultados',
     'Impressione clientes com análises detalhadas',
   ],
 };
@@ -191,14 +191,14 @@ export default function SegmentationSocialProof() {
             mb-6
           "
         >
-          Quem Já Esta{' '}
+          Quem Já Está{' '}
           <span className="text-[#5C5CFF]">Usando</span> o{' '}
           <span className="text-[#5C5CFF]">Nexus</span>?
         </h2>
 
         {/* Subheadline */}
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Investidores e assessores de todo o Brasil já escolheram o Nexus como
+          Investidores e assessores de todo o Brasil já escolheram a Nexus como
           sua ferramenta principal.{' '}
           <span className="font-semibold text-[#2B3259]">
             Veja o que eles dizem.
@@ -238,9 +238,9 @@ export default function SegmentationSocialProof() {
           "
         >
           {[
-            { value: '436+', label: 'Usuarios Ativos', color: '#5C5CFF' },
-            { value: '4.9', label: 'Avaliação Media', color: '#5C5CFF' },
-            { value: 'R$2.3M', label: 'Em Negocios Analisados', color: '#5C5CFF' },
+            { value: '436+', label: 'Usuários Ativos', color: '#5C5CFF' },
+            { value: '4.9', label: 'Avaliação Média', color: '#5C5CFF' },
+            { value: 'R$2.3M', label: 'Em Negócios Analisados', color: '#5C5CFF' },
             { value: '98%', label: 'Taxa de Satisfação', color: '#5C5CFF' },
           ].map((stat, index) => (
             <div
@@ -340,7 +340,7 @@ function SocialProofCard({
               {title}
             </h3>
             <p className="text-sm text-[#2B3259]/50 mt-1">
-              {isInvestidor ? 'Pessoas fisicas' : 'Profissionais'}
+              {isInvestidor ? 'Pessoas físicas' : 'Profissionais'}
             </p>
           </div>
 
@@ -423,7 +423,7 @@ function SocialProofCard({
                 {stats.rating}
               </span>
               <span className="text-sm text-[#2B3259]/40">
-                ({stats.reviewCount} avaliacoes)
+                ({stats.reviewCount} avaliações)
               </span>
             </div>
           </div>
@@ -471,7 +471,7 @@ function SocialProofCard({
             className="text-xs font-bold uppercase tracking-widest mb-3"
             style={{ color: primaryColor }}
           >
-            Beneficios mais citados
+            Benefícios mais citados
           </p>
           <ul className="space-y-2">
             {stats.topBenefits.map((benefit, index) => (

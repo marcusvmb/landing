@@ -308,7 +308,7 @@ export default function ProblemSocialProof() {
               "
             >
               <p className="text-[#2B3259]/60 text-sm mb-2">
-                Enquanto investidores com o Nexus fecham em media:
+                Enquanto investidores com a Nexus fecham em média:
               </p>
               <div className="flex items-baseline gap-2">
                 <span className="text-4xl font-black text-[#5C5CFF]">3x</span>
@@ -321,10 +321,10 @@ export default function ProblemSocialProof() {
         {/* Agitation */}
         <div className="mt-16 text-center max-w-3xl mx-auto">
           <p className="text-xl md:text-2xl text-[#2B3259]/60 leading-relaxed">
-            A cada dia, a distancia entre você e{' '}
+            A cada dia, a distância entre você e{' '}
             <span className="font-semibold text-[#5C5CFF]">quem já usa ferramentas integradas</span>{' '}
             aumenta. As mesmas oportunidades.{' '}
-            <span className="font-semibold text-[#2B3259]">A diferenca e quem chega primeiro.</span>
+            <span className="font-semibold text-[#2B3259]">A diferença é quem chega primeiro.</span>
           </p>
         </div>
 

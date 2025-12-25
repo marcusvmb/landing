@@ -59,8 +59,8 @@ const faqItems: FAQItem[] = [
   {
     id: 'tempo',
     question: 'Quanto tempo leva para ver resultados?',
-    lossFrame: 'Cada dia sem o Nexus = oportunidades perdidas',
-    answer: 'A maioria dos usuarios ve resultados significativos em 15-30 dias. A busca unificada economiza em media 2 horas por dia desde o primeiro acesso. Em um mês, você já tera recuperado o investimento em tempo.',
+    lossFrame: 'Cada dia sem a Nexus = oportunidades perdidas',
+    answer: 'A maioria dos usuários vê resultados significativos em 15-30 dias. A busca unificada economiza em média 2 horas por dia desde o primeiro acesso. Em um mês, você já terá recuperado o investimento em tempo.',
     savingsType: 'time',
     savingsValue: '60h',
     savingsDesc: 'economizadas no primeiro mês',
@@ -69,7 +69,7 @@ const faqItems: FAQItem[] = [
     id: 'tipos',
     question: 'O sistema funciona para qualquer tipo de leilão?',
     lossFrame: 'Limitar-se a um tipo = perder metade do mercado',
-    answer: 'Sim! O Nexus cobre leilões judiciais e extrajudiciais de todos os principais leiloeiros do Brasil. Você não perde nenhuma oportunidade por estar "no site errado". Uma única busca, todos os leilões.',
+    answer: 'Sim! A Nexus cobre leilões judiciais e extrajudiciais de todos os principais leiloeiros do Brasil. Você não perde nenhuma oportunidade por estar "no site errado". Uma única busca, todos os leilões.',
     savingsType: 'opportunity',
     savingsValue: '2x',
     savingsDesc: 'mais oportunidades encontradas',
@@ -77,35 +77,35 @@ const faqItems: FAQItem[] = [
   {
     id: 'experiência',
     question: 'Preciso de experiência em leilões para usar?',
-    lossFrame: 'Inexperiencia sem ferramenta = erros caros',
-    answer: 'Não! A interface foi criada para ser intuitiva tanto para iniciantes quanto para experts. A calculadora multi-cenarios guia você em cada decisao, eliminando erros de cálculo que custam milhares de reais.',
-    savingsType: 'money',
-    savingsValue: 'R$15.000+',
-    savingsDesc: 'em erros evitados por ano',
+    lossFrame: 'Inexperiência sem ferramenta = erros caros',
+    answer: 'Não! A interface foi criada para ser intuitiva tanto para iniciantes quanto para experts. A calculadora multi-cenários guia você em cada decisão, eliminando erros de análise que consomem horas e geram insegurança.',
+    savingsType: 'time',
+    savingsValue: '100+ horas',
+    savingsDesc: 'de cálculos manuais eliminados',
   },
   {
     id: 'calculadora',
-    question: 'Como funciona a calculadora multi-cenarios?',
-    lossFrame: 'Calculos manuais = decisões arriscadas',
-    answer: 'Nossa calculadora exclusiva simula 5 cenarios automaticamente: otimista, realista, conservador, com reforma e para revenda rapida. Você ve o ROI potencial de cada estrategia antes de dar um único lance.',
-    savingsType: 'money',
-    savingsValue: 'R$8.000+',
-    savingsDesc: 'de media em melhores decisões',
+    question: 'Como funciona a calculadora multi-cenários?',
+    lossFrame: 'Cálculos manuais = decisões arriscadas',
+    answer: 'Nossa calculadora exclusiva simula 5 cenários automaticamente: otimista, realista, conservador, com reforma e para revenda rápida. Você vê o ROI potencial de cada estratégia antes de dar um único lance.',
+    savingsType: 'opportunity',
+    savingsValue: '100%',
+    savingsDesc: 'de confiança nas decisões',
   },
   {
     id: 'dados',
-    question: 'Os dados sao confiaveis?',
+    question: 'Os dados são confiáveis?',
     lossFrame: 'Dados desatualizados = lances perdidos',
-    answer: 'Absolutamente. Nossos dados vem de fontes oficiais dos leiloeiros e sao atualizados diariamente. Você nunca vai perder um leilão por informação desatualizada ou errada.',
+    answer: 'Absolutamente. Nossos dados vêm de fontes oficiais dos leiloeiros e são atualizados diariamente. Você nunca vai perder um leilão por informação desatualizada ou errada.',
     savingsType: 'opportunity',
     savingsValue: '3-5',
     savingsDesc: 'leilões salvos por mês',
   },
   {
     id: 'suporte',
-    question: 'Qual suporte e oferecido?',
-    lossFrame: 'Sem suporte = tempo perdido com duvidas',
-    answer: 'Oferecemos chat ao vivo, email e um onboarding gratuito personalizado. Você nunca fica sozinho. Nossa equipe responde em media em 2 horas, para que você nunca perca uma oportunidade esperando ajuda.',
+    question: 'Qual suporte é oferecido?',
+    lossFrame: 'Sem suporte = tempo perdido com dúvidas',
+    answer: 'Oferecemos chat ao vivo, email e um onboarding gratuito personalizado. Você nunca fica sozinho. Nossa equipe responde em média em 2 horas, para que você nunca perca uma oportunidade esperando ajuda.',
     savingsType: 'time',
     savingsValue: '10h',
     savingsDesc: 'economizadas em suporte por mês',
@@ -113,11 +113,11 @@ const faqItems: FAQItem[] = [
 ];
 
 const savingsSummary = {
-  total: 'R$47.000+',
+  total: '+15h/sem',
   breakdown: [
     { icon: '⏰', label: 'Tempo economizado', value: '730h/ano' },
-    { icon: '💰', label: 'Erros evitados', value: 'R$15.000+' },
-    { icon: '🎯', label: 'Oportunidades extras', value: 'R$32.000+' },
+    { icon: '🎯', label: 'Decisões seguras', value: '100% confiança' },
+    { icon: '🔍', label: 'Oportunidades', value: 'Encontrar primeiro' },
   ],
 };
 
@@ -144,8 +144,8 @@ export default function FAQLossAversion() {
 
         {/* Subheadline */}
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Cada pergunta sem resposta e uma decisao adiada.{' '}
-          <span className="font-semibold text-[#2B3259]">Cada decisao adiada custa dinheiro.</span>
+          Cada pergunta sem resposta é uma decisão adiada.{' '}
+          <span className="font-semibold text-[#2B3259]">Cada decisão adiada custa dinheiro.</span>
         </p>
 
         {/* Main Content - Asymmetric Grid */}
@@ -165,7 +165,7 @@ export default function FAQLossAversion() {
                 <div className="p-6 bg-gradient-to-br from-[#5C5CFF]/10 to-[#5C5CFF]/5 border-b border-[#5C5CFF]/10">
                   <p className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider mb-2">Economia Total Estimada</p>
                   <p className="text-5xl font-black text-[#5C5CFF] tracking-tight">{savingsSummary.total}</p>
-                  <p className="text-sm text-[#2B3259]/60 mt-1">por ano usando o Nexus</p>
+                  <p className="text-sm text-[#2B3259]/60 mt-1">por ano usando a Nexus</p>
                 </div>
 
                 {/* Breakdown */}

@@ -84,7 +84,7 @@ export default function SolutionSocialProof() {
           >
             Por Que <span className="text-[#5C5CFF]">547 Investidores</span>
             <br />
-            Escolheram o Nexus
+            Escolheram a Nexus
           </h2>
 
           {/* Avatar Stack */}
@@ -133,7 +133,7 @@ export default function SolutionSocialProof() {
             testimonial="Encontrei 3 oportunidades no primeiro dia. Antes eu passava 2 horas por dia alternando entre sites. Agora levo 15 minutos."
             authorName="Carlos Mendes"
             authorRole="Investidor PF, Rio de Janeiro"
-            features={['+20 sites', 'Alertas WhatsApp', 'Filtros avancados']}
+            features={['+20 sites', 'Alertas WhatsApp', 'Filtros avançados']}
             isLarge={true}
           />
 
@@ -143,22 +143,22 @@ export default function SolutionSocialProof() {
               <TestimonialPillarCard
                 pillarName="ANALISAR"
                 pillarTitle="A Calculadora Que Assessores Sonhavam"
-                pillarDesc="Calculadora multi-cenario"
-                testimonial="Evitei um prejuizo de R$40k em um imóvel que parecia otimo. A calculadora mostrou custos ocultos."
+                pillarDesc="Calculadora multi-cenário"
+                testimonial="Evitei um prejuízo de R$40k em um imóvel que parecia ótimo. A calculadora mostrou custos ocultos."
                 authorName="Maria Santos"
-                authorRole="Assessora, Sao Paulo"
-                features={['Multi-cenario', 'Custos reais', 'ROI projetado']}
+                authorRole="Assessora, São Paulo"
+                features={['Multi-cenário', 'Custos reais', 'ROI projetado']}
               />
             </div>
 
             <div className="col-span-12 lg:col-span-7">
               <TestimonialPillarCard
                 pillarName="GERENCIAR"
-                pillarTitle="Os Relatorios Que Clientes Valorizam"
-                pillarDesc="Dashboard e relatorios PDF"
-                testimonial="Meus clientes adoram os relatorios em PDF. Pareco muito mais profissional e fecho mais negocios."
-                authorName="Andre Oliveira"
-                authorRole="Escritorio de Assessoria, BH"
+                pillarTitle="Os Relatórios Que Clientes Valorizam"
+                pillarDesc="Dashboard e relatórios PDF"
+                testimonial="Meus clientes adoram os relatórios em PDF. Pareço muito mais profissional e fecho mais negócios."
+                authorName="André Oliveira"
+                authorRole="Escritório de Assessoria, BH"
                 features={['Dashboard', 'PDF Reports', 'Multi-cliente', 'Pipeline']}
               />
             </div>
@@ -187,7 +187,7 @@ export default function SolutionSocialProof() {
           </div>
           <span className="text-[#2B3259]/70">
             <span className="font-semibold text-[#2B3259]">
-              +23 avaliacoes 5 estrelas
+              +23 avaliações 5 estrelas
             </span>{' '}
             esta semana
           </span>
@@ -197,7 +197,7 @@ export default function SolutionSocialProof() {
         <p className="mt-10 text-center text-lg text-[#2B3259]/60 max-w-2xl mx-auto">
           A cada dia, mais investidores garantem seu lugar na lista VIP.{' '}
           <span className="font-semibold text-[#2B3259]">
-            Quem entrar primeiro tera condicoes exclusivas.
+            Quem entrar primeiro terá condições exclusivas.
           </span>
         </p>
 

@@ -81,7 +81,7 @@ export default function SolutionTransformation() {
         {/* Subheadline */}
         <p className="text-center text-lg text-[#2B3259]/60 mb-16 max-w-2xl mx-auto leading-relaxed">
           Imagine acordar e ver todas as oportunidades organizadas, analisadas e
-          prontas para decisao. Sem abas abertas, sem planilhas confusas. Apenas
+          prontas para decisão. Sem abas abertas, sem planilhas confusas. Apenas
           clareza total.
         </p>
 
@@ -120,24 +120,24 @@ export default function SolutionTransformation() {
           />
           <TransformCard
             pillarName="ANALISAR"
-            before="Calculos manuais em planilhas confusas"
-            after="Simulações automaticas com multiplos cenarios e ROI projetado"
+            before="Cálculos manuais em planilhas confusas"
+            after="Simulações automáticas com múltiplos cenários e ROI projetado"
             className="col-span-12 md:col-span-4"
           />
           <TransformCard
             pillarName="GERENCIAR"
-            before="Informações perdidas em anotacoes espalhadas"
-            after="Dashboard centralizado com relatorios PDF prontos para compartilhar"
+            before="Informações perdidas em anotações espalhadas"
+            after="Dashboard centralizado com relatórios PDF prontos para compartilhar"
             className="col-span-12 md:col-span-4"
           />
         </div>
 
         {/* Agitation */}
         <p className="mt-12 text-center text-lg text-[#2B3259]/60 max-w-2xl mx-auto">
-          A diferenca entre investidores amadores e profissionais esta nas
+          A diferença entre investidores amadores e profissionais está nas
           ferramentas que usam.{' '}
           <span className="font-semibold text-[#2B3259]">
-            O Nexus e o upgrade que transforma sua operação.
+            A Nexus é o upgrade que transforma sua operação.
           </span>
         </p>
 
@@ -264,7 +264,7 @@ function AfterStateCard() {
           </li>
           <li className="flex items-center gap-2">
             <span className="text-[#5C5CFF]">&#10003;</span>
-            Visao completa
+            Visão completa
           </li>
         </ul>
       </div>

@@ -43,17 +43,17 @@ import React from 'react';
  */
 
 const beforeState = {
-  title: 'Antes do Nexus',
+  title: 'Antes da Nexus',
   items: [
     { icon: 'chaos', text: 'Dezenas de abas abertas' },
     { icon: 'time', text: 'Horas buscando imóveis' },
-    { icon: 'error', text: 'Calculos manuais arriscados' },
+    { icon: 'error', text: 'Cálculos manuais arriscados' },
     { icon: 'miss', text: 'Oportunidades perdidas' },
   ],
 };
 
 const afterState = {
-  title: 'Com o Nexus',
+  title: 'Com a Nexus',
   items: [
     { icon: 'unified', text: 'Busca unificada em um lugar' },
     { icon: 'fast', text: 'Encontre em minutos' },
@@ -65,13 +65,13 @@ const afterState = {
 const onboardingTimeline = [
   { day: '1', label: 'Acesso', desc: 'Crie sua conta' },
   { day: '3', label: 'Setup', desc: 'Configure alertas' },
-  { day: '7', label: 'Dominio', desc: 'Use como expert' },
+  { day: '7', label: 'Domínio', desc: 'Use como expert' },
   { day: '30', label: 'Resultado', desc: 'Primeira economia' },
 ];
 
 const footerLinks = {
   legal: [
-    { label: 'Politica de Privacidade', href: '/privacidade' },
+    { label: 'Política de Privacidade', href: '/privacidade' },
     { label: 'Termos de Uso', href: '/termos' },
   ],
   social: [
@@ -105,7 +105,7 @@ export default function FinalCTATransformation() {
 
           {/* Headline */}
           <h2 id="finalcta-transformation-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-white mb-6">
-            De Buscas Caoticas Para
+            De Buscas Caóticas Para
             <br />
             <span className="text-[#EFF0F0]">Investimentos Precisos</span>
           </h2>

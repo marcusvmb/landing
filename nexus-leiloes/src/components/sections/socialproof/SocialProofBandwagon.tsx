@@ -55,11 +55,11 @@ const testimonials = [
 ];
 
 const recentJoiners = [
-  { id: 1, initials: 'PS', city: 'Sao Paulo' },
+  { id: 1, initials: 'PS', city: 'São Paulo' },
   { id: 2, initials: 'MR', city: 'Rio de Janeiro' },
   { id: 3, initials: 'CF', city: 'Belo Horizonte' },
   { id: 4, initials: 'LA', city: 'Curitiba' },
-  { id: 5, initials: 'TB', city: 'Brasilia' },
+  { id: 5, initials: 'TB', city: 'Brasília' },
   { id: 6, initials: 'RG', city: 'Salvador' },
   { id: 7, initials: 'AC', city: 'Fortaleza' },
   { id: 8, initials: 'DN', city: 'Porto Alegre' },
@@ -130,8 +130,8 @@ export default function SocialProofBandwagon() {
           Que Não Para de Crescer
         </h2>
         <p className="text-center text-lg text-[#2B3259]/60 max-w-2xl mx-auto mb-12 leading-relaxed">
-          Investidores de todo o Brasil estão migrando para o Nexus.
-          Faca parte do movimento.
+          Investidores de todo o Brasil estão migrando para a Nexus.
+          Faça parte do movimento.
         </p>
 
         {/* Recent Activity Stream */}
@@ -172,10 +172,10 @@ export default function SocialProofBandwagon() {
 
         {/* Stats Bar */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <StatCard value="2.500+" label="Usuarios ativos" icon="users" />
+          <StatCard value="2.500+" label="Usuários ativos" icon="users" />
           <StatCard value="R$24M+" label="Em leilões analisados" icon="chart" />
           <StatCard value="98%" label="Taxa de satisfação" icon="heart" />
-          <StatCard value="15 min" label="Tempo medio de análise" icon="clock" />
+          <StatCard value="15 min" label="Tempo médio de análise" icon="clock" />
         </div>
 
         {/* CTA */}
@@ -184,7 +184,7 @@ export default function SocialProofBandwagon() {
             Fazer Parte da Comunidade
             <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
           </button>
-          <p className="mt-4 text-sm text-[#2B3259]/50">+47 novos membros nas ultimas 24 horas</p>
+          <p className="mt-4 text-sm text-[#2B3259]/50">+47 novos membros nas últimas 24 horas</p>
         </div>
       </div>
 
@@ -217,8 +217,8 @@ interface Testimonial {
 
 function BandwagonCard({ testimonial, showJoinDate }: { testimonial: Testimonial; showJoinDate?: boolean }) {
   const joinText = testimonial.joinedDaysAgo > 30
-    ? `Ha ${Math.floor(testimonial.joinedDaysAgo / 30)} meses`
-    : `Ha ${testimonial.joinedDaysAgo} dias`;
+    ? `Há ${Math.floor(testimonial.joinedDaysAgo / 30)} meses`
+    : `Há ${testimonial.joinedDaysAgo} dias`;
 
   return (
     <article className="group h-full bg-white/80 backdrop-blur-sm rounded-2xl border border-[#5C5CFF]/10 shadow-[0_15px_40px_-15px_rgba(92,92,255,0.1)] hover:shadow-[0_20px_50px_-15px_rgba(92,92,255,0.2)] hover:-translate-y-1 transition-all duration-400 overflow-hidden">

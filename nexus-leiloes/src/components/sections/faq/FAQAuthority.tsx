@@ -11,7 +11,7 @@
  * |                         EYEBROW BADGE                                |
  * |                    [✓] Verificado por Especialistas                  |
  * |                                                                      |
- * |         "Especialistas Respondem Suas Duvidas"                      |
+ * |         "Especialistas Respondem Suas Dúvidas"                      |
  * |                       (headline)                                     |
  * +----------------------------------------------------------------------+
  * |                                                                      |
@@ -87,7 +87,7 @@ const experts: Expert[] = [
   {
     id: 'carlos',
     name: 'Carlos Eduardo Lima',
-    role: 'Consultor Imobiliario',
+    role: 'Consultor Imobiliário',
     credential: 'CRECI 54.321',
     avatar: 'CL',
     yearsExperience: 15,
@@ -98,14 +98,14 @@ const faqItems: FAQItem[] = [
   {
     id: 'tempo',
     question: 'Quanto tempo leva para ver resultados?',
-    answer: 'Na minha experiência com centenas de investidores, a maioria ve resultados significativos em 15 a 30 dias. A busca unificada economiza em media 2 horas por dia desde o primeiro acesso, e em um mês o investimento em tempo já esta recuperado.',
+    answer: 'Na minha experiência com centenas de investidores, a maioria ve resultados significativos em 15 a 30 dias. A busca unificada economiza em media 2 horas por dia desde o primeiro acesso, e em um mês o investimento em tempo já está recuperado.',
     expertId: 'marcos',
     verifiedDate: 'Dez 2024',
   },
   {
     id: 'tipos',
     question: 'O sistema funciona para qualquer tipo de leilão?',
-    answer: 'Sim, o Nexus cobre tanto leilões judiciais quanto extrajudiciais de todos os principais leiloeiros do Brasil. Como analista, posso afirmar que ter todas as opcoes em um só lugar e fundamental para não perder oportunidades de mercado.',
+    answer: 'Sim, a Nexus cobre tanto leilões judiciais quanto extrajudiciais de todos os principais leiloeiros do Brasil. Como analista, posso afirmar que ter todas as opções em um só lugar e fundamental para não perder oportunidades de mercado.',
     expertId: 'ana',
     verifiedDate: 'Dez 2024',
   },
@@ -119,14 +119,14 @@ const faqItems: FAQItem[] = [
   {
     id: 'calculadora',
     question: 'Como funciona a calculadora multi-cenarios?',
-    answer: 'Esta e uma das funcionalidades que mais recomendo. A calculadora simula automaticamente 5 cenarios: otimista, realista, conservador, com reforma e para revenda rapida. Você visualiza o ROI potencial de cada estrategia antes de qualquer decisao.',
+    answer: 'Esta é uma das funcionalidades que mais recomendo. A calculadora simula automaticamente 5 cenários: otimista, realista, conservador, com reforma e para revenda rapida. Você visualiza o ROI potencial de cada estrategia antes de qualquer decisao.',
     expertId: 'ana',
     verifiedDate: 'Dez 2024',
   },
   {
     id: 'dados',
-    question: 'Os dados sao confiaveis?',
-    answer: 'Como advogado especialista em leilões, posso garantir: os dados vem de fontes oficiais dos leiloeiros e sao atualizados diariamente. Essa confiabilidade e essencial para evitar problemas juridicos e financeiros no processo de arrematacao.',
+    question: 'Os dados são confiáveis?',
+    answer: 'Como advogado especialista em leilões, posso garantir: os dados vem de fontes oficiais dos leiloeiros e sao atualizados diariamente. Essa confiabilidade é essencial para evitar problemas juridicos e financeiros no processo de arrematacao.',
     expertId: 'marcos',
     verifiedDate: 'Dez 2024',
   },
@@ -169,14 +169,14 @@ export default function FAQAuthority() {
         <h2 id="faq-authority-heading" className="text-center text-3xl sm:text-4xl md:text-5xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
           Especialistas Respondem{' '}
           <br className="hidden sm:block" />
-          <span className="text-[#5C5CFF]">Suas Duvidas</span>
+          <span className="text-[#5C5CFF]">Suas Dúvidas</span>
         </h2>
 
         {/* Subheadline */}
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
           Respostas validadas por profissionais com{' '}
           <span className="font-semibold text-[#2B3259]">{totalYearsExperience} anos de experiência combinada</span>{' '}
-          em leilões imobiliarios.
+          em leilões imobiliários.
         </p>
 
         {/* Main Content - Asymmetric Grid */}
@@ -226,7 +226,7 @@ export default function FAQAuthority() {
                       <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <p className="text-sm font-semibold text-[#2B3259]">Informações Verificadas</p>
-                    <p className="text-xs text-[#2B3259]/60 mt-1">Todas as respostas sao revisadas</p>
+                    <p className="text-xs text-[#2B3259]/60 mt-1">Todas as respostas são revisadas</p>
                   </div>
                 </div>
               </div>
@@ -240,7 +240,7 @@ export default function FAQAuthority() {
             Falar com Especialista
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
-            Tire suas duvidas diretamente com nossa equipe
+            Tire suas dúvidas diretamente com nossa equipe
           </p>
         </div>
       </div>

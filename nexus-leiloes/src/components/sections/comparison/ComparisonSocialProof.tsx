@@ -1,7 +1,7 @@
 /**
  * COMPARISON SECTION V4: SOCIAL PROOF
  *
- * Frame Cognitivo: "Por que 547 migraram para o Nexus"
+ * Frame Cognitivo: "Por que 547 migraram para a Nexus"
  * Cada comparacao e validada por um mini-testimonial real
  *
  * ASCII Layout:
@@ -28,7 +28,7 @@
  * |  |  | Planilhas manuais |   VS   | Calculadora automatica      |    | |
  * |  |  +-------------------+        +-----------------------------+    | |
  * |  |                                                                  | |
- * |  |  "Perdi R$12k em um lance mal calculado. Com o Nexus,           | |
+ * |  |  "Perdi R$12k em um lance mal calculado. Com a Nexus,           | |
  * |  |   isso nunca mais aconteceu."                                   | |
  * |  |                                              — Ricardo S., RJ    | |
  * |  +------------------------------------------------------------------+ |
@@ -74,9 +74,9 @@ const comparisonWithTestimonials = [
     },
     testimonial: {
       quote: 'Eu gastava 2 horas por dia só navegando entre sites de leiloeiros. Agora encontro tudo em minutos e ainda sobra tempo para analisar.',
-      author: 'Joao M.',
+      author: 'João M.',
       role: 'Investidor',
-      location: 'Sao Paulo, SP',
+      location: 'São Paulo, SP',
       initials: 'JM',
     },
   },
@@ -87,11 +87,11 @@ const comparisonWithTestimonials = [
       detail: 'erros de cálculo',
     },
     with: {
-      short: 'Calculadora automatica',
+      short: 'Calculadora automática',
       detail: '100% precisão',
     },
     testimonial: {
-      quote: 'Perdi R$12 mil em um lance mal calculado antes do Nexus. Depois que comecei a usar a calculadora multi-cenarios, nunca mais errei.',
+      quote: 'Perdi R$12 mil em um lance mal calculado antes da Nexus. Depois que comecei a usar a calculadora multi-cenarios, nunca mais errei.',
       author: 'Ricardo S.',
       role: 'Investidor PF',
       location: 'Rio de Janeiro, RJ',
@@ -106,10 +106,10 @@ const comparisonWithTestimonials = [
     },
     with: {
       short: '15 minutos/dia',
-      detail: 'eficiência maxima',
+      detail: 'eficiência máxima',
     },
     testimonial: {
-      quote: 'Como assessor, meu tempo vale dinheiro. O Nexus me devolveu 40 horas por mês que agora uso para prospectar novos clientes.',
+      quote: 'Como assessor, meu tempo vale dinheiro. A Nexus me devolveu 40 horas por mês que agora uso para prospectar novos clientes.',
       author: 'Ana C.',
       role: 'Assessora de Leilões',
       location: 'Belo Horizonte, MG',
@@ -127,7 +127,7 @@ const comparisonWithTestimonials = [
       detail: 'controle total',
     },
     testimonial: {
-      quote: 'Eu perdia oportunidades porque esquecia em qual aba tinha visto o imóvel. O dashboard do Nexus mudou minha organização completamente.',
+      quote: 'Eu perdia oportunidades porque esquecia em qual aba tinha visto o imóvel. O dashboard da Nexus mudou minha organização completamente.',
       author: 'Pedro L.',
       role: 'Investidor',
       location: 'Curitiba, PR',
@@ -163,7 +163,7 @@ const comparisonWithTestimonials = [
       detail: '5 simulações por imóvel',
     },
     testimonial: {
-      quote: 'A funcao de multi-cenarios me mostrou que um imóvel que parecia otimo na verdade dava prejuizo em 3 das 5 simulações. Economizei R$40 mil.',
+      quote: 'A função de multi-cenários me mostrou que um imóvel que parecia ótimo na verdade dava prejuízo em 3 das 5 simulações. Economizei R$40 mil.',
       author: 'Carlos R.',
       role: 'Investidor',
       location: 'Campinas, SP',
@@ -260,9 +260,9 @@ export default function ComparisonSocialProof() {
 
         {/* Subheadline */}
         <p className="text-center text-lg md:text-xl text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Veja o que investidores reais dizem sobre cada diferenca
+          Veja o que investidores reais dizem sobre cada diferença
           <br className="hidden md:block" />
-          entre o metodo antigo e o Nexus.
+          entre o método antigo e a Nexus.
         </p>
 
         {/* Comparison Cards with Testimonials */}
@@ -310,14 +310,14 @@ export default function ComparisonSocialProof() {
               {/* Left: Stats */}
               <div className="text-center md:text-left">
                 <p className="text-[#5C5CFF] font-bold text-sm uppercase tracking-widest mb-2">
-                  Resultado da comparacao
+                  Resultado da comparação
                 </p>
                 <p className="text-3xl md:text-4xl font-black text-white">
                   547 investidores,{' '}
                   <span className="text-[#5C5CFF]">1 escolha</span>
                 </p>
                 <p className="text-white/60 mt-2">
-                  Todos chegaram a mesma conclusao
+                  Todos chegaram à mesma conclusão
                 </p>
               </div>
 

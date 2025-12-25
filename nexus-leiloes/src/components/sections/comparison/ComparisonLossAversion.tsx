@@ -1,7 +1,7 @@
 /**
  * COMPARISON SECTION V1: LOSS AVERSION
  *
- * Frame Cognitivo: "O custo de NAO ter o Nexus"
+ * Frame Cognitivo: "O custo de NAO ter a Nexus"
  * Foco em perdas quantificaveis - valores em vermelho/laranja
  *
  * ASCII Layout:
@@ -72,16 +72,16 @@ const comparisonData = [
     without: {
       icon: '!',
       title: '20+ Sites Abertos',
-      value: '-R$8.400',
-      suffix: '/ano',
-      description: 'em tempo desperdicado navegando',
+      value: '-2h',
+      suffix: '/dia',
+      description: 'navegando entre leiloeiros',
     },
     with: {
       icon: 'check',
       title: '1 Busca Unificada',
-      value: '+R$8.400',
-      suffix: '/ano',
-      description: 'em tempo economizado',
+      value: '+40h',
+      suffix: '/mês',
+      description: 'de tempo recuperado',
     },
   },
   {
@@ -106,30 +106,30 @@ const comparisonData = [
     without: {
       icon: '!',
       title: 'Planilhas Manuais',
-      value: '-R$15k',
-      suffix: '/ano',
-      description: 'em erros de cálculo evitaveis',
+      value: '-2h',
+      suffix: '/análise',
+      description: 'em cálculos repetitivos',
     },
     with: {
       icon: 'check',
-      title: 'Calculadora Automatica',
+      title: 'Calculadora Automática',
       value: '100%',
       suffix: ' precisão',
-      description: 'com 5 cenarios por imóvel',
+      description: 'com 5 cenários por imóvel',
     },
   },
   {
     id: 'erros',
     without: {
       icon: '!',
-      title: 'Erros de Cálculo',
-      value: '-R$15k',
-      suffix: '/ano',
-      description: 'media do mercado em decisões erradas',
+      title: 'Decisões no Escuro',
+      value: '0',
+      suffix: ' cenários',
+      description: 'analisados antes de dar lance',
     },
     with: {
       icon: 'check',
-      title: 'Multi-Cenarios',
+      title: 'Multi-Cenários',
       value: '5x',
       suffix: ' simulações',
       description: 'lado a lado por oportunidade',
@@ -159,13 +159,13 @@ const comparisonData = [
       title: 'Prints Amadores',
       value: '-87%',
       suffix: ' confiança',
-      description: 'de clientes em apresentacoes',
+      description: 'de clientes em apresentações',
     },
     with: {
       icon: 'check',
       title: 'PDFs Profissionais',
       value: '+92%',
-      suffix: ' conversao',
+      suffix: ' conversão',
       description: 'em fechamentos com clientes',
     },
   },
@@ -220,7 +220,7 @@ export default function ComparisonLossAversion() {
           O Custo de{' '}
           <span className="text-[#5C5CFF]">NAO</span> Ter
           <br />
-          o Nexus
+          a Nexus
         </h2>
 
         {/* Subheadline */}
@@ -315,13 +315,13 @@ export default function ComparisonLossAversion() {
               "
             >
               <p className="text-sm text-[#2B3259]/50 mb-2">
-                Total de perdas anuais estimadas
+                Tempo perdido toda semana
               </p>
               <p className="text-4xl md:text-5xl font-black text-[#5C5CFF]">
-                -R$45.000+
+                -15h/sem
               </p>
               <p className="text-sm text-[#2B3259]/40 mt-2">
-                em tempo, erros e oportunidades
+                + ansiedade e decisões no escuro
               </p>
             </div>
           </div>
@@ -365,13 +365,13 @@ export default function ComparisonLossAversion() {
               "
             >
               <p className="text-sm text-[#2B3259]/50 mb-2">
-                Total de ganhos anuais com Nexus
+                Tempo recuperado toda semana
               </p>
               <p className="text-4xl md:text-5xl font-black text-[#5C5CFF]">
-                +R$45.000+
+                +15h/sem
               </p>
               <p className="text-sm text-[#2B3259]/40 mt-2">
-                economizados e recuperados
+                + confiança e controle total
               </p>
             </div>
           </div>

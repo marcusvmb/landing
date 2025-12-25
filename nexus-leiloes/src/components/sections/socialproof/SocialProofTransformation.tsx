@@ -22,13 +22,13 @@ const transformations = [
     role: 'Investidor PF',
     avatar: 'RM',
     before: {
-      title: 'Antes do Nexus',
+      title: 'Antes da Nexus',
       pain: 'Perdia horas em planilhas e errava cálculos',
       metric: '-R$32.000',
       metricLabel: 'em erros',
     },
     after: {
-      title: 'Depois do Nexus',
+      title: 'Depois da Nexus',
       gain: 'Análises precisas em minutos',
       metric: 'R$32.000',
       metricLabel: 'economizados',
@@ -41,14 +41,14 @@ const transformations = [
     role: 'Assessora de Leilões',
     avatar: 'AP',
     before: {
-      title: 'Antes do Nexus',
+      title: 'Antes da Nexus',
       pain: 'Dificuldade em escalar a carteira de clientes',
       metric: '12',
       metricLabel: 'clientes',
     },
     after: {
-      title: 'Depois do Nexus',
-      gain: 'Relatorios profissionais que impressionam',
+      title: 'Depois da Nexus',
+      gain: 'Relatórios profissionais que impressionam',
       metric: '36',
       metricLabel: 'clientes',
     },
@@ -60,14 +60,14 @@ const transformations = [
     role: 'Escritorio de Assessoria',
     avatar: 'MC',
     before: {
-      title: 'Antes do Nexus',
+      title: 'Antes da Nexus',
       pain: 'Precisava contratar para crescer',
       metric: '+2',
       metricLabel: 'funcionarios',
     },
     after: {
-      title: 'Depois do Nexus',
-      gain: 'Automatizacao que dispensa contratacoes',
+      title: 'Depois da Nexus',
+      gain: 'Automatização que dispensa contratações',
       metric: '50+',
       metricLabel: 'clientes gerenciados',
     },
@@ -79,14 +79,14 @@ const transformations = [
     role: 'Compradora Residencial',
     avatar: 'JL',
     before: {
-      title: 'Antes do Nexus',
+      title: 'Antes da Nexus',
       pain: 'Medo de leilões e processos obscuros',
       metric: '0',
       metricLabel: 'imóveis',
     },
     after: {
-      title: 'Depois do Nexus',
-      gain: 'Compra segura com visao completa',
+      title: 'Depois da Nexus',
+      gain: 'Compra segura com visão completa',
       metric: '1',
       metricLabel: 'imóvel conquistado',
     },
@@ -116,7 +116,7 @@ export default function SocialProofTransformation() {
           Jornadas de <span className="text-[#5C5CFF]">Transformação</span>
         </h2>
         <p className="text-center text-lg text-[#2B3259]/60 max-w-2xl mx-auto mb-16 leading-relaxed">
-          Investidores reais. Resultados reais. Veja como o Nexus mudou suas operacoes.
+          Investidores reais. Resultados reais. Veja como a Nexus mudou suas operações.
         </p>
 
         {/* Timeline */}
@@ -154,7 +154,7 @@ export default function SocialProofTransformation() {
         {/* CTA */}
         <div className="mt-12 text-center">
           <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-            Comecar Minha Transformação
+            Começar Minha Transformação
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">Sua jornada de sucesso começa aqui</p>
         </div>

@@ -66,12 +66,12 @@ export default function ProblemLossAversion() {
                 text-[#2B3259]
               "
             >
-              Enquanto você le isso,
+              Enquanto você lê isso,
               <br />
-              um negocio lucrativo esta{' '}
+              um negócio lucrativo está{' '}
               <span className="text-[#5C5CFF]">escapando</span>
               <br />
-              das suas maos
+              das suas mãos
             </h2>
           </div>
 
@@ -101,7 +101,7 @@ export default function ProblemLossAversion() {
               </div>
 
               <span className="text-[#5C5CFF]/50 text-sm font-bold uppercase tracking-widest">
-                Perda Estimada
+                Tempo Perdido
               </span>
               <div
                 className="
@@ -114,9 +114,9 @@ export default function ProblemLossAversion() {
                   mt-2
                 "
               >
-                -R$12.450
+                -15h
               </div>
-              <span className="text-lg text-[#2B3259]/60">/mês em oportunidades</span>
+              <span className="text-lg text-[#2B3259]/60">/semana em navegação fragmentada</span>
             </div>
           </div>
         </div>
@@ -196,10 +196,10 @@ export default function ProblemLossAversion() {
         {/* Agitation Quote */}
         <div className="mt-16 text-center max-w-3xl mx-auto">
           <p className="text-xl md:text-2xl text-[#2B3259]/70 leading-relaxed">
-            Cada minuto gasto organizando ferramentas fragmentadas e um minuto que{' '}
-            <span className="font-semibold text-[#5C5CFF]">seus concorrentes usam para fechar negocios</span>.
+            Cada minuto gasto organizando ferramentas fragmentadas é um minuto que{' '}
+            <span className="font-semibold text-[#5C5CFF]">seus concorrentes usam para fechar negócios</span>.
             Eles não estão perdendo tempo.{' '}
-            <span className="font-semibold text-[#2B3259]">Você esta.</span>
+            <span className="font-semibold text-[#2B3259]">Você está.</span>
           </p>
         </div>
 
@@ -218,7 +218,7 @@ export default function ProblemLossAversion() {
           <p className="text-lg text-[#2B3259]/80">
             <span className="text-[#5C5CFF] font-semibold">&#9888;</span>{' '}
             A cada semana com esse caos, você deixa na mesa oportunidades que{' '}
-            <span className="font-semibold">nunca mais voltarao</span>.
+            <span className="font-semibold">nunca mais voltarão</span>.
           </p>
         </div>
       </div>

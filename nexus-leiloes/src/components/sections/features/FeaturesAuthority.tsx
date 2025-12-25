@@ -31,7 +31,7 @@
  * │  │                               │                         │
  * │  │  5 cenarios, precisão total   │                         │
  * │  │                               │                         │
- * │  │  [★ EXCLUSIVO - SO AQUI ★]    │                         │
+ * │  │  [★ EXCLUSIVO - SÓ AQUI ★]    │                         │
  * │  │                               │                         │
  * │  │  col-span-7, DESTAQUE MAXIMO  │                         │
  * │  └───────────────────────────────┘                         │
@@ -53,7 +53,7 @@
  *
  * Visual Elements:
  * - Bold typography with badges
- * - "UNICO", "EXCLUSIVO", "SO AQUI" badges
+ * - "UNICO", "EXCLUSIVO", "SÓ AQUI" badges
  * - Asymmetric bento layout
  * - Featured card with ring/glow effect
  *
@@ -78,7 +78,7 @@ const authorityFeatures = [
   {
     id: 'relatorios',
     icon: '📄',
-    name: 'Relatorios PDF',
+    name: 'Relatórios PDF',
     headline: 'Documentos Profissionais',
     description: 'Prontos para impressionar clientes e parceiros.',
     badge: 'PROFISSIONAL',
@@ -101,9 +101,9 @@ const authorityFeatures = [
     id: 'calculadora',
     icon: '🧮',
     name: 'Calculadora Multi-Cenario',
-    headline: '5 Cenarios de Investimento',
+    headline: '5 Cenários de Investimento',
     description: 'Simule otimista, conservador, pessimista e mais. Precisão total antes de dar qualquer lance.',
-    badge: 'EXCLUSIVO - SO AQUI',
+    badge: 'EXCLUSIVO - SÓ AQUI',
     badgeStyle: 'featured',
     gridClass: 'col-span-12 md:col-span-7',
     size: 'featured',
@@ -112,8 +112,8 @@ const authorityFeatures = [
     id: 'ocupantes',
     icon: '🏠',
     name: 'Dados de Ocupantes',
-    headline: 'Consulta Previa',
-    description: 'Saiba a situacao do imóvel antes do arremate.',
+    headline: 'Consulta Prévia',
+    description: 'Saiba a situação do imóvel antes do arremate.',
     badge: null,
     badgeStyle: null,
     gridClass: 'col-span-12 md:col-span-4',
@@ -123,7 +123,7 @@ const authorityFeatures = [
     id: 'assessores',
     icon: '👥',
     name: 'Ferramentas para Assessores',
-    headline: 'Gestao Multi-Cliente',
+    headline: 'Gestão Multi-Cliente',
     description: 'Organize o portfolio de todos os seus clientes em um só painel profissional.',
     badge: 'PARA ASSESSORES',
     badgeStyle: 'secondary',
@@ -176,7 +176,7 @@ export default function FeaturesAuthority() {
           >
             <span className="text-lg">👑</span>
             <span className="text-sm font-bold text-[#5C5CFF] uppercase tracking-wider">
-              Lideranca absoluta
+              Liderança absoluta
             </span>
           </span>
         </div>
@@ -208,12 +208,12 @@ export default function FeaturesAuthority() {
           </span>{' '}
           Hub Completo
           <br />
-          Para Leilões Imobiliarios
+          Para Leilões Imobiliários
         </h2>
 
         {/* Subheadline */}
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Enquanto outras ferramentas fazem apenas uma coisa, o Nexus faz{' '}
+          Enquanto outras ferramentas fazem apenas uma coisa, a Nexus faz{' '}
           <strong className="text-[#2B3259]">tudo</strong>.
           Busca, análise e gestao em uma só plataforma.
         </p>
@@ -265,7 +265,7 @@ export default function FeaturesAuthority() {
             <span className="font-semibold">parte</span> disso.
             <br />
             <span className="text-[#5C5CFF] font-semibold">
-              Só o Nexus faz tudo.
+              Só a Nexus faz tudo.
             </span>
           </p>
         </div>

@@ -34,7 +34,7 @@ import React from 'react';
  * |                                                                      |
  * +----------------------------------------------------------------------+
  * |                          FOOTER                                      |
- * |   Logo    Certificacoes + Trust    Redes    Copyright               |
+ * |   Logo    Certificações + Trust    Redes    Copyright               |
  * +----------------------------------------------------------------------+
  *
  * Grid Structure: 12 cols asymmetric (7/5)
@@ -53,7 +53,7 @@ const credibilityBadges = [
 ];
 
 const expertTestimonial = {
-  quote: 'O Nexus transformou a forma como analiso leilões. O que antes levava horas, agora faço em minutos. E a ferramenta que uso diariamente para tomar decisões assertivas.',
+  quote: 'A Nexus transformou a forma como analiso leilões. O que antes levava horas, agora faço em minutos. E a ferramenta que uso diariamente para tomar decisões assertivas.',
   author: 'Carlos Mendes',
   role: 'Assessor de Leilões - 12 anos de mercado',
   avatar: '/avatars/carlos.jpg',
@@ -74,7 +74,7 @@ const certifications = [
 
 const footerLinks = {
   legal: [
-    { label: 'Politica de Privacidade', href: '/privacidade' },
+    { label: 'Política de Privacidade', href: '/privacidade' },
     { label: 'Termos de Uso', href: '/termos' },
   ],
   social: [
@@ -111,7 +111,7 @@ export default function FinalCTAAuthority() {
 
           {/* Subheadline */}
           <p className="text-center text-lg text-[#2B3259]/60 max-w-2xl mx-auto mb-12">
-            Profissionais que movimentam milhoes em leilões confiam no Nexus.{' '}
+            Profissionais que movimentam milhões em leilões confiam na Nexus.{' '}
             <span className="text-[#2B3259] font-semibold">Agora você também pode ter acesso.</span>
           </p>
 
