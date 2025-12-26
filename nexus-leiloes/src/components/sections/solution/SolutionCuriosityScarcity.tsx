@@ -98,9 +98,9 @@ export default function SolutionCuriosityScarcity() {
               mb-6
             "
           >
-            O Hub Completo que
+            O hub completo que
             <br />
-            <span className="text-[#5C5CFF]">Ninguém Mais Oferece</span>
+            <span className="text-[#5C5CFF]">ninguém mais oferece</span>
           </h2>
           <p className="text-xl text-[#2B3259]/60 max-w-2xl mx-auto">
             Três pilares. Uma plataforma. Zero fragmentação.

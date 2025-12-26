@@ -106,7 +106,7 @@ export default function FAQCuriosityScarcity() {
           >
             Perguntas
             <br />
-            <span className="text-[#5C5CFF]">Frequentes</span>
+            <span className="text-[#5C5CFF]">frequentes</span>
           </h2>
           <p className="text-xl text-[#2B3259]/60">
             Tudo que você precisa saber sobre a Nexus e as vagas de fundador.

@@ -106,9 +106,9 @@ export default function SegmentationCuriosityScarcity() {
               mb-6
             "
           >
-            Qual É o
+            Qual é o
             <br />
-            <span className="text-[#5C5CFF]">Seu Perfil</span>?
+            <span className="text-[#5C5CFF]">seu perfil</span>?
           </h2>
           <p className="text-xl text-[#2B3259]/60 max-w-2xl mx-auto">
             Cada tipo de usuário tem benefícios específicos.

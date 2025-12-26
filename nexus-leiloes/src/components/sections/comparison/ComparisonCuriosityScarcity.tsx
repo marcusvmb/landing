@@ -102,9 +102,9 @@ export default function ComparisonCuriosityScarcity() {
               mb-6
             "
           >
-            Você Vai Continuar
+            Você vai continuar
             <br />
-            <span className="text-[#5C5CFF]">Perdendo Tempo</span>?
+            <span className="text-[#5C5CFF]">perdendo tempo</span>?
           </h2>
           <p className="text-xl text-[#2B3259]/60 max-w-2xl mx-auto">
             Veja o que muda quando você entra para a lista de fundadores.

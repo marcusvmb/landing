@@ -151,9 +151,9 @@ export default function HeroCuriosityScarcity() {
               text-[#2B3259]
             "
           >
-            O Que 87% dos Investidores
+            O que 87% dos investidores
             <br />
-            de Leilão <span className="text-[#5C5CFF]">Não Sabem</span>
+            de leilão <span className="text-[#5C5CFF]">não sabem</span>
           </h1>
 
           {/* Subheadline - Teaser */}

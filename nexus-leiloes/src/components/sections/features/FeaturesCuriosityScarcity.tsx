@@ -101,9 +101,9 @@ export default function FeaturesCuriosityScarcity() {
               mb-6
             "
           >
-            Funcionalidades que Você
+            Funcionalidades que você
             <br />
-            <span className="text-[#5C5CFF]">Vai Querer Ver</span>
+            <span className="text-[#5C5CFF]">vai querer ver</span>
           </h2>
           <p className="text-xl text-[#2B3259]/60 max-w-2xl mx-auto">
             Algumas já podemos mostrar. Outras{' '}

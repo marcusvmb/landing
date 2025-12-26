@@ -125,9 +125,9 @@ export default function SocialProofCuriosityScarcity() {
               mb-6
             "
           >
-            O Movimento Já
+            O movimento já
             <br />
-            <span className="text-[#5C5CFF]">Começou</span>
+            <span className="text-[#5C5CFF]">começou</span>
           </h2>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
             Investidores de todo Brasil estão garantindo seu lugar.

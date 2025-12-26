@@ -175,9 +175,9 @@ export default function FinalCTACuriosityScarcity() {
             id="finalcta-curiosity-heading"
             className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-white mb-4"
           >
-            Sua Última Chance de
+            Sua última chance de
             <br />
-            <span className="text-[#5C5CFF]">Ver Primeiro</span>
+            <span className="text-[#5C5CFF]">ver primeiro</span>
           </h2>
 
           {/* Subheadline */}
@@ -198,7 +198,7 @@ export default function FinalCTACuriosityScarcity() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-6">
-                  O Que Você Ganha Entrando Agora
+                  O que você ganha entrando agora
                 </h3>
 
                 {/* Benefits List */}

@@ -82,18 +82,18 @@ export default function HeroLossAversion() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 lg:pt-16 pb-16">
         <div className="grid grid-cols-12 gap-6 items-center">
 
-          {/* Content Column - 7 colunas (assimetrico) */}
-          <div className="col-span-12 lg:col-span-7 relative z-10">
+          {/* Content Column - 6 colunas (assimetrico) */}
+          <div className="col-span-12 lg:col-span-6 relative z-10">
 
             {/* Headline - Massivo com tight tracking */}
             <h1
               id="hero-loss-aversion-heading"
               className="
-                text-[2.5rem]
-                sm:text-5xl
-                md:text-6xl
-                lg:text-[4.5rem]
-                xl:text-[5rem]
+                text-[2rem]
+                sm:text-4xl
+                md:text-[2.75rem]
+                lg:text-[3.25rem]
+                xl:text-[3.75rem]
                 font-black
                 tracking-[-0.03em]
                 leading-[0.95]
@@ -171,15 +171,14 @@ export default function HeroLossAversion() {
             </ul>
           </div>
 
-          {/* Image Column - 5 colunas com overlap e breaking grid */}
+          {/* Image Column - 6 colunas com overlap e breaking grid */}
           <div
             className="
               col-span-12
-              lg:col-span-5
-              lg:-mr-20
-              lg:-mt-10
+              lg:col-span-6
+              lg:-mr-24
               relative
-              mt-12
+              mt-10
               lg:mt-0
             "
           >
@@ -191,81 +190,24 @@ export default function HeroLossAversion() {
                   inset-0
                   bg-[#5C5CFF]/20
                   rounded-3xl
-                  blur-2xl
-                  scale-95
+                  blur-3xl
+                  scale-90
                 "
               />
 
-              {/* Dashboard Mockup - Glassmorphism */}
-              <div
+              {/* Dashboard Mockup - High-end image */}
+              <img
+                src="/mockup-dashboard.png"
+                alt="Painel da Nexus Leilões mostrando oportunidades de leilões imobiliários com filtros avançados e análise de preços"
                 className="
                   relative
                   z-10
-                  bg-white/80
-                  backdrop-blur-xl
-                  rounded-3xl
-                  p-6
-                  md:p-8
-                  shadow-[0_30px_80px_-20px_rgba(92,92,255,0.3)]
-                  border border-white/50
+                  w-[115%]
+                  max-w-none
+                  h-auto
+                  drop-shadow-[0_30px_60px_rgba(92,92,255,0.25)]
                 "
-                role="img"
-                aria-label="Visualização do painel da Nexus Leilões mostrando 23 imóveis em análise, 5 leilões hoje e 12 alertas ativos"
-              >
-                {/* Mockup Header - macOS style */}
-                <div className="flex items-center gap-2 mb-6">
-                  <div className="w-3 h-3 rounded-full bg-[#FF5F57]" />
-                  <div className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
-                  <div className="w-3 h-3 rounded-full bg-[#28C840]" />
-                  <div className="ml-auto text-xs text-[#2B3259]/40 font-medium">
-                    Nexus Dashboard
-                  </div>
-                </div>
-
-                {/* Mockup Content - Simplified UI representation */}
-                <div className="space-y-5">
-                  {/* Search bar */}
-                  <div className="h-10 bg-[#5C5CFF]/8 rounded-xl flex items-center px-4">
-                    <span className="text-[#5C5CFF]/60 text-sm">🔍 Buscar imóveis...</span>
-                  </div>
-
-                  {/* Stats cards */}
-                  <div className="grid grid-cols-3 gap-3">
-                    <div className="p-4 bg-[#5C5CFF]/5 rounded-xl border border-[#5C5CFF]/10">
-                      <div className="text-2xl font-bold text-[#5C5CFF]">23</div>
-                      <div className="text-xs text-[#2B3259]/50">Em análise</div>
-                    </div>
-                    <div className="p-4 bg-[#5C5CFF]/5 rounded-xl border border-[#5C5CFF]/10">
-                      <div className="text-2xl font-bold text-[#5C5CFF]">5</div>
-                      <div className="text-xs text-[#2B3259]/50">Hoje</div>
-                    </div>
-                    <div className="p-4 bg-[#5C5CFF]/5 rounded-xl border border-[#5C5CFF]/10">
-                      <div className="text-2xl font-bold text-[#5C5CFF]">12</div>
-                      <div className="text-xs text-[#2B3259]/50">Alertas</div>
-                    </div>
-                  </div>
-
-                  {/* Chart placeholder */}
-                  <div className="h-28 bg-gradient-to-r from-[#5C5CFF]/10 via-[#5C5CFF]/5 to-[#5C5CFF]/10 rounded-xl flex items-end p-4 gap-2">
-                    <div className="w-1/6 h-[30%] bg-[#5C5CFF]/30 rounded-t" />
-                    <div className="w-1/6 h-[50%] bg-[#5C5CFF]/40 rounded-t" />
-                    <div className="w-1/6 h-[70%] bg-[#5C5CFF]/50 rounded-t" />
-                    <div className="w-1/6 h-[45%] bg-[#5C5CFF]/40 rounded-t" />
-                    <div className="w-1/6 h-[85%] bg-[#5C5CFF] rounded-t" />
-                    <div className="w-1/6 h-[60%] bg-[#5C5CFF]/40 rounded-t" />
-                  </div>
-
-                  {/* Action buttons */}
-                  <div className="flex gap-3">
-                    <div className="h-8 bg-[#5C5CFF] rounded-lg flex-1 flex items-center justify-center">
-                      <span className="text-white text-xs font-medium">Gerar Relatório</span>
-                    </div>
-                    <div className="h-8 bg-[#2B3259]/10 rounded-lg w-24 flex items-center justify-center">
-                      <span className="text-[#2B3259]/60 text-xs">Filtrar</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              />
             </div>
           </div>
         </div>
