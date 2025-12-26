@@ -1,6 +1,7 @@
 'use client';
 
 import { useLeadModal } from '@/contexts/LeadModalContext';
+import { LazyVideo } from '@/components/ui/LazyVideo';
 
 /**
  * FEATURES SECTION V2: SHOWCASE CINEMATOGRÁFICO
@@ -48,18 +49,31 @@ const heroFeatures = [
     titleHighlight: 'Uma busca.',
     description:
       'Acesse imóveis de múltiplos leiloeiros em uma interface unificada. Economize horas de busca — invista esse tempo analisando.',
-    tags: ['+20 leiloeiros', 'Filtros avançados', 'Resultados em segundos'],
+    tags: ['Atualização diária', 'Filtros avançados', 'Resultados em segundos'],
     videoSrc: '/videos/Filtro.webm',
+    posterSrc: '/videos/posters/filtro.jpg',
     badge: null,
   },
   {
-    id: 'calculadora',
+    id: 'calculadora-custos',
+    title: 'Custo total.',
+    titleHighlight: 'Sem surpresas.',
+    description:
+      'Veja todos os custos antes de dar seu lance — ITBI, cartório, reforma, desocupação. Arremate com a certeza de quem conhece cada centavo.',
+    tags: ['Custos detalhados', 'Cálculo instantâneo', 'Decisão segura'],
+    videoSrc: '/videos/calculadora.webm',
+    posterSrc: '/videos/posters/calculadora.jpg',
+    badge: 'NOVO',
+  },
+  {
+    id: 'multi-cenario',
     title: 'Decisões com',
     titleHighlight: 'Precisão Cirúrgica.',
     description:
       'Simule múltiplos cenários de investimento antes de dar seu lance. A única calculadora do mercado que modela diferentes desfechos.',
-    tags: ['5 cenários', 'Precisão total', 'Exclusivo do Hub'],
-    videoSrc: null, // Vídeo será adicionado depois
+    tags: ['Múltiplos cenários', 'Precisão total', 'Exclusivo do Hub'],
+    videoSrc: '/videos/playground.webm',
+    posterSrc: '/videos/posters/playground.jpg',
     badge: 'EXCLUSIVO',
   },
 ];
@@ -242,6 +256,7 @@ interface HeroFeatureCardProps {
     description: string;
     tags: string[];
     videoSrc: string | null;
+    posterSrc: string | null;
     badge: string | null;
   };
   reversed?: boolean;
@@ -297,7 +312,7 @@ function HeroFeatureCard({ feature, reversed = false }: HeroFeatureCardProps) {
             ${reversed ? 'lg:order-2' : 'lg:order-1'}
           `}
         >
-          <h3 className="text-2xl lg:text-3xl font-black text-[#2B3259] tracking-[-0.02em] leading-tight mb-4">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#2B3259] tracking-[-0.03em] leading-[1.1] mb-5">
             {feature.title}
             <br />
             <span className="text-[#5C5CFF]">{feature.titleHighlight}</span>
@@ -362,13 +377,13 @@ function HeroFeatureCard({ feature, reversed = false }: HeroFeatureCardProps) {
             />
 
             {feature.videoSrc ? (
-              <video
-                className="w-full h-full object-cover"
+              <LazyVideo
                 src={feature.videoSrc}
-                autoPlay
-                loop
-                muted
-                playsInline
+                poster={feature.posterSrc || undefined}
+                className="w-full h-full"
+                playThreshold={0.3}
+                pauseOnExit={true}
+                rootMargin="300px"
               />
             ) : (
               // Placeholder para vídeo futuro
@@ -479,7 +494,7 @@ function SecondaryFeatureCard({ feature }: SecondaryFeatureCardProps) {
       </div>
 
       {/* Content */}
-      <h4 className="text-lg lg:text-xl font-bold text-[#2B3259] mb-2 tracking-[-0.01em]">
+      <h4 className="text-xl lg:text-2xl font-bold text-[#2B3259] mb-3 tracking-[-0.02em]">
         {feature.title}
       </h4>
       <p className="text-sm lg:text-base text-[#2B3259]/60 leading-relaxed">

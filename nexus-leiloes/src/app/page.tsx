@@ -54,6 +54,7 @@ import {
   FinalCTAAuthority,
   FinalCTACuriosityScarcity,
 } from '@/components/sections/finalcta';
+import { AssessoresShowcase } from '@/components/sections/assessores';
 
 type LandingVariant = 'v1' | 'v2' | 'v3' | 'v4';
 
@@ -92,6 +93,7 @@ export default function Home() {
             <ProblemLossAversion />
             <SolutionLossAversion />
             <FeaturesShowcase />
+            <AssessoresShowcase />
             <SegmentationLossAversion />
             <ComparisonLossAversion />
             <SocialProofLossAversion />
