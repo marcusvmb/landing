@@ -68,6 +68,7 @@ const features = [
     gainDesc: 'para focar em análises que geram lucro',
     recoveryPercent: 85,
     badge: null,
+    videoSrc: '/videos/Filtro.webm',
   },
   {
     id: 'calculadora',
@@ -275,6 +276,7 @@ interface FeatureCardProps {
     gainDesc: string;
     recoveryPercent: number;
     badge: string | null;
+    videoSrc?: string;
   };
 }
 
@@ -346,6 +348,58 @@ function FeatureCard({ feature }: FeatureCardProps) {
             </h3>
           </div>
         </div>
+
+        {/* Video Demo */}
+        {feature.videoSrc && (
+          <div className="relative mb-5">
+            {/* Glow behind video */}
+            <div
+              className="
+                absolute -inset-2
+                bg-[#5C5CFF]/10
+                blur-2xl
+                rounded-3xl
+                opacity-0
+                group-hover:opacity-100
+                transition-opacity duration-500
+                -z-10
+              "
+              aria-hidden="true"
+            />
+            <div
+              className="
+                relative
+                aspect-video
+                overflow-hidden
+                rounded-2xl
+                border border-white/20
+                shadow-[0_12px_40px_-8px_rgba(92,92,255,0.2)]
+                group-hover:shadow-[0_20px_60px_-10px_rgba(92,92,255,0.3)]
+                group-hover:-translate-y-1
+                transition-all duration-500
+              "
+            >
+              <video
+                className="w-full h-full object-cover"
+                src={feature.videoSrc}
+                autoPlay
+                loop
+                muted
+                playsInline
+              />
+              {/* Subtle shine overlay */}
+              <div
+                className="
+                  absolute inset-0
+                  bg-gradient-to-br from-white/10 via-transparent to-transparent
+                  pointer-events-none
+                  rounded-2xl
+                "
+                aria-hidden="true"
+              />
+            </div>
+          </div>
+        )}
 
         {/* Loss Section */}
         <div

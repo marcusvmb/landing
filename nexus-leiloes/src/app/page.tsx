@@ -19,6 +19,7 @@ import {
 } from '@/components/sections/solution';
 import {
   FeaturesLossAversion,
+  FeaturesShowcase,
   FeaturesTransformation,
   FeaturesAuthority,
   FeaturesCuriosityScarcity,
@@ -90,7 +91,7 @@ export default function Home() {
             <HeroLossAversion />
             <ProblemLossAversion />
             <SolutionLossAversion />
-            <FeaturesLossAversion />
+            <FeaturesShowcase />
             <SegmentationLossAversion />
             <ComparisonLossAversion />
             <SocialProofLossAversion />

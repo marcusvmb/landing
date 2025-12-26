@@ -8,6 +8,7 @@
  */
 
 export { default as FeaturesLossAversion } from './FeaturesLossAversion';
+export { default as FeaturesShowcase } from './FeaturesShowcase';
 export { default as FeaturesTransformation } from './FeaturesTransformation';
 export { default as FeaturesAuthority } from './FeaturesAuthority';
 export { default as FeaturesSocialProof } from './FeaturesSocialProof';
