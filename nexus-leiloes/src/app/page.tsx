@@ -4,54 +4,54 @@ import { useState } from 'react';
 import HeroLossAversion from '@/components/heroes/HeroLossAversion';
 import HeroTransformation from '@/components/heroes/HeroTransformation';
 import HeroAuthority from '@/components/heroes/HeroAuthority';
-import HeroSocialProof from '@/components/heroes/HeroSocialProof';
+import HeroCuriosityScarcity from '@/components/heroes/HeroCuriosityScarcity';
 import {
   ProblemLossAversion,
   ProblemTransformation,
   ProblemAuthority,
-  ProblemSocialProof,
+  ProblemCuriosityScarcity,
 } from '@/components/sections/problem';
 import {
   SolutionLossAversion,
   SolutionTransformation,
   SolutionAuthority,
-  SolutionSocialProof,
+  SolutionCuriosityScarcity,
 } from '@/components/sections/solution';
 import {
   FeaturesLossAversion,
   FeaturesTransformation,
   FeaturesAuthority,
-  FeaturesSocialProof,
+  FeaturesCuriosityScarcity,
 } from '@/components/sections/features';
 import {
   SegmentationLossAversion,
   SegmentationTransformation,
   SegmentationAuthority,
-  SegmentationSocialProof,
+  SegmentationCuriosityScarcity,
 } from '@/components/sections/segmentation';
 import {
   ComparisonLossAversion,
   ComparisonTransformation,
   ComparisonAuthority,
-  ComparisonSocialProof,
+  ComparisonCuriosityScarcity,
 } from '@/components/sections/comparison';
 import {
   SocialProofLossAversion,
   SocialProofTransformation,
   SocialProofAuthority,
-  SocialProofBandwagon,
+  SocialProofCuriosityScarcity,
 } from '@/components/sections/socialproof';
 import {
   FAQLossAversion,
   FAQTransformation,
   FAQAuthority,
-  FAQBandwagon,
+  FAQCuriosityScarcity,
 } from '@/components/sections/faq';
 import {
   FinalCTALossAversion,
   FinalCTATransformation,
   FinalCTAAuthority,
-  FinalCTABandwagon,
+  FinalCTACuriosityScarcity,
 } from '@/components/sections/finalcta';
 
 type LandingVariant = 'v1' | 'v2' | 'v3' | 'v4';
@@ -73,9 +73,9 @@ const VARIANT_INFO: Record<LandingVariant, { label: string; description: string;
     frame: 'Autoridade'
   },
   'v4': {
-    label: 'V4: Social Proof',
-    description: 'Validação social + Form inline',
-    frame: 'Prova Social'
+    label: 'V4: Curiosity + Scarcity',
+    description: 'Teaser + Escassez genuína',
+    frame: 'Curiosidade + Urgência'
   }
 };
 
@@ -102,12 +102,10 @@ export default function Home() {
         return (
           <>
             <HeroTransformation />
-            <ProblemTransformation />
             <SolutionTransformation />
             <FeaturesTransformation />
             <SegmentationTransformation />
             <ComparisonTransformation />
-            <SocialProofTransformation />
             <FAQTransformation />
             <FinalCTATransformation />
           </>
@@ -129,15 +127,15 @@ export default function Home() {
       case 'v4':
         return (
           <>
-            <HeroSocialProof />
-            <ProblemSocialProof />
-            <SolutionSocialProof />
-            <FeaturesSocialProof />
-            <SegmentationSocialProof />
-            <ComparisonSocialProof />
-            <SocialProofBandwagon />
-            <FAQBandwagon />
-            <FinalCTABandwagon />
+            <HeroCuriosityScarcity />
+            <ProblemCuriosityScarcity />
+            <SolutionCuriosityScarcity />
+            <FeaturesCuriosityScarcity />
+            <SegmentationCuriosityScarcity />
+            <ComparisonCuriosityScarcity />
+            <SocialProofCuriosityScarcity />
+            <FAQCuriosityScarcity />
+            <FinalCTACuriosityScarcity />
           </>
         );
     }

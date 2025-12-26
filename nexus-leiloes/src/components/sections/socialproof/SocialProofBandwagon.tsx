@@ -18,6 +18,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useLeadModal } from '@/contexts/LeadModalContext';
 
 const testimonials = [
   {
@@ -32,15 +33,15 @@ const testimonials = [
     id: 2,
     name: 'Ana Paula',
     role: 'Assessora',
-    quote: 'Triplicei minha carteira de clientes com os relatorios profissionais',
+    quote: 'Triplicei minha carteira de clientes com os relatórios profissionais',
     avatar: 'AP',
     joinedDaysAgo: 120,
   },
   {
     id: 3,
     name: 'Marcos',
-    role: 'Escritorio de Assessoria',
-    quote: 'Gerenciamos 50+ clientes sem contratar mais funcionarios',
+    role: 'Escritório de Assessoria',
+    quote: 'Gerenciamos 50+ clientes sem contratar mais funcionários',
     avatar: 'MC',
     joinedDaysAgo: 90,
   },
@@ -48,7 +49,7 @@ const testimonials = [
     id: 4,
     name: 'Julia',
     role: 'Compradora Residencial',
-    quote: 'Comprei meu primeiro imóvel em leilão com total seguranca',
+    quote: 'Comprei meu primeiro imóvel em leilão com total segurança',
     avatar: 'JL',
     joinedDaysAgo: 45,
   },
@@ -66,6 +67,7 @@ const recentJoiners = [
 ];
 
 export default function SocialProofBandwagon() {
+  const { openModal } = useLeadModal();
   const [userCount, setUserCount] = useState(2487);
   const [activeNow, setActiveNow] = useState(127);
 
@@ -82,7 +84,7 @@ export default function SocialProofBandwagon() {
   }, []);
 
   return (
-    <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="social-bandwagon-heading">
+    <section className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="social-bandwagon-heading">
       {/* Background Glows */}
       <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-[#5C5CFF]/6 rounded-full blur-[150px] -translate-x-1/2 -translate-y-1/2" aria-hidden="true" />
 
@@ -125,9 +127,9 @@ export default function SocialProofBandwagon() {
 
         {/* Headline */}
         <h2 id="social-bandwagon-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
-          Junte-se a <span className="text-[#5C5CFF]">Comunidade</span>
+          Junte-se a <span className="text-[#5C5CFF]">comunidade</span>
           <br />
-          Que Não Para de Crescer
+          que não para de crescer
         </h2>
         <p className="text-center text-lg text-[#2B3259]/60 max-w-2xl mx-auto mb-12 leading-relaxed">
           Investidores de todo o Brasil estão migrando para a Nexus.
@@ -180,8 +182,8 @@ export default function SocialProofBandwagon() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button type="button" className="group bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-            Fazer Parte da Comunidade
+          <button type="button" onClick={openModal} className="group bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+            Fazer parte da comunidade
             <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">+47 novos membros nas últimas 24 horas</p>

@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { useLeadModal } from '@/contexts/LeadModalContext';
 
 /**
  * FINAL CTA V3: AUTHORITY + FOOTER
@@ -47,13 +48,13 @@ import React from 'react';
 
 const credibilityBadges = [
   { icon: 'shield', label: 'Dados Seguros', value: 'SSL 256-bit' },
-  { icon: 'award', label: 'Nota Media', value: '4.9/5' },
+  { icon: 'award', label: 'Nota Média', value: '4.9/5' },
   { icon: 'check', label: 'Dados Verificados', value: '100%' },
   { icon: 'users', label: 'Especialistas', value: '+2.500' },
 ];
 
 const expertTestimonial = {
-  quote: 'A Nexus transformou a forma como analiso leilões. O que antes levava horas, agora faço em minutos. E a ferramenta que uso diariamente para tomar decisões assertivas.',
+  quote: 'A Nexus transformou a forma como analiso leilões. O que antes levava horas, agora faço em minutos. É a ferramenta que uso diariamente para tomar decisões assertivas.',
   author: 'Carlos Mendes',
   role: 'Assessor de Leilões - 12 anos de mercado',
   avatar: '/avatars/carlos.jpg',
@@ -61,7 +62,7 @@ const expertTestimonial = {
 
 const partnerLogos = [
   { name: 'Leiloeiro SP', initials: 'LSP' },
-  { name: 'Tribunal de Justica', initials: 'TJ' },
+  { name: 'Tribunal de Justiça', initials: 'TJ' },
   { name: 'Banco Invest', initials: 'BI' },
   { name: 'Conselho Imob', initials: 'CI' },
 ];
@@ -83,10 +84,12 @@ const footerLinks = {
 };
 
 export default function FinalCTAAuthority() {
+  const { openModal } = useLeadModal();
+
   return (
     <>
       {/* CTA Section */}
-      <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="finalcta-authority-heading">
+      <section className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="finalcta-authority-heading">
         {/* Background Glows */}
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[150px]" aria-hidden="true" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[120px]" aria-hidden="true" />
@@ -104,9 +107,9 @@ export default function FinalCTAAuthority() {
 
           {/* Headline */}
           <h2 id="finalcta-authority-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-[#2B3259] mb-6">
-            A Ferramenta dos Maiores
+            A ferramenta dos maiores
             <br />
-            <span className="text-[#5C5CFF]">Especialistas do Mercado</span>
+            <span className="text-[#5C5CFF]">especialistas do mercado</span>
           </h2>
 
           {/* Subheadline */}
@@ -188,7 +191,7 @@ export default function FinalCTAAuthority() {
                   </div>
 
                   <h3 className="text-2xl lg:text-3xl font-black text-white mb-4">
-                    Tenha as Mesmas Ferramentas dos Experts
+                    Tenha as mesmas ferramentas dos experts
                   </h3>
 
                   <p className="text-white/60 mb-8">
@@ -197,7 +200,7 @@ export default function FinalCTAAuthority() {
 
                   {/* Features list */}
                   <ul className="space-y-3 mb-8">
-                    {['Relatorios PDF profissionais', 'Calculadora multi-cenarios', 'Alertas personalizados', 'Suporte prioritario'].map((feature, index) => (
+                    {['Relatórios PDF profissionais', 'Calculadora multicenários', 'Alertas personalizados', 'Suporte prioritário'].map((feature, index) => (
                       <li key={index} className="flex items-center gap-3 text-white/80">
                         <svg className="w-5 h-5 text-[#5C5CFF]" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
@@ -210,8 +213,8 @@ export default function FinalCTAAuthority() {
 
                 {/* CTA */}
                 <div>
-                  <button type="button" className="w-full bg-[#5C5CFF] text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-[0_20px_50px_-15px_rgba(92,92,255,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:shadow-[0_25px_60px_-15px_rgba(92,92,255,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-                    Acessar Plataforma Profissional
+                  <button type="button" onClick={openModal} className="w-full bg-[#5C5CFF] text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-[0_20px_50px_-15px_rgba(92,92,255,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:shadow-[0_25px_60px_-15px_rgba(92,92,255,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+                    Acessar plataforma profissional
                     <span className="ml-2" aria-hidden="true">&rarr;</span>
                   </button>
 

@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * COMPARISON SECTION V4: SOCIAL PROOF
  *
@@ -91,7 +95,7 @@ const comparisonWithTestimonials = [
       detail: '100% precisão',
     },
     testimonial: {
-      quote: 'Perdi R$12 mil em um lance mal calculado antes da Nexus. Depois que comecei a usar a calculadora multi-cenarios, nunca mais errei.',
+      quote: 'Perdi R$12 mil em um lance mal calculado antes da Nexus. Depois que comecei a usar a calculadora multi-cenários, nunca mais errei.',
       author: 'Ricardo S.',
       role: 'Investidor PF',
       location: 'Rio de Janeiro, RJ',
@@ -142,10 +146,10 @@ const comparisonWithTestimonials = [
     },
     with: {
       short: 'PDFs profissionais',
-      detail: 'relatorios em 1 clique',
+      detail: 'relatórios em 1 clique',
     },
     testimonial: {
-      quote: 'Meus clientes ficavam desconfiados quando eu mandava prints de tela. Agora envio PDFs profissionais e já fechei 3 negocios a mais.',
+      quote: 'Meus clientes ficavam desconfiados quando eu mandava prints de tela. Agora envio PDFs profissionais e já fechei 3 negócios a mais.',
       author: 'Mariana F.',
       role: 'Assessora',
       location: 'Porto Alegre, RS',
@@ -159,7 +163,7 @@ const comparisonWithTestimonials = [
       detail: 'decisões no achismo',
     },
     with: {
-      short: 'Multi-cenarios',
+      short: 'Multi-cenários',
       detail: '5 simulações por imóvel',
     },
     testimonial: {
@@ -173,9 +177,11 @@ const comparisonWithTestimonials = [
 ];
 
 export default function ComparisonSocialProof() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="comparison-social-heading"
     >
       {/* Background Elements */}
@@ -253,9 +259,9 @@ export default function ComparisonSocialProof() {
             mb-6
           "
         >
-          Eles Compararam.
+          Eles compararam.
           <br />
-          <span className="text-[#5C5CFF]">Eles Escolheram.</span>
+          <span className="text-[#5C5CFF]">Eles escolheram.</span>
         </h2>
 
         {/* Subheadline */}
@@ -359,6 +365,7 @@ export default function ComparisonSocialProof() {
 
                 <button
                   type="button"
+                  onClick={openModal}
                   className="
                     bg-[#5C5CFF]
                     text-white
@@ -374,7 +381,7 @@ export default function ComparisonSocialProof() {
                     cursor-pointer
                   "
                 >
-                  Fazer a Mesma Escolha
+                  Fazer a mesma escolha
                 </button>
               </div>
             </div>

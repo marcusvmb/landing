@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SEGMENTATION SECTION V4: SOCIAL PROOF
  *
@@ -82,7 +86,7 @@ const assessorStats = {
   reviewCount: 43,
   testimonial: {
     quote:
-      'Minha produtividade triplicou. Consigo atender mais clientes com muito mais qualidade nos relatorios.',
+      'Minha produtividade triplicou. Consigo atender mais clientes com muito mais qualidade nos relatórios.',
     author: 'Maria S.',
     location: 'Rio de Janeiro, RJ',
     avatar: 'MS',
@@ -96,9 +100,11 @@ const assessorStats = {
 };
 
 export default function SegmentationSocialProof() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="segmentation-proof-heading"
     >
       {/* Subtle confetti-like particles */}
@@ -191,8 +197,8 @@ export default function SegmentationSocialProof() {
             mb-6
           "
         >
-          Quem Já Está{' '}
-          <span className="text-[#5C5CFF]">Usando</span> o{' '}
+          Quem já está{' '}
+          <span className="text-[#5C5CFF]">usando</span> o{' '}
           <span className="text-[#5C5CFF]">Nexus</span>?
         </h2>
 
@@ -214,7 +220,8 @@ export default function SegmentationSocialProof() {
               title="Investidores PF"
               stats={investidorStats}
               primaryColor="#5C5CFF"
-              ctaText="Juntar-se aos Investidores"
+              ctaText="Juntar-se aos investidores"
+              onOpenModal={openModal}
             />
           </div>
 
@@ -225,7 +232,8 @@ export default function SegmentationSocialProof() {
               title="Assessores de Leilão"
               stats={assessorStats}
               primaryColor="#5C5CFF"
-              ctaText="Juntar-se aos Assessores"
+              ctaText="Juntar-se aos assessores"
+              onOpenModal={openModal}
             />
           </div>
         </div>
@@ -289,6 +297,7 @@ interface SocialProofCardProps {
   };
   primaryColor: string;
   ctaText: string;
+  onOpenModal: () => void;
 }
 
 function SocialProofCard({
@@ -296,6 +305,7 @@ function SocialProofCard({
   stats,
   primaryColor,
   ctaText,
+  onOpenModal,
 }: SocialProofCardProps) {
   const isInvestidor = primaryColor === '#5C5CFF';
 
@@ -494,6 +504,7 @@ function SocialProofCard({
         {/* CTA */}
         <button
           type="button"
+          onClick={onOpenModal}
           className="
             w-full
             font-bold text-base

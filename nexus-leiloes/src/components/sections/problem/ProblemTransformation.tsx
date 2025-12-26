@@ -19,7 +19,7 @@
 export default function ProblemTransformation() {
   return (
     <section
-      className="bg-gradient-to-b from-[#E0E1E1] via-[#E8E9E9] to-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-gradient-to-b from-[#E0E1E1] via-[#E8E9E9] to-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="problem-transformation-heading"
     >
       {/* Noise overlay for stressed/chaotic feeling */}
@@ -303,7 +303,7 @@ export default function ProblemTransformation() {
               cursor-pointer
             "
           >
-            Sair do Caos
+            Sair do caos
           </button>
         </div>
       </div>

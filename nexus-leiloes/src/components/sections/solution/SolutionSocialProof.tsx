@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SOLUTION SECTION V4: SOCIAL PROOF
  *
@@ -16,9 +20,10 @@
  */
 
 export default function SolutionSocialProof() {
+  const { openModal } = useLeadModal();
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="solution-social-heading"
     >
       {/* Avatar scatter background */}
@@ -82,9 +87,9 @@ export default function SolutionSocialProof() {
               mb-6
             "
           >
-            Por Que <span className="text-[#5C5CFF]">547 Investidores</span>
+            Por que <span className="text-[#5C5CFF]">547 investidores</span>
             <br />
-            Escolheram a Nexus
+            escolheram a Nexus
           </h2>
 
           {/* Avatar Stack */}
@@ -128,7 +133,7 @@ export default function SolutionSocialProof() {
           {/* BUSCAR - Full Width */}
           <TestimonialPillarCard
             pillarName="BUSCAR"
-            pillarTitle="O Recurso Mais Pedido Por Investidores"
+            pillarTitle="O recurso mais pedido por investidores"
             pillarDesc="Agregador de +20 leiloeiras unificado"
             testimonial="Encontrei 3 oportunidades no primeiro dia. Antes eu passava 2 horas por dia alternando entre sites. Agora levo 15 minutos."
             authorName="Carlos Mendes"
@@ -142,8 +147,8 @@ export default function SolutionSocialProof() {
             <div className="col-span-12 lg:col-span-5">
               <TestimonialPillarCard
                 pillarName="ANALISAR"
-                pillarTitle="A Calculadora Que Assessores Sonhavam"
-                pillarDesc="Calculadora multi-cenário"
+                pillarTitle="A calculadora que assessores sonhavam"
+                pillarDesc="Calculadora multicenário"
                 testimonial="Evitei um prejuízo de R$40k em um imóvel que parecia ótimo. A calculadora mostrou custos ocultos."
                 authorName="Maria Santos"
                 authorRole="Assessora, São Paulo"
@@ -154,7 +159,7 @@ export default function SolutionSocialProof() {
             <div className="col-span-12 lg:col-span-7">
               <TestimonialPillarCard
                 pillarName="GERENCIAR"
-                pillarTitle="Os Relatórios Que Clientes Valorizam"
+                pillarTitle="Os relatórios que clientes valorizam"
                 pillarDesc="Dashboard e relatórios PDF"
                 testimonial="Meus clientes adoram os relatórios em PDF. Pareço muito mais profissional e fecho mais negócios."
                 authorName="André Oliveira"
@@ -205,6 +210,7 @@ export default function SolutionSocialProof() {
         <div className="mt-10 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -222,7 +228,7 @@ export default function SolutionSocialProof() {
               cursor-pointer
             "
           >
-            Entrar Para a Lista VIP
+            Entrar para a lista VIP
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Mais de 547 investidores já na fila. Desconto exclusivo para quem entra

@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * FEATURES SECTION V1: LOSS AVERSION
  *
@@ -110,10 +114,10 @@ const features = [
     name: 'Dados de Ocupantes',
     lossLabel: 'Sem isso você perde',
     lossValue: 'Tempo e Dinheiro',
-    lossDesc: 'descobrindo ocupacao depois do arremate',
+    lossDesc: 'descobrindo ocupação depois do arremate',
     gainLabel: 'Com isso você ganha',
-    gainValue: 'Seguranca',
-    gainDesc: 'consulta previa da situacao do imóvel',
+    gainValue: 'Segurança',
+    gainDesc: 'consulta prévia da situação do imóvel',
     recoveryPercent: 80,
     badge: null,
   },
@@ -125,17 +129,19 @@ const features = [
     lossValue: 'Clientes',
     lossDesc: 'por falta de organização multi-cliente',
     gainLabel: 'Com isso você ganha',
-    gainValue: '+87% retencao',
-    gainDesc: 'gestao profissional de portfolio',
+    gainValue: '+87% retenção',
+    gainDesc: 'gestão profissional de portfólio',
     recoveryPercent: 87,
     badge: 'PARA ASSESSORES',
   },
 ];
 
 export default function FeaturesLossAversion() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="features-loss-heading"
     >
       {/* Background Glows */}
@@ -176,10 +182,10 @@ export default function FeaturesLossAversion() {
             mb-6
           "
         >
-          Sem Essas Ferramentas,{' '}
-          <span className="text-[#5C5CFF]">Você Perde Tempo</span>
+          Sem essas ferramentas,{' '}
+          <span className="text-[#5C5CFF]">você perde tempo</span>
           <br />
-          <span className="text-[#5C5CFF]">(e Oportunidades) Todos os Dias</span>
+          <span className="text-[#5C5CFF]">(e oportunidades) todos os dias</span>
         </h2>
 
         {/* Subheadline */}
@@ -229,6 +235,7 @@ export default function FeaturesLossAversion() {
         <div className="mt-12 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -244,7 +251,7 @@ export default function FeaturesLossAversion() {
               cursor-pointer
             "
           >
-            Parar de Perder Agora
+            Parar de perder agora
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Entre na lista VIP e seja o primeiro a eliminar essas perdas

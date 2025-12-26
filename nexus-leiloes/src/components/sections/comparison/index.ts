@@ -14,3 +14,4 @@ export { default as ComparisonLossAversion } from './ComparisonLossAversion';
 export { default as ComparisonTransformation } from './ComparisonTransformation';
 export { default as ComparisonAuthority } from './ComparisonAuthority';
 export { default as ComparisonSocialProof } from './ComparisonSocialProof';
+export { default as ComparisonCuriosityScarcity } from './ComparisonCuriosityScarcity';

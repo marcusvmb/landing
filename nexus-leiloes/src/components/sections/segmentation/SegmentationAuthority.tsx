@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SEGMENTATION SECTION V3: AUTHORITY
  *
@@ -75,7 +79,7 @@ const investidorFeatures = [
   },
   {
     icon: '📋',
-    title: 'Relatorios PDF',
+    title: 'Relatórios PDF',
     desc: 'Tome decisões com confiança',
   },
 ];
@@ -89,24 +93,26 @@ const assessorFeatures = [
   {
     icon: '📄',
     title: 'PDFs com Sua Marca',
-    desc: 'Gere relatorios profissionais personalizados',
+    desc: 'Gere relatórios profissionais personalizados',
   },
   {
     icon: '💰',
-    title: 'Controle de Comissoes',
-    desc: 'Acompanhe comissoes e resultados',
+    title: 'Controle de Comissões',
+    desc: 'Acompanhe comissões e resultados',
   },
   {
     icon: '📈',
-    title: 'Análises Avancadas',
+    title: 'Análises Avançadas',
     desc: 'Impressione clientes com dados detalhados',
   },
 ];
 
 export default function SegmentationAuthority() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="segmentation-authority-heading"
     >
       {/* Subtle grid pattern */}
@@ -191,9 +197,9 @@ export default function SegmentationAuthority() {
             mb-6
           "
         >
-          A Ferramenta <span className="text-[#5C5CFF]">Profissional</span>
+          A ferramenta <span className="text-[#5C5CFF]">profissional</span>
           <br className="hidden sm:block" />
-          Para Cada <span className="text-[#5C5CFF]">Perfil</span>
+          para cada <span className="text-[#5C5CFF]">perfil</span>
         </h2>
 
         {/* Subheadline */}
@@ -215,6 +221,7 @@ export default function SegmentationAuthority() {
               features={investidorFeatures}
               ctaText="Acessar Versão Pro"
               primaryColor="#5C5CFF"
+              onOpenModal={openModal}
             />
           </div>
 
@@ -227,6 +234,7 @@ export default function SegmentationAuthority() {
               features={assessorFeatures}
               ctaText="Acessar Versão Pro"
               primaryColor="#5C5CFF"
+              onOpenModal={openModal}
             />
           </div>
         </div>
@@ -257,7 +265,7 @@ export default function SegmentationAuthority() {
 
           <div className="text-center sm:text-left">
             <p className="font-black text-[#2B3259] text-lg">
-              Tecnologia de Ponta Para Profissionais Exigentes
+              Tecnologia de ponta para profissionais exigentes
             </p>
             <p className="text-sm text-[#2B3259]/50 mt-1">
               Desenvolvido com base em anos de experiência no mercado de leilões
@@ -294,6 +302,7 @@ interface AuthorityCardProps {
   features: { icon: string; title: string; desc: string }[];
   ctaText: string;
   primaryColor: string;
+  onOpenModal: () => void;
 }
 
 function AuthorityCard({
@@ -302,6 +311,7 @@ function AuthorityCard({
   features,
   ctaText,
   primaryColor,
+  onOpenModal,
 }: AuthorityCardProps) {
   return (
     <article
@@ -434,6 +444,7 @@ function AuthorityCard({
         <div className="mt-8">
           <button
             type="button"
+            onClick={onOpenModal}
             className="
               w-full
               font-black text-base

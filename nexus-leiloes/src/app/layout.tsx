@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { LeadModalProvider } from "@/contexts/LeadModalContext";
+import LeadCaptureModal from "@/components/LeadCaptureModal";
 
 /**
  * Montserrat Font Configuration
@@ -54,7 +56,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${montserrat.variable} font-sans antialiased`}>
-        {children}
+        <LeadModalProvider>
+          {children}
+          <LeadCaptureModal />
+        </LeadModalProvider>
       </body>
     </html>
   );

@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SOCIAL PROOF SECTION V2: TRANSFORMATION
  *
@@ -57,17 +61,17 @@ const transformations = [
   {
     id: 3,
     name: 'Marcos',
-    role: 'Escritorio de Assessoria',
+    role: 'Escritório de Assessoria',
     avatar: 'MC',
     before: {
       title: 'Antes da Nexus',
       pain: 'Precisava contratar para crescer',
       metric: '+2',
-      metricLabel: 'funcionarios',
+      metricLabel: 'funcionários',
     },
     after: {
       title: 'Depois da Nexus',
-      gain: 'Automatização que dispensa contratações',
+      gain: 'Automação que dispensa contratações',
       metric: '50+',
       metricLabel: 'clientes gerenciados',
     },
@@ -95,8 +99,10 @@ const transformations = [
 ];
 
 export default function SocialProofTransformation() {
+  const { openModal } = useLeadModal();
+
   return (
-    <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="social-transform-heading">
+    <section className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="social-transform-heading">
       {/* Background Glows */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[120px]" aria-hidden="true" />
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[120px]" aria-hidden="true" />
@@ -113,7 +119,7 @@ export default function SocialProofTransformation() {
 
         {/* Headline */}
         <h2 id="social-transform-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
-          Jornadas de <span className="text-[#5C5CFF]">Transformação</span>
+          Jornadas de <span className="text-[#5C5CFF]">transformação</span>
         </h2>
         <p className="text-center text-lg text-[#2B3259]/60 max-w-2xl mx-auto mb-16 leading-relaxed">
           Investidores reais. Resultados reais. Veja como a Nexus mudou suas operações.
@@ -144,7 +150,7 @@ export default function SocialProofTransformation() {
                 <div className="text-3xl text-[#5C5CFF]">&rarr;</div>
                 <div className="text-center">
                   <p className="text-3xl md:text-4xl font-black text-[#5C5CFF]">Lucrando</p>
-                  <p className="text-sm text-[#2B3259]/50 mt-1">Agora sao assim</p>
+                  <p className="text-sm text-[#2B3259]/50 mt-1">Agora são assim</p>
                 </div>
               </div>
             </div>
@@ -153,8 +159,8 @@ export default function SocialProofTransformation() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-            Começar Minha Transformação
+          <button type="button" onClick={openModal} className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+            Começar minha transformação
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">Sua jornada de sucesso começa aqui</p>
         </div>

@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * FEATURES SECTION V3: AUTHORITY
  *
@@ -79,7 +83,7 @@ const authorityFeatures = [
     id: 'relatorios',
     icon: '📄',
     name: 'Relatórios PDF',
-    headline: 'Documentos Profissionais',
+    headline: 'Documentos profissionais',
     description: 'Prontos para impressionar clientes e parceiros.',
     badge: 'PROFISSIONAL',
     badgeStyle: 'secondary',
@@ -90,7 +94,7 @@ const authorityFeatures = [
     id: 'dashboard',
     icon: '📊',
     name: 'Dashboard Unificado',
-    headline: 'Pipeline Visual Completo',
+    headline: 'Pipeline visual completo',
     description: 'Todas as oportunidades em um só lugar.',
     badge: 'COMPLETO',
     badgeStyle: 'secondary',
@@ -100,8 +104,8 @@ const authorityFeatures = [
   {
     id: 'calculadora',
     icon: '🧮',
-    name: 'Calculadora Multi-Cenario',
-    headline: '5 Cenários de Investimento',
+    name: 'Calculadora Multicenário',
+    headline: '5 cenários de investimento',
     description: 'Simule otimista, conservador, pessimista e mais. Precisão total antes de dar qualquer lance.',
     badge: 'EXCLUSIVO - SÓ AQUI',
     badgeStyle: 'featured',
@@ -112,7 +116,7 @@ const authorityFeatures = [
     id: 'ocupantes',
     icon: '🏠',
     name: 'Dados de Ocupantes',
-    headline: 'Consulta Prévia',
+    headline: 'Consulta prévia',
     description: 'Saiba a situação do imóvel antes do arremate.',
     badge: null,
     badgeStyle: null,
@@ -123,7 +127,7 @@ const authorityFeatures = [
     id: 'assessores',
     icon: '👥',
     name: 'Ferramentas para Assessores',
-    headline: 'Gestão Multi-Cliente',
+    headline: 'Gestão multicliente',
     description: 'Organize o portfolio de todos os seus clientes em um só painel profissional.',
     badge: 'PARA ASSESSORES',
     badgeStyle: 'secondary',
@@ -133,9 +137,11 @@ const authorityFeatures = [
 ];
 
 export default function FeaturesAuthority() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="features-authority-heading"
     >
       {/* Background Glows */}
@@ -215,7 +221,7 @@ export default function FeaturesAuthority() {
         <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
           Enquanto outras ferramentas fazem apenas uma coisa, a Nexus faz{' '}
           <strong className="text-[#2B3259]">tudo</strong>.
-          Busca, análise e gestao em uma só plataforma.
+          Busca, análise e gestão em uma só plataforma.
         </p>
 
         {/* Bento Grid */}
@@ -274,6 +280,7 @@ export default function FeaturesAuthority() {
         <div className="mt-12 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -289,7 +296,7 @@ export default function FeaturesAuthority() {
               cursor-pointer
             "
           >
-            Quero o Hub Completo
+            Quero o hub completo
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Acesso antecipado com desconto exclusivo para fundadores
@@ -458,7 +465,7 @@ function AuthorityCard({ feature }: AuthorityCardProps) {
                 ))}
               </div>
               <span className="text-sm text-[#2B3259]/60">
-                5 cenarios para cada imóvel
+                5 cenários para cada imóvel
               </span>
             </div>
           </div>

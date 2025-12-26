@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { useLeadModal } from '@/contexts/LeadModalContext';
 
 /**
  * FINAL CTA V4: BANDWAGON + FOOTER
@@ -77,6 +78,7 @@ const footerLinks = {
 };
 
 export default function FinalCTABandwagon() {
+  const { openModal } = useLeadModal();
   const [timeLeft, setTimeLeft] = useState({ days: 6, hours: 23, minutes: 47, seconds: 32 });
   const [currentUsers, setCurrentUsers] = useState(liveStats.totalUsers);
   const [activeNow, setActiveNow] = useState(liveStats.activeNow);
@@ -123,7 +125,7 @@ export default function FinalCTABandwagon() {
   return (
     <>
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-[#5C5CFF] via-[#5C5CFF] to-[#2B3259] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="finalcta-bandwagon-heading">
+      <section className="bg-gradient-to-br from-[#5C5CFF] via-[#5C5CFF] to-[#2B3259] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="finalcta-bandwagon-heading">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10" aria-hidden="true">
           <div className="absolute top-10 left-10 w-60 h-60 border-2 border-white/30 rounded-full" />
@@ -146,9 +148,9 @@ export default function FinalCTABandwagon() {
 
           {/* Headline */}
           <h2 id="finalcta-bandwagon-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-white mb-6">
-            <span className="text-white/90">{currentUsers.toLocaleString('pt-BR')}</span> Investidores
+            <span className="text-white/90">{currentUsers.toLocaleString('pt-BR')}</span> investidores
             <br />
-            <span className="text-[#2B3259]">Já Estão Dentro. Falta Você.</span>
+            <span className="text-[#2B3259]">já estão dentro. Falta você.</span>
           </h2>
 
           {/* Live Counter + Avatars */}
@@ -257,8 +259,8 @@ export default function FinalCTABandwagon() {
                 <div className="space-y-4">
                   <input type="email" placeholder="Seu melhor e-mail" className="w-full px-6 py-4 bg-[#EFF0F0] border border-[#2B3259]/10 rounded-2xl text-[#2B3259] placeholder:text-[#2B3259]/40 focus:outline-none focus:border-[#5C5CFF]/50 focus:bg-white transition-all duration-300" />
 
-                  <button type="button" className="w-full bg-[#5C5CFF] text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-[0_20px_50px_-15px_rgba(92,92,255,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:shadow-[0_25px_60px_-15px_rgba(92,92,255,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-                    Garantir Meu Desconto
+                  <button type="button" onClick={openModal} className="w-full bg-[#5C5CFF] text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-[0_20px_50px_-15px_rgba(92,92,255,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:shadow-[0_25px_60px_-15px_rgba(92,92,255,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+                    Garantir meu desconto
                     <span className="ml-2" aria-hidden="true">&rarr;</span>
                   </button>
                 </div>

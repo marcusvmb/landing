@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * FEATURES SECTION V2: TRANSFORMATION
  *
@@ -126,9 +130,11 @@ const transformations = [
 ];
 
 export default function FeaturesTransformation() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="features-transform-heading"
     >
       {/* Background Gradient Glows */}
@@ -187,8 +193,8 @@ export default function FeaturesTransformation() {
             mb-6
           "
         >
-          Sua Transformação{' '}
-          <span className="text-[#5C5CFF]">Começa Aqui</span>
+          Sua transformação{' '}
+          <span className="text-[#5C5CFF]">começa aqui</span>
         </h2>
 
         {/* Subheadline */}
@@ -228,7 +234,7 @@ export default function FeaturesTransformation() {
             {/* From */}
             <div className="text-center opacity-50">
               <p className="text-sm text-[#2B3259]/60 mb-2">De</p>
-              <p className="text-xl font-bold text-[#2B3259]">Investidor Desorganizado</p>
+              <p className="text-xl font-bold text-[#2B3259]">Investidor desorganizado</p>
             </div>
 
             {/* Arrow */}
@@ -257,7 +263,7 @@ export default function FeaturesTransformation() {
             {/* To */}
             <div className="text-center">
               <p className="text-sm text-[#5C5CFF] mb-2 font-semibold">Para</p>
-              <p className="text-2xl font-black text-[#5C5CFF]">Investidor Profissional</p>
+              <p className="text-2xl font-black text-[#5C5CFF]">Investidor profissional</p>
             </div>
           </div>
         </div>
@@ -266,6 +272,7 @@ export default function FeaturesTransformation() {
         <div className="mt-12 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -281,7 +288,7 @@ export default function FeaturesTransformation() {
               cursor-pointer
             "
           >
-            Iniciar Minha Transformação
+            Iniciar minha transformação
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Junte-se a centenas de investidores que já transformaram seus resultados

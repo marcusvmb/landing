@@ -11,3 +11,4 @@ export { default as FeaturesLossAversion } from './FeaturesLossAversion';
 export { default as FeaturesTransformation } from './FeaturesTransformation';
 export { default as FeaturesAuthority } from './FeaturesAuthority';
 export { default as FeaturesSocialProof } from './FeaturesSocialProof';
+export { default as FeaturesCuriosityScarcity } from './FeaturesCuriosityScarcity';

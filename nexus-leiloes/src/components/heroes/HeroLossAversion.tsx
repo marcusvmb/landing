@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * HERO 1: LOSS AVERSION
  *
@@ -26,6 +30,8 @@
  */
 
 export default function HeroLossAversion() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
       className="bg-[#EFF0F0] min-h-screen relative overflow-hidden"
@@ -73,7 +79,7 @@ export default function HeroLossAversion() {
       </header>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-16 lg:pt-24 pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 lg:pt-16 pb-16">
         <div className="grid grid-cols-12 gap-6 items-center">
 
           {/* Content Column - 7 colunas (assimetrico) */}
@@ -94,11 +100,11 @@ export default function HeroLossAversion() {
                 text-[#2B3259]
               "
             >
-              Pare de Perder
+              Pare de perder
               <br />
-              Oportunidades em Leilões
+              oportunidades em leilões
               <br />
-              <span className="text-[#5C5CFF]">Por Falta de Organização</span>
+              <span className="text-[#5C5CFF]">por falta de organização</span>
             </h1>
 
             {/* Subheadline - Contraste com headline */}
@@ -119,6 +125,7 @@ export default function HeroLossAversion() {
             {/* CTA Button - Primary Blue, Pill, com colored shadow e states */}
             <button
               type="button"
+              onClick={openModal}
               className="
                 mt-10
                 bg-[#5C5CFF]
@@ -143,7 +150,7 @@ export default function HeroLossAversion() {
                 cursor-pointer
               "
             >
-              Garantir Meu Acesso Antecipado
+              Garantir meu acesso antecipado
               <span aria-hidden="true"> &rarr;</span>
             </button>
 
@@ -151,7 +158,7 @@ export default function HeroLossAversion() {
             <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#2B3259]/70" aria-label="Beneficios inclusos">
               <li className="flex items-center gap-1.5">
                 <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
-                Vagas limitadas para Fundadores
+                Vagas limitadas para fundadores
               </li>
               <li className="flex items-center gap-1.5">
                 <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
@@ -251,7 +258,7 @@ export default function HeroLossAversion() {
                   {/* Action buttons */}
                   <div className="flex gap-3">
                     <div className="h-8 bg-[#5C5CFF] rounded-lg flex-1 flex items-center justify-center">
-                      <span className="text-white text-xs font-medium">Gerar Relatorio</span>
+                      <span className="text-white text-xs font-medium">Gerar Relatório</span>
                     </div>
                     <div className="h-8 bg-[#2B3259]/10 rounded-lg w-24 flex items-center justify-center">
                       <span className="text-[#2B3259]/60 text-xs">Filtrar</span>

@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * FEATURES SECTION V4: SOCIAL PROOF
  *
@@ -81,7 +85,7 @@ const socialProofFeatures = [
   {
     id: 'calculadora',
     icon: '🧮',
-    name: 'Calculadora Multi-Cenario',
+    name: 'Calculadora Multicenário',
     loveMetric: '98%',
     loveLabel: 'consideram essencial',
     testimonial: 'Nunca mais errei um cálculo de lucro. Isso já me salvou mais de R$20 mil.',
@@ -94,10 +98,10 @@ const socialProofFeatures = [
   {
     id: 'relatorios',
     icon: '📄',
-    name: 'Relatorios PDF',
+    name: 'Relatórios PDF',
     loveMetric: '87%',
     loveLabel: 'usam semanalmente',
-    testimonial: 'Meus clientes adoram receber os relatorios!',
+    testimonial: 'Meus clientes adoram receber os relatórios!',
     testimonialAuthor: 'Fernando R.',
     testimonialRole: 'Corretor',
     satisfactionPercent: 87,
@@ -135,8 +139,8 @@ const socialProofFeatures = [
     icon: '👥',
     name: 'Ferramentas para Assessores',
     loveMetric: '89%',
-    loveLabel: 'aumentaram retencao de clientes',
-    testimonial: 'Meus clientes não vao mais embora.',
+    loveLabel: 'aumentaram retenção de clientes',
+    testimonial: 'Meus clientes não vão mais embora.',
     testimonialAuthor: 'Juliana M.',
     testimonialRole: 'Assessora Senior',
     satisfactionPercent: 89,
@@ -146,9 +150,11 @@ const socialProofFeatures = [
 ];
 
 export default function FeaturesSocialProof() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="features-social-heading"
     >
       {/* Background Glows */}
@@ -206,10 +212,10 @@ export default function FeaturesSocialProof() {
             mb-6
           "
         >
-          As Features{' '}
-          <span className="text-[#5C5CFF]">Mais Amadas</span>
+          As features{' '}
+          <span className="text-[#5C5CFF]">mais amadas</span>
           <br />
-          Pelos Nossos Usuários
+          pelos nossos usuários
         </h2>
 
         {/* Subheadline */}
@@ -297,6 +303,7 @@ export default function FeaturesSocialProof() {
         <div className="mt-12 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -312,7 +319,7 @@ export default function FeaturesSocialProof() {
               cursor-pointer
             "
           >
-            Juntar-me a Eles
+            Juntar-me a eles
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Entre para a comunidade de investidores inteligentes

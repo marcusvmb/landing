@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SOLUTION SECTION V1: LOSS AVERSION
  *
@@ -15,9 +19,10 @@
  */
 
 export default function SolutionLossAversion() {
+  const { openModal } = useLeadModal();
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="solution-loss-heading"
     >
       {/* Subtle gradient transition from problem section */}
@@ -57,10 +62,10 @@ export default function SolutionLossAversion() {
             mb-6
           "
         >
-          Seu Hub de Leilões:{' '}
-          <span className="text-[#5C5CFF]">Nunca Mais Perca</span>
+          Seu hub de leilões:{' '}
+          <span className="text-[#5C5CFF]">nunca mais perca</span>
           <br />
-          Uma Oportunidade Lucrativa
+          uma oportunidade lucrativa
         </h2>
 
         {/* Subheadline */}
@@ -80,7 +85,7 @@ export default function SolutionLossAversion() {
               beforeDesc="alternando entre 20+ sites"
               pillarName="BUSCAR"
               pillarIcon="&#128269;"
-              pillarTitle="Chega de Perder Tempo em 20+ Sites"
+              pillarTitle="Chega de perder tempo em 20+ sites"
               pillarDesc="Todos os leilões do Brasil em uma única busca. Ganhe tempo para analisar o que realmente importa."
               afterLabel="Agora Ganha"
               afterValue="+40h/mês"
@@ -96,7 +101,7 @@ export default function SolutionLossAversion() {
               beforeDesc="em planilhas e cálculos manuais"
               pillarName="ANALISAR"
               pillarIcon="&#129518;"
-              pillarTitle="Nunca Mais Erre no Cálculo do Lucro"
+              pillarTitle="Nunca mais erre no cálculo do lucro"
               pillarDesc="Calculadora exclusiva simula múltiplos cenários. Elimine o risco de entrar em leilões que não compensam."
               afterLabel="Agora Acerta"
               afterValue="100%"
@@ -112,7 +117,7 @@ export default function SolutionLossAversion() {
               beforeDesc="por falta de organização"
               pillarName="GERENCIAR"
               pillarIcon="&#128202;"
-              pillarTitle="Controle Total, Oportunidades Seguras"
+              pillarTitle="Controle total, oportunidades seguras"
               pillarDesc="Dashboard unificado e relatórios PDF profissionais. Mantenha cada oportunidade sob seu controle."
               afterLabel="Agora Retém"
               afterValue="+87%"
@@ -144,7 +149,7 @@ export default function SolutionLossAversion() {
 
         {/* Agitation */}
         <p className="mt-12 text-center text-lg text-[#2B3259]/60 max-w-2xl mx-auto">
-          Cada dia sem uma ferramenta integrada e um dia de oportunidades perdidas.
+          Cada dia sem uma ferramenta integrada é um dia de oportunidades perdidas.
           <br />
           <span className="font-semibold text-[#2B3259]">
             Seus concorrentes já estão se organizando.
@@ -155,6 +160,7 @@ export default function SolutionLossAversion() {
         <div className="mt-10 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -172,7 +178,7 @@ export default function SolutionLossAversion() {
               cursor-pointer
             "
           >
-            Garantir Meu Acesso Antecipado
+            Garantir meu acesso antecipado
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Vagas limitadas para a lista VIP. Sem cartão de crédito.

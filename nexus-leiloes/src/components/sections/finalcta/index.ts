@@ -28,3 +28,4 @@ export { default as FinalCTALossAversion } from './FinalCTALossAversion';
 export { default as FinalCTATransformation } from './FinalCTATransformation';
 export { default as FinalCTAAuthority } from './FinalCTAAuthority';
 export { default as FinalCTABandwagon } from './FinalCTABandwagon';
+export { default as FinalCTACuriosityScarcity } from './FinalCTACuriosityScarcity';

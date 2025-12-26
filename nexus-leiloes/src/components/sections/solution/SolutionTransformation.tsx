@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SOLUTION SECTION V2: TRANSFORMATION
  *
@@ -15,9 +19,10 @@
  */
 
 export default function SolutionTransformation() {
+  const { openModal } = useLeadModal();
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="solution-transform-heading"
     >
       {/* Gradient transition - left to right */}
@@ -74,8 +79,8 @@ export default function SolutionTransformation() {
             mb-6
           "
         >
-          Do <span className="text-[#2B3259]/40">Caos</span> a{' '}
-          <span className="text-[#5C5CFF]">Clareza</span>
+          Do <span className="text-[#2B3259]/40">caos</span> à{' '}
+          <span className="text-[#5C5CFF]">clareza</span>
         </h2>
 
         {/* Subheadline */}
@@ -145,6 +150,7 @@ export default function SolutionTransformation() {
         <div className="mt-10 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -162,7 +168,7 @@ export default function SolutionTransformation() {
               cursor-pointer
             "
           >
-            Quero Transformar Minha Operação
+            Quero transformar minha operação
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Acesso antecipado com desconto exclusivo para os primeiros.

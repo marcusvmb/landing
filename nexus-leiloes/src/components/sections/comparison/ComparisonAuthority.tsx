@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * COMPARISON SECTION V3: AUTHORITY
  *
@@ -96,8 +100,8 @@ const comparisonData = [
       status: 'fail',
     },
     pro: {
-      value: 'Calculadora automatica',
-      description: '5 cenarios por imóvel',
+      value: 'Calculadora automática',
+      description: '5 cenários por imóvel',
       status: 'pass',
     },
   },
@@ -106,7 +110,7 @@ const comparisonData = [
     aspect: 'Precisão',
     amateur: {
       value: '-R$15k/ano',
-      description: 'em erros evitaveis',
+      description: 'em erros evitáveis',
       status: 'fail',
     },
     pro: {
@@ -146,9 +150,11 @@ const comparisonData = [
 ];
 
 export default function ComparisonAuthority() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="comparison-authority-heading"
     >
       {/* Background Glow */}
@@ -215,9 +221,9 @@ export default function ComparisonAuthority() {
             mb-6
           "
         >
-          Qual Lado Você
+          Qual lado você
           <br />
-          <span className="text-[#5C5CFF]">Quer Estar?</span>
+          <span className="text-[#5C5CFF]">quer estar?</span>
         </h2>
 
         {/* Subheadline */}
@@ -417,6 +423,7 @@ export default function ComparisonAuthority() {
         <div className="mt-12 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -432,7 +439,7 @@ export default function ComparisonAuthority() {
               cursor-pointer
             "
           >
-            Virar Profissional Agora
+            Virar profissional agora
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Entre para o time dos investidores que levam a sério

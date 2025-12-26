@@ -44,6 +44,7 @@
  */
 
 import { useState } from 'react';
+import { useLeadModal } from '@/contexts/LeadModalContext';
 
 interface FAQItem {
   id: string;
@@ -122,6 +123,7 @@ const savingsSummary = {
 };
 
 export default function FAQLossAversion() {
+  const { openModal } = useLeadModal();
   const [openId, setOpenId] = useState<string | null>(null);
 
   const toggleFAQ = (id: string) => {
@@ -129,7 +131,7 @@ export default function FAQLossAversion() {
   };
 
   return (
-    <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="faq-loss-heading">
+    <section className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="faq-loss-heading">
       {/* Background Glows */}
       <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[150px] -translate-x-1/2" aria-hidden="true" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[120px] translate-x-1/3" aria-hidden="true" />
@@ -137,9 +139,9 @@ export default function FAQLossAversion() {
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Headline */}
         <h2 id="faq-loss-heading" className="text-center text-3xl sm:text-4xl md:text-5xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
-          Duvidas que Podem{' '}
+          Dúvidas que podem{' '}
           <br className="hidden sm:block" />
-          <span className="text-[#5C5CFF]">Te Custar Caro</span>
+          <span className="text-[#5C5CFF]">te custar caro</span>
         </h2>
 
         {/* Subheadline */}
@@ -185,8 +187,8 @@ export default function FAQLossAversion() {
 
                 {/* CTA */}
                 <div className="p-6 pt-0">
-                  <button type="button" className="w-full bg-[#5C5CFF] text-white font-bold text-base px-6 py-4 rounded-xl shadow-[0_12px_35px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-0.5 hover:shadow-[0_18px_45px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-                    Parar de Perder Agora
+                  <button type="button" onClick={openModal} className="w-full bg-[#5C5CFF] text-white font-bold text-base px-6 py-4 rounded-xl shadow-[0_12px_35px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-0.5 hover:shadow-[0_18px_45px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+                    Parar de perder agora
                   </button>
                 </div>
               </div>

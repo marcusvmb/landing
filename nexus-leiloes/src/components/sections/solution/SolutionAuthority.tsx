@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SOLUTION SECTION V3: AUTHORITY
  *
@@ -16,9 +20,10 @@
  */
 
 export default function SolutionAuthority() {
+  const { openModal } = useLeadModal();
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="solution-authority-heading"
     >
       {/* Massive glow - center dominant */}
@@ -47,7 +52,7 @@ export default function SolutionAuthority() {
             "
           >
             <span className="text-white font-bold uppercase tracking-widest text-sm">
-              A Única Plataforma Completa
+              A única plataforma completa
             </span>
           </span>
         </div>
@@ -65,10 +70,10 @@ export default function SolutionAuthority() {
             mb-8
           "
         >
-          O Padrão Profissional Que o Mercado
+          O padrão profissional que o mercado
           <br />
           <span className="relative inline-block">
-            <span className="text-[#5C5CFF]">de Leilões Esperava</span>
+            <span className="text-[#5C5CFF]">de leilões esperava</span>
             {/* Underline glow */}
             <span
               className="
@@ -85,8 +90,8 @@ export default function SolutionAuthority() {
 
         {/* Subheadline */}
         <p className="text-center text-lg md:text-xl text-[#2B3259]/60 max-w-3xl mx-auto mb-20 leading-relaxed">
-          Outras ferramentas resolvem pedacos do problema. A Nexus é a primeira e
-          única hub que integra busca, análise e gestao em uma plataforma desenvolvida
+          Outras ferramentas resolvem pedaços do problema. A Nexus é a primeira e
+          única hub que integra busca, análise e gestão em uma plataforma desenvolvida
           por quem entende do mercado.
         </p>
 
@@ -126,7 +131,7 @@ export default function SolutionAuthority() {
                   mb-4
                 "
               >
-                O Maior Agregador de Leilões do Brasil
+                O maior agregador de leilões do Brasil
               </h3>
 
               <p className="text-lg text-[#2B3259]/70 leading-relaxed mb-6">
@@ -213,18 +218,18 @@ export default function SolutionAuthority() {
                   mb-3
                 "
               >
-                Calculadora Proprietária de Múltiplos Cenários
+                Calculadora proprietária de múltiplos cenários
               </h3>
 
               <p className="text-[#2B3259]/70 leading-relaxed mb-5">
                 Tecnologia exclusiva que simula diferentes condições de mercado,
-                custos e margens. O nivel de análise que assessores profissionais
+                custos e margens. O nível de análise que assessores profissionais
                 exigem.
               </p>
 
               <div className="bg-[#5C5CFF]/5 rounded-xl p-4 border border-[#5C5CFF]/10">
                 <div className="text-sm text-[#5C5CFF] font-semibold mb-1">
-                  Diferencial Ànico
+                  Diferencial Único
                 </div>
                 <div className="text-[#2B3259]/80">
                   Simule 5 cenários simultâneos
@@ -269,12 +274,12 @@ export default function SolutionAuthority() {
                       mb-3
                     "
                   >
-                    Relatórios com Padrão Institucional
+                    Relatórios com padrão institucional
                   </h3>
 
                   <p className="text-[#2B3259]/70 leading-relaxed">
                     PDFs profissionais prontos para apresentar a clientes e
-                    investidores. O mesmo nivel de documentação usado por grandes
+                    investidores. O mesmo nível de documentação usado por grandes
                     assessorias do mercado.
                   </p>
                 </div>
@@ -287,7 +292,7 @@ export default function SolutionAuthority() {
                   'Pipeline',
                   'PDF Reports',
                   'Multi-cliente',
-                  'Historico',
+                  'Histórico',
                 ].map((chip) => (
                   <span
                     key={chip}
@@ -329,6 +334,7 @@ export default function SolutionAuthority() {
         <div className="mt-12 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -346,7 +352,7 @@ export default function SolutionAuthority() {
               cursor-pointer
             "
           >
-            Acessar a Plataforma Profissional
+            Acessar a plataforma profissional
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Lista de espera exclusiva. Vagas limitadas para o lançamento.

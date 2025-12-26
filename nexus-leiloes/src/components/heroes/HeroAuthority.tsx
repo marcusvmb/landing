@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * HERO 3: AUTHORITY (Typography as Hero)
  *
@@ -27,6 +31,8 @@
  */
 
 export default function HeroAuthority() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
       className="bg-[#EFF0F0] min-h-screen relative overflow-hidden"
@@ -89,7 +95,7 @@ export default function HeroAuthority() {
             🏆
           </span>
           <span className="text-sm font-semibold text-white">
-            Primeiro e Único Hub do Brasil
+            Primeiro e único hub do Brasil
           </span>
         </div>
       </header>
@@ -100,8 +106,8 @@ export default function HeroAuthority() {
           relative z-10
           max-w-7xl mx-auto
           px-6
-          pt-16 md:pt-24 lg:pt-32
-          pb-24
+          pt-12 md:pt-16 lg:pt-20
+          pb-16
           flex flex-col items-center justify-center
           min-h-[80vh]
         "
@@ -123,7 +129,7 @@ export default function HeroAuthority() {
             "
           >
             O{' '}
-            {/* "Único" com efeito especial */}
+            {/* "único" com efeito especial */}
             <span className="relative inline-block">
               {/* Glow behind */}
               <span
@@ -137,7 +143,7 @@ export default function HeroAuthority() {
                 "
               />
               {/* Text */}
-              <span className="relative z-10 text-[#5C5CFF]">Único</span>
+              <span className="relative z-10 text-[#5C5CFF]">único</span>
               {/* Animated underline */}
               <span
                 className="
@@ -151,11 +157,11 @@ export default function HeroAuthority() {
                 "
               />
             </span>
-            {' '}Hub
+            {' '}hub
             <br />
-            Completo Para
+            completo para
             <br />
-            Leilão Imobiliário
+            leilão imobiliário
             <br />
             <span className="text-[#5C5CFF]/50">no Brasil</span>
           </h1>
@@ -172,6 +178,7 @@ export default function HeroAuthority() {
         {/* CTA Button - Maior que outros heroes */}
         <button
           type="button"
+          onClick={openModal}
           className="
             mt-10 md:mt-12
             bg-[#5C5CFF]
@@ -196,7 +203,7 @@ export default function HeroAuthority() {
             cursor-pointer
           "
         >
-          Conhecer o Hub
+          Conhecer o hub
           <span aria-hidden="true"> &rarr;</span>
         </button>
 
@@ -330,7 +337,7 @@ export default function HeroAuthority() {
             🏆
           </span>
           <span className="text-sm font-semibold text-white">
-            Primeiro e Único Hub do Brasil
+            Primeiro e único hub do Brasil
           </span>
         </div>
       </div>

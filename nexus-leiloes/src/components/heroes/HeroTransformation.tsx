@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * HERO 2: TRANSFORMATION (Antes/Depois)
  *
@@ -26,6 +30,8 @@
  */
 
 export default function HeroTransformation() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
       className="bg-gradient-to-br from-[#E5E6E6] via-[#EFF0F0] to-[#EFF0F0] min-h-screen relative overflow-hidden"
@@ -52,7 +58,7 @@ export default function HeroTransformation() {
       </header>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-8 lg:pt-12 pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-8 lg:pt-12 pb-16">
 
         {/* Headline - Centralizado e Massivo */}
         <div className="text-center mb-12 lg:mb-16">
@@ -70,10 +76,10 @@ export default function HeroTransformation() {
               text-[#2B3259]
             "
           >
-            De Ferramentas Fragmentadas ao
+            De ferramentas fragmentadas ao
             <br />
             <span className="relative inline-block">
-              <span className="text-[#5C5CFF]">Controle Total</span>
+              <span className="text-[#5C5CFF]">controle total</span>
               {/* Underline glow */}
               <span
                 className="
@@ -86,7 +92,7 @@ export default function HeroTransformation() {
                 "
               />
             </span>
-            {' '}dos Seus Leilões
+            {' '}dos seus leilões
           </h1>
         </div>
 
@@ -279,6 +285,7 @@ export default function HeroTransformation() {
           {/* CTA Button - Primary Blue para este Hero */}
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -302,7 +309,7 @@ export default function HeroTransformation() {
               cursor-pointer
             "
           >
-            Começar Minha Transformação
+            Começar minha transformação
             <span aria-hidden="true"> &rarr;</span>
           </button>
 

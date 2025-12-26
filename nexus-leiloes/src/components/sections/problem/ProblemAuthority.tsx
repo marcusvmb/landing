@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * PROBLEM SECTION V3: AUTHORITY
  *
@@ -16,9 +20,10 @@
  */
 
 export default function ProblemAuthority() {
+  const { openModal } = useLeadModal();
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="problem-authority-heading"
     >
       {/* Subtle center glow */}
@@ -253,6 +258,7 @@ export default function ProblemAuthority() {
         <div className="mt-16 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -271,7 +277,7 @@ export default function ProblemAuthority() {
               cursor-pointer
             "
           >
-            Conhecer a Única Solução Completa
+            Conhecer a única solução completa
           </button>
         </div>
       </div>

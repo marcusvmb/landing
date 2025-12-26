@@ -49,6 +49,7 @@
  */
 
 import { useState } from 'react';
+import { useLeadModal } from '@/contexts/LeadModalContext';
 
 interface Expert {
   id: string;
@@ -98,48 +99,49 @@ const faqItems: FAQItem[] = [
   {
     id: 'tempo',
     question: 'Quanto tempo leva para ver resultados?',
-    answer: 'Na minha experiência com centenas de investidores, a maioria ve resultados significativos em 15 a 30 dias. A busca unificada economiza em media 2 horas por dia desde o primeiro acesso, e em um mês o investimento em tempo já está recuperado.',
+    answer: 'Na minha experiência com centenas de investidores, a maioria vê resultados significativos em 15 a 30 dias. A busca unificada economiza em média 2 horas por dia desde o primeiro acesso, e em um mês o investimento em tempo já está recuperado.',
     expertId: 'marcos',
     verifiedDate: 'Dez 2024',
   },
   {
     id: 'tipos',
     question: 'O sistema funciona para qualquer tipo de leilão?',
-    answer: 'Sim, a Nexus cobre tanto leilões judiciais quanto extrajudiciais de todos os principais leiloeiros do Brasil. Como analista, posso afirmar que ter todas as opções em um só lugar e fundamental para não perder oportunidades de mercado.',
+    answer: 'Sim, a Nexus cobre tanto leilões judiciais quanto extrajudiciais de todos os principais leiloeiros do Brasil. Como analista, posso afirmar que ter todas as opções em um só lugar é fundamental para não perder oportunidades de mercado.',
     expertId: 'ana',
     verifiedDate: 'Dez 2024',
   },
   {
     id: 'experiência',
     question: 'Preciso de experiência em leilões para usar?',
-    answer: 'Absolutamente não. A interface foi desenhada para ser intuitiva tanto para iniciantes quanto para investidores experientes. A calculadora multi-cenarios guia cada decisao, eliminando a curva de aprendizado que normalmente levaria meses.',
+    answer: 'Absolutamente não. A interface foi desenhada para ser intuitiva tanto para iniciantes quanto para investidores experientes. A calculadora multicenários guia cada decisão, eliminando a curva de aprendizado que normalmente levaria meses.',
     expertId: 'carlos',
     verifiedDate: 'Dez 2024',
   },
   {
     id: 'calculadora',
-    question: 'Como funciona a calculadora multi-cenarios?',
-    answer: 'Esta é uma das funcionalidades que mais recomendo. A calculadora simula automaticamente 5 cenários: otimista, realista, conservador, com reforma e para revenda rapida. Você visualiza o ROI potencial de cada estrategia antes de qualquer decisao.',
+    question: 'Como funciona a calculadora multicenários?',
+    answer: 'Esta é uma das funcionalidades que mais recomendo. A calculadora simula automaticamente 5 cenários: otimista, realista, conservador, com reforma e para revenda rápida. Você visualiza o ROI potencial de cada estratégia antes de qualquer decisão.',
     expertId: 'ana',
     verifiedDate: 'Dez 2024',
   },
   {
     id: 'dados',
     question: 'Os dados são confiáveis?',
-    answer: 'Como advogado especialista em leilões, posso garantir: os dados vem de fontes oficiais dos leiloeiros e sao atualizados diariamente. Essa confiabilidade é essencial para evitar problemas juridicos e financeiros no processo de arrematacao.',
+    answer: 'Como advogado especialista em leilões, posso garantir: os dados vêm de fontes oficiais dos leiloeiros e são atualizados diariamente. Essa confiabilidade é essencial para evitar problemas jurídicos e financeiros no processo de arrematação.',
     expertId: 'marcos',
     verifiedDate: 'Dez 2024',
   },
   {
     id: 'suporte',
-    question: 'Qual suporte e oferecido?',
-    answer: 'O suporte inclui chat ao vivo, email e onboarding gratuito personalizado. Na minha atuacao como consultor, vejo que esse acompanhamento inicial faz toda diferenca para o sucesso do investidor, especialmente nos primeiros negocios.',
+    question: 'Qual suporte é oferecido?',
+    answer: 'O suporte inclui chat ao vivo, e-mail e onboarding gratuito personalizado. Na minha atuação como consultor, vejo que esse acompanhamento inicial faz toda diferença para o sucesso do investidor, especialmente nos primeiros negócios.',
     expertId: 'carlos',
     verifiedDate: 'Dez 2024',
   },
 ];
 
 export default function FAQAuthority() {
+  const { openModal } = useLeadModal();
   const [openId, setOpenId] = useState<string | null>(null);
 
   const toggleFAQ = (id: string) => {
@@ -149,7 +151,7 @@ export default function FAQAuthority() {
   const totalYearsExperience = experts.reduce((sum, e) => sum + e.yearsExperience, 0);
 
   return (
-    <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="faq-authority-heading">
+    <section className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="faq-authority-heading">
       {/* Background Glows */}
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-[#2B3259]/5 rounded-full blur-[120px] -translate-x-1/2" aria-hidden="true" />
       <div className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[150px] translate-x-1/3" aria-hidden="true" />
@@ -167,9 +169,9 @@ export default function FAQAuthority() {
 
         {/* Headline */}
         <h2 id="faq-authority-heading" className="text-center text-3xl sm:text-4xl md:text-5xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
-          Especialistas Respondem{' '}
+          Especialistas respondem{' '}
           <br className="hidden sm:block" />
-          <span className="text-[#5C5CFF]">Suas Dúvidas</span>
+          <span className="text-[#5C5CFF]">suas dúvidas</span>
         </h2>
 
         {/* Subheadline */}
@@ -236,8 +238,8 @@ export default function FAQAuthority() {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-            Falar com Especialista
+          <button type="button" onClick={openModal} className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+            Falar com especialista
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             Tire suas dúvidas diretamente com nossa equipe

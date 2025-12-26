@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { useLeadModal } from '@/contexts/LeadModalContext';
 
 /**
  * FINAL CTA V1: LOSS AVERSION + FOOTER
@@ -64,6 +65,7 @@ const footerLinks = {
 };
 
 export default function FinalCTALossAversion() {
+  const { openModal } = useLeadModal();
   const [timeLeft, setTimeLeft] = useState({ hours: 23, minutes: 47, seconds: 32 });
   const [spotsLeft, setSpotsLeft] = useState(47);
 
@@ -97,7 +99,7 @@ export default function FinalCTALossAversion() {
   return (
     <>
       {/* CTA Section */}
-      <section className="bg-[#2B3259] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="finalcta-loss-heading">
+      <section className="bg-[#2B3259] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="finalcta-loss-heading">
         {/* Background Glows */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#5C5CFF]/10 rounded-full blur-[200px] translate-x-1/3 -translate-y-1/3" aria-hidden="true" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#5C5CFF]/10 rounded-full blur-[150px] -translate-x-1/3 translate-y-1/3" aria-hidden="true" />
@@ -105,9 +107,9 @@ export default function FinalCTALossAversion() {
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           {/* Headline */}
           <h2 id="finalcta-loss-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-white mb-6">
-            Cada Dia Sem a Nexus
+            Cada dia sem a Nexus
             <br />
-            <span className="text-[#5C5CFF]">é Tempo e Oportunidades Perdidos</span>
+            <span className="text-[#5C5CFF]">é tempo e oportunidades perdidos</span>
           </h2>
 
           {/* Subheadline */}
@@ -155,7 +157,7 @@ export default function FinalCTALossAversion() {
               <div className="bg-gradient-to-br from-[#5C5CFF]/15 to-[#5C5CFF]/5 backdrop-blur-xl rounded-3xl border border-[#5C5CFF]/20 p-8 lg:p-10 shadow-[0_40px_100px_-30px_rgba(92,92,255,0.3)]">
                 {/* Urgency Counter */}
                 <div className="text-center mb-8">
-                  <p className="text-sm font-medium text-white/60 mb-4">Oferta de lancamento encerra em:</p>
+                  <p className="text-sm font-medium text-white/60 mb-4">Oferta de lançamento encerra em:</p>
                   <div className="flex items-center justify-center gap-3">
                     <TimeBlock value={formatTime(timeLeft.hours)} label="horas" />
                     <span className="text-3xl font-bold text-[#5C5CFF]">:</span>
@@ -175,8 +177,8 @@ export default function FinalCTALossAversion() {
                 <div className="space-y-4">
                   <input type="email" placeholder="Seu melhor e-mail" className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-2xl text-white placeholder:text-white/40 focus:outline-none focus:border-[#5C5CFF]/50 focus:bg-white/15 transition-all duration-300" />
 
-                  <button type="button" className="w-full bg-[#5C5CFF] text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-[0_20px_50px_-15px_rgba(92,92,255,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:shadow-[0_25px_60px_-15px_rgba(92,92,255,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-                    Garantir Minha Vaga
+                  <button type="button" onClick={openModal} className="w-full bg-[#5C5CFF] text-white font-bold text-lg px-8 py-5 rounded-2xl shadow-[0_20px_50px_-15px_rgba(92,92,255,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:shadow-[0_25px_60px_-15px_rgba(92,92,255,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+                    Garantir minha vaga
                     <span className="ml-2" aria-hidden="true">&rarr;</span>
                   </button>
                 </div>

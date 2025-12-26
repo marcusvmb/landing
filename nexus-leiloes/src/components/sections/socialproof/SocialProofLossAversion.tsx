@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SOCIAL PROOF SECTION V1: LOSS AVERSION
  *
@@ -59,8 +63,10 @@ const testimonials = [
 ];
 
 export default function SocialProofLossAversion() {
+  const { openModal } = useLeadModal();
+
   return (
-    <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="social-loss-heading">
+    <section className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="social-loss-heading">
       {/* Background Glows */}
       <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[120px] translate-x-1/3" aria-hidden="true" />
       <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-[#5C5CFF]/6 rounded-full blur-[100px] -translate-x-1/3" aria-hidden="true" />
@@ -70,9 +76,9 @@ export default function SocialProofLossAversion() {
         <div className="grid grid-cols-12 gap-6 mb-16">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3 text-center">
             <h2 id="social-loss-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
-              Eles <span className="text-[#5C5CFF] line-through opacity-70">Quase Perderam</span>
+              Eles <span className="text-[#5C5CFF] line-through opacity-70">quase perderam</span>
               <br />
-              <span className="text-[#5C5CFF]">Até Descobrirem a Nexus</span>
+              <span className="text-[#5C5CFF]">até descobrirem a Nexus</span>
             </h2>
             <p className="text-lg text-[#2B3259]/60 max-w-2xl mx-auto leading-relaxed">
               Veja quanto investidores como você deixaram de perder usando nossa plataforma.
@@ -111,8 +117,8 @@ export default function SocialProofLossAversion() {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-            Evitar Minhas Perdas Também
+          <button type="button" onClick={openModal} className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+            Evitar minhas perdas também
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">Junte-se aos investidores que pararam de perder dinheiro</p>
         </div>

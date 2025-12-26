@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * PROBLEM SECTION V4: SOCIAL PROOF
  *
@@ -17,9 +21,10 @@
  */
 
 export default function ProblemSocialProof() {
+  const { openModal } = useLeadModal();
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="problem-social-heading"
     >
       {/* Dot pattern - matching hero but lighter */}
@@ -122,7 +127,7 @@ export default function ProblemSocialProof() {
                       <span className="text-green-500 text-sm" aria-label="verificado">&#10003;</span>
                     </div>
                     <p className="text-sm text-[#2B3259]/70">
-                      &quot;Meus clientes adoram os relatorios profissionais.&quot;
+                      &quot;Meus clientes adoram os relatórios profissionais.&quot;
                     </p>
                   </div>
                 </div>
@@ -332,6 +337,7 @@ export default function ProblemSocialProof() {
         <div className="mt-12 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -350,7 +356,7 @@ export default function ProblemSocialProof() {
               cursor-pointer
             "
           >
-            Entrar Para o Grupo dos Vencedores
+            Entrar para o grupo dos vencedores
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/60">
             Junte-se a 547+ investidores que já simplificaram

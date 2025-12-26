@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SEGMENTATION SECTION V2: TRANSFORMATION
  *
@@ -82,9 +86,11 @@ const assessorWithNexus = [
 ];
 
 export default function SegmentationTransformation() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="segmentation-transform-heading"
     >
       {/* Gradient transition background */}
@@ -145,10 +151,10 @@ export default function SegmentationTransformation() {
             mb-6
           "
         >
-          Cada Perfil,{' '}
+          Cada perfil,{' '}
           <br className="hidden sm:block" />
-          Uma <span className="text-[#5C5CFF]">Jornada</span> de{' '}
-          <span className="text-[#5C5CFF]">Transformação</span>
+          uma <span className="text-[#5C5CFF]">jornada</span> de{' '}
+          <span className="text-[#5C5CFF]">transformação</span>
         </h2>
 
         {/* Subheadline */}
@@ -164,11 +170,12 @@ export default function SegmentationTransformation() {
             <TransformationCard
               persona="investidor"
               title="Investidores PF"
-              subtitle="Pessoas fisicas que investem em leilões"
+              subtitle="Pessoas físicas que investem em leilões"
               todayItems={investidorToday}
               nexusItems={investidorWithNexus}
-              ctaText="Iniciar Minha Jornada"
+              ctaText="Iniciar minha jornada"
               primaryColor="#5C5CFF"
+              onOpenModal={openModal}
             />
           </div>
 
@@ -180,8 +187,9 @@ export default function SegmentationTransformation() {
               subtitle="Profissionais que assessoram clientes"
               todayItems={assessorToday}
               nexusItems={assessorWithNexus}
-              ctaText="Evoluir Minha Assessoria"
+              ctaText="Evoluir minha assessoria"
               primaryColor="#5C5CFF"
+              onOpenModal={openModal}
             />
           </div>
         </div>
@@ -246,6 +254,7 @@ interface TransformationCardProps {
   nexusItems: string[];
   ctaText: string;
   primaryColor: string;
+  onOpenModal: () => void;
 }
 
 function TransformationCard({
@@ -256,6 +265,7 @@ function TransformationCard({
   nexusItems,
   ctaText,
   primaryColor,
+  onOpenModal,
 }: TransformationCardProps) {
   const isInvestidor = persona === 'investidor';
 
@@ -439,6 +449,7 @@ function TransformationCard({
         <div className="mt-8 ml-14">
           <button
             type="button"
+            onClick={onOpenModal}
             className="
               w-full
               font-bold text-base

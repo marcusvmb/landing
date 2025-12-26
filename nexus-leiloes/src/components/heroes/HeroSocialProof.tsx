@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useLeadModal } from '@/contexts/LeadModalContext';
 
 /**
  * HERO 4: SOCIAL PROOF (Validacao Social + Form Inline)
@@ -45,6 +46,7 @@ const FAKE_USERS = [
 ];
 
 export default function HeroSocialProof() {
+  const { openModal } = useLeadModal();
   const [showToast, setShowToast] = useState(false);
   const [currentUser, setCurrentUser] = useState(FAKE_USERS[0]);
   const [counter, setCounter] = useState(547);
@@ -112,7 +114,7 @@ export default function HeroSocialProof() {
       </header>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 pt-8 lg:pt-12 pb-24">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 pt-8 lg:pt-12 pb-16">
 
         {/* Avatar Stack + Counter */}
         <div className="flex flex-col items-center mb-10">
@@ -171,9 +173,9 @@ export default function HeroSocialProof() {
             "
           >
             Junte-se a{' '}
-            <span className="text-[#5C5CFF]">500+</span> Investidores
+            <span className="text-[#5C5CFF]">500+</span> investidores
             <br />
-            Que Já Simplificaram Seus Leilões
+            que já simplificaram seus leilões
           </h1>
         </div>
 
@@ -348,7 +350,8 @@ export default function HeroSocialProof() {
 
             {/* CTA Button - Full width */}
             <button
-              type="submit"
+              type="button"
+              onClick={openModal}
               className="
                 w-full
                 bg-[#5C5CFF]
@@ -373,7 +376,7 @@ export default function HeroSocialProof() {
                 cursor-pointer
               "
             >
-              Entrar na Lista VIP
+              Entrar na lista VIP
             </button>
 
             {/* Security Microcopy - Improved contrast (70% instead of 50%) */}

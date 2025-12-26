@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * COMPARISON SECTION V1: LOSS AVERSION
  *
@@ -172,9 +176,11 @@ const comparisonData = [
 ];
 
 export default function ComparisonLossAversion() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="comparison-loss-heading"
     >
       {/* Background Elements */}
@@ -217,15 +223,15 @@ export default function ComparisonLossAversion() {
             mb-6
           "
         >
-          O Custo de{' '}
-          <span className="text-[#5C5CFF]">NAO</span> Ter
+          O custo de{' '}
+          <span className="text-[#5C5CFF]">NÃO</span> ter
           <br />
           a Nexus
         </h2>
 
         {/* Subheadline */}
         <p className="text-center text-lg md:text-xl text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Cada dia sem o Hub completo e dinheiro saindo do seu bolso.
+          Cada dia sem o Hub completo é dinheiro saindo do seu bolso.
           <br className="hidden md:block" />
           Compare a realidade de quem ainda usa ferramentas fragmentadas.
         </p>
@@ -249,7 +255,7 @@ export default function ComparisonLossAversion() {
                   Sem Nexus
                 </span>
                 <p className="text-2xl font-black text-[#5C5CFF] mt-1">
-                  Perdas Acumulando
+                  Perdas acumulando
                 </p>
               </div>
             </div>
@@ -274,7 +280,7 @@ export default function ComparisonLossAversion() {
                   Com Nexus
                 </span>
                 <p className="text-2xl font-black text-[#5C5CFF] mt-1">
-                  Ganhos Garantidos
+                  Ganhos garantidos
                 </p>
               </div>
             </div>
@@ -381,6 +387,7 @@ export default function ComparisonLossAversion() {
         <div className="mt-16 text-center">
           <button
             type="button"
+            onClick={openModal}
             className="
               bg-[#5C5CFF]
               text-white
@@ -396,7 +403,7 @@ export default function ComparisonLossAversion() {
               cursor-pointer
             "
           >
-            Parar de Perder Agora
+            Parar de perder agora
           </button>
           <p className="mt-4 text-sm text-[#2B3259]/50">
             547 investidores já pararam de perder dinheiro

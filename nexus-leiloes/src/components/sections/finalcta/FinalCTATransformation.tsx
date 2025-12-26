@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { useLeadModal } from '@/contexts/LeadModalContext';
 
 /**
  * FINAL CTA V2: TRANSFORMATION + FOOTER
@@ -57,7 +58,7 @@ const afterState = {
   items: [
     { icon: 'unified', text: 'Busca unificada em um lugar' },
     { icon: 'fast', text: 'Encontre em minutos' },
-    { icon: 'calc', text: 'Calculadora multi-cenarios' },
+    { icon: 'calc', text: 'Calculadora multicenários' },
     { icon: 'alert', text: 'Alertas de oportunidades' },
   ],
 };
@@ -80,10 +81,12 @@ const footerLinks = {
 };
 
 export default function FinalCTATransformation() {
+  const { openModal } = useLeadModal();
+
   return (
     <>
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-[#5C5CFF] via-[#5C5CFF] to-[#2B3259] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="finalcta-transformation-heading">
+      <section className="bg-gradient-to-br from-[#5C5CFF] via-[#5C5CFF] to-[#2B3259] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="finalcta-transformation-heading">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10" aria-hidden="true">
           <div className="absolute top-20 left-10 w-40 h-40 border border-white/20 rounded-full" />
@@ -105,9 +108,9 @@ export default function FinalCTATransformation() {
 
           {/* Headline */}
           <h2 id="finalcta-transformation-heading" className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.05] text-white mb-6">
-            De Buscas Caóticas Para
+            De buscas caóticas para
             <br />
-            <span className="text-[#EFF0F0]">Investimentos Precisos</span>
+            <span className="text-[#EFF0F0]">investimentos precisos</span>
           </h2>
 
           {/* Subheadline */}
@@ -185,8 +188,8 @@ export default function FinalCTATransformation() {
 
           {/* CTA */}
           <div className="text-center">
-            <button type="button" className="bg-[#EFF0F0] text-[#2B3259] font-bold text-lg px-12 py-5 rounded-full shadow-[0_20px_50px_-15px_rgba(239,240,240,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_25px_60px_-15px_rgba(239,240,240,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-              Iniciar Minha Jornada
+            <button type="button" onClick={openModal} className="bg-[#EFF0F0] text-[#2B3259] font-bold text-lg px-12 py-5 rounded-full shadow-[0_20px_50px_-15px_rgba(239,240,240,0.5)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_25px_60px_-15px_rgba(239,240,240,0.6)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+              Iniciar minha jornada
               <span className="ml-2" aria-hidden="true">&rarr;</span>
             </button>
 

@@ -45,6 +45,7 @@
  */
 
 import { useState } from 'react';
+import { useLeadModal } from '@/contexts/LeadModalContext';
 
 interface FAQItem {
   id: string;
@@ -63,7 +64,7 @@ interface JourneyStage {
 const journeyStages: JourneyStage[] = [
   {
     id: 'antes',
-    title: 'Antes de Comecar',
+    title: 'Antes de começar',
     subtitle: 'Primeiros passos',
     icon: '🔍',
     questions: [
@@ -81,8 +82,8 @@ const journeyStages: JourneyStage[] = [
   },
   {
     id: 'durante',
-    title: 'Durante o Uso',
-    subtitle: 'Operação diaria',
+    title: 'Durante o uso',
+    subtitle: 'Operação diária',
     icon: '🧮',
     questions: [
       {
@@ -99,7 +100,7 @@ const journeyStages: JourneyStage[] = [
   },
   {
     id: 'depois',
-    title: 'Depois dos Resultados',
+    title: 'Depois dos resultados',
     subtitle: 'Sucesso contínuo',
     icon: '🏆',
     questions: [
@@ -118,6 +119,7 @@ const journeyStages: JourneyStage[] = [
 ];
 
 export default function FAQTransformation() {
+  const { openModal } = useLeadModal();
   const [activeStage, setActiveStage] = useState<'antes' | 'durante' | 'depois'>('antes');
   const [openQuestionId, setOpenQuestionId] = useState<string | null>(null);
 
@@ -128,7 +130,7 @@ export default function FAQTransformation() {
   const currentStageIndex = journeyStages.findIndex((s) => s.id === activeStage);
 
   return (
-    <section className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden" aria-labelledby="faq-transform-heading">
+    <section className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="faq-transform-heading">
       {/* Background Gradient Glows */}
       <div className="absolute top-0 left-1/2 w-[800px] h-[400px] bg-gradient-to-r from-[#5C5CFF]/5 via-transparent to-[#5C5CFF]/10 rounded-full blur-[100px] -translate-x-1/2" aria-hidden="true" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#5C5CFF]/8 rounded-full blur-[120px] translate-x-1/4" aria-hidden="true" />
@@ -137,16 +139,16 @@ export default function FAQTransformation() {
         {/* Eyebrow */}
         <div className="text-center mb-6">
           <span className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/60 backdrop-blur-sm rounded-full border border-[#5C5CFF]/15 shadow-[0_8px_30px_-10px_rgba(92,92,255,0.15)]">
-            <span className="text-[#2B3259]/40 text-sm">Duvida</span>
+            <span className="text-[#2B3259]/40 text-sm">Dúvida</span>
             <span className="text-[#5C5CFF] font-bold">→</span>
-            <span className="text-[#5C5CFF] font-semibold text-sm">Decisao</span>
+            <span className="text-[#5C5CFF] font-semibold text-sm">Decisão</span>
           </span>
         </div>
 
         {/* Headline */}
         <h2 id="faq-transform-heading" className="text-center text-3xl sm:text-4xl md:text-5xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
-          De Duvidas para{' '}
-          <span className="text-[#5C5CFF]">Decisões Assertivas</span>
+          De dúvidas para{' '}
+          <span className="text-[#5C5CFF]">decisões assertivas</span>
         </h2>
 
         {/* Subheadline */}
@@ -223,7 +225,7 @@ export default function FAQTransformation() {
             {/* From */}
             <div className="text-center opacity-50">
               <p className="text-sm text-[#2B3259]/60 mb-2">De</p>
-              <p className="text-xl font-bold text-[#2B3259]">Cheio de Duvidas</p>
+              <p className="text-xl font-bold text-[#2B3259]">Cheio de dúvidas</p>
             </div>
 
             {/* Arrow */}
@@ -237,15 +239,15 @@ export default function FAQTransformation() {
             {/* To */}
             <div className="text-center">
               <p className="text-sm text-[#5C5CFF] mb-2 font-semibold">Para</p>
-              <p className="text-2xl font-black text-[#5C5CFF]">Decisões com Confiança</p>
+              <p className="text-2xl font-black text-[#5C5CFF]">Decisões com confiança</p>
             </div>
           </div>
         </div>
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <button type="button" className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-            Iniciar Minha Transformação
+          <button type="button" onClick={openModal} className="bg-[#5C5CFF] text-white font-bold text-lg px-10 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
+            Iniciar minha transformação
           </button>
         </div>
       </div>

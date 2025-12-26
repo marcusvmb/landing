@@ -1,3 +1,7 @@
+'use client';
+
+import { useLeadModal } from '@/contexts/LeadModalContext';
+
 /**
  * SEGMENTATION SECTION V1: LOSS AVERSION
  *
@@ -78,9 +82,11 @@ const assessorBenefits = [
 ];
 
 export default function SegmentationLossAversion() {
+  const { openModal } = useLeadModal();
+
   return (
     <section
-      className="bg-[#EFF0F0] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="segmentation-loss-heading"
     >
       {/* Background Glows */}
@@ -121,9 +127,9 @@ export default function SegmentationLossAversion() {
             mb-6
           "
         >
-          Para Quem é a Nexus?{' '}
+          Para quem é a Nexus?{' '}
           <br className="hidden sm:block" />
-          <span className="text-[#5C5CFF]">Para Quem Não Quer Perder.</span>
+          <span className="text-[#5C5CFF]">Para quem não quer perder.</span>
         </h2>
 
         {/* Subheadline */}
@@ -141,11 +147,12 @@ export default function SegmentationLossAversion() {
             <PersonaCard
               persona="investidor"
               title="Investidores PF"
-              subtitle="Pessoas fisicas que investem em leilões"
+              subtitle="Pessoas físicas que investem em leilões"
               losses={investidorLosses}
               benefits={investidorBenefits}
-              ctaText="Parar de Perder Oportunidades"
+              ctaText="Parar de perder oportunidades"
               ctaColor="primary"
+              onOpenModal={openModal}
             />
           </div>
 
@@ -157,8 +164,9 @@ export default function SegmentationLossAversion() {
               subtitle="Profissionais que assessoram clientes"
               losses={assessorLosses}
               benefits={assessorBenefits}
-              ctaText="Parar de Perder Clientes"
+              ctaText="Parar de perder clientes"
               ctaColor="secondary"
+              onOpenModal={openModal}
             />
           </div>
         </div>
@@ -198,6 +206,7 @@ interface PersonaCardProps {
   benefits: string[];
   ctaText: string;
   ctaColor: 'primary' | 'secondary';
+  onOpenModal: () => void;
 }
 
 function PersonaCard({
@@ -208,6 +217,7 @@ function PersonaCard({
   benefits,
   ctaText,
   ctaColor,
+  onOpenModal,
 }: PersonaCardProps) {
   const isInvestidor = persona === 'investidor';
   const primaryColor = '#5C5CFF';
@@ -377,6 +387,7 @@ function PersonaCard({
         {/* CTA */}
         <button
           type="button"
+          onClick={onOpenModal}
           className={`
             w-full
             font-bold text-base

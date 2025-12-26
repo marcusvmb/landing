@@ -18,7 +18,7 @@
 export default function ProblemLossAversion() {
   return (
     <section
-      className="bg-gradient-to-br from-[#EFF0F0] via-[#EFF0F0] to-[#FFF8F5] py-24 lg:py-32 relative overflow-hidden"
+      className="bg-gradient-to-br from-[#EFF0F0] via-[#EFF0F0] to-[#FFF8F5] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="problem-loss-heading"
     >
       {/* Warning stripe pattern - subtle */}
