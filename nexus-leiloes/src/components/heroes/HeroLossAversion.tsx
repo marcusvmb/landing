@@ -100,11 +100,42 @@ export default function HeroLossAversion() {
                 text-[#2B3259]
               "
             >
-              Pare de perder
+              O{' '}
+              {/* "único" com efeito especial */}
+              <span className="relative inline-block">
+                {/* Glow behind */}
+                <span
+                  className="
+                    absolute
+                    inset-0
+                    bg-[#5C5CFF]/15
+                    blur-2xl
+                    rounded-full
+                    scale-150
+                  "
+                />
+                {/* Text */}
+                <span className="relative z-10 text-[#5C5CFF]">único</span>
+                {/* Animated underline */}
+                <span
+                  className="
+                    absolute
+                    -bottom-2 md:-bottom-3
+                    left-0 right-0
+                    h-3 md:h-4
+                    bg-gradient-to-r from-[#5C5CFF]/40 via-[#5C5CFF]/60 to-[#5C5CFF]/40
+                    rounded-full
+                    animate-underline-glow
+                  "
+                />
+              </span>
+              {' '}hub
               <br />
-              oportunidades em leilões
+              completo para
               <br />
-              <span className="text-[#5C5CFF]">por falta de organização</span>
+              leilão imobiliário
+              <br />
+              <span className="text-[#5C5CFF]/50">no Brasil</span>
             </h1>
 
             {/* Subheadline - Contraste com headline */}

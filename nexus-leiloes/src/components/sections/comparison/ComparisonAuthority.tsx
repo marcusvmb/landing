@@ -170,44 +170,6 @@ export default function ComparisonAuthority() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Eyebrow */}
-        <div className="text-center mb-6">
-          <span
-            className="
-              inline-flex items-center gap-3
-              px-5 py-2.5
-              bg-white/80
-              rounded-full
-              border border-[#5C5CFF]/20
-              shadow-[0_4px_20px_-5px_rgba(92,92,255,0.15)]
-            "
-          >
-            <span
-              className="
-                px-2 py-0.5
-                text-xs font-bold
-                bg-[#2B3259]/10
-                text-[#2B3259]/50
-                rounded-md
-              "
-            >
-              AMADOR
-            </span>
-            <span className="text-[#2B3259]/40">vs</span>
-            <span
-              className="
-                px-2 py-0.5
-                text-xs font-bold
-                bg-[#5C5CFF]
-                text-white
-                rounded-md
-              "
-            >
-              PRO
-            </span>
-          </span>
-        </div>
-
         {/* Headline */}
         <h2
           id="comparison-authority-heading"

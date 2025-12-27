@@ -90,12 +90,11 @@ export default function Home() {
         return (
           <>
             <HeroLossAversion />
-            <ProblemLossAversion />
-            <SolutionLossAversion />
+            <ProblemAuthority />
             <FeaturesShowcase />
             <AssessoresShowcase />
             <SegmentationLossAversion />
-            <ComparisonLossAversion />
+            <ComparisonAuthority />
             <SocialProofLossAversion />
             <FAQLossAversion />
             <FinalCTALossAversion />
