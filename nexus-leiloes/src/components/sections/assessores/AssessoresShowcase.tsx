@@ -90,6 +90,21 @@ export default function AssessoresShowcase() {
               rootMargin="300px"
             />
 
+            {/* Selo de Exclusividade no Vídeo */}
+            <div
+              className="
+                absolute top-4 right-4 z-20
+                bg-gradient-to-r from-amber-500 to-yellow-500
+                text-[#1a1f36]
+                px-3 py-1.5 rounded-lg
+                font-bold text-xs uppercase tracking-wide
+                shadow-lg shadow-amber-500/30
+                transform rotate-1
+              "
+            >
+              Pioneiro no Brasil
+            </div>
+
             {/* Subtle shine overlay */}
             <div
               className="
@@ -117,13 +132,13 @@ export default function AssessoresShowcase() {
             text-center
           "
         >
-          {/* Badge */}
+          {/* Badge de Segmento */}
           <span
             className="
               inline-flex items-center gap-2
               bg-[#5C5CFF]/20 text-[#5C5CFF]
               text-xs font-bold uppercase tracking-wider
-              px-4 py-2 rounded-full mb-6
+              px-4 py-2 rounded-full mb-4
             "
           >
             <svg
@@ -141,6 +156,25 @@ export default function AssessoresShowcase() {
             </svg>
             Para Assessores
           </span>
+
+          {/* Badge de Exclusividade */}
+          <div className="flex justify-center mb-5">
+            <span
+              className="
+                inline-flex items-center gap-2
+                bg-gradient-to-r from-amber-500/20 to-yellow-500/20
+                text-amber-400
+                border border-amber-500/30
+                text-xs font-bold uppercase tracking-wider
+                px-4 py-2 rounded-full
+              "
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              Único no mercado
+            </span>
+          </div>
 
           {/* Headline */}
           <h2
@@ -161,13 +195,14 @@ export default function AssessoresShowcase() {
 
           {/* Subheadline */}
           <p className="text-base lg:text-lg text-white/60 leading-relaxed mb-8 max-w-xl mx-auto">
-            Organize cada cliente, rastreie cada oportunidade. Gerencie toda sua carteira de
-            assessoria em um painel unificado que transmite profissionalismo.
+            Outras plataformas são feitas para investidores individuais. A Nexus foi criada para
+            quem assessora — com painel multi-cliente, relatórios profissionais e gestão de
+            carteira completa.
           </p>
 
           {/* Tags */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['Carteira organizada', 'Relatórios por cliente', 'Escala sem caos'].map((tag) => (
+            {['Exclusivo: Multi-cliente', 'Relatórios PDF por cliente', 'Escale de 5 para 50'].map((tag) => (
               <span
                 key={tag}
                 className="
@@ -204,6 +239,11 @@ export default function AssessoresShowcase() {
           >
             Quero Gerenciar Meus Clientes
           </button>
+
+          {/* Microcopy de Exclusividade */}
+          <p className="mt-4 text-sm text-white/40">
+            Funcionalidade indisponível em outras plataformas
+          </p>
         </div>
       </div>
     </section>
