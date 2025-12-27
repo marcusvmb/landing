@@ -186,9 +186,79 @@ export default function ProblemAuthority() {
                 aria-hidden="true"
               />
 
-              {/* Single hub icon */}
+              {/* Hub with animated convergence */}
               <div className="flex justify-center mb-6">
-                <img src="/logo-nexus-full.png" alt="Nexus" className="h-16" width={160} height={64} />
+                <div className="relative w-32 h-32">
+                  {/* CSS Animations */}
+                  <style>{`
+                    @keyframes flowToCenter {
+                      0% { stroke-dashoffset: 20; opacity: 0; }
+                      50% { opacity: 1; }
+                      100% { stroke-dashoffset: 0; opacity: 0; }
+                    }
+                    @keyframes pulse {
+                      0%, 100% { transform: scale(1); opacity: 1; }
+                      50% { transform: scale(1.1); opacity: 0.8; }
+                    }
+                    @keyframes hubGlow {
+                      0%, 100% { box-shadow: 0 8px 30px -5px rgba(92,92,255,0.5); }
+                      50% { box-shadow: 0 8px 40px -5px rgba(92,92,255,0.7); }
+                    }
+                    .flow-line {
+                      stroke-dasharray: 4 4;
+                      animation: flowToCenter 2s ease-in-out infinite;
+                    }
+                    .satellite {
+                      animation: pulse 3s ease-in-out infinite;
+                    }
+                    .hub-center {
+                      animation: hubGlow 3s ease-in-out infinite;
+                    }
+                  `}</style>
+
+                  {/* Connection lines with flow animation */}
+                  <svg
+                    className="absolute inset-0 w-full h-full"
+                    viewBox="0 0 100 100"
+                    aria-hidden="true"
+                  >
+                    {/* Static base lines */}
+                    <line x1="50" y1="50" x2="50" y2="15" className="stroke-[#5C5CFF]/20" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="83" y2="30" className="stroke-[#5C5CFF]/20" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="83" y2="70" className="stroke-[#5C5CFF]/20" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="17" y2="70" className="stroke-[#5C5CFF]/20" strokeWidth="1" />
+                    <line x1="50" y1="50" x2="17" y2="30" className="stroke-[#5C5CFF]/20" strokeWidth="1" />
+
+                    {/* Animated flow lines */}
+                    <line x1="50" y1="15" x2="50" y2="50" className="stroke-[#5C5CFF] flow-line" strokeWidth="2" style={{ animationDelay: '0s' }} />
+                    <line x1="83" y1="30" x2="50" y2="50" className="stroke-[#5C5CFF] flow-line" strokeWidth="2" style={{ animationDelay: '0.4s' }} />
+                    <line x1="83" y1="70" x2="50" y2="50" className="stroke-[#5C5CFF] flow-line" strokeWidth="2" style={{ animationDelay: '0.8s' }} />
+                    <line x1="17" y1="70" x2="50" y2="50" className="stroke-[#5C5CFF] flow-line" strokeWidth="2" style={{ animationDelay: '1.2s' }} />
+                    <line x1="17" y1="30" x2="50" y2="50" className="stroke-[#5C5CFF] flow-line" strokeWidth="2" style={{ animationDelay: '1.6s' }} />
+                  </svg>
+
+                  {/* Center hub with logo */}
+                  <div
+                    className="
+                      hub-center
+                      absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+                      w-12 h-12
+                      bg-white
+                      rounded-xl
+                      flex items-center justify-center
+                      p-2
+                    "
+                  >
+                    <img src="/icon-nexus.png" alt="Hub Leilão" className="w-full h-full object-contain" />
+                  </div>
+
+                  {/* Satellite nodes with pulse animation - larger */}
+                  <div className="satellite absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-10 bg-white rounded-xl shadow-md border border-[#5C5CFF]/20 flex items-center justify-center text-base" style={{ animationDelay: '0s' }}>📊</div>
+                  <div className="satellite absolute top-[8%] -right-3 w-10 h-10 bg-white rounded-xl shadow-md border border-[#5C5CFF]/20 flex items-center justify-center text-base" style={{ animationDelay: '0.6s' }}>📝</div>
+                  <div className="satellite absolute bottom-[8%] -right-3 w-10 h-10 bg-white rounded-xl shadow-md border border-[#5C5CFF]/20 flex items-center justify-center text-base" style={{ animationDelay: '1.2s' }}>📅</div>
+                  <div className="satellite absolute bottom-[8%] -left-3 w-10 h-10 bg-white rounded-xl shadow-md border border-[#5C5CFF]/20 flex items-center justify-center text-base" style={{ animationDelay: '1.8s' }}>🌐</div>
+                  <div className="satellite absolute top-[8%] -left-3 w-10 h-10 bg-white rounded-xl shadow-md border border-[#5C5CFF]/20 flex items-center justify-center text-base" style={{ animationDelay: '2.4s' }}>📧</div>
+                </div>
               </div>
 
               <div className="text-center">

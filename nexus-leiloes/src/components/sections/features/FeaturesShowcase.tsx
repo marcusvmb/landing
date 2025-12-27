@@ -151,7 +151,7 @@ export default function FeaturesShowcase() {
 
   return (
     <section
-      className="bg-[#EFF0F0] py-20 lg:py-28 relative overflow-hidden"
+      className="bg-[#EFF0F0] py-16 lg:py-28 relative overflow-hidden"
       aria-labelledby="features-showcase-heading"
     >
       {/* Background Glows - Optimized for mobile */}
