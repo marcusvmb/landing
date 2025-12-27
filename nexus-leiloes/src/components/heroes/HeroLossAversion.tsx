@@ -86,7 +86,7 @@ export default function HeroLossAversion() {
           <h1
             id="hero-loss-aversion-heading"
             className="
-              text-[2.25rem]
+              text-[2.75rem]
               sm:text-5xl
               md:text-6xl
               lg:text-7xl

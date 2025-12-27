@@ -263,7 +263,7 @@ function HeroFeatureCard({ feature, reversed = false }: HeroFeatureCardProps) {
         backdrop-blur-md md:backdrop-blur-xl
         border border-white/20
         rounded-[28px]
-        p-6 lg:p-10
+        p-4 sm:p-6 lg:p-10
         shadow-[0_30px_60px_-15px_rgba(92,92,255,0.15)]
         hover:shadow-[0_40px_80px_-15px_rgba(92,92,255,0.25)]
         transition-all duration-500
@@ -338,6 +338,7 @@ function HeroFeatureCard({ feature, reversed = false }: HeroFeatureCardProps) {
           className={`
             lg:col-span-7
             ${reversed ? 'lg:order-1' : 'lg:order-2'}
+            -mx-4 -mb-4 sm:mx-0 sm:mb-0
           `}
         >
           <div

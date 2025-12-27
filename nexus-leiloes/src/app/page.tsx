@@ -1,204 +1,21 @@
-'use client';
-
-import { useState } from 'react';
 import HeroLossAversion from '@/components/heroes/HeroLossAversion';
-import HeroTransformation from '@/components/heroes/HeroTransformation';
-import HeroAuthority from '@/components/heroes/HeroAuthority';
-import HeroCuriosityScarcity from '@/components/heroes/HeroCuriosityScarcity';
-import {
-  ProblemLossAversion,
-  ProblemTransformation,
-  ProblemAuthority,
-  ProblemCuriosityScarcity,
-} from '@/components/sections/problem';
-import {
-  SolutionLossAversion,
-  SolutionTransformation,
-  SolutionAuthority,
-  SolutionCuriosityScarcity,
-} from '@/components/sections/solution';
-import {
-  FeaturesLossAversion,
-  FeaturesShowcase,
-  FeaturesTransformation,
-  FeaturesAuthority,
-  FeaturesCuriosityScarcity,
-} from '@/components/sections/features';
-import {
-  SegmentationLossAversion,
-  SegmentationTransformation,
-  SegmentationAuthority,
-  SegmentationCuriosityScarcity,
-} from '@/components/sections/segmentation';
-import {
-  ComparisonLossAversion,
-  ComparisonTransformation,
-  ComparisonAuthority,
-  ComparisonCuriosityScarcity,
-} from '@/components/sections/comparison';
-import {
-  SocialProofLossAversion,
-  SocialProofTransformation,
-  SocialProofAuthority,
-  SocialProofCuriosityScarcity,
-} from '@/components/sections/socialproof';
-import {
-  FAQLossAversion,
-  FAQTransformation,
-  FAQAuthority,
-  FAQCuriosityScarcity,
-} from '@/components/sections/faq';
-import {
-  FinalCTALossAversion,
-  FinalCTATransformation,
-  FinalCTAAuthority,
-  FinalCTACuriosityScarcity,
-} from '@/components/sections/finalcta';
+import { ProblemAuthority } from '@/components/sections/problem';
+import { FeaturesShowcase } from '@/components/sections/features';
+import { SegmentationLossAversion } from '@/components/sections/segmentation';
+import { ComparisonAuthority } from '@/components/sections/comparison';
+import { FAQLossAversion } from '@/components/sections/faq';
 import { AssessoresShowcase } from '@/components/sections/assessores';
 
-type LandingVariant = 'v1' | 'v2' | 'v3' | 'v4';
-
-const VARIANT_INFO: Record<LandingVariant, { label: string; description: string; frame: string }> = {
-  'v1': {
-    label: 'V1: Loss Aversion',
-    description: 'Medo de perder oportunidades',
-    frame: 'Aversão à Perda'
-  },
-  'v2': {
-    label: 'V2: Transformation',
-    description: 'Antes/Depois - Caos → Ordem',
-    frame: 'Transformação'
-  },
-  'v3': {
-    label: 'V3: Authority',
-    description: 'Único no mercado',
-    frame: 'Autoridade'
-  },
-  'v4': {
-    label: 'V4: Curiosity + Scarcity',
-    description: 'Teaser + Escassez genuína',
-    frame: 'Curiosidade + Urgência'
-  }
-};
-
 export default function Home() {
-  const [activeVariant, setActiveVariant] = useState<LandingVariant>('v1');
-
-  const renderLandingPage = () => {
-    switch (activeVariant) {
-      case 'v1':
-        return (
-          <>
-            <HeroLossAversion />
-            <ProblemAuthority />
-            <FeaturesShowcase />
-            <AssessoresShowcase />
-            <SegmentationLossAversion />
-            <ComparisonAuthority />
-            <FAQLossAversion />
-          </>
-        );
-      case 'v2':
-        return (
-          <>
-            <HeroTransformation />
-            <SolutionTransformation />
-            <FeaturesTransformation />
-            <SegmentationTransformation />
-            <ComparisonTransformation />
-            <FAQTransformation />
-            <FinalCTATransformation />
-          </>
-        );
-      case 'v3':
-        return (
-          <>
-            <HeroAuthority />
-            <ProblemAuthority />
-            <SolutionAuthority />
-            <FeaturesAuthority />
-            <SegmentationAuthority />
-            <ComparisonAuthority />
-            <SocialProofAuthority />
-            <FAQAuthority />
-            <FinalCTAAuthority />
-          </>
-        );
-      case 'v4':
-        return (
-          <>
-            <HeroCuriosityScarcity />
-            <ProblemCuriosityScarcity />
-            <SolutionCuriosityScarcity />
-            <FeaturesCuriosityScarcity />
-            <SegmentationCuriosityScarcity />
-            <ComparisonCuriosityScarcity />
-            <SocialProofCuriosityScarcity />
-            <FAQCuriosityScarcity />
-            <FinalCTACuriosityScarcity />
-          </>
-        );
-    }
-  };
-
   return (
-    <div className="relative">
-      {/* Version Selector - Fixed at top */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-[#2B3259] text-white py-3 px-4 shadow-lg">
-        <div className="max-w-7xl mx-auto">
-          {/* Title */}
-          <div className="flex items-center justify-between mb-3">
-            <div>
-              <h2 className="text-sm font-bold">Landing Page Builder - Nexus Leilões</h2>
-              <p className="text-xs text-white/60">Clique para alternar entre as 4 versões</p>
-            </div>
-            <div className="text-right">
-              <p className="text-xs text-white/60">Frame Cognitivo:</p>
-              <p className="text-sm font-semibold text-[#5C5CFF]">{VARIANT_INFO[activeVariant].frame}</p>
-            </div>
-          </div>
-
-          {/* Buttons - with scroll indicator on mobile */}
-          <div className="relative">
-            <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
-              {(Object.keys(VARIANT_INFO) as LandingVariant[]).map((variant) => (
-                <button
-                  key={variant}
-                  onClick={() => setActiveVariant(variant)}
-                  className={`
-                    flex-shrink-0
-                    px-4 py-3 min-h-[44px] rounded-full
-                    text-sm font-medium
-                    transition-all duration-200
-                    cursor-pointer
-                    ${activeVariant === variant
-                      ? 'bg-[#5C5CFF] text-white shadow-lg'
-                      : 'bg-white/10 text-white/80 hover:bg-white/20'
-                    }
-                  `}
-                >
-                  <span className="block">{VARIANT_INFO[variant].label}</span>
-                  <span className="block text-xs opacity-70">{VARIANT_INFO[variant].description}</span>
-                </button>
-              ))}
-            </div>
-            {/* Scroll fade indicator for mobile */}
-            <div className="absolute right-0 top-0 bottom-1 w-8 bg-gradient-to-l from-[#2B3259] to-transparent pointer-events-none md:hidden" aria-hidden="true" />
-          </div>
-        </div>
-      </div>
-
-      {/* Landing Page Content - With padding for fixed header */}
-      <div className="pt-32 md:pt-28">
-        {renderLandingPage()}
-      </div>
-
-      {/* Scroll hint - Hidden on mobile to avoid conflict with trust badge */}
-      <div className="fixed bottom-4 right-4 z-50 hidden md:block">
-        <div className="bg-[#5C5CFF] text-white rounded-full px-4 py-2 shadow-lg text-sm font-medium">
-          ↓ Role para ver a página completa
-        </div>
-      </div>
-    </div>
+    <>
+      <HeroLossAversion />
+      <ProblemAuthority />
+      <FeaturesShowcase />
+      <AssessoresShowcase />
+      <SegmentationLossAversion />
+      <ComparisonAuthority />
+      <FAQLossAversion />
+    </>
   );
 }

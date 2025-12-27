@@ -23,7 +23,7 @@ export default function ProblemAuthority() {
   const { openModal } = useLeadModal();
   return (
     <section
-      className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
+      className="hidden md:block bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="problem-authority-heading"
     >
       {/* Subtle center glow - Optimized for mobile */}
