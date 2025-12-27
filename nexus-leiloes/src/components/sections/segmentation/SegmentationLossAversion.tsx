@@ -89,14 +89,14 @@ export default function SegmentationLossAversion() {
       className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="segmentation-loss-heading"
     >
-      {/* Background Glows */}
+      {/* Background Glows - Optimized for mobile */}
       <div
         className="
           absolute top-1/4 left-0
-          w-[600px] h-[600px]
+          w-[300px] md:w-[600px] h-[300px] md:h-[600px]
           bg-[#5C5CFF]/8
           rounded-full
-          blur-[150px]
+          blur-[80px] md:blur-[150px]
           -translate-x-1/2
         "
         aria-hidden="true"
@@ -104,10 +104,10 @@ export default function SegmentationLossAversion() {
       <div
         className="
           absolute bottom-1/4 right-0
-          w-[500px] h-[500px]
+          w-[250px] md:w-[500px] h-[250px] md:h-[500px]
           bg-[#5C5CFF]/6
           rounded-full
-          blur-[120px]
+          blur-[60px] md:blur-[120px]
           translate-x-1/3
         "
         aria-hidden="true"

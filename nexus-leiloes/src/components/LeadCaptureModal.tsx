@@ -559,7 +559,7 @@ export default function LeadCaptureModal() {
                   </span>
                   <button
                     onClick={closeModal}
-                    className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-600 rounded-full"
+                    className="w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-400 hover:text-gray-600 rounded-full"
                     aria-label="Fechar"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

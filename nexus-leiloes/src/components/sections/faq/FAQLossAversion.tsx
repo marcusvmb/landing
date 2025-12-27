@@ -132,9 +132,9 @@ export default function FAQLossAversion() {
 
   return (
     <section className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="faq-loss-heading">
-      {/* Background Glows */}
-      <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[150px] -translate-x-1/2" aria-hidden="true" />
-      <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[120px] translate-x-1/3" aria-hidden="true" />
+      {/* Background Glows - Optimized for mobile */}
+      <div className="absolute top-1/4 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[80px] md:blur-[150px] -translate-x-1/2" aria-hidden="true" />
+      <div className="absolute bottom-1/4 right-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[60px] md:blur-[120px] translate-x-1/3" aria-hidden="true" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Headline */}
@@ -189,8 +189,8 @@ function FAQAccordionItem({ item, isOpen, onToggle }: FAQAccordionItemProps) {
           <h3 className="text-lg font-bold text-[#2B3259] leading-snug">{item.question}</h3>
         </div>
 
-        {/* Toggle Arrow */}
-        <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-[#EFF0F0] flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+        {/* Toggle Arrow - min 44px touch target */}
+        <div className={`flex-shrink-0 w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#EFF0F0] flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
           <svg className="w-4 h-4 text-[#2B3259]/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>

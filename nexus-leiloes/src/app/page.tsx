@@ -158,39 +158,43 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Buttons */}
-          <div className="flex gap-2 overflow-x-auto pb-1">
-            {(Object.keys(VARIANT_INFO) as LandingVariant[]).map((variant) => (
-              <button
-                key={variant}
-                onClick={() => setActiveVariant(variant)}
-                className={`
-                  flex-shrink-0
-                  px-4 py-2 rounded-full
-                  text-sm font-medium
-                  transition-all duration-200
-                  cursor-pointer
-                  ${activeVariant === variant
-                    ? 'bg-[#5C5CFF] text-white shadow-lg'
-                    : 'bg-white/10 text-white/80 hover:bg-white/20'
-                  }
-                `}
-              >
-                <span className="block">{VARIANT_INFO[variant].label}</span>
-                <span className="block text-xs opacity-70">{VARIANT_INFO[variant].description}</span>
-              </button>
-            ))}
+          {/* Buttons - with scroll indicator on mobile */}
+          <div className="relative">
+            <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+              {(Object.keys(VARIANT_INFO) as LandingVariant[]).map((variant) => (
+                <button
+                  key={variant}
+                  onClick={() => setActiveVariant(variant)}
+                  className={`
+                    flex-shrink-0
+                    px-4 py-3 min-h-[44px] rounded-full
+                    text-sm font-medium
+                    transition-all duration-200
+                    cursor-pointer
+                    ${activeVariant === variant
+                      ? 'bg-[#5C5CFF] text-white shadow-lg'
+                      : 'bg-white/10 text-white/80 hover:bg-white/20'
+                    }
+                  `}
+                >
+                  <span className="block">{VARIANT_INFO[variant].label}</span>
+                  <span className="block text-xs opacity-70">{VARIANT_INFO[variant].description}</span>
+                </button>
+              ))}
+            </div>
+            {/* Scroll fade indicator for mobile */}
+            <div className="absolute right-0 top-0 bottom-1 w-8 bg-gradient-to-l from-[#2B3259] to-transparent pointer-events-none md:hidden" aria-hidden="true" />
           </div>
         </div>
       </div>
 
       {/* Landing Page Content - With padding for fixed header */}
-      <div className="pt-28">
+      <div className="pt-32 md:pt-28">
         {renderLandingPage()}
       </div>
 
-      {/* Scroll hint */}
-      <div className="fixed bottom-4 right-4 z-50">
+      {/* Scroll hint - Hidden on mobile to avoid conflict with trust badge */}
+      <div className="fixed bottom-4 right-4 z-50 hidden md:block">
         <div className="bg-[#5C5CFF] text-white rounded-full px-4 py-2 shadow-lg text-sm font-medium">
           ↓ Role para ver a página completa
         </div>

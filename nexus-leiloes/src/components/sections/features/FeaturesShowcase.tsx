@@ -154,13 +154,13 @@ export default function FeaturesShowcase() {
       className="bg-[#EFF0F0] py-20 lg:py-28 relative overflow-hidden"
       aria-labelledby="features-showcase-heading"
     >
-      {/* Background Glows */}
+      {/* Background Glows - Optimized for mobile */}
       <div
-        className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[150px] translate-x-1/3"
+        className="absolute top-1/4 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[80px] md:blur-[150px] translate-x-1/3"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-1/3 left-0 w-[500px] h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[120px] -translate-x-1/3"
+        className="absolute bottom-1/3 left-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[60px] md:blur-[120px] -translate-x-1/3"
         aria-hidden="true"
       />
 
@@ -260,7 +260,7 @@ function HeroFeatureCard({ feature, reversed = false }: HeroFeatureCardProps) {
         group
         relative
         bg-white/30
-        backdrop-blur-xl
+        backdrop-blur-md md:backdrop-blur-xl
         border border-white/20
         rounded-[28px]
         p-6 lg:p-10

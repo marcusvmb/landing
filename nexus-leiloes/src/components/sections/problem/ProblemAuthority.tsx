@@ -26,16 +26,16 @@ export default function ProblemAuthority() {
       className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="problem-authority-heading"
     >
-      {/* Subtle center glow */}
+      {/* Subtle center glow - Optimized for mobile */}
       <div
         className="
           absolute
           top-1/2 left-1/2
           -translate-x-1/2 -translate-y-1/2
-          w-[1000px] h-[1000px]
+          w-[400px] md:w-[800px] lg:w-[1000px] h-[400px] md:h-[800px] lg:h-[1000px]
           bg-[#5C5CFF]/[0.03]
           rounded-full
-          blur-[150px]
+          blur-[80px] md:blur-[120px] lg:blur-[150px]
         "
       />
 
@@ -188,7 +188,7 @@ export default function ProblemAuthority() {
 
               {/* Single hub icon */}
               <div className="flex justify-center mb-6">
-                <img src="/logo-nexus-full.png" alt="Nexus" className="h-16" />
+                <img src="/logo-nexus-full.png" alt="Nexus" className="h-16" width={160} height={64} />
               </div>
 
               <div className="text-center">

@@ -37,28 +37,28 @@ export default function HeroLossAversion() {
       className="bg-[#EFF0F0] relative overflow-hidden"
       aria-labelledby="hero-loss-aversion-heading"
     >
-      {/* Background glow - posicionado no canto superior direito */}
+      {/* Background glow - posicionado no canto superior direito - Optimized for mobile */}
       <div
         className="
           absolute
           top-0 right-0
-          w-[600px] h-[600px]
+          w-[300px] md:w-[600px] h-[300px] md:h-[600px]
           bg-[#5C5CFF]/10
           rounded-full
-          blur-[100px]
+          blur-[60px] md:blur-[100px]
           -translate-y-1/4 translate-x-1/4
         "
       />
 
-      {/* Secondary glow - mais sutil, no centro */}
+      {/* Secondary glow - mais sutil, no centro - Optimized for mobile */}
       <div
         className="
           absolute
           top-1/2 left-1/3
-          w-[400px] h-[400px]
+          w-[200px] md:w-[400px] h-[200px] md:h-[400px]
           bg-[#5C5CFF]/5
           rounded-full
-          blur-[80px]
+          blur-[50px] md:blur-[80px]
         "
       />
 
@@ -66,7 +66,7 @@ export default function HeroLossAversion() {
       <header className="relative z-20 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="/logo-nexus.png" alt="Nexus Leilões" className="h-10" />
+          <img src="/logo-nexus.png" alt="Nexus Leilões" className="h-10" width={120} height={40} />
         </div>
       </header>
 
@@ -86,11 +86,11 @@ export default function HeroLossAversion() {
           <h1
             id="hero-loss-aversion-heading"
             className="
-              text-[3rem]
-              sm:text-6xl
-              md:text-7xl
-              lg:text-8xl
-              xl:text-9xl
+              text-[2.25rem]
+              sm:text-5xl
+              md:text-6xl
+              lg:text-7xl
+              xl:text-8xl
               font-black
               tracking-[-0.04em]
               leading-[0.9]
@@ -193,25 +193,6 @@ export default function HeroLossAversion() {
         </ul>
       </div>
 
-      {/* Mobile Trust Badge - Fixed bottom */}
-      <div className="md:hidden fixed bottom-4 left-4 right-4 z-30">
-        <div
-          className="
-            flex items-center justify-center gap-2
-            px-5 py-3.5
-            bg-white/95
-            backdrop-blur-lg
-            rounded-full
-            shadow-[0_10px_40px_-10px_rgba(92,92,255,0.3)]
-            border border-[#5C5CFF]/10
-          "
-        >
-          <span className="w-2 h-2 bg-[#5C5CFF] rounded-full animate-pulse-dot" />
-          <span className="text-sm font-medium text-[#2B3259]">
-            +547 investidores já na lista de espera
-          </span>
-        </div>
-      </div>
     </section>
   );
 }

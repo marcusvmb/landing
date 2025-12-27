@@ -52,19 +52,19 @@ export default function AssessoresShowcase() {
       className="bg-[#2B3259] py-20 lg:py-28 relative overflow-hidden"
       aria-labelledby="assessores-heading"
     >
-      {/* Background Glows */}
+      {/* Background Glows - Optimized for mobile */}
       <div
-        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#5C5CFF]/15 rounded-full blur-[150px]"
+        className="absolute top-0 left-1/4 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-[#5C5CFF]/15 rounded-full blur-[80px] md:blur-[150px]"
         aria-hidden="true"
       />
       <div
-        className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#5C5CFF]/10 rounded-full blur-[120px]"
+        className="absolute bottom-0 right-1/4 w-[200px] md:w-[400px] h-[200px] md:h-[400px] bg-[#5C5CFF]/10 rounded-full blur-[60px] md:blur-[120px]"
         aria-hidden="true"
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Video Container */}
-        <div className="relative mb-[-60px] lg:mb-[-80px]">
+        {/* Video Container - No overlap on mobile, overlap on tablet/desktop */}
+        <div className="relative mb-6 md:mb-[-60px] lg:mb-[-80px]">
           {/* Glow behind video */}
           <div
             className="absolute inset-0 bg-[#5C5CFF]/20 blur-3xl rounded-3xl scale-95"
@@ -124,7 +124,7 @@ export default function AssessoresShowcase() {
             relative z-20
             max-w-2xl mx-auto
             bg-white/[0.08]
-            backdrop-blur-2xl
+            backdrop-blur-lg md:backdrop-blur-2xl
             border border-white/15
             rounded-2xl lg:rounded-3xl
             p-8 lg:p-12

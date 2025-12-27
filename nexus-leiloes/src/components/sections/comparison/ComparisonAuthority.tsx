@@ -157,14 +157,14 @@ export default function ComparisonAuthority() {
       className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden"
       aria-labelledby="comparison-authority-heading"
     >
-      {/* Background Glow */}
+      {/* Background Glow - Optimized for mobile */}
       <div
         className="
           absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-          w-[800px] h-[800px]
+          w-[400px] md:w-[800px] h-[400px] md:h-[800px]
           bg-[#5C5CFF]/5
           rounded-full
-          blur-[150px]
+          blur-[80px] md:blur-[150px]
         "
         aria-hidden="true"
       />
@@ -195,9 +195,10 @@ export default function ComparisonAuthority() {
           Compare e decida por você mesmo.
         </p>
 
-        {/* Comparison Table */}
+        {/* Comparison Table - Desktop */}
         <div
           className="
+            hidden md:block
             bg-white/90
             backdrop-blur-sm
             rounded-3xl
@@ -299,6 +300,60 @@ export default function ComparisonAuthority() {
           {/* Table Rows */}
           {comparisonData.map((item, index) => (
             <ComparisonTableRow key={item.id} item={item} isLast={index === comparisonData.length - 1} />
+          ))}
+        </div>
+
+        {/* Comparison Cards - Mobile */}
+        <div className="md:hidden space-y-4">
+          {comparisonData.map((item) => (
+            <div
+              key={item.id}
+              className="
+                bg-white/90
+                backdrop-blur-sm
+                rounded-2xl
+                p-5
+                border border-[#5C5CFF]/10
+                shadow-[0_10px_40px_-15px_rgba(92,92,255,0.1)]
+              "
+            >
+              <p className="font-bold text-[#2B3259] mb-4 text-base">
+                {item.aspect}
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {/* Amateur */}
+                <div className="bg-gray-50 p-4 rounded-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-5 h-5 bg-[#2B3259]/10 rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-[#2B3259]/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div>
+                    <span className="text-xs font-semibold text-[#2B3259]/50 uppercase tracking-wide">
+                      Amador
+                    </span>
+                  </div>
+                  <p className="text-sm font-medium text-[#2B3259]/70">{item.amateur.value}</p>
+                  <p className="text-xs text-[#2B3259]/40 mt-1">{item.amateur.description}</p>
+                </div>
+
+                {/* Pro */}
+                <div className="bg-[#5C5CFF]/5 p-4 rounded-xl border border-[#5C5CFF]/10">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-5 h-5 bg-[#5C5CFF] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="text-xs font-semibold text-[#5C5CFF] uppercase tracking-wide">
+                      Pro
+                    </span>
+                  </div>
+                  <p className="text-sm font-bold text-[#2B3259]">{item.pro.value}</p>
+                  <p className="text-xs text-[#5C5CFF] mt-1">{item.pro.description}</p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
