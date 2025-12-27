@@ -297,7 +297,7 @@ export default function ComparisonTransformation() {
         <p className="text-center text-lg md:text-xl text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
           Veja a transformação que acontece quando você migra
           <br className="hidden md:block" />
-          de ferramentas fragmentadas para o Hub completo.
+          de ferramentas soltas para o Hub completo.
         </p>
 
         {/* Transformation Container */}
@@ -322,7 +322,7 @@ export default function ComparisonTransformation() {
                     ANTES
                   </p>
                   <p className="text-sm text-[#2B3259]/30 mt-1">
-                    Ferramentas fragmentadas
+                    Ferramentas soltas
                   </p>
                 </div>
               </div>
@@ -416,7 +416,7 @@ export default function ComparisonTransformation() {
                 De
               </p>
               <p className="text-xl font-bold text-[#2B3259]/50 grayscale-[30%]">
-                Ferramentas Fragmentadas
+                Ferramentas Soltas
               </p>
               <p className="text-sm text-[#2B3259]/30">
                 Perda de tempo, erros, frustração

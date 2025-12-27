@@ -210,7 +210,7 @@ function BeforeStateCard() {
         <span className="text-xs font-semibold text-[#2B3259]/40 uppercase tracking-widest">
           Antes
         </span>
-        <h3 className="text-xl font-bold text-[#2B3259]/60 mt-2">Fragmentado</h3>
+        <h3 className="text-xl font-bold text-[#2B3259]/60 mt-2">Improvisado</h3>
         <ul className="mt-4 space-y-2 text-sm text-[#2B3259]/50">
           <li className="flex items-center gap-2">
             <span className="text-[#5C5CFF]/60">&#10060;</span>

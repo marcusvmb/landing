@@ -76,7 +76,7 @@ export default function HeroTransformation() {
               text-[#2B3259]
             "
           >
-            De ferramentas fragmentadas ao
+            De ferramentas soltas ao
             <br />
             <span className="relative inline-block">
               <span className="text-[#5C5CFF]">controle total</span>
@@ -154,7 +154,7 @@ export default function HeroTransformation() {
                   </div>
                   <div>
                     <div className="font-medium text-sm text-[#2B3259]/70">20+ Sites</div>
-                    <div className="text-xs text-[#2B3259]/40">Busca fragmentada</div>
+                    <div className="text-xs text-[#2B3259]/40">Busca improvisada</div>
                   </div>
                 </div>
               </div>

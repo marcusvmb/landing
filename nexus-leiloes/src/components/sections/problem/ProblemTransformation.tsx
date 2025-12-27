@@ -63,7 +63,7 @@ export default function ProblemTransformation() {
         </h2>
 
         {/* Scattered Icons - Chaos visualization */}
-        <div className="relative h-[280px] md:h-[350px] max-w-4xl mx-auto mb-8" role="img" aria-label="Visualização do caos de ferramentas fragmentadas">
+        <div className="relative h-[280px] md:h-[350px] max-w-4xl mx-auto mb-8" role="img" aria-label="Visualização do caos de ferramentas soltas">
           {/* Connecting dashed lines (chaos) */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
             <line x1="20%" y1="25%" x2="45%" y2="40%" stroke="#2B3259" strokeWidth="1" strokeDasharray="5,5" strokeOpacity="0.1" />

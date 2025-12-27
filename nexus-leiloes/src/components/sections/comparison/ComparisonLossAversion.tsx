@@ -233,7 +233,7 @@ export default function ComparisonLossAversion() {
         <p className="text-center text-lg md:text-xl text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
           Cada dia sem o Hub completo é dinheiro saindo do seu bolso.
           <br className="hidden md:block" />
-          Compare a realidade de quem ainda usa ferramentas fragmentadas.
+          Compare a realidade de quem ainda usa ferramentas soltas.
         </p>
 
         {/* Comparison Container */}

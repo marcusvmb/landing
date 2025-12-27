@@ -92,7 +92,7 @@ export default function ProblemAuthority() {
               "
             >
               {/* Tool grid - scattered */}
-              <div className="grid grid-cols-3 gap-3 mb-6" role="img" aria-label="Ferramentas fragmentadas">
+              <div className="grid grid-cols-3 gap-3 mb-6" role="img" aria-label="Ferramentas soltas">
                 <div className="aspect-square bg-[#2B3259]/5 rounded-xl flex items-center justify-center text-2xl grayscale opacity-60 rotate-[-3deg]">
                   &#128202;
                 </div>
@@ -122,7 +122,7 @@ export default function ProblemAuthority() {
                     decoration-2
                   "
                 >
-                  Fragmentado
+                  Improvisado
                 </span>
               </div>
             </div>

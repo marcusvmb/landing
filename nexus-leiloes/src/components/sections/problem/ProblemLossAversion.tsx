@@ -116,7 +116,7 @@ export default function ProblemLossAversion() {
               >
                 -15h
               </div>
-              <span className="text-lg text-[#2B3259]/60">/semana em navegação fragmentada</span>
+              <span className="text-lg text-[#2B3259]/60">/semana em navegação improvisada</span>
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@ export default function ProblemLossAversion() {
         {/* Agitation Quote */}
         <div className="mt-16 text-center max-w-3xl mx-auto">
           <p className="text-xl md:text-2xl text-[#2B3259]/70 leading-relaxed">
-            Cada minuto gasto organizando ferramentas fragmentadas é um minuto que{' '}
+            Cada minuto gasto organizando ferramentas soltas é um minuto que{' '}
             <span className="font-semibold text-[#5C5CFF]">seus concorrentes usam para fechar negócios</span>.
             Eles não estão perdendo tempo.{' '}
             <span className="font-semibold text-[#2B3259]">Você está.</span>

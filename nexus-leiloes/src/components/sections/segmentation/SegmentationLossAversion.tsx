@@ -56,9 +56,9 @@ import { useLeadModal } from '@/contexts/LeadModalContext';
  */
 
 const investidorLosses = [
-  { value: 'R$15.000+', desc: 'em erros de cálculo por ano' },
-  { value: '2h/dia', desc: 'buscando em +20 sites' },
-  { value: '3-5 imóveis', desc: 'bons perdidos por mês' },
+  { value: 'Planilhas que mentem', desc: 'esqueceu uma taxa e lá se foi o lucro' },
+  { value: 'Caos de ferramentas', desc: 'Excel, Notion, WhatsApp, planilha...' },
+  { value: 'Sempre um passo atrás', desc: 'concorrentes viram antes de você' },
 ];
 
 const investidorBenefits = [
@@ -69,9 +69,9 @@ const investidorBenefits = [
 ];
 
 const assessorLosses = [
-  { value: '3 clientes', desc: 'perdidos por mês por desorganização' },
-  { value: '5h/dia', desc: 'em tarefas manuais repetitivas' },
-  { value: 'Credibilidade', desc: 'abalada com relatórios amadores' },
+  { value: 'Concorrentes mais ágeis', desc: 'fechando seus próximos clientes' },
+  { value: 'Crescimento travado', desc: 'você é o gargalo do seu negócio' },
+  { value: 'Amadorismo visível', desc: 'relatórios que não transmitem confiança' },
 ];
 
 const assessorBenefits = [
@@ -140,13 +140,13 @@ export default function SegmentationLossAversion() {
           </span>
         </p>
 
-        {/* Persona Cards - Asymmetric Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-          {/* Investidores Card - Larger */}
-          <div className="lg:col-span-7">
+        {/* Persona Cards - Equal Width Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          {/* Investidores Card */}
+          <div>
             <PersonaCard
               persona="investidor"
-              title="Investidores PF"
+              title="Investidor"
               subtitle="Pessoas físicas que investem em leilões"
               losses={investidorLosses}
               benefits={investidorBenefits}
@@ -156,8 +156,8 @@ export default function SegmentationLossAversion() {
             />
           </div>
 
-          {/* Assessores Card - Smaller */}
-          <div className="lg:col-span-5 lg:mt-8">
+          {/* Assessores Card */}
+          <div>
             <PersonaCard
               persona="assessor"
               title="Assessores de Leilão"
@@ -169,29 +169,6 @@ export default function SegmentationLossAversion() {
               onOpenModal={openModal}
             />
           </div>
-        </div>
-
-        {/* Bottom Summary */}
-        <div
-          className="
-            mt-16
-            p-8
-            bg-white/60 backdrop-blur-sm
-            rounded-3xl
-            border border-[#5C5CFF]/10
-            shadow-[0_20px_60px_-15px_rgba(92,92,255,0.1)]
-            text-center
-          "
-        >
-          <p className="text-lg text-[#2B3259]/70 mb-3">
-            Perdas combinadas estimadas por ano:
-          </p>
-          <p className="text-4xl md:text-5xl font-black text-[#5C5CFF] line-through decoration-4 mb-2">
-            R$50.000+
-          </p>
-          <p className="text-[#2B3259]/60">
-            Entre na lista VIP e seja o primeiro a eliminar essas perdas
-          </p>
         </div>
       </div>
     </section>

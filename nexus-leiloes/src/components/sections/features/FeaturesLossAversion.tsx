@@ -228,7 +228,7 @@ export default function FeaturesLossAversion() {
             15h/semana
           </p>
           <p className="text-lg text-[#2B3259]/60">
-            em navegação fragmentada, planilhas e decisões no escuro
+            em navegação improvisada, planilhas e decisões no escuro
           </p>
         </div>
 

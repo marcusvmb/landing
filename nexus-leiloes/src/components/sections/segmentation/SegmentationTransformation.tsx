@@ -58,7 +58,7 @@ import { useLeadModal } from '@/contexts/LeadModalContext';
  */
 
 const investidorToday = [
-  'Buscas fragmentadas em +20 sites',
+  'Buscas soltas em +20 sites',
   'Cálculos manuais em planilhas',
   'Dados espalhados sem organização',
   'Decisões baseadas em "achismo"',
