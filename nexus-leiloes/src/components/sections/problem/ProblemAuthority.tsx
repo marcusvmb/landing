@@ -187,18 +187,8 @@ export default function ProblemAuthority() {
               />
 
               {/* Single hub icon */}
-              <div
-                className="
-                  w-20 h-20
-                  mx-auto mb-6
-                  bg-gradient-to-br from-[#5C5CFF] to-[#5C5CFF]
-                  rounded-2xl
-                  flex items-center justify-center
-                  shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
-                "
-                aria-hidden="true"
-              >
-                <span className="text-white text-4xl font-black">N</span>
+              <div className="flex justify-center mb-6">
+                <img src="/logo-nexus-full.png" alt="Nexus" className="h-16" />
               </div>
 
               <div className="text-center">

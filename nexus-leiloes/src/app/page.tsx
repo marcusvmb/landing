@@ -95,9 +95,7 @@ export default function Home() {
             <AssessoresShowcase />
             <SegmentationLossAversion />
             <ComparisonAuthority />
-            <SocialProofLossAversion />
             <FAQLossAversion />
-            <FinalCTALossAversion />
           </>
         );
       case 'v2':

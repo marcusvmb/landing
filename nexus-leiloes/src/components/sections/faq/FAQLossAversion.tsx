@@ -150,49 +150,13 @@ export default function FAQLossAversion() {
           <span className="font-semibold text-[#2B3259]">Cada decisão adiada custa dinheiro.</span>
         </p>
 
-        {/* Main Content - Asymmetric Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-          {/* FAQ Accordion - 7 columns */}
-          <div className="lg:col-span-7 space-y-4">
+        {/* Main Content */}
+        <div className="max-w-3xl mx-auto">
+          {/* FAQ Accordion */}
+          <div className="space-y-4">
             {faqItems.map((item) => (
               <FAQAccordionItem key={item.id} item={item} isOpen={openId === item.id} onToggle={() => toggleFAQ(item.id)} />
             ))}
-          </div>
-
-          {/* Savings Summary - 5 columns, sticky */}
-          <div className="lg:col-span-5">
-            <div className="lg:sticky lg:top-8">
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl border border-[#5C5CFF]/15 shadow-[0_20px_60px_-15px_rgba(92,92,255,0.15)] overflow-hidden">
-                {/* Header */}
-                <div className="p-6 bg-gradient-to-br from-[#5C5CFF]/10 to-[#5C5CFF]/5 border-b border-[#5C5CFF]/10">
-                  <p className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider mb-2">Economia Total Estimada</p>
-                  <p className="text-5xl font-black text-[#5C5CFF] tracking-tight">{savingsSummary.total}</p>
-                  <p className="text-sm text-[#2B3259]/60 mt-1">por ano usando a Nexus</p>
-                </div>
-
-                {/* Breakdown */}
-                <div className="p-6 space-y-4">
-                  {savingsSummary.breakdown.map((item, index) => (
-                    <div key={index} className="flex items-center gap-4 p-4 bg-[#EFF0F0]/80 rounded-2xl">
-                      <div className="w-12 h-12 bg-[#5C5CFF]/10 rounded-xl flex items-center justify-center text-xl">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-sm text-[#2B3259]/60">{item.label}</p>
-                        <p className="text-lg font-bold text-[#2B3259]">{item.value}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* CTA */}
-                <div className="p-6 pt-0">
-                  <button type="button" onClick={openModal} className="w-full bg-[#5C5CFF] text-white font-bold text-base px-6 py-4 rounded-xl shadow-[0_12px_35px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-0.5 hover:shadow-[0_18px_45px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer">
-                    Parar de perder agora
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

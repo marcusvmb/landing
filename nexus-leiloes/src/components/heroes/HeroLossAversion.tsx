@@ -34,7 +34,7 @@ export default function HeroLossAversion() {
 
   return (
     <section
-      className="bg-[#EFF0F0] min-h-screen relative overflow-hidden"
+      className="bg-[#EFF0F0] relative overflow-hidden"
       aria-labelledby="hero-loss-aversion-heading"
     >
       {/* Background glow - posicionado no canto superior direito */}
@@ -68,180 +68,129 @@ export default function HeroLossAversion() {
         <div className="flex items-center gap-2">
           <img src="/logo-nexus.png" alt="Nexus Leilões" className="h-10" />
         </div>
-
-        {/* Trust Badge - Desktop */}
-        <div className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-[#5C5CFF]/8 rounded-full border border-[#5C5CFF]/10">
-          <span className="w-2 h-2 bg-[#5C5CFF] rounded-full animate-pulse-dot" />
-          <span className="text-sm font-medium text-[#5C5CFF]">
-            +547 investidores na lista
-          </span>
-        </div>
       </header>
 
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 lg:pt-16 pb-16">
-        <div className="grid grid-cols-12 gap-6 items-center">
-
-          {/* Content Column - 6 colunas (assimetrico) */}
-          <div className="col-span-12 lg:col-span-6 relative z-10">
-
-            {/* Headline - Massivo com tight tracking */}
-            <h1
-              id="hero-loss-aversion-heading"
-              className="
-                text-[2rem]
-                sm:text-4xl
-                md:text-[2.75rem]
-                lg:text-[3.25rem]
-                xl:text-[3.75rem]
-                font-black
-                tracking-[-0.03em]
-                leading-[0.95]
-                text-[#2B3259]
-              "
-            >
-              O{' '}
-              {/* "único" com efeito especial */}
-              <span className="relative inline-block">
-                {/* Glow behind */}
-                <span
-                  className="
-                    absolute
-                    inset-0
-                    bg-[#5C5CFF]/15
-                    blur-2xl
-                    rounded-full
-                    scale-150
-                  "
-                />
-                {/* Text */}
-                <span className="relative z-10 text-[#5C5CFF]">único</span>
-                {/* Animated underline */}
-                <span
-                  className="
-                    absolute
-                    -bottom-2 md:-bottom-3
-                    left-0 right-0
-                    h-3 md:h-4
-                    bg-gradient-to-r from-[#5C5CFF]/40 via-[#5C5CFF]/60 to-[#5C5CFF]/40
-                    rounded-full
-                    animate-underline-glow
-                  "
-                />
-              </span>
-              {' '}hub
-              <br />
-              completo para
-              <br />
-              leilão imobiliário
-              <br />
-              <span className="text-[#5C5CFF]/50">no Brasil</span>
-            </h1>
-
-            {/* Subheadline - Contraste com headline */}
-            <p
-              className="
-                mt-8
-                text-lg
-                md:text-xl
-                text-[#2B3259]/60
-                max-w-xl
-                leading-relaxed
-              "
-            >
-              O único Hub que unifica busca, análise e gestão de leilões imobiliários.
-              Tudo em uma plataforma. Sem alternar entre dezenas de sites e planilhas.
-            </p>
-
-            {/* CTA Button - Primary Blue, Pill, com colored shadow e states */}
-            <button
-              type="button"
-              onClick={openModal}
-              className="
-                mt-10
-                bg-[#5C5CFF]
-                text-white
-                font-bold
-                text-lg
-                px-10 py-5
-                rounded-full
-                shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)]
-                transition-all
-                duration-300
-                ease-[cubic-bezier(0.34,1.56,0.64,1)]
-                hover:-translate-y-1
-                hover:scale-[1.02]
-                hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)]
-                active:translate-y-0
-                active:scale-[0.98]
-                focus-visible:outline
-                focus-visible:outline-2
-                focus-visible:outline-offset-2
-                focus-visible:outline-[#2B3259]
-                cursor-pointer
-              "
-            >
-              Garantir meu acesso antecipado
-              <span aria-hidden="true"> &rarr;</span>
-            </button>
-
-            {/* Microcopy - Risk Removers - Improved contrast (70% instead of 60%) */}
-            <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#2B3259]/70" aria-label="Beneficios inclusos">
-              <li className="flex items-center gap-1.5">
-                <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
-                Vagas limitadas para fundadores
-              </li>
-              <li className="flex items-center gap-1.5">
-                <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
-                Sem cartão de crédito
-              </li>
-              <li className="flex items-center gap-1.5">
-                <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
-                7 dias grátis
-              </li>
-            </ul>
-          </div>
-
-          {/* Image Column - 6 colunas com overlap e breaking grid */}
-          <div
+      {/* Main Content - Typography as Hero (like V3) */}
+      <div
+        className="
+          relative z-10
+          max-w-7xl mx-auto
+          px-6
+          pt-12 md:pt-16 lg:pt-20
+          pb-16
+          flex flex-col items-center justify-center
+        "
+      >
+        {/* Massive Headline - Typography IS the visual */}
+        <div className="text-center max-w-5xl">
+          <h1
+            id="hero-loss-aversion-heading"
             className="
-              col-span-12
-              lg:col-span-6
-              lg:-mr-24
-              relative
-              mt-10
-              lg:mt-0
+              text-[3rem]
+              sm:text-6xl
+              md:text-7xl
+              lg:text-8xl
+              xl:text-9xl
+              font-black
+              tracking-[-0.04em]
+              leading-[0.9]
+              text-[#2B3259]
             "
           >
-            <div className="relative">
-              {/* Glow behind mockup */}
-              <div
+            O{' '}
+            {/* "único" com efeito especial */}
+            <span className="relative inline-block">
+              {/* Glow behind */}
+              <span
                 className="
                   absolute
                   inset-0
-                  bg-[#5C5CFF]/20
-                  rounded-3xl
-                  blur-3xl
-                  scale-90
+                  bg-[#5C5CFF]/15
+                  blur-2xl
+                  rounded-full
+                  scale-150
                 "
               />
-
-              {/* Dashboard Mockup - High-end image */}
-              <img
-                src="/mockup-dashboard.png"
-                alt="Painel da Nexus Leilões mostrando oportunidades de leilões imobiliários com filtros avançados e análise de preços"
+              {/* Text */}
+              <span className="relative z-10 text-[#5C5CFF]">único</span>
+              {/* Animated underline */}
+              <span
                 className="
-                  relative
-                  z-10
-                  w-[115%]
-                  max-w-none
-                  h-auto
-                  drop-shadow-[0_30px_60px_rgba(92,92,255,0.25)]
+                  absolute
+                  -bottom-2 md:-bottom-3
+                  left-0 right-0
+                  h-3 md:h-4
+                  bg-gradient-to-r from-[#5C5CFF]/40 via-[#5C5CFF]/60 to-[#5C5CFF]/40
+                  rounded-full
+                  animate-underline-glow
                 "
               />
-            </div>
-          </div>
+            </span>
+            {' '}hub
+            <br />
+            completo para
+            <br />
+            leilão imobiliário
+            <br />
+            <span className="text-[#5C5CFF]/50">no Brasil</span>
+          </h1>
         </div>
+
+        {/* Subheadline - Curta e direta */}
+        <p className="mt-8 md:mt-10 text-xl md:text-2xl text-[#2B3259]/60 text-center max-w-xl">
+          Busque. Analise. Gerencie.{' '}
+          <span className="text-[#5C5CFF] font-semibold">
+            Tudo em um só lugar.
+          </span>
+        </p>
+
+        {/* CTA Button - Maior que outros heroes */}
+        <button
+          type="button"
+          onClick={openModal}
+          className="
+            mt-10 md:mt-12
+            bg-[#5C5CFF]
+            text-white
+            font-bold
+            text-xl
+            px-12 py-6
+            rounded-full
+            shadow-[0_20px_50px_-12px_rgba(92,92,255,0.5)]
+            transition-all
+            duration-300
+            ease-[cubic-bezier(0.34,1.56,0.64,1)]
+            hover:-translate-y-1.5
+            hover:scale-[1.03]
+            hover:shadow-[0_25px_60px_-12px_rgba(92,92,255,0.6)]
+            active:translate-y-0
+            active:scale-[0.98]
+            focus-visible:outline
+            focus-visible:outline-2
+            focus-visible:outline-offset-2
+            focus-visible:outline-[#2B3259]
+            cursor-pointer
+          "
+        >
+          Garantir meu acesso antecipado
+          <span aria-hidden="true"> &rarr;</span>
+        </button>
+
+        {/* Microcopy - Risk Removers */}
+        <ul className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[#2B3259]/70" aria-label="Beneficios inclusos">
+          <li className="flex items-center gap-1.5">
+            <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
+            Vagas limitadas para fundadores
+          </li>
+          <li className="flex items-center gap-1.5">
+            <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
+            Sem cartão de crédito
+          </li>
+          <li className="flex items-center gap-1.5">
+            <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
+            7 dias grátis
+          </li>
+        </ul>
       </div>
 
       {/* Mobile Trust Badge - Fixed bottom */}
