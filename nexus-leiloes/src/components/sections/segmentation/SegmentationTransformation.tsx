@@ -118,26 +118,6 @@ export default function SegmentationTransformation() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        {/* Eyebrow */}
-        <div className="text-center mb-6">
-          <span
-            className="
-              inline-flex items-center gap-2
-              px-5 py-2.5
-              bg-gradient-to-r from-[#5C5CFF]/10 to-[#5C5CFF]/10
-              rounded-full
-              border border-[#5C5CFF]/15
-            "
-          >
-            <span className="text-sm font-semibold text-[#5C5CFF] uppercase tracking-wider">
-              Jornada de Transformação
-            </span>
-            <span className="text-[#5C5CFF]" aria-hidden="true">
-              &#8594;
-            </span>
-          </span>
-        </div>
-
         {/* Headline */}
         <h2
           id="segmentation-transform-heading"
@@ -163,14 +143,14 @@ export default function SegmentationTransformation() {
           individual ou um assessor gerenciando múltiplos clientes.
         </p>
 
-        {/* Persona Cards - Asymmetric Grid (inverted) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-          {/* Investidores Card - Smaller */}
-          <div className="lg:col-span-5">
+        {/* Persona Cards - Equal Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          {/* Investidores Card */}
+          <div>
             <TransformationCard
               persona="investidor"
-              title="Investidores PF"
-              subtitle="Pessoas físicas que investem em leilões"
+              title="Investidores"
+              subtitle="Pessoas que investem em leilões"
               todayItems={investidorToday}
               nexusItems={investidorWithNexus}
               ctaText="Iniciar minha jornada"
@@ -179,8 +159,8 @@ export default function SegmentationTransformation() {
             />
           </div>
 
-          {/* Assessores Card - Larger */}
-          <div className="lg:col-span-7 lg:-mt-8">
+          {/* Assessores Card */}
+          <div>
             <TransformationCard
               persona="assessor"
               title="Assessores de Leilão"
@@ -194,53 +174,6 @@ export default function SegmentationTransformation() {
           </div>
         </div>
 
-        {/* Bottom Motivation */}
-        <div className="mt-16 text-center">
-          <p className="text-lg text-[#2B3259]/60 max-w-2xl mx-auto mb-6">
-            A diferença entre amadores e profissionais está nas ferramentas.{' '}
-            <span className="font-semibold text-[#2B3259]">
-              A Nexus é o upgrade que você precisa.
-            </span>
-          </p>
-
-          {/* Journey Steps Summary */}
-          <div className="flex flex-wrap justify-center gap-8 mt-8">
-            {['HOJE', 'NEXUS', 'SUCESSO'].map((step, index) => (
-              <div key={step} className="flex items-center gap-4">
-                <div
-                  className={`
-                    w-10 h-10
-                    rounded-full
-                    flex items-center justify-center
-                    font-bold text-sm
-                    ${
-                      index === 0
-                        ? 'bg-[#2B3259]/10 text-[#2B3259]/50'
-                        : index === 1
-                          ? 'bg-[#5C5CFF] text-white shadow-[0_6px_20px_-5px_rgba(92,92,255,0.4)]'
-                          : 'bg-[#5C5CFF] text-white shadow-[0_6px_20px_-5px_rgba(92,92,255,0.4)]'
-                    }
-                  `}
-                >
-                  {index + 1}
-                </div>
-                <span
-                  className={`
-                    font-semibold text-sm
-                    ${index === 0 ? 'text-[#2B3259]/50' : 'text-[#2B3259]'}
-                  `}
-                >
-                  {step}
-                </span>
-                {index < 2 && (
-                  <span className="text-[#5C5CFF]/40 ml-2" aria-hidden="true">
-                    &#8594;
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

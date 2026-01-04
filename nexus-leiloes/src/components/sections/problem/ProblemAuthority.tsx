@@ -306,11 +306,12 @@ export default function ProblemAuthority() {
         {/* Logical Conclusion */}
         <div className="mt-12 text-center max-w-3xl mx-auto">
           <p className="text-xl md:text-2xl text-[#2B3259]/60 leading-relaxed">
-            Ferramentas separadas significam{' '}
-            <span className="font-semibold text-[#2B3259]">informação espalhada</span>.
+            Você trabalha demais para{' '}
+            <span className="font-semibold text-[#2B3259]">organizar</span>{' '}
+            e de menos para{' '}
+            <span className="font-semibold text-[#2B3259]">decidir</span>.
             <br />
-            Informação espalhada significa{' '}
-            <span className="font-semibold text-[#2B3259]">visão incompleta</span>.
+            A energia vai toda para o processo, não para o resultado.
           </p>
         </div>
 

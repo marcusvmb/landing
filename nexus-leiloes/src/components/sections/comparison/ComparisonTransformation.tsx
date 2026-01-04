@@ -265,22 +265,6 @@ export default function ComparisonTransformation() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Eyebrow */}
-        <div className="text-center mb-6">
-          <span
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#2B3259]/10 to-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/20"
-          >
-            <span className="text-lg">
-              <span className="grayscale opacity-50">x</span>
-              <span className="mx-2 text-[#5C5CFF]">-&gt;</span>
-              <span className="text-[#5C5CFF]">*</span>
-            </span>
-            <span className="text-sm font-semibold text-[#2B3259]">
-              Veja sua transformação
-            </span>
-          </span>
-        </div>
-
         {/* Headline */}
         <h2
           id="comparison-transform-heading"
@@ -411,7 +395,7 @@ export default function ComparisonTransformation() {
         >
           <div className="grid grid-cols-12 gap-6 items-center">
             {/* Before Summary */}
-            <div className="col-span-12 md:col-span-4 text-center md:text-left">
+            <div className="col-span-12 md:col-span-6 text-center md:text-left">
               <p className="text-sm text-[#2B3259]/40 uppercase tracking-widest mb-1">
                 De
               </p>
@@ -423,31 +407,8 @@ export default function ComparisonTransformation() {
               </p>
             </div>
 
-            {/* Arrow */}
-            <div className="col-span-12 md:col-span-4 flex justify-center">
-              <div
-                className="flex items-center gap-4 px-6 py-3 bg-[#5C5CFF]/10 rounded-full border border-[#5C5CFF]/20"
-              >
-                <span className="text-[#2B3259]/30">- - -</span>
-                <svg
-                  className="w-6 h-6 text-[#5C5CFF]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-                <span className="text-[#5C5CFF] font-bold">NEXUS</span>
-              </div>
-            </div>
-
             {/* After Summary */}
-            <div className="col-span-12 md:col-span-4 text-center md:text-right">
+            <div className="col-span-12 md:col-span-6 text-center md:text-right">
               <p className="text-sm text-[#5C5CFF] uppercase tracking-widest mb-1">
                 Para
               </p>

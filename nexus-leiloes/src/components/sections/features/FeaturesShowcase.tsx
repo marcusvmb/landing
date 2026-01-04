@@ -2,6 +2,7 @@
 
 import { useLeadModal } from '@/contexts/LeadModalContext';
 import { LazyVideo } from '@/components/ui/LazyVideo';
+import { FadeInWhenVisible, StaggerContainer, StaggerItem } from '@/components/animations';
 
 /**
  * FEATURES SECTION V2: SHOWCASE CINEMATOGRÁFICO
@@ -166,71 +167,83 @@ export default function FeaturesShowcase() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <header className="text-center mb-16 lg:mb-20">
-          <h2
-            id="features-showcase-heading"
-            className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6"
-          >
-            Tudo em um só lugar.{' '}
-            <span className="text-[#5C5CFF]">Finalmente.</span>
-          </h2>
-          <p className="text-lg lg:text-xl text-[#2B3259]/60 max-w-2xl mx-auto leading-relaxed">
-            Busque, analise, decida e gerencie. Sem alternar entre abas, planilhas ou apps.
-          </p>
-        </header>
+        <FadeInWhenVisible>
+          <header className="text-center mb-16 lg:mb-20">
+            <h2
+              id="features-showcase-heading"
+              className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6"
+            >
+              Tudo em um só lugar.{' '}
+              <span className="text-[#5C5CFF]">Finalmente.</span>
+            </h2>
+            <p className="text-lg lg:text-xl text-[#2B3259]/60 max-w-2xl mx-auto leading-relaxed">
+              Busque, analise, decida e gerencie. Sem alternar entre abas, planilhas ou apps.
+            </p>
+          </header>
+        </FadeInWhenVisible>
 
         {/* Hero Features */}
         <div className="space-y-16 lg:space-y-20 mb-16 lg:mb-20">
           {heroFeatures.map((feature, index) => (
-            <HeroFeatureCard
+            <FadeInWhenVisible
               key={feature.id}
-              feature={feature}
-              reversed={index % 2 !== 0}
-            />
+              direction={index % 2 === 0 ? 'left' : 'right'}
+              delay={0.1}
+            >
+              <HeroFeatureCard
+                feature={feature}
+                reversed={index % 2 !== 0}
+              />
+            </FadeInWhenVisible>
           ))}
         </div>
 
         {/* Secondary Features - Asymmetric Bento Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 max-w-5xl mx-auto mb-16 lg:mb-20">
           {/* Card em destaque (maior) */}
-          <div className="lg:col-span-7">
+          <FadeInWhenVisible direction="left" className="lg:col-span-7">
             <FeaturedFeatureCard feature={featuredFeature} />
-          </div>
+          </FadeInWhenVisible>
 
           {/* Cards menores empilhados */}
-          <div className="lg:col-span-5 flex flex-col gap-5 lg:gap-6">
+          <StaggerContainer
+            staggerDelay={0.15}
+            delayChildren={0.2}
+            className="lg:col-span-5 flex flex-col gap-5 lg:gap-6"
+          >
             {secondaryFeatures.map((feature) => (
-              <SecondaryFeatureCard key={feature.id} feature={feature} />
+              <StaggerItem key={feature.id} direction="right">
+                <SecondaryFeatureCard feature={feature} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
         {/* CTA */}
-        <div className="text-center">
-          <button
-            type="button"
-            onClick={openModal}
-            className="
-              bg-[#5C5CFF]
-              text-white
-              font-bold text-lg
-              px-10 py-5
-              rounded-full
-              shadow-[0_20px_50px_-12px_rgba(92,92,255,0.5)]
-              transition-all duration-300
-              ease-[cubic-bezier(0.34,1.56,0.64,1)]
-              hover:-translate-y-1 hover:scale-[1.02]
-              hover:shadow-[0_25px_60px_-12px_rgba(92,92,255,0.6)]
-              active:translate-y-0 active:scale-[0.98]
-              cursor-pointer
-            "
-          >
-            Garantir Meu Acesso Antecipado
-          </button>
-          <p className="mt-5 text-sm text-[#2B3259]/50">
-            Vagas limitadas para o desconto de lançamento
-          </p>
-        </div>
+        <FadeInWhenVisible delay={0.2}>
+          <div className="text-center">
+            <button
+              type="button"
+              onClick={openModal}
+              className="
+                bg-[#5C5CFF]
+                text-white
+                font-bold text-lg
+                px-10 py-5
+                rounded-full
+                shadow-[0_20px_50px_-12px_rgba(92,92,255,0.5)]
+                transition-all duration-300
+                ease-[cubic-bezier(0.34,1.56,0.64,1)]
+                hover:-translate-y-1 hover:scale-[1.02]
+                hover:shadow-[0_25px_60px_-12px_rgba(92,92,255,0.6)]
+                active:translate-y-0 active:scale-[0.98]
+                cursor-pointer
+              "
+            >
+              Garantir Meu Acesso Antecipado
+            </button>
+          </div>
+        </FadeInWhenVisible>
       </div>
     </section>
   );

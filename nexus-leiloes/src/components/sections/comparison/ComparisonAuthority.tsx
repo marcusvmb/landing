@@ -379,9 +379,6 @@ export default function ComparisonAuthority() {
           >
             Virar profissional agora
           </button>
-          <p className="mt-4 text-sm text-[#2B3259]/50">
-            Entre para o time dos investidores que levam a sério
-          </p>
         </div>
       </div>
     </section>

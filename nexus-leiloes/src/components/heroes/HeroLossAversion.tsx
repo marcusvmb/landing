@@ -1,6 +1,11 @@
 'use client';
 
+import { motion, useReducedMotion } from 'framer-motion';
 import { useLeadModal } from '@/contexts/LeadModalContext';
+import { ContainerScroll } from '@/components/animations/ContainerScroll';
+
+// Configurações de animação
+const ease: [number, number, number, number] = [0.4, 0, 0.2, 1]; // smooth easing
 
 /**
  * HERO 1: LOSS AVERSION
@@ -31,6 +36,15 @@ import { useLeadModal } from '@/contexts/LeadModalContext';
 
 export default function HeroLossAversion() {
   const { openModal } = useLeadModal();
+  const prefersReducedMotion = useReducedMotion();
+
+  // Animações (respeitam reduced motion)
+  const fadeUp = prefersReducedMotion
+    ? {}
+    : {
+        initial: { opacity: 0, y: 24 },
+        animate: { opacity: 1, y: 0 },
+      };
 
   return (
     <section
@@ -82,7 +96,11 @@ export default function HeroLossAversion() {
         "
       >
         {/* Massive Headline - Typography IS the visual */}
-        <div className="text-center max-w-5xl">
+        <motion.div
+          className="text-center max-w-5xl"
+          {...fadeUp}
+          transition={{ duration: 0.7, ease }}
+        >
           <h1
             id="hero-loss-aversion-heading"
             className="
@@ -134,18 +152,22 @@ export default function HeroLossAversion() {
             <br />
             <span className="text-[#5C5CFF]/50">no Brasil</span>
           </h1>
-        </div>
+        </motion.div>
 
         {/* Subheadline - Curta e direta */}
-        <p className="mt-8 md:mt-10 text-xl md:text-2xl text-[#2B3259]/60 text-center max-w-xl">
+        <motion.p
+          className="mt-8 md:mt-10 text-xl md:text-2xl text-[#2B3259]/60 text-center max-w-xl"
+          {...fadeUp}
+          transition={{ duration: 0.6, delay: 0.3, ease }}
+        >
           Busque. Analise. Gerencie.{' '}
           <span className="text-[#5C5CFF] font-semibold">
             Tudo em um só lugar.
           </span>
-        </p>
+        </motion.p>
 
-        {/* CTA Button - Maior que outros heroes */}
-        <button
+        {/* CTA Button - Antes do MacBook para melhor visibilidade */}
+        <motion.button
           type="button"
           onClick={openModal}
           className="
@@ -171,28 +193,26 @@ export default function HeroLossAversion() {
             focus-visible:outline-[#2B3259]
             cursor-pointer
           "
+          initial={prefersReducedMotion ? {} : { opacity: 0, y: 20, scale: 0.95 }}
+          animate={prefersReducedMotion ? {} : { opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.5, ease }}
         >
           Garantir meu acesso antecipado
           <span aria-hidden="true"> &rarr;</span>
-        </button>
+        </motion.button>
 
-        {/* Microcopy - Risk Removers */}
-        <ul className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-[#2B3259]/70" aria-label="Beneficios inclusos">
-          <li className="flex items-center gap-1.5">
-            <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
-            Vagas limitadas para fundadores
-          </li>
-          <li className="flex items-center gap-1.5">
-            <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
-            Sem cartão de crédito
-          </li>
-          <li className="flex items-center gap-1.5">
-            <span className="text-[#5C5CFF] font-medium" aria-hidden="true">&#10003;</span>
-            7 dias grátis
-          </li>
-        </ul>
       </div>
 
+      {/* Screenshot com animação 3D no scroll */}
+      <div className="relative z-10 w-full">
+        <ContainerScroll>
+          <img
+            src="/screenshot-app.png"
+            alt="Interface do Nexus Leilões mostrando oportunidades de imóveis em leilão"
+            className="w-full h-auto"
+          />
+        </ContainerScroll>
+      </div>
     </section>
   );
 }
