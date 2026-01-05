@@ -1,6 +1,0 @@
-{
-  "buildCommand": "cd nexus-leiloes && npm run build",
-  "outputDirectory": "nexus-leiloes/.next",
-  "installCommand": "cd nexus-leiloes && npm install",
-  "framework": "nextjs"
-}
