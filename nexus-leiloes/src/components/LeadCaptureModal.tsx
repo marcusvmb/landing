@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, FormEvent } from 'react'
+import { useState, useEffect, FormEvent, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLeadModal } from '@/contexts/LeadModalContext'
 import { supabase, Lead } from '@/lib/supabase'
@@ -39,14 +39,31 @@ export default function LeadCaptureModal() {
   const [errorMessage, setErrorMessage] = useState('')
   const [leadId, setLeadId] = useState<string | null>(null)
   const [isMobile, setIsMobile] = useState(false)
+  const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false)
+  const countryDropdownRef = useRef<HTMLDivElement>(null)
 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    countryCode: '+55',
     phone: '',
     profile: 'investidor_pf' as Lead['profile'],
     suggestion: ''
   })
+
+  // Lista de códigos de país mais comuns
+  const countryCodes = [
+    { code: '+55', country: 'BR', flag: '🇧🇷' },
+    { code: '+1', country: 'US', flag: '🇺🇸' },
+    { code: '+351', country: 'PT', flag: '🇵🇹' },
+    { code: '+34', country: 'ES', flag: '🇪🇸' },
+    { code: '+39', country: 'IT', flag: '🇮🇹' },
+    { code: '+44', country: 'UK', flag: '🇬🇧' },
+    { code: '+33', country: 'FR', flag: '🇫🇷' },
+    { code: '+49', country: 'DE', flag: '🇩🇪' },
+    { code: '+81', country: 'JP', flag: '🇯🇵' },
+    { code: '+86', country: 'CN', flag: '🇨🇳' },
+  ]
 
   // Detect mobile/desktop
   useEffect(() => {
@@ -56,15 +73,30 @@ export default function LeadCaptureModal() {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // Close country dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (countryDropdownRef.current && !countryDropdownRef.current.contains(event.target as Node)) {
+        setIsCountryDropdownOpen(false)
+      }
+    }
+    if (isCountryDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [isCountryDropdownOpen])
+
   // Reset form when modal opens
   useEffect(() => {
     if (isOpen) {
       setFormState('step1')
       setErrorMessage('')
       setLeadId(null)
+      setIsCountryDropdownOpen(false)
       setFormData({
         name: '',
         email: '',
+        countryCode: '+55',
         phone: '',
         profile: 'investidor_pf',
         suggestion: ''
@@ -107,12 +139,13 @@ export default function LeadCaptureModal() {
     setErrorMessage('')
 
     try {
+      const fullPhone = `${formData.countryCode} ${formData.phone}`
       const { data, error } = await supabase
         .from('leads')
         .insert([{
           name: formData.name,
           email: formData.email,
-          phone: formData.phone,
+          phone: fullPhone,
           profile: formData.profile
         }])
         .select('id')
@@ -200,20 +233,6 @@ export default function LeadCaptureModal() {
           <p className="text-gray-600 mb-6">
             Você agora é um <span className="font-semibold text-[#5C5CFF]">Fundador</span>.
           </p>
-
-          <div className="bg-gray-50 rounded-xl p-4 mb-6 text-left">
-            <p className="text-sm font-medium text-gray-700 mb-3">Próximos passos:</p>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li className="flex items-start gap-2">
-                <span className="w-5 h-5 bg-[#5C5CFF] text-white rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">1</span>
-                <span>Aguarde o lançamento</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="w-5 h-5 bg-[#5C5CFF] text-white rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">2</span>
-                <span>Seu desconto será aplicado automaticamente</span>
-              </li>
-            </ul>
-          </div>
 
           <motion.button
             onClick={closeModal}
@@ -304,7 +323,7 @@ export default function LeadCaptureModal() {
           {/* Header */}
           <div className="text-center mb-4">
             <h3 id="modal-title" className="text-2xl font-bold text-[#2B3259] mb-1">
-              Garanta sua Vaga de Fundador
+              Reserve seu lugar de fundador
             </h3>
             <p className="text-sm text-gray-500">
               Vagas limitadas para fundadores
@@ -357,17 +376,96 @@ export default function LeadCaptureModal() {
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                 WhatsApp
               </label>
-              <input
-                type="tel"
-                id="phone"
-                required
-                inputMode="tel"
-                autoComplete="tel"
-                value={formData.phone}
-                onChange={handlePhoneChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5C5CFF] focus:border-transparent outline-none transition-all"
-                placeholder="(11) 99999-9999"
-              />
+              <div className="flex gap-2">
+                {/* Código do país - Dropdown Premium */}
+                <div className="relative" ref={countryDropdownRef}>
+                  <button
+                    type="button"
+                    onClick={() => setIsCountryDropdownOpen(!isCountryDropdownOpen)}
+                    className={`
+                      flex items-center gap-1.5 px-3 py-3
+                      border rounded-xl outline-none
+                      transition-all
+                      ${isCountryDropdownOpen
+                        ? 'border-transparent ring-2 ring-[#5C5CFF]'
+                        : 'border-gray-300'
+                      }
+                    `}
+                  >
+                    <span className="text-lg leading-none">
+                      {countryCodes.find(c => c.code === formData.countryCode)?.flag}
+                    </span>
+                    <span className="text-sm font-medium text-gray-700 min-w-[40px]">
+                      {formData.countryCode}
+                    </span>
+                    <svg
+                      className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${isCountryDropdownOpen ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>
+                    {isCountryDropdownOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -8, scale: 0.96 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -8, scale: 0.96 }}
+                        transition={{ duration: 0.15, ease: 'easeOut' }}
+                        className={`
+                          absolute z-50 mt-1.5
+                          bg-white border border-gray-200 rounded-xl
+                          shadow-[0_10px_40px_-10px_rgba(0,0,0,0.2)]
+                          overflow-hidden
+                          ${isMobile ? 'left-0 right-auto w-[140px]' : 'left-0 w-[160px]'}
+                        `}
+                      >
+                        <div className="max-h-[200px] overflow-y-auto py-1 scrollbar-thin">
+                          {countryCodes.map((country) => (
+                            <button
+                              key={country.code}
+                              type="button"
+                              onClick={() => {
+                                setFormData(prev => ({ ...prev, countryCode: country.code }))
+                                setIsCountryDropdownOpen(false)
+                              }}
+                              className={`
+                                w-full flex items-center gap-3 px-3 py-2.5
+                                text-left transition-colors duration-100
+                                ${formData.countryCode === country.code
+                                  ? 'bg-[#5C5CFF]/10 text-[#5C5CFF]'
+                                  : 'hover:bg-gray-50 text-gray-700'
+                                }
+                              `}
+                            >
+                              <span className="text-xl leading-none">{country.flag}</span>
+                              <span className="text-sm font-medium">{country.code}</span>
+                              <span className="text-xs text-gray-400 ml-auto">{country.country}</span>
+                            </button>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Número */}
+                <input
+                  type="tel"
+                  id="phone"
+                  required
+                  inputMode="tel"
+                  autoComplete="tel"
+                  value={formData.phone}
+                  onChange={handlePhoneChange}
+                  className="flex-1 min-w-0 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#5C5CFF] focus:border-transparent outline-none transition-all"
+                  placeholder="(11) 99999-9999"
+                />
+              </div>
             </div>
 
             {/* Perfil - Cards com ícones */}
@@ -375,8 +473,8 @@ export default function LeadCaptureModal() {
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Qual seu perfil?
               </label>
-              <div className="grid grid-cols-2 gap-2">
-                {/* Investidor PF */}
+              <div className="grid grid-cols-3 gap-2">
+                {/* Investidor */}
                 <button
                   type="button"
                   onClick={() => setFormData(prev => ({ ...prev, profile: 'investidor_pf' }))}
@@ -408,28 +506,12 @@ export default function LeadCaptureModal() {
                   <span className="text-xs font-medium">Assessor</span>
                 </button>
 
-                {/* Escritório */}
+                {/* Moradia */}
                 <button
                   type="button"
-                  onClick={() => setFormData(prev => ({ ...prev, profile: 'escritorio' }))}
+                  onClick={() => setFormData(prev => ({ ...prev, profile: 'moradia' }))}
                   className={`p-3 rounded-xl border-2 transition-all flex flex-col items-center gap-1 ${
-                    formData.profile === 'escritorio'
-                      ? 'border-[#5C5CFF] bg-[#5C5CFF]/5 text-[#5C5CFF]'
-                      : 'border-gray-200 hover:border-gray-300 text-gray-600'
-                  }`}
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                  <span className="text-xs font-medium">Escritório</span>
-                </button>
-
-                {/* Comprador */}
-                <button
-                  type="button"
-                  onClick={() => setFormData(prev => ({ ...prev, profile: 'comprador' }))}
-                  className={`p-3 rounded-xl border-2 transition-all flex flex-col items-center gap-1 ${
-                    formData.profile === 'comprador'
+                    formData.profile === 'moradia'
                       ? 'border-[#5C5CFF] bg-[#5C5CFF]/5 text-[#5C5CFF]'
                       : 'border-gray-200 hover:border-gray-300 text-gray-600'
                   }`}
@@ -437,7 +519,7 @@ export default function LeadCaptureModal() {
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
-                  <span className="text-xs font-medium">Comprador</span>
+                  <span className="text-xs font-medium">Moradia</span>
                 </button>
               </div>
             </div>
@@ -472,7 +554,7 @@ export default function LeadCaptureModal() {
               </>
             ) : (
               <>
-                Garantir Minha Vaga
+                Confirmar minha reserva
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -482,7 +564,7 @@ export default function LeadCaptureModal() {
 
           {/* Microcopy */}
           <p className="mt-4 text-center text-xs text-gray-500">
-            Sem spam. Você será avisado antes do lançamento.
+            Sem spam. Avisaremos você primeiro quando lançarmos.
           </p>
         </form>
       )}

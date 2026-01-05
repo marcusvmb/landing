@@ -45,6 +45,7 @@
 
 import { useState } from 'react';
 import { useLeadModal } from '@/contexts/LeadModalContext';
+import { FadeInWhenVisible, StaggerContainer, StaggerItem } from '@/components/animations';
 
 interface FAQItem {
   id: string;
@@ -138,26 +139,32 @@ export default function FAQLossAversion() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Headline */}
-        <h2 id="faq-loss-heading" className="text-center text-3xl sm:text-4xl md:text-5xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
-          Dúvidas que podem{' '}
-          <br className="hidden sm:block" />
-          <span className="text-[#5C5CFF]">te custar caro</span>
-        </h2>
+        <FadeInWhenVisible>
+          <h2 id="faq-loss-heading" className="text-center text-3xl sm:text-4xl md:text-5xl font-black tracking-[-0.03em] leading-[1.1] text-[#2B3259] mb-6">
+            Dúvidas que podem{' '}
+            <br className="hidden sm:block" />
+            <span className="text-[#5C5CFF]">te custar caro</span>
+          </h2>
+        </FadeInWhenVisible>
 
         {/* Subheadline */}
-        <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Cada pergunta sem resposta é uma decisão adiada.{' '}
-          <span className="font-semibold text-[#2B3259]">Cada decisão adiada custa dinheiro.</span>
-        </p>
+        <FadeInWhenVisible delay={0.1}>
+          <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
+            Cada pergunta sem resposta é uma decisão adiada.{' '}
+            <span className="font-semibold text-[#2B3259]">Cada decisão adiada custa dinheiro.</span>
+          </p>
+        </FadeInWhenVisible>
 
         {/* Main Content */}
         <div className="max-w-3xl mx-auto">
           {/* FAQ Accordion */}
-          <div className="space-y-4">
+          <StaggerContainer staggerDelay={0.08} delayChildren={0.1} className="space-y-4">
             {faqItems.map((item) => (
-              <FAQAccordionItem key={item.id} item={item} isOpen={openId === item.id} onToggle={() => toggleFAQ(item.id)} />
+              <StaggerItem key={item.id}>
+                <FAQAccordionItem item={item} isOpen={openId === item.id} onToggle={() => toggleFAQ(item.id)} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </section>

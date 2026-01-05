@@ -73,13 +73,6 @@ export function ContainerScroll({ titleComponent, children }: ContainerScrollPro
             style={{
               background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)',
               padding: '8px',
-              boxShadow: `
-                0 0 0 1px rgba(255,255,255,0.05),
-                0 4px 6px rgba(0,0,0,0.1),
-                0 12px 24px rgba(0,0,0,0.15),
-                0 24px 48px rgba(0,0,0,0.2),
-                0 48px 96px rgba(0,0,0,0.25)
-              `,
             }}
           >
             {/* Barra de título (estilo browser/app) */}
@@ -118,14 +111,6 @@ export function ContainerScroll({ titleComponent, children }: ContainerScrollPro
             </div>
           </div>
 
-          {/* Sombra projetada */}
-          <div
-            className="absolute -bottom-8 left-[10%] right-[10%] h-[40px] rounded-[50%] -z-10"
-            style={{
-              background: 'radial-gradient(ellipse, rgba(92,92,255,0.2) 0%, transparent 70%)',
-              filter: 'blur(20px)',
-            }}
-          />
         </motion.div>
       </div>
     </div>

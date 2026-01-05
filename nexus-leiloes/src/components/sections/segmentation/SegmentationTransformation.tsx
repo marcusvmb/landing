@@ -1,6 +1,7 @@
 'use client';
 
 import { useLeadModal } from '@/contexts/LeadModalContext';
+import { FadeInWhenVisible, StaggerContainer, StaggerItem } from '@/components/animations';
 
 /**
  * SEGMENTATION SECTION V2: TRANSFORMATION
@@ -58,31 +59,31 @@ import { useLeadModal } from '@/contexts/LeadModalContext';
  */
 
 const investidorToday = [
-  'Buscas soltas em +20 sites',
-  'Cálculos manuais em planilhas',
-  'Dados espalhados sem organização',
-  'Decisões baseadas em "achismo"',
+  '4 horas por dia vasculhando vários sites diferentes',
+  'Planilhas com 47 colunas que ninguém entende',
+  '15 abas abertas e ainda assim perde informação',
+  'Oportunidades perdidas por falta de tempo',
 ];
 
 const investidorWithNexus = [
-  'Encontre oportunidades antes da concorrência',
-  'Calcule o ROI real antes de arrematar',
-  'Organize todos os seus leilões em um só lugar',
-  'Tome decisões com confiança',
+  'Encontre leilões lucrativos em menos de 8 minutos',
+  'Calcule ROI, custos e riscos em 3 cliques',
+  'Todas as oportunidades em 1 painel organizado',
+  'Relatórios prontos com 12 métricas essenciais',
 ];
 
 const assessorToday = [
-  'Uma planilha para cada cliente',
-  'Relatórios montados manualmente',
-  'Zero visibilidade de comissões',
-  'Apresentações pouco profissionais',
+  'Limite de clientes que você consegue atender',
+  'Tempo consumido em tarefas que não pagam',
+  'Crescimento travado por falta de organização',
+  'Renda estagnada mesmo trabalhando mais',
 ];
 
 const assessorWithNexus = [
-  'Gerencie múltiplos clientes em um painel',
-  'Gere relatórios profissionais com sua marca',
-  'Acompanhe comissões e resultados',
-  'Impressione clientes com análises detalhadas',
+  'Dobre sua carteira sem dobrar seu trabalho',
+  'Tempo livre para prospectar novos clientes',
+  'Estrutura para crescer de forma organizada',
+  'Ganhe mais atendendo cada cliente em menos tempo',
 ];
 
 export default function SegmentationTransformation() {
@@ -119,59 +120,63 @@ export default function SegmentationTransformation() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         {/* Headline */}
-        <h2
-          id="segmentation-transform-heading"
-          className="
-            text-center
-            text-3xl sm:text-4xl md:text-5xl
-            font-black
-            tracking-[-0.03em]
-            leading-[1.1]
-            text-[#2B3259]
-            mb-6
-          "
-        >
-          Cada perfil,{' '}
-          <br className="hidden sm:block" />
-          uma <span className="text-[#5C5CFF]">jornada</span> de{' '}
-          <span className="text-[#5C5CFF]">transformação</span>
-        </h2>
+        <FadeInWhenVisible>
+          <h2
+            id="segmentation-transform-heading"
+            className="
+              text-center
+              text-3xl sm:text-4xl md:text-5xl
+              font-black
+              tracking-[-0.03em]
+              leading-[1.1]
+              text-[#2B3259]
+              mb-6
+            "
+          >
+            Cada perfil,{' '}
+            <br className="hidden sm:block" />
+            uma <span className="text-[#5C5CFF]">jornada</span> de{' '}
+            <span className="text-[#5C5CFF]">transformação</span>
+          </h2>
+        </FadeInWhenVisible>
 
         {/* Subheadline */}
-        <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Veja como a Nexus transforma sua operação, seja você um investidor
-          individual ou um assessor gerenciando múltiplos clientes.
-        </p>
+        <FadeInWhenVisible delay={0.1}>
+          <p className="text-center text-lg text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
+            Veja como a Nexus transforma sua operação, seja você um investidor
+            individual ou um assessor gerenciando múltiplos clientes.
+          </p>
+        </FadeInWhenVisible>
 
         {/* Persona Cards - Equal Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Investidores Card */}
-          <div>
+          <FadeInWhenVisible direction="left" delay={0.1}>
             <TransformationCard
               persona="investidor"
               title="Investidores"
               subtitle="Pessoas que investem em leilões"
               todayItems={investidorToday}
               nexusItems={investidorWithNexus}
-              ctaText="Iniciar minha jornada"
+              ctaText="Garantir meu preço de fundador"
               primaryColor="#5C5CFF"
               onOpenModal={openModal}
             />
-          </div>
+          </FadeInWhenVisible>
 
           {/* Assessores Card */}
-          <div>
+          <FadeInWhenVisible direction="right" delay={0.2}>
             <TransformationCard
               persona="assessor"
               title="Assessores de Leilão"
               subtitle="Profissionais que assessoram clientes"
               todayItems={assessorToday}
               nexusItems={assessorWithNexus}
-              ctaText="Evoluir minha assessoria"
+              ctaText="Garantir meu preço de fundador"
               primaryColor="#5C5CFF"
               onOpenModal={openModal}
             />
-          </div>
+          </FadeInWhenVisible>
         </div>
 
       </div>
@@ -404,7 +409,7 @@ function TransformationCard({
           </button>
 
           <p className="mt-3 text-center text-xs text-[#2B3259]/40">
-            Acesso antecipado + desconto exclusivo
+            Desconto exclusivo para fundadores
           </p>
         </div>
       </div>

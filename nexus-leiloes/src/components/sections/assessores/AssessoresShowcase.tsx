@@ -212,12 +212,12 @@ export default function AssessoresShowcase() {
               cursor-pointer
             "
           >
-            Quero Gerenciar Meus Clientes
+            Reservar minha vaga de fundador
           </button>
 
           {/* Microcopy de Exclusividade */}
           <p className="mt-4 text-sm text-white/40">
-            Funcionalidade indisponível em outras plataformas
+            Entre na lista e seja avisado no lançamento
           </p>
         </div>
       </div>

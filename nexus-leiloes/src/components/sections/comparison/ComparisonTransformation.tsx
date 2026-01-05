@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useLeadModal } from '@/contexts/LeadModalContext';
+import { FadeInWhenVisible, StaggerContainer, StaggerItem } from '@/components/animations';
 
 /**
  * COMPARISON SECTION V2: TRANSFORMATION
@@ -72,13 +73,13 @@ const transformationData = [
     id: 'busca',
     before: {
       icon: 'tabs',
-      title: '20+ Sites Abertos',
-      subtitle: 'Caos de abas e navegadores',
+      title: 'Buscas Dispersas',
+      subtitle: 'Pulando de site em site',
       visual: 'chaos',
     },
     after: {
       icon: 'dashboard',
-      title: '1 Busca Unificada',
+      title: 'Busca Unificada',
       subtitle: 'Tudo em um lugar só',
       visual: 'unified',
     },
@@ -87,14 +88,14 @@ const transformationData = [
     id: 'tempo',
     before: {
       icon: 'clock',
-      title: '2 Horas/Dia',
-      subtitle: 'Tempo perdido buscando',
+      title: 'Manhãs Inteiras',
+      subtitle: 'Preso na frente do computador',
       visual: 'slow',
     },
     after: {
       icon: 'rocket',
-      title: '15 Minutos/Dia',
-      subtitle: 'Eficiência máxima',
+      title: 'Tempo de Sobra',
+      subtitle: 'Foque no que realmente importa',
       visual: 'fast',
     },
   },
@@ -102,14 +103,14 @@ const transformationData = [
     id: 'análise',
     before: {
       icon: 'spreadsheet',
-      title: 'Planilhas Manuais',
-      subtitle: 'Erros de cálculo frequentes',
+      title: 'Excel + Word + Notion',
+      subtitle: 'Ferramentas que não conversam',
       visual: 'manual',
     },
     after: {
       icon: 'calculator',
-      title: 'Calculadora Automática',
-      subtitle: '100% precisão garantida',
+      title: 'Tudo Integrado',
+      subtitle: 'Análise e gestão em 1 lugar',
       visual: 'auto',
     },
   },
@@ -117,14 +118,14 @@ const transformationData = [
     id: 'erros',
     before: {
       icon: 'error',
-      title: 'R$15k/Ano em Erros',
-      subtitle: 'Decisões baseadas em achismo',
+      title: 'Retrabalho Constante',
+      subtitle: 'Refazendo tarefas o tempo todo',
       visual: 'loss',
     },
     after: {
       icon: 'check',
-      title: 'Análise Multicenários',
-      subtitle: '5 simulações por imóvel',
+      title: 'Fluxo Otimizado',
+      subtitle: 'Cada etapa feita uma vez só',
       visual: 'precision',
     },
   },
@@ -132,14 +133,14 @@ const transformationData = [
     id: 'organização',
     before: {
       icon: 'mess',
-      title: 'Caos de Arquivos',
-      subtitle: 'Oportunidades perdidas',
+      title: '5 Ferramentas',
+      subtitle: 'Notion, Excel, Word...',
       visual: 'disorganized',
     },
     after: {
       icon: 'folder',
-      title: 'Dashboard Central',
-      subtitle: 'Controle visual total',
+      title: '1 Dashboard',
+      subtitle: 'Tudo integrado',
       visual: 'organized',
     },
   },
@@ -147,14 +148,14 @@ const transformationData = [
     id: 'relatorios',
     before: {
       icon: 'screenshot',
-      title: 'Prints Amadores',
-      subtitle: 'Apresentações vergonhosas',
+      title: 'Print de WhatsApp',
+      subtitle: 'Cliente acha que você é amador',
       visual: 'amateur',
     },
     after: {
       icon: 'pdf',
-      title: 'PDFs Profissionais',
-      subtitle: 'Relatórios em 1 clique',
+      title: 'PDF Executivo',
+      subtitle: 'Impressiona na primeira',
       visual: 'professional',
     },
   },
@@ -266,30 +267,34 @@ export default function ComparisonTransformation() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Headline */}
-        <h2
-          id="comparison-transform-heading"
-          className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-[-0.03em] leading-[0.95] text-[#2B3259] mb-6"
-        >
-          <span className="text-[#2B3259]/40">Antes</span>
-          {' '}e{' '}
-          <span className="text-[#5C5CFF]">depois</span>
-          <br />
-          da sua operação
-        </h2>
+        <FadeInWhenVisible>
+          <h2
+            id="comparison-transform-heading"
+            className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-[-0.03em] leading-[0.95] text-[#2B3259] mb-6"
+          >
+            <span className="text-[#2B3259]/40">Antes</span>
+            {' '}e{' '}
+            <span className="text-[#5C5CFF]">depois</span>
+            <br />
+            da sua operação
+          </h2>
+        </FadeInWhenVisible>
 
         {/* Subheadline */}
-        <p className="text-center text-lg md:text-xl text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
-          Veja a transformação que acontece quando você migra
-          <br className="hidden md:block" />
-          de ferramentas soltas para o Hub completo.
-        </p>
+        <FadeInWhenVisible delay={0.1}>
+          <p className="text-center text-lg md:text-xl text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
+            Veja a transformação que acontece quando você migra
+            <br className="hidden md:block" />
+            de ferramentas soltas para o Hub completo.
+          </p>
+        </FadeInWhenVisible>
 
         {/* Transformation Container */}
         <div className="relative">
           {/* Column Headers with visual treatment */}
           <div className="grid grid-cols-12 gap-4 lg:gap-8 mb-10">
             {/* Left Header - ANTES (Grayscale) */}
-            <div className="col-span-12 md:col-span-5">
+            <FadeInWhenVisible direction="left" delay={0.1} className="col-span-12 md:col-span-5">
               <div
                 className="p-5 bg-[#2B3259]/5 grayscale-[30%] rounded-2xl border border-[#2B3259]/10 text-center relative overflow-hidden"
               >
@@ -310,7 +315,7 @@ export default function ComparisonTransformation() {
                   </p>
                 </div>
               </div>
-            </div>
+            </FadeInWhenVisible>
 
             {/* Center - Transformation Arrow */}
             <div className="hidden md:flex md:col-span-2 items-center justify-center">
@@ -341,7 +346,7 @@ export default function ComparisonTransformation() {
             </div>
 
             {/* Right Header - DEPOIS (Full Color) */}
-            <div className="col-span-12 md:col-span-5">
+            <FadeInWhenVisible direction="right" delay={0.2} className="col-span-12 md:col-span-5">
               <div
                 className="p-5 bg-[#5C5CFF]/10 rounded-2xl border border-[#5C5CFF]/30 text-center relative overflow-hidden"
               >
@@ -362,15 +367,17 @@ export default function ComparisonTransformation() {
                   </p>
                 </div>
               </div>
-            </div>
+            </FadeInWhenVisible>
           </div>
 
           {/* Transformation Rows */}
-          <div className="space-y-5">
+          <StaggerContainer staggerDelay={0.1} delayChildren={0.2} className="space-y-5">
             {transformationData.map((item, index) => (
-              <TransformationRow key={item.id} item={item} index={index} />
+              <StaggerItem key={item.id}>
+                <TransformationRow item={item} index={index} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           {/* Vertical Divider Line (Desktop) */}
           <div
@@ -390,51 +397,55 @@ export default function ComparisonTransformation() {
         </div>
 
         {/* Transformation Summary */}
-        <div
-          className="mt-16 p-8 md:p-10 bg-gradient-to-r from-[#2B3259]/5 via-white to-[#5C5CFF]/10 rounded-3xl border border-[#5C5CFF]/20 shadow-[0_20px_60px_-15px_rgba(92,92,255,0.15)]"
-        >
-          <div className="grid grid-cols-12 gap-6 items-center">
-            {/* Before Summary */}
-            <div className="col-span-12 md:col-span-6 text-center md:text-left">
-              <p className="text-sm text-[#2B3259]/40 uppercase tracking-widest mb-1">
-                De
-              </p>
-              <p className="text-xl font-bold text-[#2B3259]/50 grayscale-[30%]">
-                Ferramentas Soltas
-              </p>
-              <p className="text-sm text-[#2B3259]/30">
-                Perda de tempo, erros, frustração
-              </p>
-            </div>
+        <FadeInWhenVisible delay={0.2}>
+          <div
+            className="mt-16 p-8 md:p-10 bg-gradient-to-r from-[#2B3259]/5 via-white to-[#5C5CFF]/10 rounded-3xl border border-[#5C5CFF]/20 shadow-[0_20px_60px_-15px_rgba(92,92,255,0.15)]"
+          >
+            <div className="grid grid-cols-12 gap-6 items-center">
+              {/* Before Summary */}
+              <div className="col-span-12 md:col-span-6 text-center md:text-left">
+                <p className="text-sm text-[#2B3259]/40 uppercase tracking-widest mb-1">
+                  De
+                </p>
+                <p className="text-xl font-bold text-[#2B3259]/50 grayscale-[30%]">
+                  Ferramentas Soltas
+                </p>
+                <p className="text-sm text-[#2B3259]/30">
+                  Perda de tempo, erros, frustração
+                </p>
+              </div>
 
-            {/* After Summary */}
-            <div className="col-span-12 md:col-span-6 text-center md:text-right">
-              <p className="text-sm text-[#5C5CFF] uppercase tracking-widest mb-1">
-                Para
-              </p>
-              <p className="text-xl font-bold text-[#5C5CFF]">
-                Hub Completo Integrado
-              </p>
-              <p className="text-sm text-[#2B3259]/60">
-                Eficiência, precisão, confiança
-              </p>
+              {/* After Summary */}
+              <div className="col-span-12 md:col-span-6 text-center md:text-right">
+                <p className="text-sm text-[#5C5CFF] uppercase tracking-widest mb-1">
+                  Para
+                </p>
+                <p className="text-xl font-bold text-[#5C5CFF]">
+                  Hub Completo Integrado
+                </p>
+                <p className="text-sm text-[#2B3259]/60">
+                  Eficiência, precisão, confiança
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </FadeInWhenVisible>
 
         {/* CTA */}
-        <div className="mt-12 text-center">
-          <button
-            type="button"
-            onClick={openModal}
-            className="bg-[#5C5CFF] text-white font-bold text-lg px-12 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer"
-          >
-            Iniciar minha transformação
-          </button>
-          <p className="mt-4 text-sm text-[#2B3259]/50">
-            Junte-se aos 547 que já transformaram sua operação
-          </p>
-        </div>
+        <FadeInWhenVisible delay={0.3}>
+          <div className="mt-12 text-center">
+            <button
+              type="button"
+              onClick={openModal}
+              className="bg-[#5C5CFF] text-white font-bold text-lg px-12 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer"
+            >
+              Entrar na lista de fundadores
+            </button>
+            <p className="mt-4 text-sm text-[#2B3259]/50">
+              Junte-se aos fundadores e garanta seu desconto
+            </p>
+          </div>
+        </FadeInWhenVisible>
       </div>
 
       {/* CSS for gradient animation */}

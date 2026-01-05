@@ -240,7 +240,7 @@ export default function FeaturesShowcase() {
                 cursor-pointer
               "
             >
-              Garantir Meu Acesso Antecipado
+              Garantir meu preço de fundador
             </button>
           </div>
         </FadeInWhenVisible>

@@ -10,7 +10,7 @@ export type Lead = {
   name: string
   email: string
   phone: string
-  profile: 'investidor_pf' | 'assessor' | 'escritorio' | 'comprador'
+  profile: 'investidor_pf' | 'assessor' | 'moradia'
   essential_tool?: string
   missing_tool?: string
   created_at?: string

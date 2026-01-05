@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from 'framer-motion';
 import { useLeadModal } from '@/contexts/LeadModalContext';
-import { ContainerScroll } from '@/components/animations/ContainerScroll';
+import { SpringFloatingMockup } from '@/components/animations/SpringFloatingMockup';
 
 // Configurações de animação
 const ease: [number, number, number, number] = [0.4, 0, 0.2, 1]; // smooth easing
@@ -197,21 +197,21 @@ export default function HeroLossAversion() {
           animate={prefersReducedMotion ? {} : { opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5, ease }}
         >
-          Garantir meu acesso antecipado
+          Reservar meu lugar de fundador
           <span aria-hidden="true"> &rarr;</span>
         </motion.button>
 
       </div>
 
-      {/* Screenshot com animação 3D no scroll */}
-      <div className="relative z-10 w-full">
-        <ContainerScroll>
+      {/* Screenshot com Spring Floating - Estilo Apple */}
+      <div className="relative z-10 w-full py-10 md:py-16">
+        <SpringFloatingMockup>
           <img
-            src="/screenshot-app.png"
+            src="/imagem_correta.png"
             alt="Interface do Nexus Leilões mostrando oportunidades de imóveis em leilão"
             className="w-full h-auto"
           />
-        </ContainerScroll>
+        </SpringFloatingMockup>
       </div>
     </section>
   );
