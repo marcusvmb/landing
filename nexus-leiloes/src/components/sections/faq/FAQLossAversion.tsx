@@ -46,6 +46,7 @@
 import { useState } from 'react';
 import { useLeadModal } from '@/contexts/LeadModalContext';
 import { FadeInWhenVisible, StaggerContainer, StaggerItem } from '@/components/animations';
+import { JsonLd } from '@/components/JsonLd';
 
 interface FAQItem {
   id: string;
@@ -123,6 +124,20 @@ const savingsSummary = {
   ],
 };
 
+// Schema.org FAQ para SEO
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
 export default function FAQLossAversion() {
   const { openModal } = useLeadModal();
   const [openId, setOpenId] = useState<string | null>(null);
@@ -133,6 +148,9 @@ export default function FAQLossAversion() {
 
   return (
     <section className="bg-[#EFF0F0] py-16 lg:py-20 relative overflow-hidden" aria-labelledby="faq-loss-heading">
+      {/* FAQ Schema para SEO */}
+      <JsonLd data={faqSchema} />
+
       {/* Background Glows - Optimized for mobile */}
       <div className="absolute top-1/4 left-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-[#5C5CFF]/8 rounded-full blur-[80px] md:blur-[150px] -translate-x-1/2" aria-hidden="true" />
       <div className="absolute bottom-1/4 right-0 w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-[#5C5CFF]/6 rounded-full blur-[60px] md:blur-[120px] translate-x-1/3" aria-hidden="true" />

@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { LeadModalProvider } from "@/contexts/LeadModalContext";
 import LeadCaptureModal from "@/components/LeadCaptureModal";
+import { JsonLd } from "@/components/JsonLd";
 
 /**
  * Montserrat Font Configuration
@@ -25,26 +26,122 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Nexus Leiloes - O Unico Hub Completo Para Leilao Imobiliario",
+  // Base URL para canonical e OG
+  metadataBase: new URL("https://nexusleiloes.com.br"),
+
+  // Title com template
+  title: {
+    default: "Nexus Leilões - O Único Hub Completo Para Leilão Imobiliário",
+    template: "%s | Nexus Leilões",
+  },
+
   description:
-    "Pare de perder oportunidades em leiloes. O Nexus unifica busca, analise e gestao de leiloes imobiliarios em uma unica plataforma. Cadastre-se na lista de espera.",
+    "Pare de perder oportunidades em leilões. O Nexus unifica busca, análise e gestão de leilões imobiliários em uma única plataforma. Cadastre-se na lista de espera.",
+
   keywords: [
-    "leilao imobiliario",
-    "investimento em leilao",
-    "leilao de imoveis",
-    "busca leilao",
-    "analise leilao",
-    "calculadora leilao",
-    "hub leilao",
-    "assessor leilao",
+    "leilão imobiliário",
+    "investimento em leilão",
+    "leilão de imóveis",
+    "busca leilão",
+    "análise leilão",
+    "calculadora leilão",
+    "hub leilão",
+    "assessor leilão",
+    "leilão judicial",
+    "leilão extrajudicial",
   ],
-  authors: [{ name: "Nexus Leiloes" }],
+
+  authors: [{ name: "Nexus Leilões" }],
+
+  // Canonical URL
+  alternates: {
+    canonical: "/",
+  },
+
+  // Robots
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  // Open Graph (imagem gerada dinamicamente via opengraph-image.tsx)
   openGraph: {
-    title: "Nexus Leiloes - O Unico Hub Completo Para Leilao Imobiliario",
+    title: "Nexus Leilões - O Único Hub Completo Para Leilão Imobiliário",
     description:
-      "Pare de perder oportunidades em leiloes. O Nexus unifica busca, analise e gestao de leiloes imobiliarios em uma unica plataforma.",
-    type: "website",
+      "Pare de perder oportunidades em leilões. O Nexus unifica busca, análise e gestão de leilões imobiliários em uma única plataforma.",
+    url: "https://nexusleiloes.com.br",
+    siteName: "Nexus Leilões",
     locale: "pt_BR",
+    type: "website",
+  },
+
+  // Twitter Cards (imagem gerada dinamicamente via twitter-image.tsx)
+  twitter: {
+    card: "summary_large_image",
+    title: "Nexus Leilões - O Único Hub Completo Para Leilão Imobiliário",
+    description:
+      "Pare de perder oportunidades em leilões. Busca, análise e gestão em uma única plataforma.",
+  },
+
+  // Verificação Google Search Console
+  verification: {
+    google: "Wx7_0ZqofQZ9oH7hAv7NsEC_9GWIdKYeC4Og-yCUXvo",
+  },
+};
+
+// Schema.org - Organization
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Nexus Leilões",
+  url: "https://nexusleiloes.com.br",
+  logo: "https://nexusleiloes.com.br/logo-nexus.png",
+  description:
+    "O único hub completo para leilão imobiliário no Brasil. Busca, análise e gestão em uma única plataforma.",
+  sameAs: [
+    "https://instagram.com/nexus.leiloes",
+  ],
+};
+
+// Schema.org - WebSite
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Nexus Leilões",
+  url: "https://nexusleiloes.com.br",
+  description:
+    "Plataforma completa para investidores de leilões imobiliários no Brasil.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://nexusleiloes.com.br/busca?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+// Schema.org - SoftwareApplication (para quando lançar)
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Nexus Leilões",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description:
+    "Hub completo para busca, análise e gestão de leilões imobiliários.",
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/PreOrder",
+    price: "0",
+    priceCurrency: "BRL",
   },
 };
 
@@ -55,7 +152,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* Preconnect para recursos externos */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+      </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
+        {/* Schema.org JSON-LD */}
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
+        <JsonLd data={softwareSchema} />
+
         <LeadModalProvider>
           {children}
           <LeadCaptureModal />

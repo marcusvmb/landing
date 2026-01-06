@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
+import Image from 'next/image';
 import { useLeadModal } from '@/contexts/LeadModalContext';
 import { SpringFloatingMockup } from '@/components/animations/SpringFloatingMockup';
 
@@ -80,7 +81,14 @@ export default function HeroLossAversion() {
       <header className="relative z-20 max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img src="/logo-nexus.png" alt="Nexus Leilões" className="h-10" width={120} height={40} />
+          <Image
+            src="/logo-nexus.png"
+            alt="Nexus Leilões"
+            width={120}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </div>
       </header>
 
@@ -205,10 +213,15 @@ export default function HeroLossAversion() {
       {/* Screenshot com Spring Floating - Estilo Apple */}
       <div className="relative z-10 w-full py-10 md:py-16">
         <SpringFloatingMockup>
-          <img
-            src="/imagem_correta.png"
+          <Image
+            src="/imagem_correta.webp"
             alt="Interface do Nexus Leilões mostrando oportunidades de imóveis em leilão"
+            width={1920}
+            height={1080}
             className="w-full h-auto"
+            priority
+            sizes="100vw"
+            quality={85}
           />
         </SpringFloatingMockup>
       </div>
