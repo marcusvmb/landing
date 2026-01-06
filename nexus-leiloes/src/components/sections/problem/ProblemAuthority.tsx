@@ -362,40 +362,17 @@ export default function ProblemAuthority() {
                 text-[#2B3259]
               "
             >
-              {/* Mobile: quebras otimizadas */}
-              <span className="md:hidden">
-                O problema não é você.
-                <br />
-                É usar{' '}
-                <span className="relative inline-block text-[#5C5CFF]">
-                  <span
-                    className="absolute inset-0 bg-[#5C5CFF]/10 blur-xl rounded-full scale-150"
-                    aria-hidden="true"
-                  />
-                  <span className="relative z-10">VÁRIAS</span>
-                </span>
-                {' '}ferramentas
-                <br />
-                <span className="text-[#2B3259]/40 whitespace-nowrap">
-                  para fazer o trabalho de 1.
-                </span>
+              Quanto tempo você perde
+              <br />
+              organizando o que deveria ser{' '}
+              <span className="relative inline-block text-[#5C5CFF]">
+                <span
+                  className="absolute inset-0 bg-[#5C5CFF]/10 blur-xl rounded-full scale-150"
+                  aria-hidden="true"
+                />
+                <span className="relative z-10">automático</span>
               </span>
-              {/* Desktop: layout original */}
-              <span className="hidden md:inline">
-                O problema não é você.
-                <br />
-                É usar{' '}
-                <span className="relative inline-block text-[#5C5CFF]">
-                  <span
-                    className="absolute inset-0 bg-[#5C5CFF]/10 blur-xl rounded-full scale-150"
-                    aria-hidden="true"
-                  />
-                  <span className="relative z-10">VÁRIAS</span>
-                </span>
-                {' '}ferramentas
-                <br />
-                <span className="text-[#2B3259]/40">para fazer o trabalho de 1.</span>
-              </span>
+              ?
             </h2>
           </div>
         </FadeInWhenVisible>
