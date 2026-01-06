@@ -158,11 +158,11 @@ function GravitationalConvergenceAnimation() {
   // Transform scroll progress to animation progress
   const progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  // Hub animations - cresce e faz BOUNCE no momento do snap
+  // Hub animations - cresce e faz BOUNCE no momento do snap, ficando MAIOR no final
   const hubScale = useTransform(
     progress,
     [0, 0.5, 0.85, 0.95, 0.98, 1.0],
-    [0.6, 0.8, 0.9, 1.15, 0.95, 1.0] // BOUNCE: 1.15 → 0.95 → 1.0
+    [0.6, 0.8, 0.95, 1.35, 1.15, 1.25] // BOUNCE: 1.35 → 1.15 → 1.25 (maior no final)
   );
   const hubOpacity = useTransform(progress, [0, 0.4, 0.9], [0.3, 0.6, 1]);
 
@@ -350,37 +350,52 @@ export default function ProblemAuthority() {
             <h2
               id="problem-authority-heading"
               className="
-                text-3xl
+                text-[1.75rem]
                 sm:text-4xl
                 md:text-5xl
                 lg:text-6xl
                 xl:text-7xl
                 font-black
                 tracking-[-0.04em]
-                leading-[0.95]
+                leading-[1.05]
+                md:leading-[0.95]
                 text-[#2B3259]
               "
             >
-              O problema não é você.
-              <br />
-              É usar{' '}
-              <span className="relative inline-block text-[#5C5CFF]">
-                {/* Glow behind text */}
-                <span
-                  className="
-                    absolute inset-0
-                    bg-[#5C5CFF]/10
-                    blur-xl
-                    rounded-full
-                    scale-150
-                  "
-                  aria-hidden="true"
-                />
-                <span className="relative z-10">VÁRIAS</span>
+              {/* Mobile: quebras otimizadas */}
+              <span className="md:hidden">
+                O problema não é você.
+                <br />
+                É usar{' '}
+                <span className="relative inline-block text-[#5C5CFF]">
+                  <span
+                    className="absolute inset-0 bg-[#5C5CFF]/10 blur-xl rounded-full scale-150"
+                    aria-hidden="true"
+                  />
+                  <span className="relative z-10">VÁRIAS</span>
+                </span>
+                {' '}ferramentas
+                <br />
+                <span className="text-[#2B3259]/40 whitespace-nowrap">
+                  para fazer o trabalho de 1.
+                </span>
               </span>
-              {' '}ferramentas
-              <br />
-              <span className="text-[#2B3259]/40">para fazer o trabalho de 1.</span>
+              {/* Desktop: layout original */}
+              <span className="hidden md:inline">
+                O problema não é você.
+                <br />
+                É usar{' '}
+                <span className="relative inline-block text-[#5C5CFF]">
+                  <span
+                    className="absolute inset-0 bg-[#5C5CFF]/10 blur-xl rounded-full scale-150"
+                    aria-hidden="true"
+                  />
+                  <span className="relative z-10">VÁRIAS</span>
+                </span>
+                {' '}ferramentas
+                <br />
+                <span className="text-[#2B3259]/40">para fazer o trabalho de 1.</span>
+              </span>
             </h2>
           </div>
         </FadeInWhenVisible>
