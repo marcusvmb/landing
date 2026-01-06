@@ -152,7 +152,7 @@ export default async function Image() {
             opacity: 0.5,
           }}
         >
-          nexusleiloes.com.br
+          www.nexusleiloes.com.br
         </div>
       </div>
     ),

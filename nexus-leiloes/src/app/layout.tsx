@@ -26,8 +26,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  // Base URL para canonical e OG
-  metadataBase: new URL("https://nexusleiloes.com.br"),
+  // Base URL para canonical e OG (usando www - versão principal)
+  metadataBase: new URL("https://www.nexusleiloes.com.br"),
 
   // Title com template
   title: {
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     title: "Nexus Leilões - O Único Hub Completo Para Leilão Imobiliário",
     description:
       "Pare de perder oportunidades em leilões. O Nexus unifica busca, análise e gestão de leilões imobiliários em uma única plataforma.",
-    url: "https://nexusleiloes.com.br",
+    url: "https://www.nexusleiloes.com.br",
     siteName: "Nexus Leilões",
     locale: "pt_BR",
     type: "website",
@@ -101,8 +101,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Nexus Leilões",
-  url: "https://nexusleiloes.com.br",
-  logo: "https://nexusleiloes.com.br/logo-nexus.png",
+  url: "https://www.nexusleiloes.com.br",
+  logo: "https://www.nexusleiloes.com.br/logo-nexus.png",
   description:
     "O único hub completo para leilão imobiliário no Brasil. Busca, análise e gestão em uma única plataforma.",
   sameAs: [
@@ -115,14 +115,14 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Nexus Leilões",
-  url: "https://nexusleiloes.com.br",
+  url: "https://www.nexusleiloes.com.br",
   description:
     "Plataforma completa para investidores de leilões imobiliários no Brasil.",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://nexusleiloes.com.br/busca?q={search_term_string}",
+      urlTemplate: "https://www.nexusleiloes.com.br/busca?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },
