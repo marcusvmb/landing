@@ -212,7 +212,7 @@ export default function AssessoresShowcase() {
               cursor-pointer
             "
           >
-            Reservar minha vaga de fundador
+            Avise-me do lançamento
           </button>
 
           {/* Microcopy de Exclusividade */}

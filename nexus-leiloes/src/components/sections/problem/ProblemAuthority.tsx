@@ -477,7 +477,7 @@ export default function ProblemAuthority() {
                 cursor-pointer
               "
             >
-              Reservar meu lugar de fundador
+              Quero ser avisado sobre o lançamento
             </button>
           </div>
         </FadeInWhenVisible>

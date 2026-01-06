@@ -197,8 +197,7 @@ export default function HeroLossAversion() {
           animate={prefersReducedMotion ? {} : { opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5, ease }}
         >
-          Reservar meu lugar de fundador
-          <span aria-hidden="true"> &rarr;</span>
+          Entrar na lista de espera
         </motion.button>
 
       </div>

@@ -158,7 +158,7 @@ export default function SegmentationTransformation() {
               subtitle="Pessoas que investem em leilões"
               todayItems={investidorToday}
               nexusItems={investidorWithNexus}
-              ctaText="Garantir meu preço de fundador"
+              ctaText="Reservar meu lugar"
               primaryColor="#5C5CFF"
               onOpenModal={openModal}
             />
@@ -172,7 +172,7 @@ export default function SegmentationTransformation() {
               subtitle="Profissionais que assessoram clientes"
               todayItems={assessorToday}
               nexusItems={assessorWithNexus}
-              ctaText="Garantir meu preço de fundador"
+              ctaText="Reservar meu lugar"
               primaryColor="#5C5CFF"
               onOpenModal={openModal}
             />
@@ -405,7 +405,7 @@ function TransformationCard({
               boxShadow: `0 12px 35px -10px ${primaryColor}60`,
             }}
           >
-            {ctaText} &#8594;
+            {ctaText}
           </button>
 
           <p className="mt-3 text-center text-xs text-[#2B3259]/40">

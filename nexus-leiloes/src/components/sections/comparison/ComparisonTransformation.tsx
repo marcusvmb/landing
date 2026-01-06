@@ -439,7 +439,7 @@ export default function ComparisonTransformation() {
               onClick={openModal}
               className="bg-[#5C5CFF] text-white font-bold text-lg px-12 py-5 rounded-full shadow-[0_15px_40px_-10px_rgba(92,92,255,0.4)] transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_50px_-10px_rgba(92,92,255,0.5)] active:translate-y-0 active:scale-[0.98] cursor-pointer"
             >
-              Entrar na lista de fundadores
+              Ser avisado primeiro
             </button>
             <p className="mt-4 text-sm text-[#2B3259]/50">
               Junte-se aos fundadores e garanta seu desconto

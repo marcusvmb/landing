@@ -231,7 +231,7 @@ export default function LeadCaptureModal() {
           </h3>
 
           <p className="text-gray-600 mb-6">
-            Você agora é um <span className="font-semibold text-[#5C5CFF]">Fundador</span>.
+            Você será avisado assim que lançarmos!
           </p>
 
           <motion.button
