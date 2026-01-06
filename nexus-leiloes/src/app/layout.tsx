@@ -4,6 +4,7 @@ import "./globals.css";
 import { LeadModalProvider } from "@/contexts/LeadModalContext";
 import LeadCaptureModal from "@/components/LeadCaptureModal";
 import { JsonLd } from "@/components/JsonLd";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 /**
  * Montserrat Font Configuration
@@ -52,6 +53,20 @@ export const metadata: Metadata = {
   ],
 
   authors: [{ name: "Nexus Leilões" }],
+
+  // App Config
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Nexus Leilões",
+  },
+
+  // Icons
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 
   // Canonical URL
   alternates: {
@@ -153,6 +168,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        {/* Theme color para browser UI */}
+        <meta name="theme-color" content="#5C5CFF" />
+        <meta name="msapplication-TileColor" content="#5C5CFF" />
+
         {/* Preconnect para recursos externos */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -160,8 +179,19 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
+
+        {/* Preload hero image para melhor LCP */}
+        <link
+          rel="preload"
+          href="/imagem_correta.webp"
+          as="image"
+          type="image/webp"
+        />
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
+        {/* Google Analytics 4 */}
+        <GoogleAnalytics />
+
         {/* Schema.org JSON-LD */}
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
