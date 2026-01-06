@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Pare de perder oportunidades em leilões. O Nexus unifica busca, análise e gestão de leilões imobiliários em uma única plataforma. Cadastre-se na lista de espera.",
+    "Pare de perder oportunidades em leilões. A Nexus unifica busca, análise e gestão de leilões imobiliários em uma única plataforma. Cadastre-se na lista de espera.",
 
   keywords: [
     "leilão imobiliário",
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nexus Leilões - O Único Hub Completo Para Leilão Imobiliário",
     description:
-      "Pare de perder oportunidades em leilões. O Nexus unifica busca, análise e gestão de leilões imobiliários em uma única plataforma.",
+      "Pare de perder oportunidades em leilões. A Nexus unifica busca, análise e gestão de leilões imobiliários em uma única plataforma.",
     url: "https://www.nexusleiloes.com.br",
     siteName: "Nexus Leilões",
     locale: "pt_BR",
