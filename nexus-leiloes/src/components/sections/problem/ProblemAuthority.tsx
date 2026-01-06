@@ -162,7 +162,7 @@ function GravitationalConvergenceAnimation() {
   const hubScale = useTransform(
     progress,
     [0, 0.5, 0.85, 0.95, 0.98, 1.0],
-    [0.6, 0.8, 0.95, 1.35, 1.15, 1.25] // BOUNCE: 1.35 → 1.15 → 1.25 (maior no final)
+    [0.6, 0.85, 1.1, 1.6, 1.4, 1.5] // BOUNCE: 1.6 → 1.4 → 1.5 (50% maior no final)
   );
   const hubOpacity = useTransform(progress, [0, 0.4, 0.9], [0.3, 0.6, 1]);
 
