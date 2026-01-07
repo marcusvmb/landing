@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { FadeInWhenVisible } from '@/components/animations';
 
 export default function Footer() {
@@ -8,11 +9,13 @@ export default function Footer() {
       <FadeInWhenVisible>
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Logo */}
-            <img
+            {/* Logo - com dimensões explícitas para evitar CLS */}
+            <Image
               src="/logo-nexus-white.png"
               alt="Nexus Leilões"
-              className="h-10"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
             />
 
             {/* Instagram Link */}

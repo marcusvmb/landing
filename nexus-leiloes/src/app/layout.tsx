@@ -184,6 +184,9 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
+        {/* Preconnect para Google Tag Manager */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
         {/* Preload hero image para melhor LCP */}
         <link

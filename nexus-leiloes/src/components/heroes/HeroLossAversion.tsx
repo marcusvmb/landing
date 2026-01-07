@@ -1,12 +1,8 @@
 'use client';
 
-import { motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 import { useLeadModal } from '@/contexts/LeadModalContext';
 import { SpringFloatingMockup } from '@/components/animations/SpringFloatingMockup';
-
-// Configurações de animação
-const ease: [number, number, number, number] = [0.4, 0, 0.2, 1]; // smooth easing
 
 /**
  * HERO 1: LOSS AVERSION
@@ -37,15 +33,6 @@ const ease: [number, number, number, number] = [0.4, 0, 0.2, 1]; // smooth easin
 
 export default function HeroLossAversion() {
   const { openModal } = useLeadModal();
-  const prefersReducedMotion = useReducedMotion();
-
-  // Animações (respeitam reduced motion)
-  const fadeUp = prefersReducedMotion
-    ? {}
-    : {
-        initial: { opacity: 0, y: 24 },
-        animate: { opacity: 1, y: 0 },
-      };
 
   return (
     <section
@@ -104,11 +91,7 @@ export default function HeroLossAversion() {
         "
       >
         {/* Massive Headline - Typography IS the visual */}
-        <motion.div
-          className="text-center max-w-5xl"
-          {...fadeUp}
-          transition={{ duration: 0.7, ease }}
-        >
+        <div className="text-center max-w-5xl animate-fade-up">
           <h1
             id="hero-loss-aversion-heading"
             className="
@@ -160,22 +143,18 @@ export default function HeroLossAversion() {
             <br />
             <span className="text-[#5C5CFF]/50">no Brasil</span>
           </h1>
-        </motion.div>
+        </div>
 
         {/* Subheadline - Curta e direta */}
-        <motion.p
-          className="mt-8 md:mt-10 text-xl md:text-2xl text-[#2B3259]/60 text-center max-w-xl"
-          {...fadeUp}
-          transition={{ duration: 0.6, delay: 0.3, ease }}
-        >
+        <p className="mt-8 md:mt-10 text-xl md:text-2xl text-[#2B3259]/60 text-center max-w-xl animate-fade-up-delay-1">
           Busque. Analise. Gerencie.{' '}
           <span className="text-[#5C5CFF] font-semibold">
             Tudo em um só lugar.
           </span>
-        </motion.p>
+        </p>
 
         {/* CTA Button - Antes do MacBook para melhor visibilidade */}
-        <motion.button
+        <button
           type="button"
           onClick={openModal}
           className="
@@ -200,13 +179,11 @@ export default function HeroLossAversion() {
             focus-visible:outline-offset-2
             focus-visible:outline-[#2B3259]
             cursor-pointer
+            animate-fade-up-delay-2
           "
-          initial={prefersReducedMotion ? {} : { opacity: 0, y: 20, scale: 0.95 }}
-          animate={prefersReducedMotion ? {} : { opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.5, ease }}
         >
           Entrar na lista de espera
-        </motion.button>
+        </button>
 
       </div>
 

@@ -1,6 +1,11 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  // Otimização de CSS crítico via Critters
+  experimental: {
+    optimizeCss: true,
+  },
+
   // Otimização de imagens
   images: {
     formats: ['image/avif', 'image/webp'],
