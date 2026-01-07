@@ -284,7 +284,7 @@ export default function ComparisonTransformation() {
         <FadeInWhenVisible delay={0.1}>
           <p className="text-center text-lg md:text-xl text-[#2B3259]/60 max-w-3xl mx-auto mb-16 leading-relaxed">
             Veja a transformação que acontece quando você migra
-            <br className="hidden md:block" />
+            <br className="hidden md:block" />{' '}
             de ferramentas soltas para o Hub completo.
           </p>
         </FadeInWhenVisible>

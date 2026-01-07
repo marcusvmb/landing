@@ -101,8 +101,8 @@ const faqItems: FAQItem[] = [
     lossFrame: 'Dados desatualizados = lances perdidos',
     answer: 'Absolutamente. Nossos dados vêm de fontes oficiais dos leiloeiros e são atualizados diariamente. Você nunca vai perder um leilão por informação desatualizada ou errada.',
     savingsType: 'opportunity',
-    savingsValue: '3-5',
-    savingsDesc: 'leilões salvos por mês',
+    savingsValue: 'Diária',
+    savingsDesc: 'atualização dos dados',
   },
   {
     id: 'suporte',

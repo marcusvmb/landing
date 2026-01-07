@@ -423,7 +423,7 @@ export default function ProblemAuthority() {
                     Copiar dados manualmente
                   </h3>
                   <p className="text-sm text-[#2B3259]/60">
-                    Você copia. Depois confere. Depois corrige. Depois confere de novo. Trabalho triplo que automação resolve em zero cliques.
+                    Você copia. Depois confere. Depois corrige. Depois confere de novo. Trabalho triplo que automação resolve em poucos cliques.
                   </p>
                 </div>
               </StaggerItem>
